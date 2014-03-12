@@ -1,0 +1,36 @@
+<settings>
+    <category label="30000">
+    	<setting label="30007" type="lsep"/>
+    	<setting type="action" label="30008" action="RunScript($CWD/config.py)"/>
+    	<setting label="30009" type="lsep"/>
+        <setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
+        <setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
+        <setting id="ChannelResetSetting" type="enum" label="30004" values="Automatic|Daily|Weekly|Monthly|Never|Every Time" default="0"/>
+    	<setting id="StartMode" type="enum" label="30011" values="Resume|Real Time|Random" default="1" />
+    	<setting id="ThreadMode" type="enum" label="30012" values="On|Minimum Use|Off" default="1" />
+    	<setting id="ChannelSharing" type="bool" label="30015" default="false"/>
+    	<setting id="SettingsFolder" subsetting="true" type="folder" source="auto" visible="eq(-1,true)" label="30013" default="" />
+    </category>
+
+    <category label="30020">
+        <setting id="InfoOnChange" type="bool" label="30003" default="false"/>
+    	<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
+    	<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
+    	<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
+    	<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
+    	<setting id="HideClips" type="bool" label="30017" default="true"/>
+    	<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15|30|60|90|120|180|240|300|360" default="2"/>
+    	<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
+    </category>
+    
+    <category label="30022">
+        <setting id="ChannelDelay" type="enum" label="30023" default="0" values="None|0.25|0.5|0.75|1.0|1.25|1.5|1.75|2.0"/>
+        <setting id="MediaLimit" type="number" label="30044" default="60"/>
+    </category>
+    
+    <category label="30026">
+		<setting id="enable" type="bool" label="30027" default="false"/>
+		<setting id="timer_amount" type="enum" values="0|5|10|15|20" label="30028" enable="eq(-1,true)" default="1"/>
+		<setting id="notify" type="bool" label="30029" enable="eq(-2,true)" default="true"/>
+	</category>
+</settings>
