@@ -97,7 +97,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelDelay = 0
 
         for i in range(3):
-            self.channelLabel.append(xbmcgui.ControlImage(30 + (40 * i), 30, 50, 50, IMAGES_LOC + 'solid.png', colorDiffuse='0xAA00ff00'))
+            self.channelLabel.append(xbmcgui.ControlImage(50 + (35 * i), 50, 50, 50, IMAGES_LOC + 'solid.png', colorDiffuse='0xFF00ff00'))
             self.addControl(self.channelLabel[i])
             self.channelLabel[i].setVisible(False)
 
@@ -527,6 +527,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.getControl(504).setLabel(self.channels[self.currentChannel - 1].getItemEpisodeTitle(position))
         self.getControl(505).setLabel(self.channels[self.currentChannel - 1].getItemDescription(position))
         self.getControl(506).setImage(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
+        if not os.path.isfile(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+            self.getControl(506).setImage(IMAGES_LOC + 'Default.png')
+            
+            
         self.log('setShowInfo return')
 
 
@@ -565,6 +569,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if self.showChannelBug == True:
             try:
                 self.getControl(103).setImage(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
+                if not os.path.isfile(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+                    self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
             except:
                 pass
         else:

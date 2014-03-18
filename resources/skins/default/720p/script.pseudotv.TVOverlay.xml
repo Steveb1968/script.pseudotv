@@ -1,123 +1,209 @@
 <window>
     <allowoverlay>no</allowoverlay>
-
     <coordinates>
         <system>1</system>
         <posx>0</posx>
         <posy>0</posy>
     </coordinates>
-
     <controls>
-        <control type="image" id="101">
-            <description>Background</description>
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>1280</width>
-            <height>720</height>
-            <texture>pstvSolid.png</texture>
-            <colordiffuse>FF000000</colordiffuse>
-        </control>
-
-		<control type="image" id="103">
-            <description>Channel Bug</description>
-            <posx>220r</posx>
-            <posy>120r</posy>
-            <width>150</width>
-            <height>100</height>
-    		<aspectratio>keep</aspectratio>
-			<texture></texture>
-            <!--<colordiffuse>FF000000</colordiffuse>-->
-			<animation effect="fade" start="40" end="40" condition="True">Conditional</animation>
-        </control>
-
         <control type="group" id="102">
-			<animation effect="fade" time="500">VisibleChange</animation>
-            
-			<control type="image">
-                <description>Info Background</description>
-                <posx>0</posx>
-                <posy>400</posy>
+            <animation effect="fade" start="0" end="100" time="300" condition="Control.IsVisible(102)">Conditional</animation>
+            <visible>!Window.IsActive(VideoOSD)</visible>
+			<!--HEADER-->
+            <control type="image">
+                <left>0</left>
+                <top>-40</top>
                 <width>1280</width>
-                <height>324</height>
-                <texture>pstvInfoWindow.png</texture>
+                <height>120</height>
+                <texture flipy="true" border="1">ptv_HomeNowPlayingBack.png</texture>
             </control>
-    
-            <control type="grouplist">
-    			<posx>140</posx>
-    			<posy>500</posy>
-    			<width>850</width>
-    			<height>30</height>
-    			<orientation>horizontal</orientation>
-    			<itemgap>6</itemgap>
-
-    			<control type="label" id="502">
-    				<description>Show Name Label</description>
-    				<width min="40" max="600">auto</width>
-    				<height>30</height>
-    				<label>Now watching</label>
-    				<font>font12</font>
-    				<align>left</align>
-    				<textcolor>FFFFFFFF</textcolor>
-    			</control>
-    
-    			<control type="label" id="503">
-    				<description>Show Name Label</description>
-    				<width min="40" max="600">auto</width>
-    				<height>30</height>
-    				<label>Show Name</label>
-    				<font>font12</font>
-    				<align>left</align>
-    				<textcolor>FFFFFFFF</textcolor>
-    			</control>
-    
-    			<control type="label">
-    				<description>Show Name Label</description>
-    				<width min="10" max="50">auto</width>
-    				<height>30</height>
-    				<label>•</label>
-    				<font>font12</font>
-    				<align>left</align>
-    				<textcolor>FFFFFFFF</textcolor>
-    			</control>
-    
-    			<control type="label" id="504">
-    				<description>Show Title Label</description>
-    				<width min="40" max="300">auto</width>
-    				<height>30</height>
-    				<label>Show Title</label>
-    				<font>font12</font>
-    				<align>left</align>
-    				<textcolor>FFFFFFFF</textcolor>
-    			</control>
-    		</control>
-    
-    		<control type="label" id="505">
-    			<posx>-10</posx>
-                <posy>-10</posy>
-                <width>0</width>
-                <height>0</height>
-                <visible>false</visible>
+            <control type="image">
+                <left>15</left>
+                <top>3</top>
+                <width>260</width>
+                <height>35</height>
+                <texture>NavFlagInfo.png</texture>
+                <aspectratio align="left">keep</aspectratio>
+                <colordiffuse>lightgrey</colordiffuse>
+            </control>
+			<control type="label">
+				<description>Clock label</description>
+				<left>450</left>
+				<top>5</top>
+				<width>800</width>
+				<height>25</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<!--FOOTER-->			
+			<control type="image">
+				<left>0</left>
+				<top>490</top>
+				<width>1280</width>
+				<height>230</height>
+				<texture border="1">ptv_HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<left>20</left>
+				<top>460</top>
+				<width>300</width>
+				<height>230</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="8">ptv_ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!VideoPlayer.Content(Movies)</visible>
+			</control>
+			<control type="image" id="1">
+				<description>Movie cover image</description>
+				<left>20</left>
+				<top>370</top>
+				<width>300</width>
+				<height>330</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="8">ptv_ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>VideoPlayer.Content(Movies)</visible>
+			</control>           
+            <control type="label"  id="502">
+                <description>Heading label</description>
+                <left>330</left>
+                <top>535</top>
+                <width>770</width>
+                <height>25</height>
+                <align>left</align>
+                <aligny>center</aligny>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>            
+            <control type="label">
+                <left>350</left>
+                <top>565</top>
+                <width>770</width>
+                <height>25</height>
+                <align>left</align>
+                <font>font12</font>
+                <info>Control.GetLabel(503)</info>
+                <textcolor>gray</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <visible>!IsEmpty(Control.GetLabel(504))</visible>
+            </control>
+            <control type="label">
+                <left>350</left>
+                <top>595</top>
+                <width>770</width>
+                <height>35</height>
+                <font>font30</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <info>Control.GetLabel(503)</info>
+                <textcolor>orange</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scroll>true</scroll>
+                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
+                <visible>IsEmpty(Control.GetLabel(504))</visible>
+            </control>               
+            <control type="fadelabel">
+                <left>350</left>
+                <top>595</top>
+                <width>770</width>
+                <height>35</height>
+                <font>font30</font>
+                <align>left</align>
+                <aligny>center</aligny>
+                <info>Control.GetLabel(504)</info>
+                <textcolor>orange</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <scrollout>false</scrollout>
+                <pauseatend>1800</pauseatend>
+                <scrollspeed>40</scrollspeed>
+                <visible>!IsEmpty(Control.GetLabel(504))</visible>
             </control>
             <control type="textbox">
-                <posx>140</posx>
-                <posy>530</posy>
-                <width>850</width>
-                <height>55</height>
-                <font>font12</font>
-                <align>left</align>
-                <textcolor>FFFFFFFF</textcolor>
+                <description>Show Description</description>
+                <left>350</left>
+                <top>635</top>
+                <width>880</width>
+                <height>53</height>
+                <font>font13</font>
+                 <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>justify</align>
                 <info>Control.GetLabel(505)</info>
-                <autoscroll time="3000" delay="6000" repeat="6000">True</autoscroll>
+                <autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+                <visible>!IsEmpty(Control.GetLabel(504))</visible>
             </control>
-            
-            <control type="image" id="506">
-                <description>Channel Logo</description>
-                <posx>1010</posx>
-                <posy>500</posy>
-                <width>130</width>
+            <control type="textbox">
+                <description>Show Description</description>
+                <left>350</left>
+                <top>610</top>
+                <width>880</width>
                 <height>75</height>
-    			<aspectratio>scale</aspectratio>
+                <font>font13</font>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <align>justify</align>
+                <info>Control.GetLabel(505)</info>
+                <autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+                <visible>IsEmpty(Control.GetLabel(504))</visible>
             </control>
+            <control type="image" id="506">
+                <description>Show Channel Icon</description>
+                <left>1110</left>
+                <top>565</top>
+                <width>100</width>
+                <height>68</height>
+                <aspectratio aligny="center">keep</aspectratio>
+                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
+            </control>
+		</control>
+        <control type="image" id="103">
+            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
+            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+			<description>Channel Bug</description>
+			<left>1130</left>
+			<top>635</top>
+			<width>130</width>
+			<height>75</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>60FFFFFF</colordiffuse>
+			<animation effect="fade" start="100" end="50" time="0" condition="True">conditional</animation>
+		</control>
+        
+        <control type="group">
+			<visible>false</visible>
+            <control type="image" id="101">
+                <left>-10</left>
+                <top>-10</top>
+                <width>1</width>
+                <height>1</height>
+            </control>				
+            <control type="label" id="503">
+                <left>-10</left>
+                <top>-10</top>
+                <width>1</width>
+                <height>1</height>
+            </control>
+            <control type="label" id="504">
+                <left>-10</left>
+                <top>-10</top>
+                <width>1</width>
+                <height>1</height>
+            </control>
+            <control type="label" id="505">
+                <left>-10</left>
+                <top>-10</top>
+                <width>1</width>
+                <height>1</height>
+            </control>				
         </control>
+        
     </controls>
 </window>

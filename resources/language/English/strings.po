@@ -191,15 +191,15 @@ msgid "No channels available. Exiting."
 msgstr ""
 
 msgctxt "#30041"
-msgid "COMING UP:"
+msgid "Coming Up"
 msgstr ""
 
 msgctxt "#30042"
-msgid "ALREADY SEEN:"
+msgid "Already Seen"
 msgstr ""
 
 msgctxt "#30043"
-msgid "NOW WATCHING:"
+msgid "Now Playing"
 msgstr ""
 
 msgctxt "#30044"

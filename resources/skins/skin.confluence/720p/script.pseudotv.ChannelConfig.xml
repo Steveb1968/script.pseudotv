@@ -6,14 +6,14 @@
         <left>0</left>
         <top>0</top>
     </coordinates>
-    <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+    <include>dialogeffect</include>
     <controls>
         <control type="image">
             <left>240</left>
             <top>60</top>
 			<width>800</width>
 			<height>600</height>
-			<texture border="40">ptv_DialogBack.png</texture>
+			<texture border="40">DialogBack.png</texture>
         </control>
         <control type="image">
 			<description>Dialog Header image</description>
@@ -21,7 +21,7 @@
 			<top>76</top>
 			<width>720</width>
 			<height>40</height>
-			<texture>ptv_dialogheader.png</texture>
+			<texture>dialogheader.png</texture>
 		</control>
         <control type="label">
             <left>280</left>
@@ -32,7 +32,7 @@
             <label>$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507]</label>
             <align>center</align>
 			<aligny>center</aligny>
-			<textcolor>orange</textcolor>
+			<textcolor>selected</textcolor>
 			<shadowcolor>black</shadowcolor>
         </control>
         <control type="group" id="105">
@@ -81,7 +81,7 @@
                         <top>0</top>
                         <width>720</width>
                         <height>40</height>
-                        <texture border="5">ptv_button-nofocus.png</texture>
+                        <texture border="5">button-nofocus.png</texture>
                     </control>
                     <control type="label">
                         <left>40</left>
@@ -90,7 +90,7 @@
                         <height>40</height>
                         <aligny>center</aligny>
                         <align>left</align>
-                        <textcolor>gray</textcolor>
+                        <textcolor>grey2</textcolor>
                         <info>ListItem.Label</info>
                     </control>
                     <control type="label">
@@ -100,7 +100,7 @@
                         <height>40</height>
                         <aligny>center</aligny>
                         <align>right</align>
-                        <textcolor>gray</textcolor>
+                        <textcolor>grey2</textcolor>
                         <info>ListItem.Label2</info>
                     </control>
                 </itemlayout>
@@ -110,7 +110,7 @@
                         <top>0</top>
                         <width>720</width>
                         <height>40</height>
-                        <texture border="5">ptv_button-focus2.png</texture>
+                        <texture border="5">button-focus2.png</texture>
                     </control>
                     <control type="label">
                         <left>40</left>
@@ -139,11 +139,11 @@
                 <top>40</top>
                 <width>25</width>
                 <height>450</height>
-                <texturesliderbackground border="0,14,0,14">ptv_ScrollBarV.png</texturesliderbackground>
-                <texturesliderbar border="2,16,2,16">ptv_ScrollBarV_bar.png</texturesliderbar>
-                <texturesliderbarfocus border="2,16,2,16">ptv_ScrollBarV_bar_focus.png</texturesliderbarfocus>
-                <textureslidernib>ptv_ScrollBarNib.png</textureslidernib>
-                <textureslidernibfocus>ptv_ScrollBarNib.png</textureslidernibfocus>
+                <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+                <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+                <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+                <textureslidernib>ScrollBarNib.png</textureslidernib>
+                <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
                 <onup>103</onup>
                 <ondown>103</ondown>
                 <onleft>102</onleft>
@@ -176,14 +176,14 @@
                 <top>60</top>
                 <width>720</width>
                 <height>40</height>
-                <texture border="5">ptv_button-nofocus.png</texture>              
+                <texture border="5">button-nofocus.png</texture>              
             </control>
             <control type="image">
                 <left>40</left>
                 <top>60</top>
                 <width>720</width>
                 <height>40</height>
-                <texture border="5">ptv_button-focus2.png</texture>
+                <texture border="5">button-focus2.png</texture>
                 <visible>Control.HasFocus(110) | Control.HasFocus(111)</visible>               
             </control>
             <control type="label">
@@ -210,8 +210,8 @@
                 <top>69</top>
                 <width>33</width>
                 <height>22</height>
-                <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                <texturefocus>scroll-down-focus-2.png</texturefocus>
+                <texturenofocus>scroll-down-2.png</texturenofocus>
                 <onleft>111</onleft>
                 <onright>111</onright>
             </control>
@@ -220,8 +220,8 @@
                 <top>69</top>
                 <width>33</width>
                 <height>22</height>
-                <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                <texturefocus>scroll-up-focus-2.png</texturefocus>
+                <texturenofocus>scroll-up-2.png</texturenofocus>
                 <onleft>110</onleft>
                 <onright>110</onright>
             </control>
@@ -234,10 +234,11 @@
 				<height>40</height>
 				<align>center</align>
 				<aligny>center</aligny>
+				<font>font13</font>
                 <label>$LOCALIZE[10038] $LOCALIZE[19029] $LOCALIZE[5]</label>
-                <texturefocus border="5">ptv_button-focus.png</texturefocus>
-                <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
-                <textcolor>gray</textcolor>
+                <texturefocus border="5">button-focus.png</texturefocus>
+                <texturenofocus border="5">button-nofocus.png</texturenofocus>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <onup>107</onup>
                 <ondown>112</ondown>
@@ -249,9 +250,9 @@
                 <width>200</width>
 				<height>40</height>
                 <label>$LOCALIZE[186]</label>
-                <texturefocus border="5">ptv_button-focus.png</texturefocus>
-                <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
-                <textcolor>gray</textcolor>
+                <texturefocus border="5">button-focus.png</texturefocus>
+                <texturenofocus border="5">button-nofocus.png</texturenofocus>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <onup>114</onup>
                 <onleft>113</onleft>
@@ -265,9 +266,9 @@
                 <width>200</width>
 				<height>40</height>
                 <label>$LOCALIZE[222]</label>
-                <texturefocus border="5">ptv_button-focus.png</texturefocus>
-                <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
-                <textcolor>gray</textcolor>
+                <texturefocus border="5">button-focus.png</texturefocus>
+                <texturenofocus border="5">button-nofocus.png</texturenofocus>
+                <textcolor>grey2</textcolor>
                 <focusedcolor>white</focusedcolor>
                 <onup>114</onup>
                 <onleft>112</onleft>
@@ -288,8 +289,8 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texturefocus border="5">ptv_button-focus2.png</texturefocus>
-                    <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                    <texturefocus border="5">button-focus2.png</texturefocus>
+                    <texturenofocus border="5">button-nofocus.png</texturenofocus>
                     <textcolor>white</textcolor>                   
                     <align>left</align>
                     <onup>110</onup>
@@ -318,14 +319,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(140) | Control.HasFocus(141)</visible>               
                 </control>    
                 <control type="label">
@@ -352,8 +353,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>114</ondown>
                     <onleft>141</onleft>
@@ -364,8 +365,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>113</ondown>
                     <onleft>140</onleft>
@@ -384,14 +385,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(150) | Control.HasFocus(151)</visible>               
                 </control>    
                 <control type="label">
@@ -418,8 +419,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>114</ondown>
                     <onleft>151</onleft>
@@ -430,8 +431,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>113</ondown>
                     <onleft>150</onleft>
@@ -450,14 +451,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(160) | Control.HasFocus(161)</visible>               
                 </control>    
                 <control type="label">
@@ -484,8 +485,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>114</ondown>
                     <onleft>161</onleft>
@@ -496,8 +497,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>113</ondown>
                     <onleft>160</onleft>
@@ -516,14 +517,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(170) | Control.HasFocus(171)</visible>               
                 </control>    
                 <control type="label">
@@ -550,8 +551,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>114</ondown>
                     <onleft>171</onleft>
@@ -562,8 +563,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>113</ondown>
                     <onleft>170</onleft>
@@ -582,14 +583,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(180) | Control.HasFocus(181)</visible>               
                 </control>    
                 <control type="label">
@@ -616,8 +617,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>114</ondown>
                     <onleft>181</onleft>
@@ -628,8 +629,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>113</ondown>
                     <onleft>180</onleft>
@@ -648,14 +649,14 @@
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-nofocus.png</texture>              
+                    <texture border="5">button-nofocus.png</texture>              
                 </control>
                 <control type="image">
                     <left>40</left>
                     <top>105</top>
                     <width>720</width>
                     <height>40</height>
-                    <texture border="5">ptv_button-focus2.png</texture>
+                    <texture border="5">button-focus2.png</texture>
                     <visible>Control.HasFocus(190) | Control.HasFocus(191)</visible>               
                 </control>    
                 <control type="label">
@@ -682,8 +683,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-down-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-down-2.png</texturenofocus>
+                    <texturefocus>scroll-down-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-down-2.png</texturenofocus>
                     <onup>110</onup>
                     <ondown>194</ondown>
                     <onleft>191</onleft>
@@ -694,8 +695,8 @@
                     <top>114</top>
                     <width>33</width>
                     <height>22</height>
-                    <texturefocus>ptv_scroll-up-focus-2.png</texturefocus>
-                    <texturenofocus>ptv_scroll-up-2.png</texturenofocus>
+                    <texturefocus>scroll-up-focus-2.png</texturefocus>
+                    <texturenofocus>scroll-up-2.png</texturenofocus>
                     <onup>111</onup>
                     <ondown>194</ondown>
                     <onleft>190</onleft>
@@ -706,14 +707,13 @@
                     <top>150</top>
                     <width>720</width>
                     <height>40</height>
-                    <radiowidth>35</radiowidth>
-                    <radioheight>35</radioheight>
-                    <texturefocus border="5">ptv_button-focus2.png</texturefocus>
-                    <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                    <textureradioonfocus>radiobutton-focus.png</textureradioonfocus>
+                    <textureradioonnofocus>radiobutton-focus.png</textureradioonnofocus>
+                    <textureradioofffocus>radiobutton-nofocus.png</textureradioofffocus>
+                    <textureradiooffnofocus>radiobutton-nofocus.png</textureradiooffnofocus>
+                    <texturefocus border="5">button-focus2.png</texturefocus>
+                    <texturenofocus border="5">button-nofocus.png</texturenofocus>
                     <label>$LOCALIZE[581] ($LOCALIZE[20359])</label>
-                    <textcolor>white</textcolor>
-                    <textoffsetx>7</textoffsetx>
-                    <align>left</align>
                     <onup>190</onup>
                     <ondown>114</ondown>
                 </control>
@@ -731,8 +731,8 @@
                     <width>720</width>
                     <height>40</height>
                     <textcolor>white</textcolor>
-                    <texturefocus border="5">ptv_button-focus2.png</texturefocus>
-                    <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                    <texturefocus border="5">button-focus2.png</texturefocus>
+                    <texturenofocus border="5">button-nofocus.png</texturenofocus>
                     <textoffsetx>7</textoffsetx>
                     <align>right</align>
                     <onup>110</onup>
@@ -749,5 +749,6 @@
                 </control>
             </control>
         </control>
+        <include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
     </controls>
 </window>
