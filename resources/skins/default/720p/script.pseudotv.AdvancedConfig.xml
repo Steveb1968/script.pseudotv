@@ -7,7 +7,6 @@
         <left>0</left>
         <top>0</top>
     </coordinates>
-    <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
     <controls>
         <control type="image">
             <left>240</left>
