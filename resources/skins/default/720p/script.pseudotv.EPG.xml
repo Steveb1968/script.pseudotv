@@ -436,18 +436,18 @@
             <description>Show Title Label</description>
             <posx>390</posx>
             <posy>420</posy>
-            <width>765</width>
+            <width>780</width>
             <height>25</height>
             <info>Control.GetLabel(500)</info>
             <font>font12</font>
             <textcolor>gray</textcolor>
             <visible>!IsEmpty(Control.GetLabel(501))</visible>
         </control>
-        <control type="label">
+        <control type="fadelabel">
             <description>Show Title Label</description>
             <posx>390</posx>
             <posy>445</posy>
-            <width>770</width>
+            <width>780</width>
             <height>35</height>
             <info>Control.GetLabel(500)</info>
             <font>font30</font>
@@ -455,13 +455,16 @@
             <aligny>center</aligny>
             <textcolor>orange</textcolor>
             <shadowcolor>black</shadowcolor>
+            <scrollout>false</scrollout>
+            <pauseatend>1800</pauseatend>
+            <scrollspeed>40</scrollspeed>
             <visible>IsEmpty(Control.GetLabel(501))</visible>
         </control>
-        <control type="label">
+        <control type="fadelabel">
             <description>Show Name Label</description>
             <posx>390</posx>
             <posy>445</posy>
-            <width>770</width>
+            <width>780</width>
             <height>35</height>
             <info>Control.GetLabel(501)</info>
             <font>font30</font>
@@ -469,6 +472,9 @@
             <aligny>center</aligny>
             <textcolor>orange</textcolor>
             <shadowcolor>black</shadowcolor>
+            <scrollout>false</scrollout>
+            <pauseatend>1800</pauseatend>
+            <scrollspeed>40</scrollspeed>
             <visible>!IsEmpty(Control.GetLabel(500))</visible>
         </control>
         <control type="textbox">

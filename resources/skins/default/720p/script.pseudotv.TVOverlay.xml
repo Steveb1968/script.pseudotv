@@ -95,7 +95,7 @@
                 <shadowcolor>black</shadowcolor>
                 <visible>!IsEmpty(Control.GetLabel(504))</visible>
             </control>
-            <control type="label">
+            <control type="fadelabel">
                 <left>350</left>
                 <top>595</top>
                 <width>770</width>
@@ -106,7 +106,9 @@
                 <info>Control.GetLabel(503)</info>
                 <textcolor>orange</textcolor>
                 <shadowcolor>black</shadowcolor>
-                <scroll>true</scroll>
+                <scrollout>false</scrollout>
+                <pauseatend>1800</pauseatend>
+                <scrollspeed>40</scrollspeed>
                 <animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
                 <visible>IsEmpty(Control.GetLabel(504))</visible>
             </control>               
