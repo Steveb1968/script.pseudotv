@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <allowoverlay>no</allowoverlay>
+	<include>Animation_OpenCloseFade</include>
+    <controls>	
+		<!--BACKGROUND-->
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>175</height>
+			<texture>osd/OSDdialogback_top.png</texture>
+			<colordiffuse>OSDBackgroundColor</colordiffuse>
+		</control>		
+		<control type="image">
+			<left>0</left>
+			<top>170</top>
+			<width>1280</width>
+			<height>180</height>
+			<texture>osd/OSDdialogback.png</texture>
+			<colordiffuse>OSDBackgroundColor</colordiffuse>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>350</top>
+			<width>1280</width>
+			<height>200</height>
+			<texture>osd/OSDdialogback_top.png</texture>
+			<colordiffuse>OSDBackgroundColor</colordiffuse>
+		</control>
+        <control type="image">
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">backgroundLiveTv.png</texture>
+            <colordiffuse>BackgroundColor</colordiffuse>
+        </control>
+		<control type="label">
+			<description>Header label</description>
+            <left>30</left>
+            <top>10</top>
+            <include>Global_HeadingSectionVars</include>
+			<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
+		</control>
+		<control type="image">
+			<description>Navigation Flag</description>
+			<left>25</left>
+			<top>120</top>
+			<width>336</width>
+			<height>28</height>
+			<texture>NavFlagEpg.png</texture>
+			<colordiffuse>GlobalHeading</colordiffuse>
+		</control>	
+		<control type="image">
+			<left>0</left>
+			<top>545</top>
+			<width>1280</width>
+			<height>175</height>
+			<texture>osd/OSDdialogback.png</texture>
+			<colordiffuse>OSDBackgroundColor</colordiffuse>
+		</control>		
+		<control type="label">
+			<description>Now Playing</description>
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>Now Playing</label>
+			<visible>![player.paused | player.forwarding2x | player.forwarding4x | player.forwarding8x | player.forwarding16x | player.forwarding32x | player.rewinding2x | player.rewinding4x | player.rewinding8x | player.rewinding16x | player.rewinding32x]</visible>
+		</control>
+		<control type="label">
+			<description>Paused</description>
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>$LOCALIZE[112]</label>
+			<visible>player.paused</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31159][/UPPERCASE]</label>
+			<visible>player.forwarding2x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31160][/UPPERCASE]</label>
+			<visible>player.forwarding4x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31161][/UPPERCASE]</label>
+			<visible>player.forwarding8x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31162][/UPPERCASE]</label>
+			<visible>player.forwarding16x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31163][/UPPERCASE]</label>
+			<visible>player.forwarding32x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31164][/UPPERCASE]</label>
+			<visible>player.rewinding2x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31165][/UPPERCASE]</label>
+			<visible>player.rewinding4x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31166][/UPPERCASE]</label>
+			<visible>player.rewinding8x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31167][/UPPERCASE]</label>
+			<visible>player.rewinding16x</visible>
+		</control>
+		<control type="label">
+			<right>30</right>
+			<top>10</top>
+			<width>180</width>
+			<height>30</height>
+			<font>METF_Heading</font>
+			<textcolor>GlobalHeadingDetails</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<aligny>center</aligny>
+			<align>right</align>
+			<label>[UPPERCASE]$LOCALIZE[31168][/UPPERCASE]</label>
+			<visible>player.rewinding32x</visible>
+		</control>		
+		<!-- TvShow Art -->
+		<control type ="group">
+			<visible>VideoPlayer.Content(episodes)</visible>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture background="true">$INFO[Player.Art(tvshow.clearart)]</texture>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart))</visible>
+			</control>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>IsEmpty(Player.Art(tvshow.clearart))</visible>
+			</control>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture>$INFO[Player.Art(tvshow.poster)]</texture>
+				<bordertexture border="7">thumb_border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(tvshow.clearlogo))</visible>
+			</control>
+		</control>
+		<!-- Movie Art -->
+		<control type ="group">
+			<visible>VideoPlayer.Content(movies)</visible>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture background="true">$INFO[Player.Art(clearart)]</texture>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>!IsEmpty(Player.Art(clearart))</visible>
+			</control>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture background="true">$INFO[Player.Art(clearlogo)]</texture>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>IsEmpty(Player.Art(clearart))</visible>
+			</control>
+			<control type="image">
+				<right>205</right>
+				<top>10</top>
+				<width>200</width>
+				<height>145</height>
+				<texture>$INFO[Player.Art(poster)]</texture>
+				<bordertexture border="7">thumb_border.png</bordertexture>
+				<bordersize>5</bordersize>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				<visible>IsEmpty(Player.Art(clearart)) + IsEmpty(Player.Art(clearlogo))</visible>
+			</control>	
+		</control>
+		<!-- Current position / Total Time -->
+		<control type="label">
+			<right>30</right>
+			<top>83</top>
+			<width>250</width>
+			<height>40</height>
+			<aligny>center</aligny>
+			<align>right</align>
+			<font>METF_OSDTime</font>
+			<textcolor>OSDProgressBar</textcolor>
+			<label>$INFO[VideoPlayer.Time] [COLOR TextNF]/[/COLOR] $INFO[VideoPlayer.Duration]</label>
+			<textcolor>OSDPlayingDuration</textcolor>
+		</control>
+		<!-- Finish Time -->
+		<control type="label">
+			<right>30</right>
+			<top>113</top>
+			<width>250</width>
+			<height>40</height>
+			<aligny>center</aligny>
+			<align>right</align>
+			<font>METF_OSDTime</font>
+			<textcolor>OSDFinishTime</textcolor>
+			<label>$LOCALIZE[31409]:  $INFO[Player.FinishTime]</label>
+		</control>		
+		<!--LISTING HEADER AND TIME INFO-->		
+		<control type="group">
+			<left>393</left>
+			<top>185</top>			
+			<control type="image">
+				<left>-1</left>
+				<top>5</top>
+				<width>1</width>
+				<height>345</height>
+				<texture>VideoInfoLine_Vertical.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>			
+			<control type="label" id="101">
+				<description>Time 1 Label</description>
+				<left>5</left>
+				<top>0</top>
+				<width>284</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<left>296</left>
+				<top>5</top>
+				<width>1</width>
+				<height>40</height>
+				<texture>VideoInfoLine_Vertical.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<control type="label" id="102">
+				<description>Time 2 Label</description>
+				<left>301</left>
+				<top>0</top>
+				<width>284</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<left>592</left>
+				<top>5</top>
+				<width>1</width>
+				<height>40</height>
+				<texture>VideoInfoLine_Vertical.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<control type="label" id="103">
+				<description>Time 3 Label</description>
+				<left>597</left>
+				<top>0</top>
+				<width>284</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+			</control>			
+		</control>
+		<!--SHOW LISTINGS-->		
+		<control type="button" id="100">
+			<visible>false</visible>			
+			<label>0xFFFFFFFF</label><!--un-focused text color-->	
+			<label2>0xFFc89008</label2><!--focused text color-->
+		</control>
+		<control type="button" id="105">
+			<visible>false</visible>			
+			<label>METF_MediaDetailsSmall</label><!--text font-->	
+		</control>
+		<control type="group" id="111">
+			<left>393</left>
+			<top>236</top>
+			<width>887</width>
+			<height>48</height>
+		</control>
+		<control type="group" id="112">
+			<left>393</left>
+			<top>286</top>
+			<width>887</width>
+			<height>48</height>
+		</control>
+		<control type="group" id="113">
+			<left>393</left>
+			<top>336</top>
+			<width>887</width>
+			<height>48</height>
+		</control>
+		<control type="group" id="114">
+			<left>393</left>
+			<top>386</top>
+			<width>887</width>
+			<height>48</height>
+		</control>
+		<control type="group" id="115">
+			<left>393</left>
+			<top>436</top>
+			<width>887</width>
+			<height>48</height>
+		</control>		
+		<control type="group" id="116">
+			<left>393</left>
+			<top>486</top>
+			<width>860</width>
+			<height>48</height>
+		</control>
+        <!--CHANNEL BUTTONS AND LABELS-->		
+		<control type="group">
+			<left>0</left>
+			<top>185</top>		
+			<!--CHANNEL HEADER-->									
+			<control type="label" id="104">
+				<description>Date Label</description>
+				<left>0</left>
+				<top>0</top>
+				<width>393</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>50</top>
+				<width>1280</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!--CHANNEL 1-->					
+			<control type="label" id="301">
+				<description>Channel 1 Name</description>
+				<left>55</left>
+				<top>50</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>            
+            <control type="image" id="321">
+                <description>Channel 1 Icon</description>
+                <right>900</right>
+                <top>50</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>           
+			<control type="label" id="311">
+				<description>Channel 1 Number</description>
+				<right>1235</right>
+				<top>50</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>100</top>
+				<width>393</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!-- CHANNEL 2 -->								
+			<control type="label" id="302">
+				<description>Channel 2 Name</description>
+				<left>55</left>
+				<top>100</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>
+            <control type="image" id="322">
+                <description>Channel 2 Icon</description>
+                <right>900</right>
+                <top>100</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>           
+			<control type="label" id="312">
+				<description>Channel 2 Number</description>
+				<right>1235</right>
+				<top>100</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>150</top>
+				<width>393</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!-- CHANNEL 3 -->			
+			<control type="label" id="303">
+				<description>Channel 3 Name</description>
+				<left>55</left>
+				<top>150</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>
+            <control type="image" id="323">
+                <description>Channel 3 Icon</description>
+                <right>900</right>
+                <top>150</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>			
+			<control type="label" id="313">
+				<description>Channel 3 Number</description>
+				<right>1235</right>
+				<top>150</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>200</top>
+				<width>393</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!-- CHANNEL 4 -->			
+			<control type="label" id="304">
+				<description>Channel 4 Name</description>
+				<left>55</left>
+				<top>200</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>
+            <control type="image" id="324">
+                <description>Channel 4 Icon</description>
+                <right>900</right>
+                <top>200</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>           
+			<control type="label" id="314">
+				<description>Channel 4 Number</description>
+				<right>1235</right>
+				<top>200</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>250</top>
+				<width>393</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!-- CHANNEL 5 -->			
+			<control type="label" id="305">
+				<description>Channel 5 Name</description>
+				<left>55</left>
+				<top>250</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>
+            <control type="image" id="325">
+                <description>Channel 5 Icon</description>
+                <right>900</right>
+                <top>250</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>           
+			<control type="label" id="315">
+				<description>Channel 5 Number</description>
+				<right>1235</right>
+				<top>250</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>300</top>
+				<width>393</width>
+				<height>1</height>
+				<texture>VideoInfoLine.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<!-- CHANNEL 6 -->						
+			<control type="label" id="306">
+				<description>Channel 6 Name</description>
+				<left>55</left>
+				<top>300</top>
+				<width>330</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+			</control>
+            <control type="image" id="326">
+                <description>Channel 6 Icon</description>
+                <right>900</right>
+                <top>300</top>
+                <width>80</width>
+                <height>50</height>
+                <aspectratio align="right" aligny="center">keep</aspectratio>
+                <visible>false</visible>
+            </control>			
+			<control type="label" id="316">
+				<description>Channel 6 Number</description>
+				<right>1235</right>
+				<top>300</top>
+				<width>50</width>
+				<height>50</height>
+				<font>METF_PlotText</font>
+				<shadowcolor>black</shadowcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>GlobalHeading</textcolor>
+			</control>
+        </control>
+		<!--TIME BAR-->		
+		<control type="image" id="120">
+			<left>430</left>
+			<top>228</top>
+			<width>10</width>
+			<height>308</height>
+			<aspectratio>keep</aspectratio>
+		</control>	
+        <!--CHANNEL TITLE/EPISODE-->
+        <control type="fadelabel">
+            <description>Label Show Title</description>
+            <left>240</left>
+    		<top>565</top>
+    		<width>817</width>
+    		<height>40</height>
+            <font>METF_TitleTextMedium</font>
+            <label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),  •  ,]</label>
+            <aligny>center</aligny>
+            <textcolor>white</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <scrollout>false</scrollout>
+            <pauseatend>1800</pauseatend>
+            <scrollspeed>40</scrollspeed>
+        </control>
+        <control type="label" id="500">
+            <left>-20</left>
+            <top>-20</top>
+            <width>0</width>
+            <height>0</height>
+            <visible>false</visible>
+        </control>           
+        <control type="label" id="501">
+            <left>-20</left>
+            <top>-20</top>
+            <width>0</width>
+            <height>0</height>
+            <visible>false</visible>
+        </control>
+		<!-- Plot -->
+		<control type="label" id="502">
+			<left>-10</left>
+			<top>-10</top>
+			<width>0</width>
+			<height>0</height>
+			<visible>false</visible>
+		</control>     
+        <control type="textbox">
+			<left>240</left>
+			<top>600</top>
+			<width>820</width>
+			<height>90</height>
+			<align>justify</align>
+			<font>METF_PlotTextMedium</font>
+			<textcolor>LowerText</textcolor>
+			<info>Control.GetLabel(502)</info>
+			<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+		</control>
+        <include>Global_Weather</include>
+		<include>Global_Time</include>
+		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
+		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
+		<control type="image" id="503">
+            <description>Show Channel Icon</description>
+            <left>30</left>
+			<top>580</top>
+			<width>180</width>
+			<height>104</height>
+			<aspectratio>keep</aspectratio>
+		</control>
+    </controls>
+</window>

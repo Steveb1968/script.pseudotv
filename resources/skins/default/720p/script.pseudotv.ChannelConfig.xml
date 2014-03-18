@@ -53,7 +53,7 @@
                 <label>$LOCALIZE[19029]</label>
             </control>
             <control type="label">
-                <left>685</left>                
+                <left>690</left>                
                 <top>0</top>
                 <width>100</width>
                 <height>35</height>

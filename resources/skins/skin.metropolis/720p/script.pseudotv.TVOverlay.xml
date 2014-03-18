@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<control type="image" id="103">
+			<description>Channel Bug</description>
+			<left>1140</left>
+			<top>635</top>
+			<width>130</width>
+			<height>75</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>60FFFFFF</colordiffuse>
+			<animation effect="fade" start="100" end="50" time="0" condition="True">conditional</animation>
+		</control>	
+		<control type="group" id="102">
+			<visible>!Window.IsActive(VideoOSD)</visible>
+			<include>Animation_CommonFade</include>
+			<include>Animation_FadedByOSDSettings</include>
+			<!-- Background Image -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1280</width>
+				<height>80</height>
+				<texture>osd/OSDdialogback_top.png</texture>
+				<colordiffuse>OSDBackgroundColor</colordiffuse>
+			</control>
+			<include>OSD_Player_Time</include>		
+			<include>OSD_Progress_Bar2</include>
+			<include>OSD_Player_Details</include>
+			<control type="group">
+				<left>3</left>
+				<top>5</top>
+				<include>Animation_FadedByMenu</include>
+				<include>Animation_CommonFade</include>
+				<!-- MPAA Flags -->
+				<control type="group">
+					<left>300</left>
+					<top>650</top>
+					<control type="image">
+						<include>MediaFlagsVarsMPAA</include>
+						<texture>$VAR[MediaFlag_MPAA]</texture>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>-4</top>
+						<width>66</width>
+						<height>58</height>
+						<texture>flags/flag_framesquare.png</texture>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+					</control>
+				</control>
+				<!-- Rating Stars -->
+				<control type="group">
+					<left>362</left>
+					<top>650</top>
+					<control type="image">
+						<left>2</left>
+						<top>4</top>
+						<width>42</width>
+						<height>42</height>
+						<texture>Star.png</texture>
+						<colordiffuse>RatingStarDiffuse</colordiffuse>
+					</control>
+					<control type="label">
+						<left>-2</left>
+						<top>0</top>
+						<width>50</width>
+						<height>50</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label fallback="NA">$INFO[VideoPlayer.Rating]</label>
+						<textcolor>MediaFlagDiffuse</textcolor>
+						<font>METF_StarRating</font>
+					</control>
+					<control type="image">
+						<left>-10</left>
+						<top>-4</top>
+						<width>66</width>
+						<height>58</height>
+						<texture>flags/flag_framesquare.png</texture>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<left>167</left>
+				<top>3</top>
+				<include>Animation_FadedByMenu</include>
+				<include>Animation_CommonFade</include>
+				<!-- Video Resolution -->
+				<control type="group">
+					<left>240</left>
+					<top>640</top>
+					<control type="image">
+						<left>22</left>
+						<top>16</top>
+						<width>80</width>
+						<height>40</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture fallback="flags/default.png">$INFO[VideoPlayer.VideoResolution,flags/VideoResolution/,.png]</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>104</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_frame.png</texture>
+					</control>
+				</control>
+				<!-- Video Aspect-->
+				<control type="group">
+					<left>335</left>
+					<top>640</top>
+					<control type="image">
+						<left>22</left>
+						<top>16</top>
+						<width>80</width>
+						<height>40</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture fallback="flags/VideoAspect/default.png">$INFO[VideoPlayer.VideoAspect,flags/VideoAspect/,.png]</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>104</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_frame.png</texture>
+					</control>
+				</control>
+				<!-- Video Codec -->
+				<control type="group">
+					<left>430</left>
+					<top>640</top>
+					<control type="image">
+						<left>21</left>
+						<top>16</top>
+						<width>80</width>
+						<height>40</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture fallback="flags/default.png">$INFO[VideoPlayer.VideoCodec,flags/VideoCodec/,.png]</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>104</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_frame.png</texture>
+					</control>
+				</control>
+				<!-- Audio Codec -->
+				<control type="group">
+					<left>525</left>
+					<top>640</top>
+					<control type="image">
+						<left>21</left>
+						<top>16</top>
+						<width>80</width>
+						<height>40</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture fallback="flags/defaultsound.png">$INFO[VideoPlayer.AudioCodec,flags/AudioCodec/,.png]</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>104</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_frame.png</texture>
+					</control>
+				</control>
+				<!-- Audio Channels -->
+				<control type="group">
+					<left>620</left>
+					<top>640</top>
+					<control type="image">
+						<left>20</left>
+						<top>16</top>
+						<width>80</width>
+						<height>40</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture fallback="flags/AudioChannels/DefaultChannels.png">$INFO[VideoPlayer.AudioChannels,flags/AudioChannels/,ch.png]</texture>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>8</top>
+						<width>104</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_frame.png</texture>
+					</control>
+				</control>
+				<!-- Subtitles -->
+				<control type="group">
+					<left>728</left>
+					<top>645</top>
+					<control type="image">
+						<left>5</left>
+						<top>8</top>
+						<width>45</width>
+						<height>45</height>
+						<colordiffuse>MediaFlagDiffuse</colordiffuse>
+						<texture>flags/cc.png</texture>
+						<visible>!IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
+					</control>
+					<control type="image">
+						<left>-2</left>
+						<top>3</top>
+						<width>58</width>
+						<height>54</height>
+						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
+						<texture>flags/flag_framesquare.png</texture>
+						<visible>!IsEmpty(VideoPlayer.SubtitleLanguage)</visible>
+					</control>
+				</control>
+			</control>
+			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
+			<include condition="Skin.HasSetting(DebugMode)">Debug</include>
+			<control type="group">
+			<visible>false</visible>
+				<control type="image" id="101">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+					<texture>-</texture>
+				</control>
+				<control type="label" id="502">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+				</control>
+				<control type="label" id="503">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+				</control>
+				<control type="label" id="504">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+				</control>
+				<control type="label" id="505">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+				</control>
+				<control type="image" id="506">
+					<left>-10</left>
+					<top>-10</top>
+					<width>1</width>
+					<height>1</height>
+					<texture>-</texture>
+				</control>
+			</control>		
+		</control>
+	</controls>
+</window>
