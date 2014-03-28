@@ -33,6 +33,7 @@ from ChannelList import ChannelList
 from ChannelListThread import ChannelListThread
 from FileAccess import FileLock, FileAccess
 from Migrate import Migrate
+from PIL import Image
 
 __icon__ = REAL_SETTINGS.getAddonInfo('icon')
 
@@ -131,6 +132,13 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             except:
                 self.Error(REAL_SETTINGS.getLocalizedString(30036))
                 return
+                
+        if FileAccess.exists(CHANNELBUG_LOC) == False:
+                try:
+                    FileAccess.makedirs(CHANNELBUG_LOC)
+                except:
+                    self.Error(REAL_SETTINGS.getLocalizedString(30036))
+                    return
 
         self.background = self.getControl(101)
         self.getControl(102).setVisible(False)
@@ -561,16 +569,19 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelLabel[curlabel].setImage(IMAGES_LOC + 'label_' + str(channel % 10) + '.png')
         self.channelLabel[curlabel].setVisible(True)
 
-        ##ADDED BY SRANSHAFT: USED TO SHOW NEW INFO WINDOW WHEN CHANGING CHANNELS
         if self.inputChannel == -1 and self.infoOnChange == True:
             self.infoOffset = 0
             self.showInfo(5.0)
 
         if self.showChannelBug == True:
             try:
-                self.getControl(103).setImage(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
                 if not os.path.isfile(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
                     self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
+                original = Image.open(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')               
+                converted_img = original.convert('LA')
+                if not os.path.isfile(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+                    converted_img.save(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
+                self.getControl(103).setImage(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
             except:
                 pass
         else:
@@ -578,7 +589,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 self.getControl(103).setImage('')
             except:
                 pass
-        ##
 
         if xbmc.getCondVisibility('Player.ShowInfo'):
             json_query = '{"jsonrpc": "2.0", "method": "Input.Info", "id": 1}'
