@@ -4,13 +4,12 @@
 	<controls>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
-			<left>1140</left>
+			<left>1130</left>
 			<top>635</top>
 			<width>130</width>
 			<height>75</height>
 			<aspectratio>keep</aspectratio>
-			<colordiffuse>60FFFFFF</colordiffuse>
-			<animation effect="fade" start="100" end="50" time="0" condition="True">conditional</animation>
+			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
 		</control>	
 		<control type="group" id="102">
 			<visible>!Window.IsActive(VideoOSD)</visible>

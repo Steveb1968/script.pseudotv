@@ -168,16 +168,13 @@
             </control>
 		</control>
         <control type="image" id="103">
-            <animation effect="fade" start="0" end="100" time="200">WindowOpen</animation>
-            <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 			<description>Channel Bug</description>
 			<left>1130</left>
 			<top>635</top>
 			<width>130</width>
 			<height>75</height>
 			<aspectratio>keep</aspectratio>
-			<colordiffuse>60FFFFFF</colordiffuse>
-			<animation effect="fade" start="100" end="50" time="0" condition="True">conditional</animation>
+			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
 		</control>
         
         <control type="group">
