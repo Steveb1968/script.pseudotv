@@ -1,5 +1,8 @@
 Changelog
 
+2.3.0 (steveb)
+    Automatic conversion of colour channel logo's to grey-scale for channel bug.
+
 2.2.0 (steveb)
     Gotham Support.
     Code Cleanup.
