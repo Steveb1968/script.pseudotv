@@ -1096,7 +1096,7 @@ class ChannelList:
         fileList = []
         seasoneplist = []
         filecount = 0
-        json_query = uni('{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["season","episode","playcount","duration","runtime","tagline","showtitle","album","artist","plot"]}, "id": 1}' % (self.escapeDirJSON(dir_name)))
+        json_query = uni('{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["season","episode","playcount","duration","runtime","showtitle","album","artist","plot"]}, "id": 1}' % (self.escapeDirJSON(dir_name)))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "querying database")
@@ -1189,12 +1189,6 @@ class ChannelList:
 
                                 # This is a movie
                                 if album == None or len(album.group(1)) == 0:
-                                    tagline = re.search('"tagline" *: *"(.*?)"', f)
-
-                                    if tagline != None:
-                                        tmpstr += tagline.group(1)
-
-
                                     tmpstr += "//" + theplot
                                 else:
                                     artist = re.search('"artist" *: *"(.*?)"', f)
