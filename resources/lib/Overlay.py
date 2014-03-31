@@ -535,7 +535,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.getControl(504).setLabel(self.channels[self.currentChannel - 1].getItemEpisodeTitle(position))
         self.getControl(505).setLabel(self.channels[self.currentChannel - 1].getItemDescription(position))
         self.getControl(506).setImage(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
-        if not os.path.isfile(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+        if not FileAccess.exists(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
             self.getControl(506).setImage(IMAGES_LOC + 'Default.png')
             
             
@@ -575,11 +575,11 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.showChannelBug == True:
             try:
-                if not os.path.isfile(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+                if not FileAccess.exists(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
                     self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
                 original = Image.open(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')               
                 converted_img = original.convert('LA')
-                if not os.path.isfile(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
+                if not FileAccess.exists(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
                     converted_img.save(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
                 self.getControl(103).setImage(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
             except:

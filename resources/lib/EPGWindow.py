@@ -24,6 +24,7 @@ import datetime, traceback
 from Playlist import Playlist
 from Globals import *
 from Channel import Channel
+from FileAccess import FileAccess
 
 
 
@@ -232,7 +233,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
 
             try:
                 self.getControl(321 + i).setImage(self.channelLogos + ascii(self.MyOverlayWindow.channels[curchannel - 1].name) + ".png")
-                if not os.path.isfile(self.channelLogos + ascii(self.MyOverlayWindow.channels[curchannel - 1].name) + ".png"):
+                if not FileAccess.exists(self.channelLogos + ascii(self.MyOverlayWindow.channels[curchannel - 1].name) + ".png"):
                     self.getControl(321 + i).setImage(IMAGES_LOC + "Default.png")
             except:
                 pass
@@ -679,7 +680,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         self.getControl(501).setLabel(self.MyOverlayWindow.channels[newchan - 1].getItemEpisodeTitle(plpos))
         self.getControl(502).setLabel(self.MyOverlayWindow.channels[newchan - 1].getItemDescription(plpos))
         self.getControl(503).setImage(self.channelLogos + ascii(self.MyOverlayWindow.channels[newchan - 1].name) + '.png')
-        if not os.path.isfile(self.channelLogos + ascii(self.MyOverlayWindow.channels[newchan - 1].name) + '.png'):
+        if not FileAccess.exists(self.channelLogos + ascii(self.MyOverlayWindow.channels[newchan - 1].name) + '.png'):
             self.getControl(503).setImage(IMAGES_LOC + 'Default.png')
         self.log('setShowInfo return')
 
