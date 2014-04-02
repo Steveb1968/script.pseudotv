@@ -92,6 +92,16 @@ MEDIA_LIMIT['5'] = 500
 MEDIA_LIMIT['6'] = 1000
 MEDIA_LIMIT['7'] = 0
 
+NUM_COLOUR = {}
+NUM_COLOUR['0'] = '0xFFFF0000'        
+NUM_COLOUR['1'] = '0xFF00FF00'           
+NUM_COLOUR['2'] = '0xFF0000FF'            
+NUM_COLOUR['3'] = '0xFFFFFF00'
+NUM_COLOUR['4'] = '0xFF00FFFF'
+NUM_COLOUR['5'] = '0xFFFF00FF'
+NUM_COLOUR['6'] = '0xFF808080'
+NUM_COLOUR['7'] = '0xFFFFFFFF'
+
 GlobalFileLock = FileLock()
 ADDON_SETTINGS = Settings.Settings()
 

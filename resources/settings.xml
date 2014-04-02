@@ -26,6 +26,7 @@
     <category label="30022">
         <setting id="ChannelDelay" type="enum" label="30023" default="0" values="None|0.25|0.5|0.75|1.0|1.25|1.5|1.75|2.0"/>
         <setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="2"/>
+        <setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Magenta|Gray|White" default="1"/>
     </category>
     
     <category label="30026">

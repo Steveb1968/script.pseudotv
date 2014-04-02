@@ -98,7 +98,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelDelay = 0
 
         for i in range(3):
-            self.channelLabel.append(xbmcgui.ControlImage(50 + (40 * i), 50, 50, 50, IMAGES_LOC + 'solid.png', colorDiffuse='0xFF00ff00'))
+            self.channelLabel.append(xbmcgui.ControlImage(50 + (40 * i), 50, 50, 50, IMAGES_LOC + 'solid.png', colorDiffuse=str(NUM_COLOUR[REAL_SETTINGS.getSetting('NumberColour')])))
             self.addControl(self.channelLabel[i])
             self.channelLabel[i].setVisible(False)
 
