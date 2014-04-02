@@ -848,7 +848,7 @@ class ChannelList:
 
 
     def writeXSPFooter(self, fle, limit, order):
-        limit = int(REAL_SETTINGS.getSetting("MediaLimit"))
+        limit = int(MEDIA_LIMIT[REAL_SETTINGS.getSetting('MediaLimit')])
         if limit > 0:
             fle.write('    <limit>' + str(limit) + '</limit>\n')
 

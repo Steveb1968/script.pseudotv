@@ -20,10 +20,7 @@ import os
 import xbmcaddon, xbmc, xbmcgui, xbmcvfs
 import Settings
 
-
 from FileAccess import FileLock
-
-
 
 def log(msg, level = xbmc.LOGDEBUG):
     try:
@@ -68,7 +65,7 @@ MODE_REALTIME = 16
 MODE_SERIAL = MODE_RESUME | MODE_ALWAYSPAUSE | MODE_ORDERAIRDATE
 MODE_STARTMODES = MODE_RANDOM | MODE_REALTIME | MODE_RESUME
 
-SETTINGS_LOC = 'special://profile/addon_data/' + ADDON_ID
+SETTINGS_LOC = REAL_SETTINGS.getAddonInfo('profile')
 CHANNEL_SHARING = False
 LOCK_LOC = xbmc.translatePath(os.path.join(SETTINGS_LOC, 'cache' + '/'))
 
@@ -83,8 +80,17 @@ GEN_CHAN_LOC = os.path.join(CHANNELS_LOC, 'generated' + '/')
 MADE_CHAN_LOC = os.path.join(CHANNELS_LOC, 'stored' + '/')
 CHANNELBUG_LOC = xbmc.translatePath(os.path.join(CHANNELS_LOC, 'ChannelBug' + '/'))
 
-
 SHORT_CLIP_ENUM = [15,30,60,90,120,180,240,300,360]
+
+MEDIA_LIMIT = {}
+MEDIA_LIMIT['0'] = 10            
+MEDIA_LIMIT['1'] = 25           
+MEDIA_LIMIT['2'] = 50            
+MEDIA_LIMIT['3'] = 100
+MEDIA_LIMIT['4'] = 250
+MEDIA_LIMIT['5'] = 500
+MEDIA_LIMIT['6'] = 1000
+MEDIA_LIMIT['7'] = 0
 
 GlobalFileLock = FileLock()
 ADDON_SETTINGS = Settings.Settings()

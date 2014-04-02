@@ -203,5 +203,5 @@ msgid "Now Playing"
 msgstr ""
 
 msgctxt "#30044"
-msgid "Playlist Media Limit (0 = Unlimited)"
+msgid "Playlist Media Limit"
 msgstr ""
