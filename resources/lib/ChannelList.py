@@ -787,54 +787,42 @@ class ChannelList:
     def createDirectoryPlaylist(self, setting1):
         self.log("createDirectoryPlaylist " + setting1)
         fileList = []
-        filecount = 0
-        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "files"}, "id": 1}' % ( self.escapeDirJSON(setting1),)
+        filecount = 0        
+        
+        def listdir_fullpath(dir):
+            return [os.path.join(dir, f) for f in os.listdir(dir)]
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "getting file list")
 
-        json_folder_detail = self.sendJSON(json_query)
-        file_detail = re.compile( "{(.*?)}", re.DOTALL ).findall(json_folder_detail)
-        thedir = ''
-
-        if setting1[-1:1] == '/' or setting1[-1:1] == '\\':
-            thedir = os.path.split(setting1[:-1])[1]
-        else:
-            thedir = os.path.split(setting1)[1]
-
+        file_detail = listdir_fullpath(setting1)
+        
         for f in file_detail:
             if self.threadPause() == False:
                 del fileList[:]
                 break
-
-            match = re.search('"file" *: *"(.*?)",', f)
-
-            if match:
-                if(match.group(1).endswith("/") or match.group(1).endswith("\\")):
-                    fileList.extend(self.createDirectoryPlaylist(match.group(1).replace("\\\\", "\\")))
-                else:
-                    duration = self.videoParser.getVideoLength(match.group(1).replace("\\\\", "\\"))
-
-                    if duration > 0:
-                        filecount += 1
-
-                        if self.background == False:
-                            if filecount == 1:
-                                self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entry")
-                            else:
-                                self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entries")
-
-                        afile = uni(os.path.split(match.group(1).replace("\\\\", "\\"))[1])
-                        afile, ext = os.path.splitext(afile)
-                        tmpstr = uni(str(duration) + ',')
-                        tmpstr += uni(afile) + uni("//") + uni(thedir) + uni("//")
-                        tmpstr = uni(tmpstr[:2036])
-                        tmpstr = uni(tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\""))
-                        tmpstr += uni("\n") + uni(match.group(1).replace("\\\\", "\\"))
-                        fileList.append(tmpstr)
-
+            
+            duration = self.videoParser.getVideoLength(f)
+            
+            if duration > 0:
+                filecount += 1
+                
+                if self.background == False:
+                    if filecount == 1:
+                        self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entry")
+                    else:
+                        self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entries")
+                
+                afile = os.path.basename(f)
+                afile, ext = os.path.splitext(afile)
+                tmpstr = uni(str(duration) + ',')
+                tmpstr += uni(afile) + uni("\n")
+                tmpstr += setting1 + os.path.basename(f)
+                tmpstr = uni(tmpstr[:2036])
+                fileList.append(tmpstr)
+                
         if filecount == 0:
-            self.log(json_folder_detail)
+            self.log('Unable to access Videos files in ' + setting1)
 
         return fileList
 
