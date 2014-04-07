@@ -813,11 +813,11 @@ class ChannelList:
                     else:
                         self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entries")
                 
-                afile = os.path.basename(f)
+                afile = uni(os.path.basename(f))
                 afile, ext = os.path.splitext(afile)
                 tmpstr = uni(str(duration) + ',')
                 tmpstr += uni(afile) + uni("\n")
-                tmpstr += setting1 + os.path.basename(f)
+                tmpstr += setting1 + uni(os.path.basename(f))
                 tmpstr = uni(tmpstr[:2036])
                 fileList.append(tmpstr)
                 
