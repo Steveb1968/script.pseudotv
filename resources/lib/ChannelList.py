@@ -795,7 +795,7 @@ class ChannelList:
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "getting file list")
 
-        file_detail = listdir_fullpath(setting1)
+        file_detail = listdir_fullpath(uni(setting1))
         
         for f in file_detail:
             if self.threadPause() == False:
@@ -817,7 +817,7 @@ class ChannelList:
                 afile, ext = os.path.splitext(afile)
                 tmpstr = uni(str(duration) + ',')
                 tmpstr += uni(afile) + uni("\n")
-                tmpstr += setting1 + uni(os.path.basename(f))
+                tmpstr += uni(setting1) + uni(os.path.basename(f))
                 tmpstr = uni(tmpstr[:2036])
                 fileList.append(tmpstr)
                 
