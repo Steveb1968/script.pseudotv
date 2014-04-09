@@ -476,8 +476,7 @@
 			<align>justify</align>
 			<info>Control.GetLabel(502)</info>
 			<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
-		</control>
-		
+		</control>		
 		<control type="image" id="503">
             <description>Show Channel Icon</description>
             <posx>85</posx>
@@ -497,8 +496,11 @@
             <texture>NavFlagEpg.png</texture>
 			<aspectratio align="center" aligny="bottom">keep</aspectratio>
             <colordiffuse>lightgrey</colordiffuse>
+        </control>                
+        <control type="group">
+            <visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos)</visible>
+            <include>CommonNowPlaying</include>
         </control>
-        
         <control type="group">
 			<visible>false</visible>
             <control type="label" id="500">
@@ -523,7 +525,5 @@
                 <height>0</height>
             </control>
         </control>
-        
-        <include>CommonNowPlaying</include>
     </controls>
 </window>
