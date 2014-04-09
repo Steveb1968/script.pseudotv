@@ -224,40 +224,38 @@
 				<control type="image" id="101">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
-					<texture>-</texture>
+					<width>0</width>
+					<height>0</height>
 				</control>
 				<control type="label" id="502">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
+					<width>0</width>
+					<height>0</height>
 				</control>
 				<control type="label" id="503">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
+					<width>0</width>
+					<height>0</height>
 				</control>
 				<control type="label" id="504">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
+					<width>0</width>
+					<height>0</height>
 				</control>
 				<control type="label" id="505">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
+					<width>0</width>
+					<height>0</height>
 				</control>
 				<control type="image" id="506">
 					<left>-10</left>
 					<top>-10</top>
-					<width>1</width>
-					<height>1</height>
-					<texture>-</texture>
+					<width>0</width>
+					<height>0</height>
 				</control>
 			</control>		
 		</control>
