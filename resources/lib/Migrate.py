@@ -43,7 +43,7 @@ class Migrate:
 
         if curver == Globals.VERSION:
             return True
-
+        
         Globals.ADDON_SETTINGS.setSetting("Version", Globals.VERSION)
         self.log("version is " + curver)
 
@@ -51,96 +51,7 @@ class Migrate:
             if self.initializeChannels():
                 return True
 
-        if self.compareVersions(curver, "1.0.2") < 0:
-            self.log("Migrating to 1.0.2")
-
-            # Migrate to 1.0.2
-            for i in range(200):
-                if os.path.exists(xbmc.translatePath('special://profile/playlists/video') + '/Channel_' + str(i + 1) + '.xsp'):
-                    Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_type", "0")
-                    Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_1", "special://profile/playlists/video/Channel_" + str(i + 1) + ".xsp")
-                elif os.path.exists(xbmc.translatePath('special://profile/playlists/mixed') + '/Channel_' + str(i + 1) + '.xsp'):
-                    Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_type", "0")
-                    Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_1", "special://profile/playlists/mixed/Channel_" + str(i + 1) + ".xsp")
-
-            currentpreset = 0
-
-            for i in range(Globals.TOTAL_FILL_CHANNELS):
-                chantype = 9999
-
-                try:
-                    chantype = int(Globals.ADDON_SETTINGS.getSetting("Channel_" + str(i + 1) + "_type"))
-                except:
-                    pass
-
-                if chantype == 9999:
-                    self.addPreset(i + 1, currentpreset)
-                    currentpreset += 1
-
-        # Migrate serial mode to rules
-        if self.compareVersions(curver, "2.0.0") < 0:
-            self.log("Migrating to 2.0.0")
-
-            for i in range(999):
-                try:
-                    if Globals.ADDON_SETTINGS.getSetting("Channel_" + str(i + 1) + "_type") == '6':
-                        if Globals.ADDON_SETTINGS.getSetting("Channel_" + str(i + 1) + "_2") == "6":
-                            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_rulecount", "2")
-                            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_rule_1_id", "8")
-                            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_rule_2_id", "9")
-                            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(i + 1) + "_2", "4")
-                except:
-                    pass
-
         return True
-
-
-    def addPreset(self, channel, presetnum):
-        networks = ['ABC', 'AMC', 'Bravo', 'CBS', 'Comedy Central', 'Food Network', 'FOX', 'FX', 'HBO', 'NBC', 'SciFi', 'The WB']
-        genres = ['Animation', 'Comedy', 'Documentary', 'Drama', 'Fantasy']
-        studio = ['Warner Bros.', 'Fox 2000 Pictures', 'Paramount Pictures', 'Lionsgate', 'Universal Pictures']
-
-        if presetnum < len(networks):
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_type", "1")
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_1", networks[presetnum])
-        elif presetnum - len(networks) < len(genres):
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_type", "5")
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_1", genres[presetnum - len(networks)])
-        elif presetnum - len(networks) - len(genres) < len(studio):
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_type", "2")
-            Globals.ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_1", studio[presetnum - len(networks) - len(genres)])
-
-
-    def compareVersions(self, version1, version2):
-        retval = 0
-        ver1 = version1.split('.')
-        ver2 = version2.split('.')
-
-        for i in range(min(len(ver1), len(ver2))):
-            try:
-                if int(ver1[i]) < int(ver2[i]):
-                    retval = -1
-                    break
-
-                if int(ver1[i]) > int(ver2[i]):
-                    retval = 1
-                    break
-            except:
-                try:
-                    v = int(ver1[i])
-                    retval = 1
-                except:
-                    retval = -1
-
-                break
-
-        if retval == 0:
-            if len(ver1) > len(ver2):
-                retval = 1
-            elif len(ver2) > len(ver1):
-                retval = -1
-
-        return retval
 
 
     def initializeChannels(self):
