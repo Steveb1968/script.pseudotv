@@ -23,7 +23,7 @@
                 <posy>75</posy>
                 <control type="image">
                     <posx>327</posx>
-                    <posy>593</posy>
+                    <posy>583</posy>
                     <width>920</width>
                     <height>603</height>
                     <texture border="40">panel_reflect.png</texture>
@@ -37,7 +37,7 @@
                 </control>
                 <control type="image">
                     <posx>33</posx>
-                    <posy>593</posy>
+                    <posy>583</posy>
                     <width>280</width>
                     <height>603</height>
                     <texture border="40">panel_reflect.png</texture>
