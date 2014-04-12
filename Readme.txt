@@ -1,5 +1,6 @@
 PseudoTV for XBMC
 
+GOTHAM ONLY
 
 -----------
 What is it?
