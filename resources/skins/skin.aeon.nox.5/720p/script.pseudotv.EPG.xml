@@ -485,7 +485,7 @@
 		<control type="image" id="120">
 			<posx>400</posx>
 			<posy>141</posy>
-			<width>20</width>
+			<width>12</width>
 			<height>366</height>
 		</control>		
 		<!--SHOW LISTINGS-->

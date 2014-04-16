@@ -21,8 +21,7 @@
         <control type="group">
             <animation effect="slide" start="0,-67" end="0,0" time="200">WindowOpen</animation>
             <animation effect="slide" start="0,-67" end="0,0" time="200">VisibleChange</animation>
-            <visible>!Window.IsActive(videoosd)</visible>
-            <visible>control.IsVisible(102)</visible>
+            <visible>!Window.IsActive(videoosd) + control.IsVisible(102)</visible>
             <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
@@ -111,8 +110,7 @@
             <posy>673</posy>
             <animation effect="slide" start="0,60" end="0,0" time="200">WindowOpen</animation>
             <animation effect="slide" start="0,60" end="0,0" time="200">VisibleChange</animation>
-            <visible>!Window.IsActive(videoosd)</visible>
-            <visible>control.IsVisible(102)</visible>
+            <visible>!Window.IsActive(videoosd) + control.IsVisible(102)</visible>
             <control type="image">
                 <posx>0</posx>
                 <posy>0</posy>
@@ -124,7 +122,7 @@
                 <posx>0</posx>
                 <posy>22</posy>
                 <width>1280</width>
-                <height>23</height>
+                <height>24</height>
                 <texturebg border="2">osd/texturebg.png</texturebg>
                 <lefttexture>-</lefttexture>
                 <midtexture border="2">osd/midtexture_cache.png</midtexture>
@@ -136,7 +134,7 @@
                 <posx>0</posx>
                 <posy>22</posy>
                 <width>1280</width>
-                <height>23</height>
+                <height>24</height>
                 <texturebg border="1">osd/texturebg_cache.png</texturebg>
                 <lefttexture>-</lefttexture>
                 <midtexture border="2">osd/midtexture.png</midtexture>
@@ -237,42 +235,44 @@
             <height>169</height>
             <aspectratio aligny="bottom" align="right">keep</aspectratio>
             <texture background="true">$VAR[PlayerArtworkVar]</texture>
-            <visible>!Window.IsActive(videoosd)</visible>
-            <visible>control.IsVisible(102)</visible>
+            <visible>!Window.IsActive(videoosd) + control.IsVisible(102)</visible>
             <animation effect="slide" start="0,200" end="0,0" time="200">WindowOpen</animation>
             <animation effect="slide" start="0,200" end="0,0" time="200">VisibleChange</animation>
         </control>
                         
         <control type="group" id="102">
-            <visible>!Window.IsActive(VideoOSD)</visible>
             <control type="group">
                 <visible>false</visible>
                 <control type="image" id="101">
+                    <description>Background Channel Change</description>
                     <left>-10</left>
                     <top>-10</top>
                     <width>0</width>
                     <height>0</height>
                 </control>
                 <control type="label"  id="502">
-                    <description>Heading label</description>
+                    <description>Label Now Playing</description>
                     <left>-10</left>
                     <top>-10</top>
                     <width>0</width>
                     <height>0</height>
                 </control>
                 <control type="label" id="503">
+                    <description>Label Show Title</description>
                     <left>-10</left>
                     <top>-10</top>
                     <width>0</width>
                     <height>0</height>
                 </control>
                 <control type="label" id="504">
+                    <description>Label Episode Title</description>
                     <left>-10</left>
                     <top>-10</top>
                     <width>0</width>
                     <height>0</height>
                 </control>
                 <control type="label" id="505">
+                    <description>Label Show Description</description>
                     <left>-10</left>
                     <top>-10</top>
                     <width>0</width>
