@@ -1,0 +1,219 @@
+# XBMC Media Center language file
+# Addon Name: PseudoTV
+# Addon id: script.pseudotv
+# Addon version: 2.3.0
+# Addon Provider: Jason Anderson|steveb
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2014-03-08 04:23+0000\n"
+"PO-Revision-Date: 2014-04-29 19:01-0300\n"
+"Last-Translator: Rafael Vieira <contato@rafaelvieiras.com>\n"
+"Language-Team: Rafael\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgctxt "Addon Summary"
+msgid "Channel surfing for your video library"
+msgstr "Crie Canais de TV fictícios sua biblioteca de vídeo"
+
+msgctxt "Addon Description"
+msgid ""
+"PseudoTV acts similar to normal broadcast or cable TV, complete with "
+"multiple preset and user-defined channels and an EPG."
+msgstr ""
+"PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-"
+"ajuste múltiplo e canais definidos pelo usuário."
+
+msgctxt "#30000"
+msgid "General"
+msgstr "Geral"
+
+msgctxt "#30001"
+msgid "Auto-off Timer (in minutes)"
+msgstr "Auto-off Timer (em minutos)"
+
+msgctxt "#30002"
+msgid "Force channel reset on next start"
+msgstr "Forçar Redefinição de canais na próxima inicialização do plugin"
+
+msgctxt "#30003"
+msgid "Show info when changing channels"
+msgstr "Mostrar informações ao mudar de canal"
+
+msgctxt "#30004"
+msgid "Time between channel resets"
+msgstr "Tempo entre o reset de canais"
+
+msgctxt "#30005"
+msgid "Coming Up Next"
+msgstr "Em Seguida"
+
+msgctxt "#30006"
+msgid "Always show channel logo"
+msgstr "Mostrar sempre o logotipo do canal"
+
+msgctxt "#30007"
+msgid "Configure Channels"
+msgstr "Configurar Canais"
+
+msgctxt "#30008"
+msgid "Open Channel Configuration"
+msgstr "Abrir Configuração de Canal"
+
+msgctxt "#30009"
+msgid "Other Settings"
+msgstr "Outras Configurações"
+
+msgctxt "#30010"
+msgid "Channel Logo Folder"
+msgstr "Pasta com Logo de Canais"
+
+msgctxt "#30011"
+msgid "Default channel times at startup"
+msgstr "Canal padrão na inicialização"
+
+msgctxt "#30012"
+msgid "Background Updating"
+msgstr "Atualização em Segundo Plano"
+
+msgctxt "#30013"
+msgid "Shared Channels Folder"
+msgstr "Pasta de Canais Compartilhados"
+
+msgctxt "#30014"
+msgid "Clock Display"
+msgstr "Visualizar Relógio"
+
+msgctxt "#30015"
+msgid "Enable Channel Sharing"
+msgstr "Ativar o compartilhamento de canais"
+
+msgctxt "#30016"
+msgid "Show Coming Up Next box"
+msgstr "Mostrar Caixa de Em Seguida"
+
+msgctxt "#30017"
+msgid "Hide very short videos"
+msgstr "Ocultar vídeos muito curtos"
+
+msgctxt "#30018"
+msgid "Duration of \"short\" videos"
+msgstr "Duração dos vídeos curtos"
+
+msgctxt "#30019"
+msgid "Would you like to save your changes?"
+msgstr "Você gostaria de salvar as alterações?"
+
+msgctxt "#30020"
+msgid "Visuals"
+msgstr "Visuals"
+
+msgctxt "#30021"
+msgid "Show Season/Episode"
+msgstr "Mostrar Temporada / Episódio"
+
+msgctxt "#30022"
+msgid "Tweaks"
+msgstr "Tweaks"
+
+msgctxt "#30023"
+msgid "Channel Change Delay (in seconds)"
+msgstr "Delay na Troca de Canal (em segundos)"
+
+msgctxt "#30024"
+msgid "Background Loading..."
+msgstr "Carregando em Segundo Plano..."
+
+msgctxt "#30025"
+msgid "Added"
+msgstr "Adicionado"
+
+msgctxt "#30026"
+msgid "Auto Start"
+msgstr "Auto Iniciar"
+
+msgctxt "#30027"
+msgid "Activate Service"
+msgstr "Ativar o serviço"
+
+msgctxt "#30028"
+msgid "Delay Service (in seconds)"
+msgstr "Delay no Serviço (em segundos)"
+
+msgctxt "#30029"
+msgid "Show Notification"
+msgstr "Mostrar Notificação"
+
+msgctxt "#30030"
+msgid "Service Starting..."
+msgstr "Iniciando Serviço..."
+
+msgctxt "#30031"
+msgid "Are you sure you want to exit PseudoTV?"
+msgstr "Tem certeza de que deseja sair do PseudoTV?"
+
+msgctxt "#30032"
+msgid "Do you want to save all changes?"
+msgstr "Você quer salvar todas as alterações?"
+
+msgctxt "#30033"
+msgid "Are you sure you want to clear this channel?"
+msgstr "Tem certeza de que quer apagar este canal?"
+
+msgctxt "#30034"
+msgid "Unable to open the cache file"
+msgstr "Não é possível abrir o arquivo de cache"
+
+msgctxt "#30035"
+msgid "Unable to create the cache directory"
+msgstr "Não é possível criar o diretório de cache"
+
+msgctxt "#30036"
+msgid "Unable to create the storage directory"
+msgstr "Não é possível criar o diretório de armazenamento"
+
+msgctxt "#30037"
+msgid "Unable to find any channels. Please configure the addon."
+msgstr "Não foi possível encontrar nenhum canal. Por favor configure o addon."
+
+msgctxt "#30038"
+msgid ""
+"Unable to populate channels. Please verify that you have scraped media in "
+"your library and that you have properly configured channels."
+msgstr ""
+"Incapaz de preencher os canais. Por favor, verifique se você tem mídias em "
+"sua biblioteca e se você tem canais configurados corretamente."
+
+msgctxt "#30039"
+msgid "Exceeded 3 invalidated channels. Exiting."
+msgstr "Excedido 3 canais invalidados. Sair."
+
+msgctxt "#30040"
+msgid "No channels available. Exiting."
+msgstr "Não há canais disponíveis. Sair."
+
+msgctxt "#30041"
+msgid "Coming Up"
+msgstr "Coming Up"
+
+msgctxt "#30042"
+msgid "Already Seen"
+msgstr "Já Visto"
+
+msgctxt "#30043"
+msgid "Now Playing"
+msgstr "Rodando Agora"
+
+msgctxt "#30044"
+msgid "Playlist Media Limit"
+msgstr "Limite de mídias na Playlist"
+
+msgctxt "#30045"
+msgid "Channel Number Color"
+msgstr "Cor do Número do Canal"
