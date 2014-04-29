@@ -15,6 +15,8 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">Channel surfing for your video library</summary>
+		<summary lang="pt_BR">Crie Canais de TV fictícios sua biblioteca de vídeo</summary>
 		<description lang="en">PseudoTV acts similar to normal broadcast or cable TV, complete with multiple preset and user-defined channels and an EPG.</description>
+		<description lang="pt_BR">PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-ajuste múltiplo e canais definidos pelo usuário.</description>
 	</extension>
 </addon>
