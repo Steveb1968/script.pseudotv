@@ -544,12 +544,12 @@
             <posy>506</posy>
             <control type="fadelabel">
                 <posx>0</posx>
-                <posy>10</posy>
+                <posy>15</posy>
                 <width>840</width>
                 <height>20</height>
                 <textoffsetx>10</textoffsetx>
                 <align>left</align>
-                <label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),  -  ,]</label>
+                <label>[COLOR labelheader]$INFO[Control.GetLabel(500)][/COLOR]$INFO[Control.GetLabel(501),  -  ,]</label>
                 <textcolor>grey2</textcolor>
                 <font>font15</font>
                 <scrollout>false</scrollout>

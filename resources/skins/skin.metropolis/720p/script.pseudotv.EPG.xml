@@ -290,7 +290,6 @@
 			<aligny>center</aligny>
 			<align>right</align>
 			<font>METF_OSDTime</font>
-			<textcolor>OSDProgressBar</textcolor>
 			<label>$INFO[VideoPlayer.Time] [COLOR TextNF]/[/COLOR] $INFO[VideoPlayer.Duration]</label>
 			<textcolor>OSDPlayingDuration</textcolor>
 		</control>

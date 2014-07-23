@@ -554,7 +554,6 @@
                 <top>80</top>
                 <width>35</width>
                 <height>35</height>
-                <height>20</height>
                 <texturefocus>ArrowUpFo.png</texturefocus>
                 <texturenofocus>ArrowUpNF.png</texturenofocus>
                 <onup>111</onup>

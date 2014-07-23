@@ -77,7 +77,6 @@ and right.
 --------
 Settings
 --------
-
 General Settings -
 
     Configure Channels: This is the channel configuration tool.  From here you
@@ -138,8 +137,8 @@ commercials.
 -------
 Credits
 -------
-Developer: Jason102
-Code Additions: Sranshaft, TheOddLinguist
-Skins: Sranshaft, Zepfan, Steveb
-Preset Images: Jtucker1972
-Languages: CyberXaz, Machine-Sanctum
+Developer: Jason102.
+Code Additions: Sranshaft, TheOddLinguist, steveb.
+Skins: Sranshaft, Zepfan, Steveb.
+Preset Images: Jtucker1972.
+Languages: CyberXaz, Machine-Sanctum.
