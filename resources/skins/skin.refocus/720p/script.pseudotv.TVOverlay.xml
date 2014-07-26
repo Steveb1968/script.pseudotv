@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <allowoverlay>no</allowoverlay>
+    <coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+    </coordinates>    
+    <controls>
+		<control type="image" id="103">
+			<description>Channel Bug</description>
+			<left>1130</left>
+			<top>635</top>
+			<width>130</width>
+			<height>75</height>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
+            <visible>Player.HasVideo</visible>
+		</control>
+		<control type="group" id="102">
+            <include>clock</include>
+            <control type="group">
+				<include>osd_Video</include>
+				<include>transition_OSD</include>
+			</control>
+            <control type="group">
+				<include>osd_Seekbar</include>
+				<include>transition_OSD</include>
+			</control>
+            <control type="group">
+                <visible>false</visible>
+                <control type="image" id="101">
+                    <description>Background Channel Change</description>
+                </control>
+                <control type="label" id="502">
+                    <description>Now watching</description>
+                </control>
+                <control type="label" id="503">
+                    <description>Show Name Label</description>
+                </control>
+                <control type="label" id="504">
+                    <description>Show Title Label</description>
+                </control>
+                <control type="label" id="505">
+                    <description>Label Show Description</description>
+                </control>
+                <control type="image" id="506">
+                    <description>Channel Logo</description>
+                </control>
+            </control>
+		</control>
+	</controls>
+</window>

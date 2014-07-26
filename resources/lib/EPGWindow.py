@@ -39,7 +39,6 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         self.rowCount = 6
         self.channelButtons = [None] * self.rowCount
         self.buttonCache = []
-        self.buttonCount = 0
         self.actionSemaphore = threading.BoundedSemaphore()
         self.lastActionTime = time.time()
         self.channelLogos = ''
@@ -100,7 +99,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
 
         for i in range(3):
             if self.clockMode == "0":
-                self.getControl(101 + i).setLabel(now.strftime("%I:%M%p").lower())
+                self.getControl(101 + i).setLabel(now.strftime("%I:%M %p"))
             else:
                 self.getControl(101 + i).setLabel(now.strftime("%H:%M"))
 
