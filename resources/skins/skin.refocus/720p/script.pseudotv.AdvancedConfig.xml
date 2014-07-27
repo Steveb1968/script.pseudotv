@@ -57,7 +57,7 @@
                 </control>
                 <control type="button" id="121">
                     <description>Rule Entry 2</description>
-                    <posy>40</posy>
+                    <top>40</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
@@ -75,7 +75,7 @@
                 </control>
                 <control type="button" id="122">
                     <description>Rule Entry 3</description>
-                    <posy>80</posy>
+                    <top>80</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
@@ -93,7 +93,7 @@
                 </control>
                 <control type="button" id="123">
                     <description>Rule Entry 4</description>
-                    <posy>120</posy>
+                    <top>120</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
@@ -111,7 +111,7 @@
                 </control>
                 <control type="button" id="124">
                     <description>Rule Entry 5</description>
-                    <posy>160</posy>
+                    <top>160</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
@@ -129,7 +129,7 @@
                 </control>
                 <control type="button" id="125">
                     <description>Rule Entry 6</description>
-                    <posy>200</posy>
+                    <top>200</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
@@ -147,7 +147,7 @@
                 </control>
                 <control type="button" id="126">
                     <description>Rule Entry 7</description>
-                    <posy>240</posy>
+                    <top>240</top>
 					<width>792</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>

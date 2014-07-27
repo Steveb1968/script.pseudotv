@@ -35,7 +35,7 @@
                     <top>400</top>
                     <width>792</width>
                     <include>dialog_Separator</include>
-                    <visible>Control.IsVisible(102)</visible>
+                    <visible>Control.IsVisible(106)</visible>
                 </control>
 			
                 <control type="group">
