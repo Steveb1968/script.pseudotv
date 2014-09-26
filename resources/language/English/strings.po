@@ -207,5 +207,5 @@ msgid "Playlist Media Limit"
 msgstr ""
 
 msgctxt "#30045"
-msgid "Channel Number Color"
+msgid "OSD Channel Number Color"
 msgstr ""

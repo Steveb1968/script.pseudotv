@@ -95,16 +95,28 @@ NUM_COLOUR['1'] = '0xFF00FF00'
 NUM_COLOUR['2'] = '0xFF0000FF'            
 NUM_COLOUR['3'] = '0xFFFFFF00'
 NUM_COLOUR['4'] = '0xFF00FFFF'
-NUM_COLOUR['5'] = '0xFFFF00FF'
-NUM_COLOUR['6'] = '0xFF808080'
-NUM_COLOUR['7'] = '0xFFFFFFFF'
+NUM_COLOUR['5'] = '0xFFFFA500'
+NUM_COLOUR['6'] = '0xFFFF00FF'
+NUM_COLOUR['7'] = '0xFF808080'
+NUM_COLOUR['8'] = '0xFFFFFFFF'
 
 GlobalFileLock = FileLock()
 ADDON_SETTINGS = Settings.Settings()
 
 TIME_BAR = 'pstvTimeBar.png'
-BUTTON_FOCUS = 'pstvButtonFocus.png'
 BUTTON_NO_FOCUS = 'pstvButtonNoFocus.png'
+
+if xbmc.getSkinDir() == "skin.aeon.nox.5":
+    if xbmc.getInfoLabel('Skin.CurrentTheme') == "green":
+        BUTTON_FOCUS = 'pstvButtonFocusGreen.png'
+    elif xbmc.getInfoLabel('Skin.CurrentTheme') == "red":          
+        BUTTON_FOCUS = 'pstvButtonFocusRed.png'
+    elif xbmc.getInfoLabel('Skin.CurrentTheme') == "orange":
+        BUTTON_FOCUS = 'pstvButtonFocusOrange.png'
+    else:        
+        BUTTON_FOCUS = 'pstvButtonFocus.png'
+else:
+    BUTTON_FOCUS = 'pstvButtonFocus.png'
 
 RULES_ACTION_START = 1
 RULES_ACTION_JSON = 2

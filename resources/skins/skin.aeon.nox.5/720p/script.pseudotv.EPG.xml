@@ -144,8 +144,8 @@
                     <align>left</align>
                     <aligny>top</aligny>
                     <label>$INFO[Player.Title]</label>
-                    <shadowcolor>AA000000</shadowcolor>
-                    <textcolor>grey</textcolor>
+                    <shadowcolor>shadow</shadowcolor>
+                    <textcolor>grey2</textcolor>
                     <font>font13_title</font>
                     <scroll>true</scroll>
                 </control>
@@ -479,20 +479,28 @@
                 <aligny>center</aligny>
                 <textcolor>labelheader</textcolor>
             </control>
+			<control type="image">
+                <description>separator image</description>
+                <posx>0</posx>
+                <top>363</top>
+                <width>855</width>
+                <height>48</height>
+                <texture>separator2.png</texture>                
+            </control>
         </control>
  
 		<!--TIME BAR-->		
 		<control type="image" id="120">
 			<posx>400</posx>
-			<posy>141</posy>
-			<width>12</width>
-			<height>366</height>
+			<posy>144</posy>
+			<width>15</width>
+			<height>362</height>
 		</control>		
 		<!--SHOW LISTINGS-->
         <control type="button" id="100">
 			<visible>false</visible>			
 			<label>0xFF999999</label><!--un-focused text color-->	
-			<label2>0xFFe5e5e5</label2><!--focused text color-->
+			<label2>0xFF999999</label2><!--focused text color-->
 		</control>
 		<control type="button" id="105">
 			<visible>false</visible>			
@@ -571,6 +579,7 @@
                 <height>80</height>
                 <info>Control.GetLabel(502)</info>
                 <font>font15_textbox</font>
+				<textcolor>grey2</textcolor>
                 <autoscroll time="3000" delay="4000" repeat="5000">True</autoscroll>
             </control>
         </control>
