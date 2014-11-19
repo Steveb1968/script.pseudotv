@@ -1,5 +1,8 @@
 Changelog
 
+2.4.0 (steveb)
+    Helix support.
+
 2.3.0 (steveb)
     Automatic conversion of colour channel logo's to grey-scale for channel bug.
 

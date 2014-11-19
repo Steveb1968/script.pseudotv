@@ -30,10 +30,7 @@ from resources.lib.AdvancedConfig import AdvancedConfig
 from resources.lib.FileAccess import FileAccess
 from resources.lib.Migrate import Migrate
 
-
 NUMBER_CHANNEL_TYPES = 8
-
-
 
 class ConfigWindow(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
@@ -580,10 +577,5 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
         self.log("updateListing return")
 
-
-
-__cwd__ = REAL_SETTINGS.getAddonInfo('path')
-
-
-mydialog = ConfigWindow("script.pseudotv.ChannelConfig.xml", __cwd__, "default")
+mydialog = ConfigWindow("script.pseudotv.ChannelConfig.xml", ADDON_INFO, "default")
 del mydialog

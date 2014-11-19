@@ -2,7 +2,7 @@
 <settings>
     <category label="30000">
     	<setting label="30007" type="lsep"/>
-    	<setting type="action" label="30008" action="RunScript($CWD/config.py)"/>
+    	<setting id="Dummy" type="action" label="30008" action="RunScript($CWD/config.py)"/>
     	<setting label="30009" type="lsep"/>
         <setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
         <setting id="ForceChannelReset" type="bool" label="30002" default="false"/>

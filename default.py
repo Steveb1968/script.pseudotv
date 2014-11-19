@@ -16,24 +16,29 @@
 # You should have received a copy of the GNU General Public License
 # along with PseudoTV.  If not, see <http://www.gnu.org/licenses/>.
 
-
-import xbmc, xbmcgui
-import xbmcaddon
-
+import xbmc, xbmcgui, xbmcaddon
+import sys
+import os, threading
 
 # Script constants
 __scriptname__ = "PseudoTV"
-__author__     = "Jason102"
-__url__        = "http://github.com/Jasonra/XBMC-PseudoTV"
 __settings__   = xbmcaddon.Addon(id='script.pseudotv')
+__language__   = __settings__.getLocalizedString
 __cwd__        = __settings__.getAddonInfo('path')
 
+def Start():
+    import resources.lib.Overlay as Overlay
+
+    MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", __cwd__, "default")
+
+    del MyOverlayWindow
+    xbmcgui.Window(10000).setProperty("PseudoTVRunning", "False")
 
 # Adapting a solution from ronie (http://forum.xbmc.org/showthread.php?t=97353)
 if xbmcgui.Window(10000).getProperty("PseudoTVRunning") != "True":
     xbmcgui.Window(10000).setProperty("PseudoTVRunning", "True")
     shouldrestart = False
     if shouldrestart == False:
-        xbmc.executebuiltin('RunScript("' + __cwd__ + '/pseudotv.py' + '")')
+        Start()
 else:
     xbmc.log('script.PseudoTV - Already running, exiting', xbmc.LOGERROR)
