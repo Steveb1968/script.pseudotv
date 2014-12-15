@@ -3,11 +3,6 @@
     <allowoverlay>no</allowoverlay>
     <zorder>1</zorder>
     <defaultcontrol>120</defaultcontrol>
-    <coordinates>
-        <system>1</system>
-        <left>0</left>
-        <top>0</top>
-    </coordinates>
     <controls>
         <control type="image">
             <left>240</left>
@@ -56,6 +51,7 @@
                     <visible allowhiddenfocus="true">Control.HasFocus(120) | ![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,120)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="121">
                     <description>Rule Entry 2</description>
@@ -71,6 +67,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,121)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="122">
                     <description>Rule Entry 3</description>
@@ -86,6 +83,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,122)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="123">
                     <description>Rule Entry 4</description>
@@ -101,6 +99,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,123)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="124">
                     <description>Rule Entry 5</description>
@@ -116,6 +115,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,124)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="125">
                     <description>Rule Entry 6</description>
@@ -131,6 +131,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,125)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
                 <control type="button" id="126">
                     <description>Rule Entry 7</description>
@@ -145,6 +146,7 @@
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
                     <onclick>SetProperty(itempress,126)</onclick>
                     <onclick>SetFocus(130)</onclick>
+                    <colordiffuse></colordiffuse>
                 </control>
 
                 <control type="button" id="130">
@@ -159,6 +161,7 @@
                     <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
                     <onclick>SetProperty(itempress,100)</onclick>
                     <onclick>SetFocus(120)</onclick>
+                    <colordiffuse></colordiffuse>
                     <visible allowhiddenfocus="true">Control.HasFocus(130) | StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
 
                     <animation condition="StringCompare(Window.Property(itempress),121)" reversible="false">
@@ -238,6 +241,7 @@
                         <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
                         <onup>130</onup>
                         <ondown>160</ondown>
+                        <colordiffuse></colordiffuse>
                     </control>
                     <control type="label" id="150">
                         <left>30</left>
@@ -250,7 +254,7 @@
                         <align>center</align>
                     </control>
                     <control type="label" id="151">
-                        <right>30</right>
+                        <left>390</left>
                         <top>70</top>
                         <width>300</width>
                         <height>35</height>
@@ -270,7 +274,7 @@
                         <align>center</align>
                     </control>
                     <control type="label" id="153">
-                        <right>30</right>
+                        <left>390</left>
                         <top>160</top>
                         <width>300</width>
                         <height>35</height>
@@ -291,9 +295,10 @@
                         <textcolor>white</textcolor>
                         <texturefocus border="5">ptv_button-focus.png</texturefocus>
                         <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                        <colordiffuse></colordiffuse>
                     </control>
                     <control type="button" id="161">
-                        <right>30</right>
+                        <left>390</left>
                         <top>100</top>
                         <width>300</width>
                         <height>40</height>
@@ -305,6 +310,7 @@
                         <textcolor>white</textcolor>
                         <texturefocus border="5">ptv_button-focus.png</texturefocus>
                         <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                        <colordiffuse></colordiffuse>
                     </control>
                     <control type="button" id="162">
                         <left>30</left>
@@ -318,9 +324,10 @@
                         <textcolor>white</textcolor>
                         <texturefocus border="5">ptv_button-focus.png</texturefocus>
                         <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                        <colordiffuse></colordiffuse>
                     </control>
                     <control type="button" id="163">
-                        <right>30</right>
+                        <left>390</left>
                         <top>190</top>
                         <width>300</width>
                         <height>40</height>
@@ -330,6 +337,7 @@
                         <textcolor>white</textcolor>
                         <texturefocus border="5">ptv_button-focus.png</texturefocus>
                         <texturenofocus border="5">ptv_button-nofocus.png</texturenofocus>
+                        <colordiffuse></colordiffuse>
                     </control>                    
                     <control type="image" id="170">
                         <description>Down arrow when there are more controls for a rule</description>

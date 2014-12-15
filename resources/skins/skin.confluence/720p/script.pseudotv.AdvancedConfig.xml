@@ -3,11 +3,6 @@
     <allowoverlay>no</allowoverlay>
     <zorder>1</zorder>
     <defaultcontrol>120</defaultcontrol>
-    <coordinates>
-        <system>1</system>
-        <left>0</left>
-        <top>0</top>
-    </coordinates>
     <include>dialogeffect</include>
     <controls>
         <control type="image">

@@ -2,11 +2,6 @@
 <window>
     <allowoverlay>no</allowoverlay>
     <zorder>1</zorder>
-    <coordinates>
-        <system>1</system>
-        <left>0</left>
-        <top>0</top>
-    </coordinates>
     <include>dialogeffect</include>
     <controls>
         <control type="image">
@@ -95,7 +90,7 @@
                         <info>ListItem.Label</info>
                     </control>
                     <control type="label">
-                        <left>700</left>
+                        <left>280</left>
                         <top>0</top>
                         <width>420</width>
                         <height>40</height>
@@ -124,7 +119,7 @@
                         <info>ListItem.Label</info>
                     </control>
                     <control type="label">
-                        <left>700</left>
+                        <left>280</left>
                         <top>0</top>
                         <width>420</width>
                         <height>40</height>

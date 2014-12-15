@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <allowoverlay>no</allowoverlay>
-    <coordinates>
-        <system>1</system>
-        <left>0</left>
-        <top>0</top>
-    </coordinates>
 	<include>transition_Dialog</include>  
     <controls>
 		<include>global_Background</include>
@@ -30,7 +25,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>        
         <control type="image">
@@ -40,7 +35,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>        
         <control type="image">
@@ -50,7 +45,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>       
         <control type="image">
@@ -60,7 +55,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>       
         <control type="image">
@@ -70,7 +65,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>
 		<control type="image">
@@ -80,7 +75,7 @@
             <width>283</width>
             <height>46</height>
             <bordersize>1</bordersize>
-            <texture>white.png</texture>
+            <texture>overlays/white.png</texture>
 			<colordiffuse>column3</colordiffuse>
         </control>
         <!--CHANNEL 1-->

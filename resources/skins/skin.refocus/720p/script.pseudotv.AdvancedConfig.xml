@@ -48,7 +48,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <ondown>121</ondown>
                     <visible allowhiddenfocus="true">Control.HasFocus(120) | ![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
@@ -65,7 +65,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>120</onup>
                     <ondown>122</ondown>
@@ -83,7 +83,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>121</onup>
                     <ondown>123</ondown>
@@ -101,7 +101,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>122</onup>
                     <ondown>124</ondown>
@@ -119,7 +119,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>123</onup>
                     <ondown>125</ondown>
@@ -137,7 +137,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>124</onup>
                     <ondown>126</ondown>
@@ -155,7 +155,7 @@
 					<font>regular</font>
 					<textoffsetx>15</textoffsetx>
 					<aligny>center</aligny>
-					<texturefocus>dialogs/list-focus.png</texturefocus>
+					<texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onup>125</onup>
                     <visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
@@ -173,7 +173,7 @@
                     <font>regular</font>
 					<align>center</align>
 					<aligny>center</aligny>
-                    <texturefocus>dialogs/list-focus.png</texturefocus>
+                    <texturefocus>dialogs/select-fo.png</texturefocus>
 					<texturenofocus>dialogs/list-nofocus.png</texturenofocus>
                     <onclick>SetProperty(itempress,100)</onclick>
                     <onclick>SetFocus(120)</onclick>
@@ -253,7 +253,7 @@
                         <aligny>center</aligny>
                         <textcolor>Color4</textcolor>
                         <focusedcolor>Color1</focusedcolor>
-                        <texturefocus>dialogs/list-focus.png</texturefocus>
+                        <texturefocus>dialogs/select-fo.png</texturefocus>
                         <texturenofocus>dialogs/list-nofocus.png</texturenofocus>                       
                         <onup>130</onup>
                         <ondown>160</ondown>

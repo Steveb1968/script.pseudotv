@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <allowoverlay>no</allowoverlay>
-    <coordinates>
-        <system>1</system>
-        <posx>0</posx>
-        <posy>0</posy>
-    </coordinates>
     <animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
     <controls>
         <!--BACKGROUND-->
@@ -55,7 +50,7 @@
         </control>
         <control type="label">
 			<description>time label</description>
-			<right>20</right>
+			<left>1060</left>
 			<top>5</top>
 			<width>200</width>
 			<height>30</height>
@@ -137,8 +132,8 @@
 			<!-- CHANNEL 2 -->			
 			<control type="image">
 				<description>Channel 2 Back</description>
-				<posx>0</posx>
-				<posy>85</posy>
+				<left>0</left>
+				<top>85</top>
 				<width>300</width>
 				<height>48</height>
 				<texture>ptv_MenuItemNF.png</texture>                
@@ -177,8 +172,8 @@
 			<!-- CHANNEL 3 -->			
 			<control type="image">
 				<description>Channel 3 Back</description>
-				<posx>0</posx>
-				<posy>135</posy>
+				<left>0</left>
+				<top>135</top>
 				<width>300</width>
 				<height>48</height>
 				<texture>ptv_MenuItemNF.png</texture>
@@ -217,8 +212,8 @@
 			<!-- CHANNEL 4 -->			
 			<control type="image">
 				<description>Channel 4 Back</description>
-				<posx>0</posx>
-				<posy>185</posy>
+				<left>0</left>
+				<top>185</top>
 				<width>300</width>
 				<height>48</height>
 				<texture>ptv_MenuItemNF.png</texture>
@@ -257,8 +252,8 @@
 			<!-- CHANNEL 5 -->			
 			<control type="image">
 				<description>Channel 5 Back</description>
-				<posx>0</posx>
-				<posy>235</posy>
+				<left>0</left>
+				<top>235</top>
 				<width>300</width>
 				<height>48</height>
 				<texture>ptv_MenuItemNF.png</texture>
@@ -297,8 +292,8 @@
 			<!-- CHANNEL 6 -->			
 			<control type="image">
 				<description>Channel 6 Back</description>
-				<posx>0</posx>
-				<posy>285</posy>
+				<left>0</left>
+				<top>285</top>
 				<width>300</width>
 				<height>48</height>
 				<texture>ptv_MenuItemNF.png</texture>
@@ -338,14 +333,14 @@
         
         <!--TIME INFO-->
         <control type="group">
-            <posx>380</posx>
-            <posy>71</posy>
+            <left>380</left>
+            <top>71</top>
             <width>840</width>
             <height>500</height>
             <control type="label" id="101">
                 <description>Time 1 Label</description>
-                <posx>10</posx>
-                <posy>0</posy>
+                <left>10</left>
+                <top>0</top>
                 <width>280</width>
                 <height>29</height>
                 <font>font12</font>
@@ -355,8 +350,8 @@
             </control>
             <control type="label" id="102">
                 <description>Time 2 Label</description>
-                <posx>290</posx>
-                <posy>0</posy>
+                <left>290</left>
+                <top>0</top>
                 <width>280</width>
                 <height>29</height>
                 <font>font12</font>
@@ -366,8 +361,8 @@
             </control>
             <control type="label" id="103">
                 <description>Time 3 Label</description>
-                <posx>570</posx>
-                <posy>0</posy>
+                <left>570</left>
+                <top>0</top>
                 <width>280</width>
                 <height>29</height>
                 <font>font12</font>
@@ -379,8 +374,8 @@
  
 		<!--TIME BAR-->		
 		<control type="image" id="120">
-			<posx>400</posx>
-			<posy>104</posy>
+			<left>400</left>
+			<top>104</top>
 			<width>20</width>
 			<height>302</height>
 		</control>
@@ -396,38 +391,38 @@
 			<label>font12</label><!--text font-->	
 		</control>			
 		<control type="group" id="111">
-			<posx>380</posx>
-			<posy>106</posy>
+			<left>380</left>
+			<top>106</top>
 			<width>840</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="112">
-			<posx>380</posx>
-			<posy>156</posy>
+			<left>380</left>
+			<top>156</top>
 			<width>840</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="113">
-			<posx>380</posx>
-			<posy>206</posy>
+			<left>380</left>
+			<top>206</top>
 			<width>840</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="114">
-			<posx>380</posx>
-			<posy>256</posy>
+			<left>380</left>
+			<top>256</top>
 			<width>840</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="115">
-			<posx>380</posx>
-			<posy>306</posy>
+			<left>380</left>
+			<top>306</top>
 			<width>840</width>
 			<height>48</height>
 		</control>		
 		<control type="group" id="116">
-			<posx>380</posx>
-			<posy>356</posy>
+			<left>380</left>
+			<top>356</top>
 			<width>840</width>
 			<height>48</height>
 		</control>
@@ -435,8 +430,8 @@
 		<!--FOOTER-->           
         <control type="label">
             <description>Show Title Label</description>
-            <posx>390</posx>
-            <posy>420</posy>
+            <left>390</left>
+            <top>420</top>
             <width>780</width>
             <height>25</height>
             <info>Control.GetLabel(500)</info>
@@ -446,8 +441,8 @@
         </control>
         <control type="fadelabel">
             <description>Show Title Label</description>
-            <posx>390</posx>
-            <posy>445</posy>
+            <left>390</left>
+            <top>445</top>
             <width>780</width>
             <height>35</height>
             <info>Control.GetLabel(500)</info>
@@ -463,8 +458,8 @@
         </control>
         <control type="fadelabel">
             <description>Show Name Label</description>
-            <posx>390</posx>
-            <posy>445</posy>
+            <left>390</left>
+            <top>445</top>
             <width>780</width>
             <height>35</height>
             <info>Control.GetLabel(501)</info>
@@ -480,8 +475,8 @@
         </control>
         <control type="textbox">
 			<description>Show Description Label</description>
-			<posx>390</posx>
-			<posy>487</posy>
+			<left>390</left>
+			<top>487</top>
 			<width>785</width>
 			<height>120</height>
 			<font>font13</font>
@@ -492,8 +487,8 @@
 		</control>		
 		<control type="image" id="503">
             <description>Show Channel Icon</description>
-            <posx>85</posx>
-			<posy>480</posy>
+            <left>85</left>
+			<top>480</top>
 			<width>295</width>
 			<height>120</height>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -502,7 +497,7 @@
         <control type="image">
             <description>NAV INFO</description>
             <left>900</left>
-			<posy>615</posy>
+			<top>615</top>
 			<width>295</width>
 			<height>30</height>
             <align>right</align>
@@ -515,22 +510,22 @@
 			<visible>false</visible>
             <control type="label" id="500">
                 <description>Show Title Label</description>
-                <posx>-10</posx>
-                <posy>-10</posy>
+                <left>-10</left>
+                <top>-10</top>
                 <width>0</width>
                 <height>0</height>
             </control>
             <control type="label" id="501">
                 <description>Show Name Label</description>
-                <posx>-10</posx>
-                <posy>-10</posy>
+                <left>-10</left>
+                <top>-10</top>
                 <width>0</width>
                 <height>0</height>
             </control>
             <control type="label" id="502">
                 <description>Show Description Label</description>
-                <posx>-10</posx>
-                <posy>-10</posy>
+                <left>-10</left>
+                <top>-10</top>
                 <width>0</width>
                 <height>0</height>
             </control>

@@ -157,7 +157,7 @@
 					<control type="image">
 						<width>792</width>
 						<height>40</height>
-						<texture border="3">dialogs/list-focus.png</texture>
+						<texture border="3">dialogs/select-fo.png</texture>
 					</control>
 					<control type="label">
 						<width>100</width>
@@ -209,7 +209,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(110) | Control.HasFocus(111)</visible>
 			</control>
 
@@ -286,7 +286,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(130)</visible>
 			</control>
 			
@@ -314,6 +314,8 @@
             </control>
 
             <control type="button" id="130">
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
                 <left>70</left>
                 <width>722</width>
                 <height>42</height>
@@ -343,7 +345,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(140) | Control.HasFocus(141)</visible>
 			</control>
 			
@@ -421,7 +423,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(150) | Control.HasFocus(151)</visible>
 			</control>
 			
@@ -500,7 +502,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(160) | Control.HasFocus(161)</visible>
 			</control>
 			
@@ -578,7 +580,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(170) | Control.HasFocus(171)</visible>
 			</control>
 			
@@ -656,7 +658,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(180) | Control.HasFocus(181)</visible>
 			</control>
 			
@@ -734,7 +736,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(190) | Control.HasFocus(191)</visible>
 			</control>
 			
@@ -825,7 +827,7 @@
             <control type="image">
 				<width>792</width>
 				<height>42</height>
-				<texture border="3">dialogs/list-focus.png</texture>
+				<texture border="3">dialogs/select-fo.png</texture>
                 <visible>Control.HasFocus(200)</visible>
 			</control>
 			
@@ -853,6 +855,8 @@
             </control>
 
             <control type="button" id="200">
+                <texturefocus></texturefocus>
+                <texturenofocus></texturenofocus>
                 <left>140</left>
                 <width>652</width>
                 <height>42</height>

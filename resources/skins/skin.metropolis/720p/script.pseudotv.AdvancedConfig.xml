@@ -3,10 +3,6 @@
     <allowoverlay>no</allowoverlay>
     <zorder>1</zorder>
     <defaultcontrol>120</defaultcontrol>    
-    <coordinates>       
-        <left>0</left>
-        <top>0</top>
-    </coordinates>
 	<include>Animation_OpenCloseFade</include>
     <controls>
         <control type="image">
