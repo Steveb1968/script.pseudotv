@@ -10,32 +10,16 @@
 				<width>1920</width>
 				<height>680</height>
 				<texture>floor.png</texture>
-                <animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-                <animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>
             </control>
             <control type="group">
                 <left>0</left>
                 <top>128</top>
                 <control type="image">
                     <left>490</left>
-                    <top>874</top>
-                    <width>1380</width>
-                    <height>904</height>
-                    <texture border="40">panel_reflect.png</texture>
-                </control>
-                <control type="image">
-                    <left>490</left>
                     <top>0</top>
                     <width>1380</width>
                     <height>904</height>
                     <texture border="40">listpanel_back.png</texture>
-                </control>
-                <control type="image">
-                    <left>50</left>
-                    <top>874</top>
-                    <width>420</width>
-                    <height>904</height>
-                    <texture border="40">panel_reflect.png</texture>
                 </control>
                 <control type="image">
                     <left>50</left>
