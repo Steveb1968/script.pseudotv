@@ -52,7 +52,7 @@
                 <font>font13_title</font>
             </control>
             <control type="label">
-                <left>1920</left>
+                <left>1020</left>
                 <width>900</width>
                 <height>90</height>
                 <textoffsetx>15</textoffsetx>
