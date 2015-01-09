@@ -1,7 +1,7 @@
 PseudoTV for XBMC
 =================
 
-**GOTHAM ONLY**
+**GOTHAM / HELIX ONLY**
 
 -----------
 What is it?

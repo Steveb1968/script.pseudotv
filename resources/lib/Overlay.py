@@ -915,7 +915,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.log('end')
         # Prevent the player from setting the sleep timer
         self.Player.stopped = True
-        self.background.setVisible(True)
+        self.background.setVisible(False)
         curtime = time.time()
         xbmc.executebuiltin("PlayerControl(repeatoff)")
         self.isExiting = True
@@ -1037,5 +1037,4 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 self.storeFiles()
 
         updateDialog.close()
-        self.background.setVisible(False)
         self.close()

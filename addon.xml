@@ -3,7 +3,7 @@
     id="script.pseudotv"
 	version="2.4.0"
 	name="PseudoTV"
-	provider-name="Jason Anderson|steveb">
+	provider-name="Jason Anderson | steveb">
 
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
