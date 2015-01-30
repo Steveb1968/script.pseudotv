@@ -1,8 +1,8 @@
 # XBMC Media Center language file
 # Addon Name: PseudoTV
 # Addon id: script.pseudotv
-# Addon version: 2.3.0
-# Addon Provider: Jason Anderson|steveb
+# Addon version: 2.4.0
+# Addon Provider: Jason Anderson | steveb
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"

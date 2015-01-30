@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>   
-    <controls>
-        <control type="image" id="103">
+	<allowoverlay>no</allowoverlay>   
+	<controls>
+		<control type="image" id="103">
 			<description>Channel Bug</description>
 			<left>1130</left>
 			<top>635</top>
@@ -10,28 +10,28 @@
 			<height>75</height>
 			<aspectratio>keep</aspectratio>
 			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
-            <visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo</visible>
 		</control>
-        <control type="group" id="102">
-            <animation effect="fade" start="0" end="100" time="300" condition="Control.IsVisible(102)">Conditional</animation>
-            <visible>!Window.IsActive(VideoOSD)</visible>
+		<control type="group" id="102">
+			<animation effect="fade" start="0" end="100" time="300" condition="Control.IsVisible(102)">Conditional</animation>
+			<visible>!Window.IsActive(VideoOSD)</visible>
 			<!--HEADER-->
-            <control type="image">
-                <left>0</left>
-                <top>-40</top>
-                <width>1280</width>
-                <height>120</height>
-                <texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
-            </control>
-            <control type="image">
-                <left>15</left>
-                <top>3</top>
-                <width>260</width>
-                <height>35</height>
-                <texture>NavFlagInfo.png</texture>
-                <aspectratio align="left">keep</aspectratio>
-                <colordiffuse>lightgrey</colordiffuse>
-            </control>
+			<control type="image">
+				<left>0</left>
+				<top>-40</top>
+				<width>1280</width>
+				<height>120</height>
+				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>3</top>
+				<width>260</width>
+				<height>35</height>
+				<texture>NavFlagInfo.png</texture>
+				<aspectratio align="left">keep</aspectratio>
+				<colordiffuse>lightgrey</colordiffuse>
+			</control>
 			<control type="label">
 				<description>Clock label</description>
 				<left>450</left>
@@ -78,129 +78,129 @@
 				<bordersize>8</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 			</control>                   
-            <control type="label"  id="502">
-                <description>Heading label</description>
-                <left>330</left>
-                <top>535</top>
-                <width>770</width>
-                <height>25</height>
-                <align>left</align>
-                <aligny>center</aligny>
-                <font>font13</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>            
-            <control type="label">
-                <left>350</left>
-                <top>565</top>
-                <width>770</width>
-                <height>25</height>
-                <align>left</align>
-                <font>font12</font>
-                <info>Control.GetLabel(503)</info>
-                <textcolor>grey2</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <visible>!IsEmpty(Control.GetLabel(504))</visible>
-            </control>
-            <control type="fadelabel">
-                <left>350</left>
-                <top>595</top>
-                <width>770</width>
-                <height>35</height>
-                <font>font30</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <info>Control.GetLabel(503)</info>
-                <textcolor>orange</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <scrollout>false</scrollout>
-                <pauseatend>1800</pauseatend>
-                <scrollspeed>40</scrollspeed>
-                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
-                <visible>IsEmpty(Control.GetLabel(504))</visible>
-            </control>               
-            <control type="fadelabel">
-                <left>350</left>
-                <top>595</top>
-                <width>770</width>
-                <height>35</height>
-                <font>font30</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <info>Control.GetLabel(504)</info>
-                <textcolor>orange</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <scrollout>false</scrollout>
-                <pauseatend>1800</pauseatend>
-                <scrollspeed>40</scrollspeed>
-                <visible>!IsEmpty(Control.GetLabel(504))</visible>
-            </control>
-            <control type="textbox">
-                <description>Show Description</description>
-                <left>350</left>
-                <top>635</top>
-                <width>880</width>
-                <height>53</height>
-                <font>font13</font>
-                 <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <align>justify</align>
-                <info>Control.GetLabel(505)</info>
-                <autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
-                <visible>!IsEmpty(Control.GetLabel(504))</visible>
-            </control>
-            <control type="textbox">
-                <description>Show Description</description>
-                <left>350</left>
-                <top>610</top>
-                <width>880</width>
-                <height>75</height>
-                <font>font13</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <align>justify</align>
-                <info>Control.GetLabel(505)</info>
-                <autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
-                <visible>IsEmpty(Control.GetLabel(504))</visible>
-            </control>
-            <control type="image" id="506">
-                <description>Show Channel Icon</description>
-                <left>1110</left>
-                <top>565</top>
-                <width>100</width>
-                <height>68</height>
-                <aspectratio aligny="center">keep</aspectratio>
-                <animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
-            </control>
+			<control type="label"  id="502">
+				<description>Heading label</description>
+				<left>330</left>
+				<top>535</top>
+				<width>770</width>
+				<height>25</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>            
+			<control type="label">
+				<left>350</left>
+				<top>565</top>
+				<width>770</width>
+				<height>25</height>
+				<align>left</align>
+				<font>font12</font>
+				<info>Control.GetLabel(503)</info>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>!IsEmpty(Control.GetLabel(504))</visible>
+			</control>
+			<control type="fadelabel">
+				<left>350</left>
+				<top>595</top>
+				<width>770</width>
+				<height>35</height>
+				<font>font30</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>Control.GetLabel(503)</info>
+				<textcolor>orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
+				<visible>IsEmpty(Control.GetLabel(504))</visible>
+			</control>               
+			<control type="fadelabel">
+				<left>350</left>
+				<top>595</top>
+				<width>770</width>
+				<height>35</height>
+				<font>font30</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>Control.GetLabel(504)</info>
+				<textcolor>orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+				<visible>!IsEmpty(Control.GetLabel(504))</visible>
+			</control>
+			<control type="textbox">
+				<description>Show Description</description>
+				<left>350</left>
+				<top>635</top>
+				<width>880</width>
+				<height>53</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>justify</align>
+				<info>Control.GetLabel(505)</info>
+				<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+				<visible>!IsEmpty(Control.GetLabel(504))</visible>
+			</control>
+			<control type="textbox">
+				<description>Show Description</description>
+				<left>350</left>
+				<top>610</top>
+				<width>880</width>
+				<height>75</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<align>justify</align>
+				<info>Control.GetLabel(505)</info>
+				<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+				<visible>IsEmpty(Control.GetLabel(504))</visible>
+			</control>
+			<control type="image" id="506">
+				<description>Show Channel Icon</description>
+				<left>1110</left>
+				<top>565</top>
+				<width>100</width>
+				<height>68</height>
+				<aspectratio aligny="center">keep</aspectratio>
+				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
+			</control>
 		</control>
-        
-        <control type="group">
+
+		<control type="group">
 			<visible>false</visible>
-            <control type="image" id="101">
-                <left>-10</left>
-                <top>-10</top>
-                <width>1</width>
-                <height>1</height>
-            </control>				
-            <control type="label" id="503">
-                <left>-10</left>
-                <top>-10</top>
-                <width>1</width>
-                <height>1</height>
-            </control>
-            <control type="label" id="504">
-                <left>-10</left>
-                <top>-10</top>
-                <width>1</width>
-                <height>1</height>
-            </control>
-            <control type="label" id="505">
-                <left>-10</left>
-                <top>-10</top>
-                <width>1</width>
-                <height>1</height>
-            </control>				
-        </control>
-        
-    </controls>
+			<control type="image" id="101">
+				<left>-10</left>
+				<top>-10</top>
+				<width>1</width>
+				<height>1</height>
+			</control>				
+			<control type="label" id="503">
+				<left>-10</left>
+				<top>-10</top>
+				<width>1</width>
+				<height>1</height>
+			</control>
+			<control type="label" id="504">
+				<left>-10</left>
+				<top>-10</top>
+				<width>1</width>
+				<height>1</height>
+			</control>
+			<control type="label" id="505">
+				<left>-10</left>
+				<top>-10</top>
+				<width>1</width>
+				<height>1</height>
+			</control>				
+		</control>
+
+	</controls>
 </window>

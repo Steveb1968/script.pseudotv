@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>  
-    <controls>
+	<allowoverlay>no</allowoverlay>  
+	<controls>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
 			<left>1130</left>
@@ -10,39 +10,98 @@
 			<height>75</height>
 			<aspectratio>keep</aspectratio>
 			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
-            <visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="group" id="102">
-            <include>clock</include>
-            <control type="group">
-				<include>osd_Video</include>
+			<include>clock</include>
+			<control type="group">
 				<include>transition_OSD</include>
+				<top>545</top>
+				<control type="image">
+					<width>screen_Width</width>
+					<height>135</height>
+					<texture border="29">colorize/100.png</texture>
+					<colordiffuse>base_2</colordiffuse>
+				</control>
+				<control type="group">
+					<left>10</left>
+					<top>10</top>
+					<control type="image">
+						<width>192</width>
+						<height>114</height>
+						<include>art_Frame-nf</include>
+					</control>
+					<control type="group">
+						<left>7</left>
+						<top>7</top>
+						<width>178</width>
+						<height>100</height>
+						<control type="image">
+							<width>178</width>
+							<height>100</height>
+							<texture>$VAR[player:Art]</texture>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<centerleft>50%</centerleft>
+							<width>128</width>
+							<height>96</height>
+							<texture>$VAR[player:Logo]</texture>
+							<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						</control>
+					</control>
+					<control type="group">
+						<left>210</left>
+						<top>3</top>
+						<control type="label">
+							<width>1050</width>
+							<label>$VAR[player:Title]</label>
+							<include>osd_Title</include>
+						</control>
+						<control type="label">
+							<top>25</top>
+							<width>1050</width>
+							<label>$VAR[player:Info]</label>
+							<textcolor>Color2</textcolor>
+							<include>osd_Sub</include>
+							<visible>Player.HasVideo</visible>
+						</control>
+						<control type="textbox">
+							<top>55</top>
+							<width>1050</width>
+							<height>55</height>
+							<label>$VAR[player:Description]</label>
+							<include>osd_Text</include>
+							<visible>Player.HasVideo</visible>
+						</control>
+					</control>
+				</control>
 			</control>
-            <control type="group">
+			<control type="group">
+				<include>transition_OSD</include>
 				<include>osd_Seekbar</include>
-				<include>transition_OSD</include>
 			</control>
-            <control type="group">
-                <visible>false</visible>
-                <control type="image" id="101">
-                    <description>Background Channel Change</description>
-                </control>
-                <control type="label" id="502">
-                    <description>Now watching</description>
-                </control>
-                <control type="label" id="503">
-                    <description>Show Name Label</description>
-                </control>
-                <control type="label" id="504">
-                    <description>Show Title Label</description>
-                </control>
-                <control type="label" id="505">
-                    <description>Label Show Description</description>
-                </control>
-                <control type="image" id="506">
-                    <description>Channel Logo</description>
-                </control>
-            </control>
+			<control type="group">
+				<visible>false</visible>
+				<control type="image" id="101">
+					<description>Background Channel Change</description>
+				</control>
+				<control type="label" id="502">
+					<description>Now watching</description>
+				</control>
+				<control type="label" id="503">
+					<description>Show Name Label</description>
+				</control>
+				<control type="label" id="504">
+					<description>Show Title Label</description>
+				</control>
+				<control type="label" id="505">
+					<description>Label Show Description</description>
+				</control>
+				<control type="image" id="506">
+					<description>Channel Logo</description>
+				</control>
+			</control>
 		</control>
 	</controls>
 </window>

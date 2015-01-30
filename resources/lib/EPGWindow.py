@@ -94,7 +94,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
     def setTimeLabels(self, thetime):
         self.log('setTimeLabels')
         now = datetime.datetime.fromtimestamp(thetime)
-        self.getControl(104).setLabel(now.strftime('%A, %b %d'))
+        self.getControl(104).setLabel(now.strftime('%a, %d %b %Y'))
         delta = datetime.timedelta(minutes=30)
 
         for i in range(3):

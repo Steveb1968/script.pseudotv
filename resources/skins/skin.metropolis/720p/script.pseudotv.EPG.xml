@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>
+	<allowoverlay>no</allowoverlay>
 	<include>Animation_OpenCloseFade</include>
-    <controls>	
+	<controls>	
 		<!--BACKGROUND-->
 		<control type="image">
 			<left>0</left>
@@ -28,16 +28,16 @@
 			<texture>osd/OSDdialogback_top.png</texture>
 			<colordiffuse>OSDBackgroundColor</colordiffuse>
 		</control>
-        <control type="image">
-            <include>Dimensions_Fullscreen</include>
-            <texture background="true">backgroundLiveTv.png</texture>
-            <colordiffuse>BackgroundColor</colordiffuse>
-        </control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">backgroundLiveTv.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
 		<control type="label">
 			<description>Header label</description>
-            <left>30</left>
-            <top>10</top>
-            <include>Global_HeadingSectionVars</include>
+			<left>30</left>
+			<top>10</top>
+			<include>Global_HeadingSectionVars</include>
 			<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
 		</control>
 		<control type="image">
@@ -413,7 +413,7 @@
 			<width>887</width>
 			<height>48</height>
 		</control>
-        <!--CHANNEL BUTTONS AND LABELS-->		
+		<!--CHANNEL BUTTONS AND LABELS-->		
 		<control type="group">
 			<left>0</left>
 			<top>185</top>		
@@ -449,16 +449,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>            
-            <control type="image" id="321">
-                <description>Channel 1 Icon</description>
-                <left>55</left>
-                <top>51</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>           
+			<control type="image" id="321">
+				<description>Channel 1 Icon</description>
+				<left>55</left>
+				<top>51</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>           
 			<control type="label" id="311">
 				<description>Channel 1 Number</description>
 				<right>1235</right>
@@ -491,16 +491,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>
-            <control type="image" id="322">
-                <description>Channel 2 Icon</description>
-                <left>55</left>
-                <top>101</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>           
+			<control type="image" id="322">
+				<description>Channel 2 Icon</description>
+				<left>55</left>
+				<top>101</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>           
 			<control type="label" id="312">
 				<description>Channel 2 Number</description>
 				<right>1235</right>
@@ -533,16 +533,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>
-            <control type="image" id="323">
-                <description>Channel 3 Icon</description>
-                <left>55</left>
-                <top>151</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>			
+			<control type="image" id="323">
+				<description>Channel 3 Icon</description>
+				<left>55</left>
+				<top>151</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>			
 			<control type="label" id="313">
 				<description>Channel 3 Number</description>
 				<right>1235</right>
@@ -575,16 +575,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>
-            <control type="image" id="324">
-                <description>Channel 4 Icon</description>
-                <left>55</left>
-                <top>201</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>           
+			<control type="image" id="324">
+				<description>Channel 4 Icon</description>
+				<left>55</left>
+				<top>201</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>           
 			<control type="label" id="314">
 				<description>Channel 4 Number</description>
 				<right>1235</right>
@@ -617,16 +617,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>
-            <control type="image" id="325">
-                <description>Channel 5 Icon</description>
-                <left>55</left>
-                <top>251</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>           
+			<control type="image" id="325">
+				<description>Channel 5 Icon</description>
+				<left>55</left>
+				<top>251</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>           
 			<control type="label" id="315">
 				<description>Channel 5 Number</description>
 				<right>1235</right>
@@ -659,16 +659,16 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-                <scroll>True</scroll>
+				<scroll>True</scroll>
 			</control>
-            <control type="image" id="326">
-                <description>Channel 6 Icon</description>
-                <left>55</left>
-                <top>300</top>
-                <width>50</width>
-                <height>50</height>
-                <aspectratio align="right" aligny="center">keep</aspectratio>
-            </control>			
+			<control type="image" id="326">
+				<description>Channel 6 Icon</description>
+				<left>55</left>
+				<top>300</top>
+				<width>50</width>
+				<height>50</height>
+				<aspectratio align="right" aligny="center">keep</aspectratio>
+			</control>			
 			<control type="label" id="316">
 				<description>Channel 6 Number</description>
 				<right>1235</right>
@@ -681,7 +681,7 @@
 				<aligny>center</aligny>
 				<textcolor>GlobalHeading</textcolor>
 			</control>
-        </control>
+		</control>
 		<!--TIME BAR-->		
 		<control type="image" id="120">
 			<left>430</left>
@@ -690,36 +690,36 @@
 			<height>308</height>
 			<aspectratio>keep</aspectratio>
 		</control>	
-        <!--CHANNEL TITLE/EPISODE-->
-        <control type="fadelabel">
-            <description>Label Show Title</description>
-            <left>240</left>
-    		<top>565</top>
-    		<width>817</width>
-    		<height>40</height>
-            <font>METF_TitleTextMedium</font>
-            <label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),  •  ,]</label>
-            <aligny>center</aligny>
-            <textcolor>white</textcolor>
-            <shadowcolor>black</shadowcolor>
-            <scrollout>false</scrollout>
-            <pauseatend>1800</pauseatend>
-            <scrollspeed>40</scrollspeed>
-        </control>
-        <control type="label" id="500">
-            <left>-20</left>
-            <top>-20</top>
-            <width>0</width>
-            <height>0</height>
-            <visible>false</visible>
-        </control>           
-        <control type="label" id="501">
-            <left>-20</left>
-            <top>-20</top>
-            <width>0</width>
-            <height>0</height>
-            <visible>false</visible>
-        </control>
+		<!--CHANNEL TITLE/EPISODE-->
+		<control type="fadelabel">
+			<description>Label Show Title</description>
+			<left>240</left>
+			<top>565</top>
+			<width>817</width>
+			<height>40</height>
+			<font>METF_TitleTextMedium</font>
+			<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),  •  ,]</label>
+			<aligny>center</aligny>
+			<textcolor>white</textcolor>
+			<shadowcolor>black</shadowcolor>
+			<scrollout>false</scrollout>
+			<pauseatend>1800</pauseatend>
+			<scrollspeed>40</scrollspeed>
+		</control>
+		<control type="label" id="500">
+			<left>-20</left>
+			<top>-20</top>
+			<width>0</width>
+			<height>0</height>
+			<visible>false</visible>
+		</control>           
+		<control type="label" id="501">
+			<left>-20</left>
+			<top>-20</top>
+			<width>0</width>
+			<height>0</height>
+			<visible>false</visible>
+		</control>
 		<!-- Plot -->
 		<control type="label" id="502">
 			<left>-10</left>
@@ -728,7 +728,7 @@
 			<height>0</height>
 			<visible>false</visible>
 		</control>     
-        <control type="textbox">
+		<control type="textbox">
 			<left>240</left>
 			<top>600</top>
 			<width>820</width>
@@ -739,17 +739,17 @@
 			<info>Control.GetLabel(502)</info>
 			<autoscroll time="3000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
-        <include>Global_Weather</include>
+		<include>Global_Weather</include>
 		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 		<control type="image" id="503">
-            <description>Show Channel Icon</description>
-            <left>30</left>
+			<description>Show Channel Icon</description>
+			<left>30</left>
 			<top>580</top>
 			<width>180</width>
 			<height>104</height>
 			<aspectratio>keep</aspectratio>
 		</control>
-    </controls>
+	</controls>
 </window>

@@ -1,134 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>
-    <animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-    <controls>        
-        <control type="group">
-            <control type="image">
-                <left>0</left>
+	<allowoverlay>no</allowoverlay>
+	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+	<controls>        
+		<control type="group">
+			<control type="image">
+				<left>0</left>
 				<top>480</top>
 				<width>1920</width>
 				<height>680</height>
 				<texture>floor.png</texture>
-            </control>
-            <control type="group">
-                <left>0</left>
-                <top>128</top>
-                <control type="image">
-                    <left>490</left>
-                    <top>0</top>
-                    <width>1380</width>
-                    <height>904</height>
-                    <texture border="40">listpanel_back.png</texture>
-                </control>
-                <control type="image">
-                    <left>50</left>
-                    <top>0</top>
-                    <width>420</width>
-                    <height>904</height>
-                    <texture border="40">listpanel_back.png</texture>
-                </control>
-            </control>  
-        </control>
-        <control type="group">
-            <animation effect="slide" start="0,-60" end="0,0" time="480">WindowOpen</animation>
-            <animation effect="slide" end="0,-40" start="0,0" time="480">WindowClose</animation>
-            <control type="image">
-                <left>0</left>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>128</top>
+				<control type="image">
+					<left>490</left>
+					<top>0</top>
+					<width>1380</width>
+					<height>904</height>
+					<texture border="40">listpanel_back.png</texture>
+				</control>
+				<control type="image">
+					<left>50</left>
+					<top>0</top>
+					<width>420</width>
+					<height>904</height>
+					<texture border="40">listpanel_back.png</texture>
+				</control>
+			</control>  
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,-60" end="0,0" time="480">WindowOpen</animation>
+			<animation effect="slide" end="0,-40" start="0,0" time="480">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
 				<height>66</height>
 				<texture border="1">topbar.png</texture>
-            </control>
-            <control type="label">
-                <width>900</width>
+			</control>
+			<control type="label">
+				<width>900</width>
 				<height>90</height>
-                <textoffsetx>15</textoffsetx>
-                <textoffsety>-2</textoffsety>
-                <align>left</align>
-                <aligny>top</aligny>
-                <label>$INFO[System.AddonTitle(script.pseudotv)]</label>
-                <textcolor>grey2</textcolor>
-                <font>font13_title</font>
-            </control>
-            <control type="label">
-                <left>1020</left>
-                <width>900</width>
-                <height>90</height>
-                <textoffsetx>15</textoffsetx>
-                <textoffsety>-2</textoffsety>
-                <align>right</align>
-                <aligny>top</aligny>
-                <label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ,]</label>
-                <textcolor>grey2</textcolor>
-                <font>font13_title</font>
-            </control>
-            <control type="label">
-                <left>0</left>
-                <width>1920</width>
-                <height>60</height>
-                <textoffsetx>10</textoffsetx>
-                <textoffsety>-1</textoffsety>
-                <align>center</align>
-                <aligny>top</aligny>
-                <label>$INFO[System.Time]</label>
-                <textcolor>grey2</textcolor>
-                <font>font13_title</font>
-            </control>
-            <control type="image">
-                <left>0</left>
-                <top>0</top>
-                <width>12</width>
-                <height>31</height>
-                <texture>mediamenu_indicator.png</texture>               
-            </control>
-            <control type="group">
-                <left>1080</left>
-                <visible>Player.HasMedia + ![Window.IsActive(volumebar)]</visible>
-                <animation effect="slide" start="0,-40" end="0,0" time="200">Visible</animation>
-                <animation effect="slide" start="0,0" end="0,-27" time="200">Hidden</animation>
-                <control type="progress">
-                    <left>0</left>
+				<textoffsetx>15</textoffsetx>
+				<textoffsety>-2</textoffsety>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
+				<textcolor>grey2</textcolor>
+				<font>font13_title</font>
+			</control>
+			<control type="label">
+				<left>1020</left>
+				<width>900</width>
+				<height>90</height>
+				<textoffsetx>15</textoffsetx>
+				<textoffsety>-2</textoffsety>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ,]</label>
+				<textcolor>grey2</textcolor>
+				<font>font13_title</font>
+			</control>
+			<control type="label">
+				<left>0</left>
+				<width>1920</width>
+				<height>60</height>
+				<textoffsetx>10</textoffsetx>
+				<textoffsety>-1</textoffsety>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$INFO[System.Time]</label>
+				<textcolor>grey2</textcolor>
+				<font>font13_title</font>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>12</width>
+				<height>31</height>
+				<texture>mediamenu_indicator.png</texture>               
+			</control>
+			<control type="group">
+				<left>1080</left>
+				<visible>Player.HasMedia + ![Window.IsActive(volumebar)]</visible>
+				<animation effect="slide" start="0,-40" end="0,0" time="200">Visible</animation>
+				<animation effect="slide" start="0,0" end="0,-27" time="200">Hidden</animation>
+				<control type="progress">
+					<left>0</left>
 					<top>0</top>
 					<width>500</width>
 					<height>37</height>
-                    <texturebg border="2">osd/texturebg.png</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture border="2">osd/midtexture_cache.png</midtexture>
-                    <righttexture>-</righttexture>
-                    <overlaytexture>-</overlaytexture>
-                    <info>Player.ProgressCache</info>
-                </control>
-                <control type="progress">
-                    <left>0</left>
+					<texturebg border="2">osd/texturebg.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">osd/midtexture_cache.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>Player.ProgressCache</info>
+				</control>
+				<control type="progress">
+					<left>0</left>
 					<top>0</top>
 					<width>500</width>
 					<height>35</height>
-                    <texturebg border="1">osd/texturebg_cache.png</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture border="2">osd/midtexture.png</midtexture>
-                    <righttexture>-</righttexture>
-                    <overlaytexture>-</overlaytexture>
-                    <info>Player.Progress</info>
-                </control>
-                <control type="label">
-                    <left>0</left>
+					<texturebg border="1">osd/texturebg_cache.png</texturebg>
+					<lefttexture>-</lefttexture>
+					<midtexture border="2">osd/midtexture.png</midtexture>
+					<righttexture>-</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>Player.Progress</info>
+				</control>
+				<control type="label">
+					<left>0</left>
 					<top>0</top>
 					<width>500</width>
 					<height>90</height>
-                    <textoffsetx>10</textoffsetx>
-                    <textoffsety>-2</textoffsety>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <label>$INFO[Player.Title]</label>
-                    <shadowcolor>shadow</shadowcolor>
-                    <textcolor>grey2</textcolor>
-                    <font>font13_title</font>
-                    <scroll>true</scroll>
-                </control>
-            </control>
-        </control>
-        <!--CHANNEL BUTTONS AND LABELS-->
+					<textoffsetx>10</textoffsetx>
+					<textoffsety>-2</textoffsety>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[Player.Title]</label>
+					<shadowcolor>shadow</shadowcolor>
+					<textcolor>grey</textcolor>
+					<font>font13_title</font>
+					<scroll>true</scroll>
+				</control>
+			</control>
+		</control>
+		<!--CHANNEL BUTTONS AND LABELS-->
 		<control type="group">
 			<left>82</left>
 			<top>160</top>
@@ -145,338 +145,338 @@
 				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
-                <textcolor>labelheader</textcolor>
+				<textcolor>labelheader</textcolor>
 			</control>
-            <control type="image">
-                <description>separator image</description>
-                <left>0</left>
-                <top>1</top>
-                <width>356</width>
-                <height>58</height>
-                <texture border="1">separator2.png</texture>                
-            </control>            
-            <control type="group">
-                <top>15</top>
-                <!--CHANNEL 1-->           
-                <control type="image">
-                    <description>Channel 1 Back</description>
-                    <left>0</left>
-                    <top>44</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>                
-                </control>
-                <control type="label" id="311">
-                    <description>Channel 1 Number</description>
-                    <left>2</left>
-                    <top>44</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>           
-                <control type="image" id="321">
-                    <description>Channel 1 Icon</description>
-                    <left>0</left>
-                    <top>44</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="301">
-                    <description>Channel 1 Name</description>
-                    <left>65</left>
-                    <top>44</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-                <!-- CHANNEL 2 -->
-                <control type="image">
-                    <description>Channel 2 Back</description>
-                    <left>0</left>
-                    <top>134</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>                
-                </control>           
-                <control type="label" id="312">
-                    <description>Channel 2 Number</description>
-                    <left>2</left>
-                    <top>134</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>
-                <control type="image" id="322">
-                    <description>Channel 2 Icon</description>
-                    <left>0</left>
-                    <top>134</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="302">
-                    <description>Channel 2 Name</description>
-                    <left>65</left>
-                    <top>134</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-                <!-- CHANNEL 3 -->
-                <control type="image">
-                    <description>Channel 3 Back</description>
-                    <left>0</left>
-                    <top>224</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>
-                </control>
-                <control type="label" id="313">
-                    <description>Channel 3 Number</description>
-                    <left>2</left>
-                    <top>224</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>
-                <control type="image" id="323">
-                    <description>Channel 3 Icon</description>
-                    <left>0</left>
-                    <top>224</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="303">
-                    <description>Channel 3 Name</description>
-                    <left>65</left>
-                    <top>224</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-                <!-- CHANNEL 4 -->
-                <control type="image">
-                    <description>Channel 4 Back</description>
-                    <left>0</left>
-                    <top>314</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>
-                </control>
-                <control type="label" id="314">
-                    <description>Channel 4 Number</description>
-                    <left>2</left>
-                    <top>314</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>
-                <control type="image" id="324">
-                    <description>Channel 4 Icon</description>
-                    <left>0</left>
-                    <top>314</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="304">
-                    <description>Channel 4 Name</description>
-                    <left>65</left>
-                    <top>314</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-                <!-- CHANNEL 5 -->
-                <control type="image">
-                    <description>Channel 5 Back</description>
-                    <left>0</left>
-                    <top>404</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>
-                </control>
-                <control type="label" id="315">
-                    <description>Channel 5 Number</description>
-                    <left>2</left>
-                    <top>404</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>
-                <control type="image" id="325">
-                    <description>Channel 5 Icon</description>
-                    <left>0</left>
-                    <top>404</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="305">
-                    <description>Channel 5 Name</description>
-                    <left>65</left>
-                    <top>404</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-                <!-- CHANNEL 6 -->
-                <control type="image">
-                    <description>Channel 6 Back</description>
-                    <left>0</left>
-                    <top>494</top>
-                    <width>356</width>
-                    <height>90</height>
-                    <texture border="1">separator2.png</texture>
-                </control>
-                <control type="label" id="316">
-                    <description>Channel 6 Number</description>
-                    <left>2</left>
-                    <top>494</top>
-                    <width>60</width>
-                    <height>87</height>
-                    <font>font15_bold</font>
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <textcolor>grey2</textcolor>
-                </control>
-                <control type="image" id="326">
-                    <description>Channel 6 Icon</description>
-                    <left>0</left>
-                    <top>494</top>
-                    <width>65</width>
-                    <height>87</height>
-                    <aspectratio>keep</aspectratio>
-                    <visible>false</visible>
-                </control>
-                <control type="label" id="306">
-                    <description>Channel 6 Name</description>
-                    <left>65</left>
-                    <top>494</top>
-                    <width>290</width>
-                    <height>87</height>
-                    <font>font15</font>
-                    <textcolor>grey2</textcolor>
-                    <aligny>center</aligny>
-                    <align>left</align>
-                    <scroll>true</scroll>
-                </control>
-            </control>
-        </control>
-        
-        <!--LISTING HEADER AND TIME INFO-->
-        <control type="group">
-            <left>520</left>
-            <top>160</top>
-            <width>1320</width>
-            <height>750</height>
-            <control type="image">
-                <description>separator image</description>
-                <left>0</left>
-                <top>0</top>
-                <width>1320</width>
-                <height>58</height>
-                <texture border="1">separator2.png</texture>                
-            </control>
-            <control type="label" id="101">
-                <description>Time 1 Label</description>
-                <left>5</left>
-                <top>0</top>
-                <width>435</width>
-                <height>30</height>
-                <font>font13</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>labelheader</textcolor>
-            </control>
-            <control type="image">
-                <left>440</left>
-                <top>0</top>
-                <width>2</width>
-                <height>56</height>
-                <texture border="1">separator3.png</texture>
-            </control>
-            <control type="label" id="102">
-                <description>Time 2 Label</description>
-                <left>445</left>
-                <top>0</top>
-                <width>435</width>
-                <height>30</height>
-                <font>font13</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>labelheader</textcolor>
-            </control>
-            <control type="image">
-                <left>880</left>
-                <top>0</top>
-                <width>2</width>
-                <height>56</height>
-                <texture border="1">separator3.png</texture>
-            </control>
-            <control type="label" id="103">
-                <description>Time 3 Label</description>
-                <left>885</left>
-                <top>0</top>
-                <width>435</width>
-                <height>30</height>
-                <font>font13</font>
-                <align>left</align>
-                <aligny>center</aligny>
-                <textcolor>labelheader</textcolor>
-            </control>
 			<control type="image">
-                <description>separator image</description>
-                <left>0</left>
-                <top>550</top>
-                <width>1320</width>
-                <height>48</height>
-                <texture border="1">separator2.png</texture>                
-            </control>
-        </control>
- 
+				<description>separator image</description>
+				<left>0</left>
+				<top>1</top>
+				<width>356</width>
+				<height>58</height>
+				<texture border="1">separator2.png</texture>                
+			</control>            
+			<control type="group">
+				<top>15</top>
+				<!--CHANNEL 1-->           
+				<control type="image">
+					<description>Channel 1 Back</description>
+					<left>0</left>
+					<top>44</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>                
+				</control>
+				<control type="label" id="311">
+					<description>Channel 1 Number</description>
+					<left>2</left>
+					<top>44</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>           
+				<control type="image" id="321">
+					<description>Channel 1 Icon</description>
+					<left>0</left>
+					<top>44</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="301">
+					<description>Channel 1 Name</description>
+					<left>65</left>
+					<top>44</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<!-- CHANNEL 2 -->
+				<control type="image">
+					<description>Channel 2 Back</description>
+					<left>0</left>
+					<top>134</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>                
+				</control>           
+				<control type="label" id="312">
+					<description>Channel 2 Number</description>
+					<left>2</left>
+					<top>134</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="image" id="322">
+					<description>Channel 2 Icon</description>
+					<left>0</left>
+					<top>134</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="302">
+					<description>Channel 2 Name</description>
+					<left>65</left>
+					<top>134</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<!-- CHANNEL 3 -->
+				<control type="image">
+					<description>Channel 3 Back</description>
+					<left>0</left>
+					<top>224</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label" id="313">
+					<description>Channel 3 Number</description>
+					<left>2</left>
+					<top>224</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="image" id="323">
+					<description>Channel 3 Icon</description>
+					<left>0</left>
+					<top>224</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="303">
+					<description>Channel 3 Name</description>
+					<left>65</left>
+					<top>224</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<!-- CHANNEL 4 -->
+				<control type="image">
+					<description>Channel 4 Back</description>
+					<left>0</left>
+					<top>314</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label" id="314">
+					<description>Channel 4 Number</description>
+					<left>2</left>
+					<top>314</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="image" id="324">
+					<description>Channel 4 Icon</description>
+					<left>0</left>
+					<top>314</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="304">
+					<description>Channel 4 Name</description>
+					<left>65</left>
+					<top>314</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<!-- CHANNEL 5 -->
+				<control type="image">
+					<description>Channel 5 Back</description>
+					<left>0</left>
+					<top>404</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label" id="315">
+					<description>Channel 5 Number</description>
+					<left>2</left>
+					<top>404</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="image" id="325">
+					<description>Channel 5 Icon</description>
+					<left>0</left>
+					<top>404</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="305">
+					<description>Channel 5 Name</description>
+					<left>65</left>
+					<top>404</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+				<!-- CHANNEL 6 -->
+				<control type="image">
+					<description>Channel 6 Back</description>
+					<left>0</left>
+					<top>494</top>
+					<width>356</width>
+					<height>90</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label" id="316">
+					<description>Channel 6 Number</description>
+					<left>2</left>
+					<top>494</top>
+					<width>60</width>
+					<height>87</height>
+					<font>font15_bold</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="image" id="326">
+					<description>Channel 6 Icon</description>
+					<left>0</left>
+					<top>494</top>
+					<width>65</width>
+					<height>87</height>
+					<aspectratio>keep</aspectratio>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="306">
+					<description>Channel 6 Name</description>
+					<left>65</left>
+					<top>494</top>
+					<width>290</width>
+					<height>87</height>
+					<font>font15</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<align>left</align>
+					<scroll>true</scroll>
+				</control>
+			</control>
+		</control>
+
+		<!--LISTING HEADER AND TIME INFO-->
+		<control type="group">
+			<left>520</left>
+			<top>160</top>
+			<width>1320</width>
+			<height>750</height>
+			<control type="image">
+				<description>separator image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1320</width>
+				<height>58</height>
+				<texture border="1">separator2.png</texture>                
+			</control>
+			<control type="label" id="101">
+				<description>Time 1 Label</description>
+				<left>5</left>
+				<top>0</top>
+				<width>435</width>
+				<height>30</height>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>labelheader</textcolor>
+			</control>
+			<control type="image">
+				<left>440</left>
+				<top>0</top>
+				<width>2</width>
+				<height>56</height>
+				<texture border="1">separator3.png</texture>
+			</control>
+			<control type="label" id="102">
+				<description>Time 2 Label</description>
+				<left>445</left>
+				<top>0</top>
+				<width>435</width>
+				<height>30</height>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>labelheader</textcolor>
+			</control>
+			<control type="image">
+				<left>880</left>
+				<top>0</top>
+				<width>2</width>
+				<height>56</height>
+				<texture border="1">separator3.png</texture>
+			</control>
+			<control type="label" id="103">
+				<description>Time 3 Label</description>
+				<left>885</left>
+				<top>0</top>
+				<width>435</width>
+				<height>30</height>
+				<font>font13</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>labelheader</textcolor>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<left>0</left>
+				<top>550</top>
+				<width>1320</width>
+				<height>48</height>
+				<texture border="1">separator2.png</texture>                
+			</control>
+		</control>
+
 		<!--TIME BAR-->
 		<control type="image" id="120">
 			<left>600</left>
@@ -485,7 +485,7 @@
 			<height>543</height>
 		</control>
 		<!--SHOW LISTINGS-->
-        <control type="button" id="100">
+		<control type="button" id="100">
 			<visible>false</visible>
 			<label>0xFF999999</label><!--un-focused text color-->
 			<label2>0xFF999999</label2><!--focused text color-->
@@ -494,7 +494,7 @@
 			<visible>false</visible>
 			<label>font15</label><!--text font-->
 		</control>        
-        <control type="group" id="111">
+		<control type="group" id="111">
 			<left>520</left>
 			<top>219</top>
 			<width>1320</width>
@@ -531,75 +531,65 @@
 			<height>87</height>
 		</control>
 
-        <control type="group">
-            <left>522</left>
-            <top>759</top>
-            <control type="fadelabel">
-                <left>0</left>
-                <top>15</top>
-                <width>1286</width>
-                <height>30</height>
-                <textoffsetx>15</textoffsetx>
-                <align>left</align>
-                <label>[COLOR labelheader]$INFO[Control.GetLabel(500)][/COLOR]$INFO[Control.GetLabel(501),  -  ,]</label>
-                <textcolor>grey2</textcolor>
-                <font>font15</font>
-                <scrollout>false</scrollout>
-                <pauseatend>1800</pauseatend>
-                <scrollspeed>40</scrollspeed>
-            </control>
-            <control type="image">
-                <description>separator image</description>
-                <left>0</left>
-                <top>10</top>
-                <width>1320</width>
-                <height>60</height>
-                <texture border="1">separator2.png</texture>
-            </control>
-            <control type="textbox">
-                <left>15</left>
-                <top>75</top>
-                <width>1286</width>
-                <height>160</height>
-                <info>Control.GetLabel(502)</info>
-                <font>font15_textbox</font>
+		<control type="group">
+			<left>522</left>
+			<top>759</top>
+			<control type="label" id="500">
+				<description>Show/Movie Title</description>
+				<left>0</left>
+				<top>18</top>
+				<width>1320</width>
+				<height>30</height>
+				<textoffsetx>15</textoffsetx>
+				<align>left</align>
+				<textcolor>labelheader</textcolor>
+				<font>font15</font>
+			</control>
+			<control type="label" id="501">
+				<description>Episode Title</description>
+				<left>0</left>
+				<top>18</top>
+				<width>1320</width>
+				<height>30</height>
+				<textoffsetx>15</textoffsetx>
+				<align>right</align>
 				<textcolor>grey2</textcolor>
-                <autoscroll time="3000" delay="4000" repeat="5000">True</autoscroll>
-            </control>
-        </control>
-		
+				<font>font15</font>
+			</control>
+			<control type="image">
+				<description>separator image</description>
+				<left>0</left>
+				<top>10</top>
+				<width>1320</width>
+				<height>60</height>
+				<texture border="1">separator2.png</texture>
+			</control>
+			<control type="textbox">
+				<left>15</left>
+				<top>75</top>
+				<width>1286</width>
+				<height>160</height>
+				<info>Control.GetLabel(502)</info>
+				<font>font15_textbox2</font>
+				<textcolor>grey2</textcolor>
+				<autoscroll time="3000" delay="4000" repeat="5000">True</autoscroll>
+			</control>
+			<control type="label" id="502">
+				<description>Show Plot Label</description>
+				<left>-10</left>
+				<top>-10</top>
+				<width>0</width>
+				<height>0</height>
+				<visible>false</visible>
+			</control>
+		</control>
 		<control type="image" id="503">
-            <description>Show Channel Icon</description>
-            <left>97</left>
+			<description>Show Channel Icon</description>
+			<left>97</left>
 			<top>800</top>
 			<width>327</width>
 			<height>150</height>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
-        </control>            
-        
-        <control type="group">
-			<visible>false</visible>
-            <control type="label" id="500">
-                <description>Show Title Label</description>
-                <left>-10</left>
-                <top>-10</top>
-                <width>0</width>
-                <height>0</height>
-            </control>
-            <control type="label" id="501">
-                <description>Show Name Label</description>
-                <left>-10</left>
-                <top>-10</top>
-                <width>0</width>
-                <height>0</height>
-            </control>
-            <control type="label" id="502">
-                <description>Show Description Label</description>
-                <left>-10</left>
-                <top>-10</top>
-                <width>0</width>
-                <height>0</height>
-            </control>
-        </control>
-    </controls>
+		</control>            
+	</controls>
 </window>

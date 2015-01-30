@@ -10,7 +10,7 @@
 			<height>75</height>
 			<aspectratio>keep</aspectratio>
 			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
-            <visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo</visible>
 		</control>	
 		<control type="group" id="102">
 			<visible>!Window.IsActive(VideoOSD)</visible>
@@ -220,7 +220,7 @@
 			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 			<include condition="Skin.HasSetting(DebugMode)">Debug</include>
 			<control type="group">
-			<visible>false</visible>
+				<visible>false</visible>
 				<control type="image" id="101">
 					<left>-10</left>
 					<top>-10</top>

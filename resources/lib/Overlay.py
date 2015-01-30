@@ -33,7 +33,7 @@ from ChannelList import ChannelList
 from ChannelListThread import ChannelListThread
 from FileAccess import FileLock, FileAccess
 from Migrate import Migrate
-from PIL import Image
+from PIL import Image, ImageEnhance
 
 __icon__ = REAL_SETTINGS.getAddonInfo('icon')
 
@@ -579,6 +579,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                     self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
                 original = Image.open(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')               
                 converted_img = original.convert('LA')
+                img_bright = ImageEnhance.Brightness(converted_img)
+                converted_img = img_bright.enhance(2.0)
                 if not FileAccess.exists(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
                     converted_img.save(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
                 self.getControl(103).setImage(CHANNELBUG_LOC + ascii(self.channels[self.currentChannel - 1].name) + '.png')
