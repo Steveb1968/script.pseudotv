@@ -34,14 +34,14 @@ def uni(string, encoding = 'utf-8'):
         if not isinstance(string, unicode):
            string = unicode(string, encoding)
 
-	return string
+    return string
 
 def ascii(string):
     if isinstance(string, basestring):
         if isinstance(string, unicode):
            string = string.encode('ascii', 'ignore')
 
-	return string
+    return string
 
 ADDON_ID = 'script.pseudotv'
 REAL_SETTINGS = xbmcaddon.Addon(id=ADDON_ID)
