@@ -13,6 +13,7 @@
 			<visible>Player.HasVideo</visible>
 		</control>
 		<control type="group" id="102">
+			<visible>Player.HasVideo</visible>
 			<include>clock</include>
 			<control type="group">
 				<include>transition_OSD</include>

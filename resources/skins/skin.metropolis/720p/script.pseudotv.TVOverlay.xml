@@ -13,7 +13,7 @@
 			<visible>Player.HasVideo</visible>
 		</control>	
 		<control type="group" id="102">
-			<visible>!Window.IsActive(VideoOSD)</visible>
+			<visible>Player.HasVideo + !Window.IsActive(VideoOSD)</visible>
 			<include>Animation_CommonFade</include>
 			<include>Animation_FadedByOSDSettings</include>
 			<!-- Background Image -->

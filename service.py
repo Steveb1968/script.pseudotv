@@ -35,5 +35,5 @@ def autostart():
     xbmc.executebuiltin("XBMC.RunScript(script.pseudotv)")
     xbmc.log("AUTOSTART PTV: Service Started...")
 
-if (Enabled == 'true'): 
+if (Enabled == 'true'):
     autostart()
