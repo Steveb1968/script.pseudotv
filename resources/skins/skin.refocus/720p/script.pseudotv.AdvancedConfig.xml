@@ -5,7 +5,7 @@
 	<defaultcontrol>120</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
+		<left>215</left>
 		<top>88</top>
 	</coordinates>
 	<include>transition_Dialog</include>
@@ -13,13 +13,13 @@
 		<control type="group">
 			<control type="image">
 				<description>Background</description>
-				<width>800</width>
+				<width>850</width>
 				<height>545</height>
 				<include>dialog_Window</include>
 			</control>
 			<control type="label">
 				<description>heading label</description>
-				<width>792</width>
+				<width>842</width>
 				<include>dialog_Windowtitle</include>
 				<label>$LOCALIZE[10038] $LOCALIZE[19029] $LOCALIZE[5]</label>
 			</control>
@@ -27,7 +27,7 @@
 				<left>4</left>
 				<top>60</top>
 				<control type="image">
-					<width>792</width>
+					<width>842</width>
 					<include>dialog_Separator</include>
 				</control>
 			</control>
@@ -37,11 +37,11 @@
 			<left>4</left>
 			<top>60</top>
 			<control type="group" id="104">
-				<width>792</width>
+				<width>842</width>
 				<height>400</height>
 				<control type="button" id="120">
 					<description>Rule Entry 1</description>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -58,7 +58,7 @@
 				<control type="button" id="121">
 					<description>Rule Entry 2</description>
 					<top>40</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -76,7 +76,7 @@
 				<control type="button" id="122">
 					<description>Rule Entry 3</description>
 					<top>80</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -94,7 +94,7 @@
 				<control type="button" id="123">
 					<description>Rule Entry 4</description>
 					<top>120</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -112,7 +112,7 @@
 				<control type="button" id="124">
 					<description>Rule Entry 5</description>
 					<top>160</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -130,7 +130,7 @@
 				<control type="button" id="125">
 					<description>Rule Entry 6</description>
 					<top>200</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -148,7 +148,7 @@
 				<control type="button" id="126">
 					<description>Rule Entry 7</description>
 					<top>240</top>
-					<width>792</width>
+					<width>842</width>
 					<height>40</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -165,7 +165,7 @@
 
 				<control type="button" id="130">
 					<description>Rule for editing</description>
-					<width>792</width>
+					<width>842</width>
 					<height>42</height>
 					<textcolor>Color4</textcolor>
 					<focusedcolor>Color1</focusedcolor>
@@ -207,7 +207,7 @@
 				<control type="group" id="102">
 					<description>Controls for editing</description>
 					<top>42</top>
-					<width>792</width>
+					<width>842</width>
 					<height>455</height>
 					<visible>StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
 
@@ -247,7 +247,7 @@
 					</animation>
 
 					<control type="button" id="131">                      
-						<width>792</width>
+						<width>842</width>
 						<height>42</height>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -365,21 +365,21 @@
 
 					<control type="image" id="170">
 						<description>Down arrow when there are more controls for a rule</description>
-						<left>376</left>
+						<left>401</left>
 						<top>250</top>
 						<width>40</width>
 						<height>40</height>
-						<texture>settings/spin/oud/spinDown.png</texture>
+						<texture>navigation/down.png</texture>
 						<colordiffuse>Color4</colordiffuse>
 					</control>
 
 					<control type="image" id="171">
 						<description>Up arrow when there are more controls for a rule</description>
-						<left>376</left>
+						<left>401</left>
 						<top>250</top>
 						<width>40</width>
 						<height>40</height>
-						<texture>settings/spin/oud/spinUp.png</texture>
+						<texture>navigation/up.png</texture>
 						<colordiffuse>Color4</colordiffuse>
 					</control>
 				</control>

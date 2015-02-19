@@ -733,7 +733,7 @@
 					<label>$LOCALIZE[581] ($LOCALIZE[20359])</label>
 					<textcolor>white</textcolor>
 					<textoffsetx>7</textoffsetx>
-					<radioposx>680</radioposx>
+					<radioposx>685</radioposx>
 					<align>left</align>
 					<onup>190</onup>
 					<ondown>114</ondown>

@@ -4,7 +4,7 @@
 	<zorder>1</zorder>
 	<coordinates>
 		<system>1</system>
-		<left>240</left>
+		<left>215</left>
 		<top>88</top>
 	</coordinates>
 	<include>transition_Dialog</include>
@@ -12,14 +12,14 @@
 		<control type="group">
 			<control type="image">
 				<description>Background</description>
-				<width>800</width>
+				<width>850</width>
 				<height>545</height>
 				<include>dialog_Window</include>
 			</control>
 
 			<control type="label">
 				<description>heading label</description>
-				<width>792</width>
+				<width>842</width>
 				<include>dialog_Windowtitle</include>
 				<label>$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507]</label>
 			</control>
@@ -28,12 +28,12 @@
 				<left>4</left>
 				<top>60</top>
 				<control type="image">
-					<width>792</width>
+					<width>842</width>
 					<include>dialog_Separator</include>
 				</control>
 				<control type="image">
 					<top>400</top>
-					<width>792</width>
+					<width>842</width>
 					<include>dialog_Separator</include>
 					<visible>Control.IsVisible(106)</visible>
 				</control>
@@ -43,7 +43,7 @@
 					<top>420</top>
 					<control type="button" id="901">
 						<description>Exit Button</description>
-						<left>630</left>
+						<left>680</left>
 						<onup>102</onup>
 						<ondown>102</ondown>
 						<onleft>102</onleft>
@@ -66,7 +66,7 @@
 					</control>
 					<control type="button" id="112">
 						<description>OK Button</description>
-						<left>497</left>
+						<left>547</left>
 						<onup>110</onup>
 						<onleft>114</onleft>
 						<onright>113</onright>
@@ -77,7 +77,7 @@
 					</control>
 					<control type="button" id="113">
 						<description>Cancel Button</description>
-						<left>630</left>
+						<left>680</left>
 						<onup>111</onup>
 						<onleft>112</onleft>
 						<onright>114</onright>
@@ -95,7 +95,7 @@
 			<top>102</top>
 			<defaultcontrol>102</defaultcontrol>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<include>dialog_Separator</include>
 			</control>
 
@@ -109,7 +109,7 @@
 				<textcolor>Color4</textcolor>
 			</control>
 			<control type="label">
-				<right>498</right>
+				<right>448</right>
 				<top>-40</top>
 				<width>160</width>
 				<height>42</height>
@@ -120,7 +120,7 @@
 			</control>
 			<control type="list" id="102">
 				<description>All channels list</description>
-				<width>792</width>
+				<width>842</width>
 				<height>360</height>
 				<onup>102</onup>
 				<ondown>102</ondown>
@@ -128,7 +128,7 @@
 				<onleft>901</onleft>
 				<itemlayout height="40">
 					<control type="image">
-						<width>792</width>
+						<width>842</width>
 						<height>40</height>
 						<texture border="3">dialogs/list-nofocus.png</texture>
 					</control>
@@ -142,7 +142,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>172</left>
+						<left>222</left>
 						<width>620</width>
 						<height>38</height>
 						<textcolor>Color4</textcolor>
@@ -155,7 +155,7 @@
 				</itemlayout>
 				<focusedlayout height="40">
 					<control type="image">
-						<width>792</width>
+						<width>842</width>
 						<height>40</height>
 						<texture border="3">dialogs/select-fo.png</texture>
 					</control>
@@ -169,7 +169,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<left>172</left>
+						<left>222</left>
 						<width>620</width>
 						<height>38</height>
 						<textcolor>Color1</textcolor>
@@ -187,7 +187,7 @@
 		<control type="group" id="106">
 			<left>4</left>
 			<top>102</top>
-			<width>792</width>
+			<width>842</width>
 			<control type="label" id="104">
 				<left>15</left>
 				<top>-40</top>
@@ -197,17 +197,17 @@
 				<textcolor>Color4</textcolor>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<include>dialog_Separator</include>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(110) | Control.HasFocus(111)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(110) | Control.HasFocus(111)</visible>
@@ -275,16 +275,16 @@
 		<control type="group" id="120">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>!Control.HasFocus(130)</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(130)</visible>
@@ -317,7 +317,7 @@
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
 				<left>70</left>
-				<width>722</width>
+				<width>772</width>
 				<height>42</height>
 				<textcolor>Color4</textcolor>
 				<focusedcolor>Color1</focusedcolor>
@@ -334,16 +334,16 @@
 		<control type="group" id="121">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(140) | Control.HasFocus(141)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(140) | Control.HasFocus(141)</visible>
@@ -412,16 +412,16 @@
 		<control type="group" id="122">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(150) | Control.HasFocus(151)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(150) | Control.HasFocus(151)</visible>
@@ -491,16 +491,16 @@
 		<control type="group" id="123">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(160) | Control.HasFocus(161)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(160) | Control.HasFocus(161)</visible>
@@ -569,16 +569,16 @@
 		<control type="group" id="124">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(170) | Control.HasFocus(171)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(170) | Control.HasFocus(171)</visible>
@@ -647,16 +647,16 @@
 		<control type="group" id="125">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(180) | Control.HasFocus(181)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(180) | Control.HasFocus(181)</visible>
@@ -725,16 +725,16 @@
 		<control type="group" id="126">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>![Control.HasFocus(190) | Control.HasFocus(191)]</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(190) | Control.HasFocus(191)</visible>
@@ -816,16 +816,16 @@
 		<control type="group" id="127">
 			<left>4</left>
 			<top>144</top>
-			<width>792</width>
+			<width>842</width>
 
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/list-nofocus.png</texture>
 				<visible>!Control.HasFocus(200)</visible>
 			</control>
 			<control type="image">
-				<width>792</width>
+				<width>842</width>
 				<height>42</height>
 				<texture border="3">dialogs/select-fo.png</texture>
 				<visible>Control.HasFocus(200)</visible>
@@ -858,7 +858,7 @@
 				<texturefocus></texturefocus>
 				<texturenofocus></texturenofocus>
 				<left>140</left>
-				<width>652</width>
+				<width>702</width>
 				<height>42</height>
 				<textcolor>Color4</textcolor>
 				<focusedcolor>Color1</focusedcolor>
