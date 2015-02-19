@@ -295,6 +295,7 @@
 					<onup>110</onup>
 					<ondown>114</ondown>
 					<colordiffuse></colordiffuse>
+					<textoffsetx>7</textoffsetx>
 				</control>
 				<control type="label">
 					<left>47</left>
@@ -302,9 +303,11 @@
 					<width>720</width>
 					<height>35</height>               
 					<font>font13</font>
+					<label>$LOCALIZE[524]:</label>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>left</align>
+					<visible>IsEmpty(Control.GetLabel(130))</visible>
 				</control>
 			</control>
 
@@ -719,13 +722,18 @@
 					<top>150</top>
 					<width>720</width>
 					<height>40</height>
-					<radiowidth>35</radiowidth>
-					<radioheight>35</radioheight>
+					<radiowidth>24</radiowidth>
+					<radioheight>24</radioheight>
+					<textureradioonfocus>settings/ptv_radiobutton-focus.png</textureradioonfocus>
+					<textureradioonnofocus>settings/ptv_radiobutton-focus.png</textureradioonnofocus>
+					<textureradioofffocus>settings/ptv_radiobutton-nofocus.png</textureradioofffocus>
+					<textureradiooffnofocus>settings/ptv_radiobutton-nofocus.png</textureradiooffnofocus>
 					<texturefocus border="5">settings/ptv_button-focus2.png</texturefocus>
 					<texturenofocus border="5">settings/ptv_button-nofocus.png</texturenofocus>
 					<label>$LOCALIZE[581] ($LOCALIZE[20359])</label>
 					<textcolor>white</textcolor>
 					<textoffsetx>7</textoffsetx>
+					<radioposx>680</radioposx>
 					<align>left</align>
 					<onup>190</onup>
 					<ondown>114</ondown>
