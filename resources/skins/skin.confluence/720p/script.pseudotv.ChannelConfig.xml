@@ -298,9 +298,11 @@
 					<width>720</width>
 					<height>35</height>               
 					<font>font13</font>
+					<label>$LOCALIZE[524]:</label>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>left</align>
+					<visible>IsEmpty(Control.GetLabel(130))</visible>
 				</control>
 			</control>
 
