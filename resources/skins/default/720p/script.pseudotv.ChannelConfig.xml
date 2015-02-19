@@ -48,14 +48,14 @@
 				<label>$LOCALIZE[19029]</label>
 			</control>
 			<control type="label">
-				<left>665</left>                
+				<left>545</left>                
 				<top>0</top>
 				<width>200</width>
 				<height>35</height>
 				<font>font13_title</font>
 				<textcolor>steelblue</textcolor>
 				<shadowcolor>black</shadowcolor>
-				<align>left</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<label>$LOCALIZE[33029]</label>
 			</control>
@@ -112,7 +112,7 @@
 						<top>0</top>
 						<width>150</width>
 						<height>40</height>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>white</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -124,7 +124,7 @@
 						<height>40</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>white</textcolor>
 						<info>ListItem.Label2</info>
 					</control>
 				</focusedlayout>

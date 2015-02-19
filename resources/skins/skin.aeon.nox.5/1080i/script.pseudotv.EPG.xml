@@ -488,7 +488,7 @@
 		<control type="button" id="100">
 			<visible>false</visible>
 			<label>0xFF999999</label><!--un-focused text color-->
-			<label2>0xFF999999</label2><!--focused text color-->
+			<label2>0xFFFFFFFF</label2><!--focused text color-->
 		</control>
 		<control type="button" id="105">
 			<visible>false</visible>
