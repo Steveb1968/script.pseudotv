@@ -113,7 +113,7 @@
 						<top>0</top>
 						<width>150</width>
 						<height>40</height>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>white</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -125,7 +125,7 @@
 						<height>40</height>
 						<aligny>center</aligny>
 						<align>right</align>
-						<focusedcolor>white</focusedcolor>
+						<textcolor>white</textcolor>
 						<info>ListItem.Label2</info>
 					</control>
 				</focusedlayout>
