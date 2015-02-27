@@ -698,7 +698,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if action == ACTION_SELECT_ITEM:
             # If we're manually typing the channel, set it now
             if self.inputChannel > 0:
-                if self.inputChannel != self.currentChannel:
+                if self.inputChannel != self.currentChannel and self.inputChannel <= self.maxChannels:
                     self.setChannel(self.inputChannel)
 
                 self.inputChannel = -1
