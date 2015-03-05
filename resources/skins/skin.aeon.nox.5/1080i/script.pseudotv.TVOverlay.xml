@@ -121,7 +121,7 @@
 				<height>90</height>
 				<font>font14_textbox2</font>
 				<include>ShowCaseInfoPanelButtonsValues</include>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<autoscroll time="3600" delay="8000" repeat="8000">true</autoscroll>
 			</control>
 			<control type="label">
 				<left>238</left>

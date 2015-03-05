@@ -776,7 +776,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.channelList.sendJSON(json_query);
                         
                 else:
-                    self.showInfo(10.0)
+                    self.showInfo(20.0)
         elif action >= ACTION_NUMBER_0 and action <= ACTION_NUMBER_9:
             if self.inputChannel < 0:
                 self.inputChannel = action - ACTION_NUMBER_0

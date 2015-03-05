@@ -45,7 +45,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
 			</control>
-			<!--FOOTER-->			
+			<!--FOOTER-->
 			<control type="image">
 				<left>0</left>
 				<top>490</top>
@@ -159,7 +159,7 @@
 				<shadowcolor>black</shadowcolor>
 				<align>justify</align>
 				<info>Control.GetLabel(505)</info>
-				<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 				<visible>IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="image" id="506">
@@ -180,7 +180,7 @@
 				<top>-10</top>
 				<width>1</width>
 				<height>1</height>
-			</control>				
+			</control>
 			<control type="label" id="503">
 				<left>-10</left>
 				<top>-10</top>
@@ -198,7 +198,7 @@
 				<top>-10</top>
 				<width>1</width>
 				<height>1</height>
-			</control>				
+			</control>
 		</control>
 
 	</controls>

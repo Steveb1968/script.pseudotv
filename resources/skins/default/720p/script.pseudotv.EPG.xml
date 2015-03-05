@@ -483,7 +483,7 @@
 			<textcolor>white</textcolor>
 			<align>justify</align>
 			<info>Control.GetLabel(502)</info>
-			<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+			<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 		</control>		
 		<control type="image" id="503">
 			<description>Show Channel Icon</description>

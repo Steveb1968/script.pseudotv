@@ -572,7 +572,7 @@
 				<info>Control.GetLabel(502)</info>
 				<font>font15_textbox2</font>
 				<textcolor>grey2</textcolor>
-				<autoscroll time="3000" delay="4000" repeat="5000">True</autoscroll>
+				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 			</control>
 			<control type="label" id="502">
 				<description>Show Plot Label</description>
