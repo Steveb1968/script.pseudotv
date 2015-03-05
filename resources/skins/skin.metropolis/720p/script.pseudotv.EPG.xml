@@ -737,7 +737,7 @@
 			<font>METF_PlotTextMedium</font>
 			<textcolor>LowerText</textcolor>
 			<info>Control.GetLabel(502)</info>
-			<autoscroll time="4000" delay="8000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+			<autoscroll time="3600" delay="8000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
 		<include>Global_Weather</include>
 		<include>Global_Time</include>

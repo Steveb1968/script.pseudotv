@@ -145,7 +145,7 @@
 				<shadowcolor>black</shadowcolor>
 				<align>justify</align>
 				<info>Control.GetLabel(505)</info>
-				<autoscroll time="4000" delay="5000" repeat="5000">True</autoscroll>
+				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 				<visible>!IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="textbox">
