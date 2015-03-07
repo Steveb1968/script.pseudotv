@@ -132,15 +132,15 @@
 		<control type="group">
 			<visible>Control.IsVisible(102) + ![Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogVolumeBar.xml)]</visible>
 			<right>70</right>
-			<posy>70</posy>
+			<top>70</top>
 			<width>240</width>
 			<height>100</height>
 			<include>Animation.FadeIn.Slide</include>
 			<include>Animation.FadeOut</include>
 			<control type="image">
 				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>100%</width>
 				<height>100%</height>
 				<colordiffuse>$VAR[OSDPanel]</colordiffuse>
