@@ -110,7 +110,6 @@
 							<bottom>10</bottom>
 							<height>8</height>
 							<info>Player.ProgressCache</info>
-							<visible>true</visible>
 							<texturebg colordiffuse="00ffffff">osd/progress-bg.png</texturebg>
 							<lefttexture colordiffuse="Highlight2">osd/progress-end.png</lefttexture>
 							<midtexture colordiffuse="Highlight2">osd/progress-end.png</midtexture>
@@ -122,7 +121,6 @@
 							<bottom>10</bottom>
 							<height>8</height>
 							<info>Player.Progress</info>
-							<visible>true</visible>
 						</control>
 					</control>
 				</control>
