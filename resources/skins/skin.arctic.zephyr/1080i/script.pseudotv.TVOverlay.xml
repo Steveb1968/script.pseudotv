@@ -12,7 +12,7 @@
 			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
 			<visible>Player.HasVideo</visible>
 		</control>
-		<control type="group" id="102">
+		<control type="group">
 			<visible>Player.HasVideo</visible>
 			<animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
 			<control type="image">
@@ -23,15 +23,14 @@
 				<colordiffuse>$VAR[OSDPanel]</colordiffuse>
 				<include>Animation.FadeOut</include>
 				<animation effect="fade" start="100" end="95" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
-				<animation effect="slide" start="0" end="0,-190" time="150">WindowOpen</animation>
-				<animation effect="slide" start="0" end="0,-190" time="150">VisibleChange</animation>
+                <animation effect="slide" start="0,110" end="0,-190" time="150" condition="Control.IsVisible(102)">Conditional</animation>
 			</control>
 			<control type="group">
 				<top>300r</top>
 				<bottom>0</bottom>
 				<width>100%</width>
-				<animation effect="fade" start="0" end="100" delay="150" time="150" condition="Control.IsVisible(102)">Conditional</animation>
 				<control type="group">
+					<animation effect="fade" start="0" end="100" delay="150" time="150" condition="Control.IsVisible(102)">Conditional</animation>
 					<left>SidePad</left>
 					<right>SidePad</right>
 					<top>20</top>
@@ -166,38 +165,41 @@
 			</control>
 		</control>
 
-		<control type="group">
-			<visible>false</visible>
-			<control type="image" id="101">
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
+
+		<control type="group" id="102">
+			<control type="group">
+				<visible>false</visible>
+				<control type="image" id="101">
+					<left>-10</left>
+					<top>-10</top>
+					<width>0</width>
+					<height>0</height>
+				</control>
+				<control type="label" id="503">
+					<left>-10</left>
+					<top>-10</top>
+					<width>0</width>
+					<height>0</height>
+				</control>
+				<control type="label" id="504">
+					<left>-10</left>
+					<top>-10</top>
+					<width>0</width>
+					<height>0</height>
+				</control>
+				<control type="label" id="505">
+					<left>-10</left>
+					<top>-10</top>
+					<width>0</width>
+					<height>0</height>
+				</control>
+				<control type="image" id="506">
+					<left>-10</left>
+					<top>-10</top>
+					<width>0</width>
+					<height>0</height>
+				</control>
 			</control>
-			<control type="label" id="503">
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
-			<control type="label" id="504">
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
-			<control type="label" id="505">
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
-			<control type="image" id="506">
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
-		</control> 
+		</control>
 	</controls>
 </window>
