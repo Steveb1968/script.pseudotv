@@ -23,10 +23,9 @@
 				<colordiffuse>$VAR[OSDPanel]</colordiffuse>
 				<include>Animation.FadeOut</include>
 				<animation effect="fade" start="100" end="95" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
-                <animation effect="slide" start="0,110" end="0,-190" time="150" condition="Control.IsVisible(102)">Conditional</animation>
+				<animation effect="slide" start="0,110" end="0,-190" time="150" condition="Control.IsVisible(102)">Conditional</animation>
 			</control>
 			<control type="group">
-				<visible>Player.HasVideo</visible>
 				<top>300r</top>
 				<bottom>0</bottom>
 				<width>100%</width>
@@ -43,7 +42,7 @@
 							<height>260</height>
 							<texture>$VAR[PlayerPoster]</texture>
 						</control>
-						<control type="group">						
+						<control type="group">
 							<left>203</left>
 							<right>0</right>
 							<control type="label" description="Video Info">
@@ -56,6 +55,15 @@
 								<textcolor>$VAR[OSDPanelWhite30]</textcolor>
 								<label>$INFO[VideoPlayer.AudioCodec,,  •  ]$VAR[LabelOSDAudioChannels,,  •  ]$INFO[VideoPlayer.VideoResolution,,  •  ]$INFO[VideoPlayer.VideoCodec,,]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
 							</control>
+							<control type="image" id="506">
+								<description>Show Channel Icon</description>
+								<right>0</right>
+								<align>right</align>
+								<top>40</top>
+								<width>96</width>
+								<height>65</height>
+								<aspectratio aligny="center">keep</aspectratio>
+							</control>
 							<control type="label" id="502">
 								<width>1000</width>
 								<top>0</top>
@@ -64,7 +72,7 @@
 								<textcolor>Highlight</textcolor>
 							</control>
 							<control type="label" description="Show">
-								<width>100%</width>
+								<width>90%</width>
 								<top>50</top>
 								<height>40</height>
 								<font>MediumBold</font>
@@ -129,7 +137,7 @@
 				</control>
 			</control>           
 		</control>
-		
+
 		<control type="group">
 			<animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
 			<animation effect="fade" start="0" end="100" delay="150" time="150">Visible</animation>
@@ -142,12 +150,12 @@
 				<texture>common/white.png</texture>
 				<colordiffuse>$VAR[OSDPanel]</colordiffuse>
 				<include>Animation.FadeOut</include>
-				<animation effect="fade" start="100" end="95" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>			
+				<animation effect="fade" start="100" end="95" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
 			</control>              
 			<control type="group">
 				<top>110r</top>
 				<bottom>0</bottom>
-				<width>100%</width>				
+				<width>100%</width>
 				<control type="group">
 					<left>SidePad</left>
 					<right>SidePad</right>
@@ -202,9 +210,9 @@
 				</control>
 			</control>
 		</control>
-		
+
 		<control type="group">
-			<visible>[Control.IsVisible(102) | [Window.IsVisible(videoosd) | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]] + ![Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogVolumeBar.xml)]</visible>
+			<visible>[Control.IsVisible(102) | Window.IsVisible(videoosd) | [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]] + ![Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogVolumeBar.xml)]</visible>
 			<right>70</right>
 			<top>70</top>
 			<width>240</width>
@@ -264,12 +272,6 @@
 					<height>0</height>
 				</control>
 				<control type="label" id="505">
-					<left>-10</left>
-					<top>-10</top>
-					<width>0</width>
-					<height>0</height>
-				</control>
-				<control type="image" id="506">
 					<left>-10</left>
 					<top>-10</top>
 					<width>0</width>
