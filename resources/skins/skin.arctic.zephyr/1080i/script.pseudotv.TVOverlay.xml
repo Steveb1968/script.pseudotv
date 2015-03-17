@@ -137,9 +137,8 @@
 
 		<control type="group">
 			<animation effect="slide" start="0" end="0,-74" time="150" condition="Window.IsVisible(videoosd)">Conditional</animation>
-			<animation effect="fade" start="0" end="100" delay="150" time="150">Visible</animation>
-			<animation effect="fade" start="0" end="100" delay="150" time="150">WindowOpen</animation>
-			<visible>!Control.IsVisible(102) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+			<animation effect="slide" start="0,110" end="0" time="150" condition="[Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+			<visible>!Control.IsVisible(102) + [Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
 			<control type="image">
 				<top>110r</top>
 				<width>100%</width>
@@ -221,7 +220,7 @@
 		</control>
 
 		<control type="group">
-			<visible>[Control.IsVisible(102) | Window.IsVisible(videoosd) | [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]] + ![Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogVolumeBar.xml)]</visible>
+			<visible>[Control.IsVisible(102) | Window.IsVisible(videoosd) | [Player.Paused | Player.Forwarding | Player.Rewinding]] + ![Window.IsVisible(DialogKaiToast.xml) | Window.IsVisible(DialogVolumeBar.xml)]</visible>
 			<right>70</right>
 			<top>70</top>
 			<width>240</width>
