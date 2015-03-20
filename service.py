@@ -32,7 +32,7 @@ def Notify():
 def autostart():
     Notify()
     sleep(IDLE_TIME)
-    xbmc.executebuiltin("XBMC.RunScript(script.pseudotv)")
+    xbmc.executebuiltin("RunScript(script.pseudotv)")
     xbmc.log("AUTOSTART PTV: Service Started...")
 
 if (Enabled == 'true'):

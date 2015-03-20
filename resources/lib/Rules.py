@@ -1440,7 +1440,7 @@ class EvenShowsRule(BaseRule):
                             showname = item[loc + 1:loc2]
                             showname = showname.lower()
 
-                            if showname == lastshow:
+                            if showname == lastshow.lower():
                                 inarow += 1
                                 self.log("same show now at " + str(inarow))
                                 
@@ -1477,7 +1477,7 @@ class EvenShowsRule(BaseRule):
                     showname = item[loc + 1:loc2]
                     showname = showname.lower()
 
-                    if showname != lastshow:
+                    if showname != lastshow.lower():
                         self.log("insertNewShow found " + showname)
                         filelist.pop(index)
                         return item
