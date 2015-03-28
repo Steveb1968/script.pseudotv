@@ -5,11 +5,8 @@
 	<controls>        
 		<control type="group">
 			<control type="image">
-				<left>0</left>
-				<top>480</top>
-				<width>1920</width>
-				<height>680</height>
-				<texture>floor.png</texture>
+				<include>FullscreenDimensions</include>
+				<texture border="1">logo_back.png</texture>
 			</control>
 			<control type="group">
 				<left>0</left>
@@ -583,12 +580,22 @@
 				<visible>false</visible>
 			</control>
 		</control>
+		<control type="image">
+			<left>82</left>
+			<top>760</top>
+			<width>356</width>
+			<height>240</height>
+			<aspectratio>keep</aspectratio>
+			<texture>pstv_LogoBk.png</texture>
+			<bordersize>40</bordersize>
+			<visible>Control.IsVisible(503)</visible>
+		</control>
 		<control type="image" id="503">
 			<description>Show Channel Icon</description>
-			<left>97</left>
-			<top>800</top>
-			<width>327</width>
-			<height>150</height>
+			<left>190</left>
+			<top>760</top>
+			<width>140</width>
+			<height>240</height>
 			<aspectratio align="center" aligny="center">keep</aspectratio>
 		</control>            
 	</controls>

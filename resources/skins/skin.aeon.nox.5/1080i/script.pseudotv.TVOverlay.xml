@@ -24,11 +24,20 @@
 				<height>270</height>
 				<texture border="1,32,1,1">bottombar.png</texture>
 			</control>
+			<control type="image">
+				<left>5</left>
+				<top>28</top>
+				<width>233</width>
+				<height>233</height>
+				<texture>pstv_LogoBk.png</texture>
+				<visible>Control.IsVisible(506)</visible>
+			</control>
 			<control type="image" id="506">
 				<description>Show Channel Icon</description>
-				<top>28</top>
-				<width>238</width>
-				<height>238</height>
+				<left>20</left>
+				<top>38</top>
+				<width>203</width>
+				<height>223</height>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label"  id="502">
