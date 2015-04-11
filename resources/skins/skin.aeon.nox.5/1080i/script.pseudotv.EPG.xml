@@ -4,9 +4,12 @@
 	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 	<controls>        
 		<control type="group">
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<texture border="1">logo_back.png</texture>
+ 			<control type="image">
+				<left>0</left>
+				<top>480</top>
+				<width>1920</width>
+				<height>680</height>
+				<texture>floor.png</texture>
 			</control>
 			<control type="group">
 				<left>0</left>

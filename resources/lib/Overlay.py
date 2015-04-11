@@ -786,7 +786,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
             self.showChannelLabel(self.inputChannel)
         elif action == ACTION_OSD:
-            xbmc.executebuiltin("ActivateWindow(12901)")
+            xbmc.executebuiltin("ActivateWindow(videoosd)")
 
         self.actionSemaphore.release()
         self.log('onAction return')
