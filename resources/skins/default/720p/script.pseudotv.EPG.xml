@@ -393,37 +393,37 @@
 		<control type="group" id="111">
 			<left>380</left>
 			<top>106</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="112">
 			<left>380</left>
 			<top>156</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="113">
 			<left>380</left>
 			<top>206</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="114">
 			<left>380</left>
 			<top>256</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
 		</control>
 		<control type="group" id="115">
 			<left>380</left>
 			<top>306</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
-		</control>		
+		</control>
 		<control type="group" id="116">
 			<left>380</left>
 			<top>356</top>
-			<width>840</width>
+			<width>838</width>
 			<height>48</height>
 		</control>
 
