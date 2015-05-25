@@ -80,9 +80,9 @@ CHANNELBUG_LOC = xbmc.translatePath(os.path.join(CHANNELS_LOC, 'ChannelBug' + '/
 SHORT_CLIP_ENUM = [15,30,60,90,120,180,240,300,360]
 
 MEDIA_LIMIT = {}
-MEDIA_LIMIT['0'] = 10            
-MEDIA_LIMIT['1'] = 25           
-MEDIA_LIMIT['2'] = 50            
+MEDIA_LIMIT['0'] = 10
+MEDIA_LIMIT['1'] = 25
+MEDIA_LIMIT['2'] = 50
 MEDIA_LIMIT['3'] = 100
 MEDIA_LIMIT['4'] = 250
 MEDIA_LIMIT['5'] = 500

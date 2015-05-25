@@ -119,7 +119,7 @@ msgid "Tweaks"
 msgstr ""
 
 msgctxt "#30023"
-msgid "Channel Change Delay (in seconds)"
+msgid "Channel Change Delay"
 msgstr ""
 
 msgctxt "#30024"
@@ -139,7 +139,7 @@ msgid "Activate Service"
 msgstr ""
 
 msgctxt "#30028"
-msgid "Delay Service (in seconds)"
+msgid "Service Delay"
 msgstr ""
 
 msgctxt "#30029"

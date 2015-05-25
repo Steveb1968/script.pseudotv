@@ -123,8 +123,8 @@ msgid "Tweaks"
 msgstr "Tweaks"
 
 msgctxt "#30023"
-msgid "Channel Change Delay (in seconds)"
-msgstr "Delay na Troca de Canal (em segundos)"
+msgid "Channel Change Delay"
+msgstr "Delay na Troca de Canal"
 
 msgctxt "#30024"
 msgid "Background Loading..."
@@ -143,8 +143,8 @@ msgid "Activate Service"
 msgstr "Ativar o serviço"
 
 msgctxt "#30028"
-msgid "Delay Service (in seconds)"
-msgstr "Delay no Serviço (em segundos)"
+msgid "Delay Service"
+msgstr "Delay no Serviço"
 
 msgctxt "#30029"
 msgid "Show Notification"

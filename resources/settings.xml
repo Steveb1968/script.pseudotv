@@ -20,19 +20,19 @@
 		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
 		<setting id="HideClips" type="bool" label="30017" default="true"/>
-		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15|30|60|90|120|180|240|300|360" default="5"/>
+		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="5"/>
 		<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
 	</category>
 
 	<category label="30022">
-		<setting id="ChannelDelay" type="enum" label="30023" default="0" values="None|0.25|0.5|0.75|1.0|1.25|1.5|1.75|2.0"/>
+		<setting id="ChannelDelay" type="enum" label="30023" default="0" values="None|0.25 sec|0.5 sec|0.75 sec|1.0 sec|1.25 sec|1.5 sec|1.75 sec|2.0 sec"/>
 		<setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="2"/>
 		<setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Orange|Magenta|Gray|White" default="1"/>
 	</category>
 
 	<category label="30026">
 		<setting id="enable" type="bool" label="30027" default="false"/>
-		<setting id="timer_amount" type="enum" values="0|5|10|15|20" label="30028" enable="eq(-1,true)" default="1"/>
+		<setting id="timer_amount" type="enum" values="None|5 sec|10 sec|15 sec|20 sec" label="30028" enable="eq(-1,true)" default="1"/>
 		<setting id="notify" type="bool" label="30029" enable="eq(-2,true)" default="true"/>
 	</category>
 </settings>
