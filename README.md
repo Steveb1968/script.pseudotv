@@ -153,7 +153,7 @@ Settings
 **Auto Start -**
 
 	Activate Service: Activate auto start. Pseudotv will automatically start when
-    kodi is Started.
+    kodi is started.
 
     Service Delay: Delay the auto start of Pseudotv at Kodi start-up. This is useful
     for low end hardware or if your skin loads multi-pal scripts at start-up.

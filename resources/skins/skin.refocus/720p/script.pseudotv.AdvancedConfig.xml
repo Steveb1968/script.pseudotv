@@ -311,8 +311,8 @@
 						<onright>161</onright>
 						<textcolor>Color4</textcolor>
 						<focusedcolor>Color1</focusedcolor>
-						<texturenofocus>dialogs/button-nf.png</texturenofocus>
-						<texturefocus>dialogs/button-fo.png</texturefocus>
+						<texturenofocus border="5">dialogs/button-nf.png</texturenofocus>
+						<texturefocus border="5">dialogs/button-fo.png</texturefocus>
 					</control>
 
 					<control type="button" id="161">
@@ -328,8 +328,8 @@
 						<onright>162</onright>
 						<textcolor>Color4</textcolor>
 						<focusedcolor>Color1</focusedcolor>
-						<texturenofocus>dialogs/button-nf.png</texturenofocus>
-						<texturefocus>dialogs/button-fo.png</texturefocus>
+						<texturenofocus border="5">dialogs/button-nf.png</texturenofocus>
+						<texturefocus border="5">dialogs/button-fo.png</texturefocus>
 					</control>
 
 					<control type="button" id="162">
@@ -344,8 +344,8 @@
 						<onleft>161</onleft>
 						<textcolor>Color4</textcolor>
 						<focusedcolor>Color1</focusedcolor>
-						<texturenofocus>dialogs/button-nf.png</texturenofocus>
-						<texturefocus>dialogs/button-fo.png</texturefocus>
+						<texturenofocus border="5">dialogs/button-nf.png</texturenofocus>
+						<texturefocus border="5">dialogs/button-fo.png</texturefocus>
 					</control>
 
 					<control type="button" id="163">
@@ -359,8 +359,8 @@
 						<onleft>162</onleft>
 						<textcolor>Color4</textcolor>
 						<focusedcolor>Color1</focusedcolor>
-						<texturenofocus>dialogs/button-nf.png</texturenofocus>
-						<texturefocus>dialogs/button-fo.png</texturefocus>
+						<texturenofocus border="5">dialogs/button-nf.png</texturenofocus>
+						<texturefocus border="5">dialogs/button-fo.png</texturefocus>
 					</control>
 
 					<control type="image" id="170">
