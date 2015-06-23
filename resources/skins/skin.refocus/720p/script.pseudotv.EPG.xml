@@ -409,15 +409,9 @@
 
 		<control type="group">
 			<visible>false</visible>
-			<control type="label" id="500">
-				<description>Show Name Label</description>            
-			</control>
-			<control type="label" id="501">
-				<description>Show Title Label</description>
-			</control>
-			<control type="label" id="502">
-				<label>Show Description</label>
-			</control>
+			<control type="label" id="500" description="Show Title Label" />
+			<control type="label" id="501" description="Show Name Label" />
+			<control type="label" id="502" description="Show Description Label" />
 		</control>
 
 	</controls>

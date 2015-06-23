@@ -2,7 +2,7 @@
 <window>
 	<allowoverlay>no</allowoverlay>
 	<include>Animation_OpenCloseFade</include>
-	<controls>	
+	<controls>
 		<!--BACKGROUND-->
 		<control type="image">
 			<left>0</left>
@@ -11,7 +11,7 @@
 			<height>175</height>
 			<texture>osd/OSDdialogback_top.png</texture>
 			<colordiffuse>OSDBackgroundColor</colordiffuse>
-		</control>		
+		</control>
 		<control type="image">
 			<left>0</left>
 			<top>170</top>
@@ -48,7 +48,7 @@
 			<height>28</height>
 			<texture>NavFlagEpg.png</texture>
 			<colordiffuse>GlobalHeading</colordiffuse>
-		</control>	
+		</control>
 		<control type="image">
 			<left>0</left>
 			<top>545</top>
@@ -56,7 +56,7 @@
 			<height>175</height>
 			<texture>osd/OSDdialogback.png</texture>
 			<colordiffuse>OSDBackgroundColor</colordiffuse>
-		</control>		
+		</control>
 		<control type="label">
 			<description>Now Playing</description>
 			<right>30</right>
@@ -214,7 +214,7 @@
 			<align>right</align>
 			<label>[UPPERCASE]$LOCALIZE[31168][/UPPERCASE]</label>
 			<visible>player.rewinding32x</visible>
-		</control>		
+		</control>
 		<!-- TvShow Art -->
 		<control type ="group">
 			<visible>VideoPlayer.Content(episodes)</visible>
@@ -304,11 +304,11 @@
 			<font>METF_OSDTime</font>
 			<textcolor>OSDFinishTime</textcolor>
 			<label>$LOCALIZE[31409]:  $INFO[Player.FinishTime]</label>
-		</control>		
-		<!--LISTING HEADER AND TIME INFO-->		
+		</control>
+		<!--LISTING HEADER AND TIME INFO-->
 		<control type="group">
 			<left>393</left>
-			<top>185</top>			
+			<top>185</top>
 			<control type="image">
 				<left>-1</left>
 				<top>5</top>
@@ -316,7 +316,7 @@
 				<height>345</height>
 				<texture>VideoInfoLine_Vertical.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
-			</control>			
+			</control>
 			<control type="label" id="101">
 				<description>Time 1 Label</description>
 				<left>5</left>
@@ -365,17 +365,17 @@
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-			</control>			
+			</control>
 		</control>
-		<!--SHOW LISTINGS-->		
+		<!--SHOW LISTINGS-->
 		<control type="button" id="100">
-			<visible>false</visible>			
-			<label>0xFFFFFFFF</label><!--un-focused text color-->	
+			<visible>false</visible>
+			<label>0xFFFFFFFF</label><!--un-focused text color-->
 			<label2>0xFFc89008</label2><!--focused text color-->
 		</control>
 		<control type="button" id="105">
-			<visible>false</visible>			
-			<label>METF_MediaDetailsSmall</label><!--text font-->	
+			<visible>false</visible>
+			<label>METF_MediaDetailsSmall</label><!--text font-->
 		</control>
 		<control type="group" id="111">
 			<left>393</left>
@@ -406,18 +406,18 @@
 			<top>436</top>
 			<width>887</width>
 			<height>48</height>
-		</control>		
+		</control>
 		<control type="group" id="116">
 			<left>393</left>
 			<top>486</top>
 			<width>887</width>
 			<height>48</height>
 		</control>
-		<!--CHANNEL BUTTONS AND LABELS-->		
+		<!--CHANNEL BUTTONS AND LABELS-->
 		<control type="group">
 			<left>0</left>
-			<top>185</top>		
-			<!--CHANNEL HEADER-->									
+			<top>185</top>
+			<!--CHANNEL HEADER-->
 			<control type="label" id="104">
 				<description>Date Label</description>
 				<left>0</left>
@@ -437,7 +437,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!--CHANNEL 1-->					
+			<!--CHANNEL 1-->
 			<control type="label" id="301">
 				<description>Channel 1 Name</description>
 				<left>110</left>
@@ -479,7 +479,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!-- CHANNEL 2 -->								
+			<!-- CHANNEL 2 -->
 			<control type="label" id="302">
 				<description>Channel 2 Name</description>
 				<left>110</left>
@@ -521,7 +521,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!-- CHANNEL 3 -->			
+			<!-- CHANNEL 3 -->
 			<control type="label" id="303">
 				<description>Channel 3 Name</description>
 				<left>110</left>
@@ -542,7 +542,7 @@
 				<width>50</width>
 				<height>50</height>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-			</control>			
+			</control>
 			<control type="label" id="313">
 				<description>Channel 3 Number</description>
 				<right>1235</right>
@@ -563,7 +563,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!-- CHANNEL 4 -->			
+			<!-- CHANNEL 4 -->
 			<control type="label" id="304">
 				<description>Channel 4 Name</description>
 				<left>110</left>
@@ -605,7 +605,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!-- CHANNEL 5 -->			
+			<!-- CHANNEL 5 -->
 			<control type="label" id="305">
 				<description>Channel 5 Name</description>
 				<left>110</left>
@@ -647,7 +647,7 @@
 				<texture>VideoInfoLine.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-			<!-- CHANNEL 6 -->						
+			<!-- CHANNEL 6 -->
 			<control type="label" id="306">
 				<description>Channel 6 Name</description>
 				<left>110</left>
@@ -668,7 +668,7 @@
 				<width>50</width>
 				<height>50</height>
 				<aspectratio align="right" aligny="center">keep</aspectratio>
-			</control>			
+			</control>
 			<control type="label" id="316">
 				<description>Channel 6 Number</description>
 				<right>1235</right>
@@ -682,7 +682,7 @@
 				<textcolor>GlobalHeading</textcolor>
 			</control>
 		</control>
-		<!--TIME BAR-->		
+		<!--TIME BAR-->
 		<control type="image" id="120">
 			<left>430</left>
 			<top>228</top>
@@ -706,28 +706,6 @@
 			<pauseatend>1800</pauseatend>
 			<scrollspeed>40</scrollspeed>
 		</control>
-		<control type="label" id="500">
-			<left>-20</left>
-			<top>-20</top>
-			<width>0</width>
-			<height>0</height>
-			<visible>false</visible>
-		</control>           
-		<control type="label" id="501">
-			<left>-20</left>
-			<top>-20</top>
-			<width>0</width>
-			<height>0</height>
-			<visible>false</visible>
-		</control>
-		<!-- Plot -->
-		<control type="label" id="502">
-			<left>-10</left>
-			<top>-10</top>
-			<width>0</width>
-			<height>0</height>
-			<visible>false</visible>
-		</control>     
 		<control type="textbox">
 			<left>240</left>
 			<top>600</top>
@@ -750,6 +728,12 @@
 			<width>180</width>
 			<height>104</height>
 			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="group">
+			<visible>false</visible>
+			<control type="label" id="500" description="Show Title Label" />
+			<control type="label" id="501" description="Show Name Label" />
+			<control type="label" id="502" description="Show Description Label" />
 		</control>
 	</controls>
 </window>

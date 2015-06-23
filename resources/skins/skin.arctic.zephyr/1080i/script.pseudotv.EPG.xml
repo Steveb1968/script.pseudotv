@@ -397,20 +397,8 @@
 
 		<control type="group">
 			<visible>false</visible>
-			<control type="image" id="503">
-				<description>Show Channel Icon</description>
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
-			<control type="label" id="502">
-				<description>Show Plot Label</description>
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
-			</control>
+			<control type="image" id="503" description="Show Channel Icon" />
+			<control type="label" id="502" description="Show Description Label" />
 		</control>
 	</controls>
 </window>
