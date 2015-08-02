@@ -2,7 +2,6 @@ PseudoTV for XBMC
 =================
 
 **'GOTHAM / HELIX / ISENGARD' ONLY**
-(need latest nightly '23/05/2015' for Isengard)
 
 -----------
 What is it?

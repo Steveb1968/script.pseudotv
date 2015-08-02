@@ -33,11 +33,7 @@ from ChannelList import ChannelList
 from ChannelListThread import ChannelListThread
 from FileAccess import FileLock, FileAccess
 from Migrate import Migrate
-#from PIL import Image, ImageEnhance
-try:
-    from PIL import Image, ImageEnhance
-except:
-    pass
+from PIL import Image, ImageEnhance
 
 __icon__ = REAL_SETTINGS.getAddonInfo('icon')
 
