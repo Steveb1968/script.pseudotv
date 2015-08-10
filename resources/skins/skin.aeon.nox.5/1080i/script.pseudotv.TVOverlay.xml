@@ -33,34 +33,33 @@
 				<aligny>center</aligny>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<colordiffuse>grey2</colordiffuse>
+					<width>320</width>
+					<include>MediaFlagVars</include>
+					<bordersize>2</bordersize>
+					<texture>flags/studios/default-studio.png</texture>
+					<visible>IsEmpty(VideoPlayer.Studio)</visible>
+				</control>
 				<control type="image" id="800011">
 					<colordiffuse>grey2</colordiffuse>
 					<width>320</width>
 					<include>MediaFlagVars</include>
 					<bordersize>2</bordersize>
 					<texture>$INFO[VideoPlayer.Studio,flags/studios/,.png]</texture>
-					<visible>![IsEmpty(Control.GetLabel(800011)) | IsEmpty(VideoPlayer.Studio)]</visible>
-					<visible>!VideoPlayer.Content(musicvideos)</visible>
-				</control>
-				<control type="image" id="800012">
-					<colordiffuse>grey2</colordiffuse>
-					<width>320</width>
-					<include>MediaFlagVars</include>
-					<bordersize>2</bordersize>
-					<texture>$INFO[VideoPlayer.Studio,flags/music/recordlabel/,.png]</texture>
-					<visible>![IsEmpty(Control.GetLabel(800011)) | IsEmpty(VideoPlayer.Studio)]</visible>
-					<visible>VideoPlayer.Content(musicvideos)</visible>
+					<visible>!IsEmpty(Control.GetLabel(800011)) + !IsEmpty(VideoPlayer.Studio)</visible>
 				</control>
 				<control type="label">
-					<left>15</left>
-					<width>239</width>
+					<left>30</left>
+					<width>260</width>
 					<height>90</height>
 					<align>center</align>
 					<label>$INFO[VideoPlayer.Studio]</label>
 					<font>font12</font>
 					<textcolor>grey2</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>IsEmpty(Control.GetLabel(800011)) | IsEmpty(Control.GetLabel(800012))</visible>
+					<visible>IsEmpty(Control.GetLabel(800011)) + !IsEmpty(VideoPlayer.Studio)</visible>
 				</control>
 				<control type="image">
 					<width>320</width>
@@ -200,7 +199,7 @@
 				<width>1652</width>
 				<height>90</height>
 				<font>font14_textbox2</font>
-				<include>ShowCaseInfoPanelButtonsValues</include>
+				<textcolor>grey2</textcolor>
 				<autoscroll time="3600" delay="8000" repeat="8000">true</autoscroll>
 			</control>
 			<control type="label">
