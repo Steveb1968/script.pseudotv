@@ -167,7 +167,7 @@
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>shadow</shadowcolor>
-				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: ,][/B]</label>
+				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey3],[/COLOR]][/B]</label>
 			</control>
 			<control type="label">
 				<left>1420</left>

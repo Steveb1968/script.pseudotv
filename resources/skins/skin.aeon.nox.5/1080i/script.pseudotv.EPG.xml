@@ -47,7 +47,7 @@
 				<textoffsety>-2</textoffsety>
 				<align>left</align>
 				<aligny>top</aligny>
-				<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
+				<label>$INFO[System.AddonTitle(script.pseudotv)]$INFO[System.AddonVersion(script.pseudotv),[COLOR grey3] | ,[/COLOR]]</label>
 				<textcolor>grey2</textcolor>
 				<font>font13_title</font>
 			</control>
@@ -534,27 +534,17 @@
 		<control type="group">
 			<left>522</left>
 			<top>759</top>
-			<control type="label" id="500">
+			<control type="label">
 				<description>Show/Movie Title</description>
 				<left>0</left>
 				<top>18</top>
 				<width>1320</width>
-				<height>30</height>
+				<height>40</height>
 				<textoffsetx>15</textoffsetx>
 				<align>left</align>
-				<textcolor>labelheader</textcolor>
-				<font>font15</font>
-			</control>
-			<control type="label" id="501">
-				<description>Episode Title</description>
-				<left>0</left>
-				<top>18</top>
-				<width>1320</width>
-				<height>30</height>
-				<textoffsetx>15</textoffsetx>
-				<align>right</align>
 				<textcolor>grey2</textcolor>
-				<font>font15</font>
+				<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey3],[/COLOR]][/B]</label>
+				<font>font14_title</font>
 			</control>
 			<control type="image">
 				<description>separator image</description>
@@ -574,13 +564,11 @@
 				<textcolor>grey2</textcolor>
 				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 			</control>
-			<control type="label" id="502">
-				<description>Show Plot Label</description>
-				<left>-10</left>
-				<top>-10</top>
-				<width>0</width>
-				<height>0</height>
+			<control type="group">
 				<visible>false</visible>
+				<control type="label" id="500" description="Show Title Label" />
+				<control type="label" id="501" description="Show Name Label" />
+				<control type="label" id="502" description="Show Plot Label" />
 			</control>
 		</control>
 		<control type="image">

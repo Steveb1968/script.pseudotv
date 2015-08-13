@@ -55,7 +55,7 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
+			<label>$INFO[System.AddonTitle(script.pseudotv)]$INFO[System.AddonVersion(script.pseudotv),[COLOR=blue] - [/COLOR],]</label>
 		</control>
 		<include>Clock</include>
 

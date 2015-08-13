@@ -46,7 +46,7 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
+			<label>$INFO[System.AddonTitle(script.pseudotv)]$INFO[System.AddonVersion(script.pseudotv), - ,]</label>
 		</control>
 		<control type="label">
 			<description>time label</description>

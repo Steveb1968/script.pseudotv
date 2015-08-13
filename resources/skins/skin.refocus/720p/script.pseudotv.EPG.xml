@@ -14,7 +14,16 @@
 			<textcolor>Color1</textcolor>
 			<include>transition_WindowTitle</include>
 			<label>pseudo[COLOR=Color2]tv[/COLOR]</label>
-			<visible>!Player.Paused</visible>
+		</control>
+		<control type="label">
+			<right>20</right>
+			<top>680</top>
+			<width>100</width>
+			<align>right</align>
+			<textcolor>Color2</textcolor>
+			<font>font10</font>
+			<include>transition_WindowTitle</include>
+			<label>$INFO[System.AddonVersion(script.pseudotv),Ver. ,]</label>
 		</control>
 
 		<!--CHANNEL LISTINGS BACKGROUND-->
@@ -322,13 +331,13 @@
 				<description>Show Name Label</description>
 				<width>900</width>
 				<include>detail_Title</include>
-				<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: ,]</label>
+				<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR Color2],[/COLOR]]</label>
 			</control>
 			<control type="textbox">
 				<label>Show Description</label>
 				<top>35</top>
 				<width>900</width>
-				<height>90</height>
+				<height>110</height>
 				<info>Control.GetLabel(502)</info>
 				<include>detail_Text</include>
 			</control>  

@@ -68,23 +68,14 @@
 				<bottom>10</bottom>
 				<left>30</left>
 				<right>30</right>
-				<control type="label" id="500">
+				<control type="label">
 					<top>0</top>
 					<aligny>center</aligny>
 					<height>64</height>
 					<font>SmallBold</font>
 					<textcolor>PanelWhite100</textcolor>
 					<selectedcolor>PanelWhite100</selectedcolor>
-				</control>
-				<control type="label" id="501">
-					<top>0</top>
-					<right>0</right>
-					<align>right</align>
-					<aligny>center</aligny>
-					<height>74</height>
-					<font>TinyBold</font>
-					<textcolor>PanelWhite100</textcolor>
-					<selectedcolor>PanelWhite100</selectedcolor>
+					<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR PanelWhite70],[/COLOR]]</label>
 				</control>
 				<control type="textbox">
 					<top>60</top>
@@ -399,6 +390,8 @@
 			<visible>false</visible>
 			<control type="image" id="503" description="Show Channel Icon" />
 			<control type="label" id="502" description="Show Description Label" />
+			<control type="label" id="500" description="Show Title Label" />
+			<control type="label" id="501" description="Show Name Label" />
 		</control>
 	</controls>
 </window>
