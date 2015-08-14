@@ -98,7 +98,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelDelay = 0
 
         for i in range(3):
-            self.channelLabel.append(xbmcgui.ControlImage(50 + (40 * i), 50, 50, 50, IMAGES_LOC + 'solid.png', colorDiffuse=str(NUM_COLOUR[REAL_SETTINGS.getSetting('NumberColour')])))
+            self.channelLabel.append(xbmcgui.ControlImage(50 + (35 * i), 50, 50, 50, IMAGES_LOC, colorDiffuse=str(NUM_COLOUR[REAL_SETTINGS.getSetting('NumberColour')])))
             self.addControl(self.channelLabel[i])
             self.channelLabel[i].setVisible(False)
 
@@ -410,9 +410,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             self.log("Ignoring a stop because of a stream")
             self.Player.ignoreNextStop = True
 
-        self.log("about to mute");
-        # Mute the channel before changing
-        xbmc.executebuiltin("Mute()");
         xbmc.sleep(self.channelDelay)
         # set the show offset
         self.Player.playselected(self.channels[self.currentChannel - 1].playlistPosition)
@@ -430,7 +427,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                     self.Player.pause()
 
                     if self.waitForVideoPaused() == False:
-                        xbmc.executebuiltin("Mute()");
                         return
             except:
                 self.log('Exception during seek on paused channel', xbmc.LOGERROR)
@@ -449,9 +445,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 except:
                     self.log('Exception during seek', xbmc.LOGERROR)
 
-        # Unmute
-        self.log("Finished, unmuting");
-        xbmc.executebuiltin("Mute()");
         self.showChannelLabel(self.currentChannel)
         self.lastActionTime = time.time()
         self.runActions(RULES_ACTION_OVERLAY_SET_CHANNEL_END, channel, self.channels[channel - 1])

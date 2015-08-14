@@ -23,7 +23,7 @@
 			<top>80</top>
 			<width>720</width>
 			<height>30</height>
-			<font>font13_title</font>
+			<font>font13</font>
 			<label>$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507]</label>
 			<align>center</align>
 			<aligny>center</aligny>
@@ -40,7 +40,7 @@
 				<top>0</top>
 				<width>200</width>
 				<height>35</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>steelblue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>left</align>
@@ -52,7 +52,7 @@
 				<top>0</top>
 				<width>200</width>
 				<height>35</height>
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>steelblue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>right</align>
@@ -160,7 +160,7 @@
 				<top>20</top>
 				<width>720</width>
 				<height>35</height>               
-				<font>font13_title</font>
+				<font>font13</font>
 				<textcolor>steelblue</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<aligny>center</aligny>

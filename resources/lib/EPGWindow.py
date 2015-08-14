@@ -45,7 +45,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         self.textcolor = "FFFFFFFF"
         self.focusedcolor = "FF7d7d7d"
         self.clockMode = 0
-        self.textfont  = "font14"
+        self.textfont  = "font13"
 
         # Decide whether to use the current skin or the default skin.  If the current skin has the proper
         # image, then it should work.

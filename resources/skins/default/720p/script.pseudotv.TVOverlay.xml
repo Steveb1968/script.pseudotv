@@ -95,7 +95,7 @@
 				<width>770</width>
 				<height>25</height>
 				<align>left</align>
-				<font>font12</font>
+				<font>font13</font>
 				<info>Control.GetLabel(503)</info>
 				<textcolor>gray</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -106,7 +106,7 @@
 				<top>595</top>
 				<width>770</width>
 				<height>35</height>
-				<font>font30</font>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<info>Control.GetLabel(503)</info>
@@ -123,7 +123,7 @@
 				<top>595</top>
 				<width>770</width>
 				<height>35</height>
-				<font>font30</font>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<info>Control.GetLabel(504)</info>
