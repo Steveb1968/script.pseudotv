@@ -3,6 +3,8 @@ PseudoTV for XBMC
 
 **'GOTHAM / HELIX / ISENGARD' ONLY**
 
+![screenshot](https://raw.githubusercontent.com/Steveb1968/script.pseudotv/master/_screenshots/screenshot05.png)
+
 -----------
 What is it?
 -----------
@@ -164,7 +166,7 @@ Settings
 -------
 Credits
 -------
-**Developer:** Jason102.<br>
+**Developer:** Jason102, Steveb.<br>
 **Code Additions:** Sranshaft, TheOddLinguist, Steveb.<br>
 **Skins:** Sranshaft, Zepfan, Steveb.<br>
 **Preset Images:** Jtucker1972.<br>

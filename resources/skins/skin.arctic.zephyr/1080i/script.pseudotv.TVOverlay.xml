@@ -10,7 +10,7 @@
 			<height>109</height>
 			<aspectratio>keep</aspectratio>
 			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + ![Window.IsActive(videoosd) | Player.Paused]</visible>
 		</control>
 		<control type="group">
 			<visible>Player.HasVideo</visible>

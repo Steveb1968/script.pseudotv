@@ -580,10 +580,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             except:
                 self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
         else:
-            try:
-                self.getControl(103).setImage('')
-            except:
-                pass
+            self.getControl(103).setImage('')
 
         if xbmc.getCondVisibility('Player.ShowInfo'):
             json_query = '{"jsonrpc": "2.0", "method": "Input.Info", "id": 1}'
@@ -610,6 +607,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
     def hideInfo(self):
         self.getControl(102).setVisible(False)
+        self.getControl(103).setVisible(True)
         self.infoOffset = 0
         self.showingInfo = False
 
@@ -626,6 +624,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             if self.channels[self.currentChannel - 1].getItemDuration(xbmc.PlayList(xbmc.PLAYLIST_MUSIC).getposition()) < self.shortItemLength:
                 return
 
+        self.getControl(103).setVisible(False)
         self.getControl(102).setVisible(True)
         self.showingInfo = True
         self.setShowInfo()
