@@ -14,7 +14,7 @@
 		</control>
 		<control type="group" id="102">
 			<animation effect="fade" start="0" end="100" time="300" condition="Control.IsVisible(102)">Conditional</animation>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !Window.IsActive(videoosd)</visible>
 			<!--HEADER-->
 			<control type="image">
 				<left>0</left>
