@@ -94,11 +94,15 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.notPlayingCount = 0
         self.ignoreInfoAction = False
         self.shortItemLength = 60
+        self.seekForward = 30
+        self.seekBackward = -30
         self.runningActionChannel = 0
         self.channelDelay = 0
+        self.numberColor = '0xFF00FF00'
 
         for i in range(3):
-            self.channelLabel.append(xbmcgui.ControlImage(50 + (35 * i), 50, 50, 50, IMAGES_LOC, colorDiffuse=str(NUM_COLOUR[REAL_SETTINGS.getSetting('NumberColour')])))
+            self.numberColor = NUM_COLOUR[int(REAL_SETTINGS.getSetting("NumberColour"))]
+            self.channelLabel.append(xbmcgui.ControlImage(50 + (35 * i), 50, 50, 50, IMAGES_LOC, colorDiffuse=self.numberColor))
             self.addControl(self.channelLabel[i])
             self.channelLabel[i].setVisible(False)
 
@@ -243,6 +247,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.hideShortItems = REAL_SETTINGS.getSetting("HideClips") == "true"
         self.log("Hide Short Items - " + str(self.hideShortItems))
         self.shortItemLength = SHORT_CLIP_ENUM[int(REAL_SETTINGS.getSetting("ClipLength"))]
+        self.seekForward = SEEK_FORWARD[int(REAL_SETTINGS.getSetting("SeekForward"))]
+        self.seekBackward = SEEK_BACKWARD[int(REAL_SETTINGS.getSetting("SeekBackward"))]
         self.log("Short item length - " + str(self.shortItemLength))
         self.channelDelay = int(REAL_SETTINGS.getSetting("ChannelDelay")) * 250
 
@@ -726,13 +732,19 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 self.infoOffset -= 1
                 self.showInfo(10.0)
             else:
-                xbmc.executebuiltin("PlayerControl(SmallSkipBackward)")
+                if KODI_VER >= 15.0:
+                    xbmc.executebuiltin("Seek("+str(self.seekBackward)+")")
+                else:
+                    xbmc.executebuiltin("PlayerControl(SmallSkipBackward)")
         elif action == ACTION_MOVE_RIGHT:
             if self.showingInfo:
                 self.infoOffset += 1
                 self.showInfo(10.0)
             else:
-                xbmc.executebuiltin("PlayerControl(SmallSkipForward)")
+                if KODI_VER >= 15.0:
+                    xbmc.executebuiltin("Seek("+str(self.seekForward)+")")
+                else:
+                    xbmc.executebuiltin("PlayerControl(SmallSkipForward)")
         elif action in ACTION_PREVIOUS_MENU:
             if self.showingInfo:
                 self.hideInfo()

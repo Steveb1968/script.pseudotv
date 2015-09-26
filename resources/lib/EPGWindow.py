@@ -117,18 +117,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         timex, timey = self.getControl(120).getPosition()
         timew = self.getControl(120).getWidth()
         timeh = self.getControl(120).getHeight()
-        if xbmc.getSkinDir() == "skin.aeon.nox.5":
-            if xbmc.getInfoLabel('Skin.CurrentTheme') == "green":
-                self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR, colorDiffuse = '0xFF00FF00' )
-            elif xbmc.getInfoLabel('Skin.CurrentTheme') == "red":            
-                self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR, colorDiffuse = '0xFFFF0000' )
-            elif xbmc.getInfoLabel('Skin.CurrentTheme') == "orange":            
-                self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR, colorDiffuse = '0xFFFFA500' )
-            else:        
-                self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR, colorDiffuse = '0xFF6DB9E5' )
-
-        else:
-            self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR)
+        self.currentTimeBar = xbmcgui.ControlImage(timex, timey, timew, timeh, self.mediaPath + TIME_BAR)
 
         self.addControl(self.currentTimeBar)
 

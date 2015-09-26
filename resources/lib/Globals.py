@@ -48,6 +48,7 @@ REAL_SETTINGS = xbmcaddon.Addon(id=ADDON_ID)
 ADDON_INFO = REAL_SETTINGS.getAddonInfo('path')
 
 VERSION = REAL_SETTINGS.getAddonInfo('version')
+KODI_VER = float(xbmcaddon.Addon('xbmc.addon').getAddonInfo('version')[0:4])
 
 TIMEOUT = 15 * 1000
 PREP_CHANNEL_TIME = 60 * 60 * 24 * 5
@@ -77,46 +78,18 @@ GEN_CHAN_LOC = os.path.join(CHANNELS_LOC, 'generated' + '/')
 MADE_CHAN_LOC = os.path.join(CHANNELS_LOC, 'stored' + '/')
 CHANNELBUG_LOC = xbmc.translatePath(os.path.join(CHANNELS_LOC, 'ChannelBug' + '/'))
 
-SHORT_CLIP_ENUM = [15,30,60,90,120,180,240,300,360]
-
-MEDIA_LIMIT = {}
-MEDIA_LIMIT['0'] = 10
-MEDIA_LIMIT['1'] = 25
-MEDIA_LIMIT['2'] = 50
-MEDIA_LIMIT['3'] = 100
-MEDIA_LIMIT['4'] = 250
-MEDIA_LIMIT['5'] = 500
-MEDIA_LIMIT['6'] = 1000
-MEDIA_LIMIT['7'] = 0
-
-NUM_COLOUR = {}
-NUM_COLOUR['0'] = '0xFFFF0000'        
-NUM_COLOUR['1'] = '0xFF00FF00'           
-NUM_COLOUR['2'] = '0xFF0000FF'            
-NUM_COLOUR['3'] = '0xFFFFFF00'
-NUM_COLOUR['4'] = '0xFF00FFFF'
-NUM_COLOUR['5'] = '0xFFFFA500'
-NUM_COLOUR['6'] = '0xFFFF00FF'
-NUM_COLOUR['7'] = '0xFF808080'
-NUM_COLOUR['8'] = '0xFFFFFFFF'
+SHORT_CLIP_ENUM = [15, 30, 60, 90, 120, 180, 240, 300, 360]
+SEEK_FORWARD = [10, 30, 60, 180, 300, 600, 1800]
+SEEK_BACKWARD = [-10, -30, -60, -180, -300, -600, -1800]
+MEDIA_LIMIT = [10, 25, 50, 100, 250, 500, 1000, 0]
+NUM_COLOUR = ['0xFFFF0000', '0xFF00FF00', '0xFF0000FF', '0xFFFFFF00', '0xFF00FFFF', '0xFFFFA500', '0xFFFF00FF', '0xFF808080', '0xFFFFFFFF']
 
 GlobalFileLock = FileLock()
 ADDON_SETTINGS = Settings.Settings()
 
 TIME_BAR = 'pstvTimeBar.png'
 BUTTON_NO_FOCUS = 'pstvButtonNoFocus.png'
-
-if xbmc.getSkinDir() == "skin.aeon.nox.5":
-    if xbmc.getInfoLabel('Skin.CurrentTheme') == "green":
-        BUTTON_FOCUS = 'pstvButtonFocusGreen.png'
-    elif xbmc.getInfoLabel('Skin.CurrentTheme') == "red":          
-        BUTTON_FOCUS = 'pstvButtonFocusRed.png'
-    elif xbmc.getInfoLabel('Skin.CurrentTheme') == "orange":
-        BUTTON_FOCUS = 'pstvButtonFocusOrange.png'
-    else:        
-        BUTTON_FOCUS = 'pstvButtonFocus.png'
-else:
-    BUTTON_FOCUS = 'pstvButtonFocus.png'
+BUTTON_FOCUS = 'pstvButtonFocus.png'
 
 RULES_ACTION_START = 1
 RULES_ACTION_JSON = 2

@@ -2,7 +2,7 @@
 <settings>
 	<category label="30000">
 		<setting label="30007" type="lsep"/>
-		<setting id="Dummy" type="action" label="30008" action="RunScript($CWD/config.py)"/>
+		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/config.py)"/>
 		<setting label="30009" type="lsep"/>
 		<setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
@@ -26,8 +26,10 @@
 
 	<category label="30022">
 		<setting id="ChannelDelay" type="enum" label="30023" default="0" values="None|0.25 sec|0.5 sec|0.75 sec|1.0 sec|1.25 sec|1.5 sec|1.75 sec|2.0 sec"/>
-		<setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="2"/>
+		<setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="1"/>
 		<setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Orange|Magenta|Gray|White" default="1"/>
+		<setting id="SeekForward" type="enum" label="30046" values="10 sec|30 sec|60 sec|3 min|5 min|10 min|30 min" default="1"/>
+		<setting id="SeekBackward" type="enum" label="30047" values="-10 sec|-30 sec|-60 sec|-3 min|-5 min|-10 min|-30 min" default="1"/>
 	</category>
 
 	<category label="30026">

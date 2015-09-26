@@ -32,7 +32,7 @@ def Start():
     MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", __cwd__, "default")
 
     del MyOverlayWindow
-    xbmcgui.Window(10000).setProperty("PseudoTVRunning", "False")
+    xbmcgui.Window(10000).setProperty("PseudoTVRunning", '')
 
 # Adapting a solution from ronie (http://forum.xbmc.org/showthread.php?t=97353)
 if xbmcgui.Window(10000).getProperty("PseudoTVRunning") != "True":

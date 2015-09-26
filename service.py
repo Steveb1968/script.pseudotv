@@ -1,6 +1,6 @@
 # modules
 from time import sleep
-import xbmc, xbmcgui, os
+import xbmc, xbmcgui
 import xbmcaddon
 
 # get addon info
@@ -10,14 +10,9 @@ __language__    = __addon__.getLocalizedString
 __addonname__   = __addon__.getAddonInfo('name')
 __icon__        = __addon__.getAddonInfo('icon')
 
-timer_amounts = {}
-timer_amounts['0'] = 0            
-timer_amounts['1'] = 5           
-timer_amounts['2'] = 10            
-timer_amounts['3'] = 15
-timer_amounts['4'] = 20
+timer_amounts = [0, 5, 10, 15, 20]
 
-IDLE_TIME = int(timer_amounts[__addon__.getSetting('timer_amount')])
+IDLE_TIME = timer_amounts[int(__addon__.getSetting("timer_amount"))]
 Msg = __addon__.getSetting('notify')
 Enabled = __addon__.getSetting('enable')
 

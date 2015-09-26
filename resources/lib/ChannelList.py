@@ -67,6 +67,7 @@ class ChannelList:
         self.startMode = int(REAL_SETTINGS.getSetting("StartMode"))
         self.log('Start Mode is ' + str(self.startMode))
         self.backgroundUpdating = int(REAL_SETTINGS.getSetting("ThreadMode"))
+        self.mediaLimit = MEDIA_LIMIT[int(REAL_SETTINGS.getSetting("MediaLimit"))]
         self.showSeasonEpisode = REAL_SETTINGS.getSetting("ShowSeEp") == "true"
         self.findMaxChannels()
 
@@ -836,9 +837,8 @@ class ChannelList:
 
 
     def writeXSPFooter(self, fle, limit, order):
-        limit = int(MEDIA_LIMIT[REAL_SETTINGS.getSetting('MediaLimit')])
-        if limit > 0:
-            fle.write('    <limit>' + str(limit) + '</limit>\n')
+        if self.mediaLimit > 0:
+            fle.write('    <limit>' + str(self.mediaLimit) + '</limit>\n')
 
         fle.write('    <order direction="ascending">' + order + '</order>\n')
         fle.write('</smartplaylist>\n')

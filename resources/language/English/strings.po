@@ -209,3 +209,11 @@ msgstr ""
 msgctxt "#30045"
 msgid "OSD Channel Number Color"
 msgstr ""
+
+msgctxt "#30046"
+msgid "Seek step forward [I](Isengard)[/I]"
+msgstr ""
+
+msgctxt "#30047"
+msgid "Seek step backward [I](Isengard)[/I]"
+msgstr ""
