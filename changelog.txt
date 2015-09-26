@@ -1,5 +1,9 @@
 Changelog
 
+2.4.1 (steveb)
+    Added option to set seek times forward/backward (Isengard & above).
+    Code cleanup.
+
 2.4.0 (steveb)
     Helix support.
 

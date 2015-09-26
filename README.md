@@ -29,7 +29,7 @@ Features
 --------
     - Automatic channel creation based on your library.
     - Optionally customize the channels you want with the channel configuration
-    	tool.
+        tool.
     - Utilize the XBMC smart playlist editor to create advanced channel setups.
     - Use an EPG and view what was on, is on, and will be on.  Would you rather
         see something that will be on later?  Select it and watch it now!
@@ -120,8 +120,8 @@ Settings
 
 **Visual Settings -**
 
-	Info when Changing Channels: Pops up a small window on the bottom of the
-	screen where the current show information is displayed when changing channels.
+    Info when Changing Channels: Pops up a small window on the bottom of the
+    screen where the current show information is displayed when changing channels.
 
     Always show channel logo: Always display the current channel logo.
 
@@ -142,7 +142,7 @@ Settings
 
 **Tweaks -**
 
-	Channel Change Delay: Option to add a small delay to channel change times.
+    Channel Change Delay: Option to add a small delay to channel change times.
 
     Playlist Media Limit: Limit the playlist items in a channel generated
     by pseudotv. Smaller values will result in quicker load/rebuild times.
@@ -150,10 +150,16 @@ Settings
     OSD Channel Number Color: Change the color of the channel number located
     at the top left, seen when changing channels and on startup.
 
+    Seek step forward: Option to adjust the seek step forward. This option is only
+    relevant to Kodi 15.0 Isengard builds and above.
+
+    Seek step backward: Option to adjust the seek step backward. This option is only
+    relevant to Kodi 15.0 Isengard builds and above.
+
 
 **Auto Start -**
 
-	Activate Service: Activate auto start. Pseudotv will automatically start when
+    Activate Service: Activate auto start. Pseudotv will automatically start when
     kodi is started.
 
     Service Delay: Delay the auto start of Pseudotv at Kodi start-up. This is useful
@@ -161,7 +167,7 @@ Settings
 
     Show Notification: Self explanatory I hope. Will show a notification of Pseudotv's
     attempt to auto-start.
-	
+
 
 -------
 Credits
