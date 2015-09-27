@@ -706,7 +706,7 @@
 			<pauseatend>1800</pauseatend>
 			<scrollspeed>40</scrollspeed>
 		</control>
-		<control type="textbox">
+		<control type="textbox" id="502">
 			<left>240</left>
 			<top>600</top>
 			<width>820</width>
@@ -714,7 +714,6 @@
 			<align>justify</align>
 			<font>METF_PlotTextMedium</font>
 			<textcolor>LowerText</textcolor>
-			<info>Control.GetLabel(502)</info>
 			<autoscroll time="3600" delay="8000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
 		<include>Global_Weather</include>
@@ -733,7 +732,6 @@
 			<visible>false</visible>
 			<control type="label" id="500" description="Show Title Label" />
 			<control type="label" id="501" description="Show Name Label" />
-			<control type="label" id="502" description="Show Description Label" />
 		</control>
 	</controls>
 </window>

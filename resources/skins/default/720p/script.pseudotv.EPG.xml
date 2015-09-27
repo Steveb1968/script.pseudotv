@@ -41,7 +41,6 @@
 			<top>5</top>
 			<width>1000</width>
 			<height>30</height>
-			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
@@ -56,7 +55,6 @@
 			<height>30</height>
 			<align>right</align>
 			<aligny>center</aligny>
-			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
@@ -75,7 +73,6 @@
 				<top>0</top>
 				<width>300</width>
 				<height>29</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -104,7 +101,6 @@
 				<top>40</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -123,7 +119,6 @@
 				<top>35</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -144,7 +139,6 @@
 				<top>88</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -163,7 +157,6 @@
 				<top>85</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -184,7 +177,6 @@
 				<top>140</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -203,7 +195,6 @@
 				<top>135</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -224,7 +215,6 @@
 				<top>188</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -236,14 +226,13 @@
 				<width>45</width>
 				<height>44</height>
 				<aspectratio>keep</aspectratio>
-			</control>			
+			</control>
 			<control type="label" id="304">
 				<description>Channel 4 Name</description>
 				<left>96</left>
 				<top>185</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -264,7 +253,6 @@
 				<top>238</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -283,7 +271,6 @@
 				<top>235</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -304,7 +291,6 @@
 				<top>290</top>
 				<width>40</width>
 				<height>35</height>
-				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -323,7 +309,6 @@
 				<top>285</top>
 				<width>200</width>
 				<height>48</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -343,7 +328,6 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -354,7 +338,6 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -365,7 +348,6 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -435,7 +417,6 @@
 			<width>780</width>
 			<height>25</height>
 			<info>Control.GetLabel(500)</info>
-			<font>font13</font>
 			<textcolor>gray</textcolor>
 			<visible>!IsEmpty(Control.GetLabel(501))</visible>
 		</control>
@@ -446,7 +427,6 @@
 			<width>780</width>
 			<height>35</height>
 			<info>Control.GetLabel(500)</info>
-			<font>font13</font>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>orange</textcolor>
@@ -463,7 +443,6 @@
 			<width>780</width>
 			<height>35</height>
 			<info>Control.GetLabel(501)</info>
-			<font>font13</font>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>orange</textcolor>
@@ -473,16 +452,14 @@
 			<scrollspeed>40</scrollspeed>
 			<visible>!IsEmpty(Control.GetLabel(500))</visible>
 		</control>
-		<control type="textbox">
-			<description>Show Description Label</description>
+		<control type="textbox" id="502">
+			<description>Plot</description>
 			<left>390</left>
 			<top>487</top>
 			<width>785</width>
 			<height>120</height>
-			<font>font13</font>
 			<textcolor>white</textcolor>
 			<align>justify</align>
-			<info>Control.GetLabel(502)</info>
 			<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 		</control>
 		<control type="image" id="503">
@@ -510,7 +487,6 @@
 			<visible>false</visible>
 			<control type="label" id="500" description="Show Title Label" />
 			<control type="label" id="501" description="Show Name Label" />
-			<control type="label" id="502" description="Show Description Label" />
 		</control>
 
 	</controls>

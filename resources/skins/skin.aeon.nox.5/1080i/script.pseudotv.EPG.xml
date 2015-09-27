@@ -554,12 +554,12 @@
 				<height>60</height>
 				<texture border="1">separator2.png</texture>
 			</control>
-			<control type="textbox">
+			<control type="textbox" id="502">
+				<description>Plot</description>
 				<left>15</left>
 				<top>75</top>
 				<width>1286</width>
 				<height>160</height>
-				<info>Control.GetLabel(502)</info>
 				<font>font15_textbox2</font>
 				<textcolor>grey2</textcolor>
 				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
@@ -568,7 +568,6 @@
 				<visible>false</visible>
 				<control type="label" id="500" description="Show Title Label" />
 				<control type="label" id="501" description="Show Name Label" />
-				<control type="label" id="502" description="Show Plot Label" />
 			</control>
 		</control>
 		<control type="image">

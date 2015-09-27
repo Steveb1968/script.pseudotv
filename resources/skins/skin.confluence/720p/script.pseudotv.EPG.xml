@@ -460,8 +460,8 @@
 			<scrollspeed>40</scrollspeed>
 			<visible>!IsEmpty(Control.GetLabel(500))</visible>
 		</control>
-		<control type="textbox">
-			<description>Show Description Label</description>
+		<control type="textbox" id="502">
+			<description>Plot</description>
 			<left>390</left>
 			<top>487</top>
 			<width>785</width>
@@ -469,7 +469,6 @@
 			<font>font13</font>
 			<textcolor>white</textcolor>
 			<align>justify</align>
-			<info>Control.GetLabel(502)</info>
 			<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 		</control>
 		<control type="image" id="503">
@@ -500,7 +499,6 @@
 			<visible>false</visible>
 			<control type="label" id="500" description="Show Title Label" />
 			<control type="label" id="501" description="Show Name Label" />
-			<control type="label" id="502" description="Show Description Label" />
 		</control>
 	</controls>
 </window>

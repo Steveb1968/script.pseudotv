@@ -678,7 +678,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
 
         self.getControl(500).setLabel(self.MyOverlayWindow.channels[newchan - 1].getItemTitle(plpos))
         self.getControl(501).setLabel(self.MyOverlayWindow.channels[newchan - 1].getItemEpisodeTitle(plpos))
-        self.getControl(502).setLabel(self.MyOverlayWindow.channels[newchan - 1].getItemDescription(plpos))
+        self.getControl(502).setText(self.MyOverlayWindow.channels[newchan - 1].getItemDescription(plpos))
         self.getControl(503).setImage(self.channelLogos + ascii(self.MyOverlayWindow.channels[newchan - 1].name) + '.png')
         if not FileAccess.exists(self.channelLogos + ascii(self.MyOverlayWindow.channels[newchan - 1].name) + '.png'):
             self.getControl(503).setImage(IMAGES_LOC + 'Default.png')
