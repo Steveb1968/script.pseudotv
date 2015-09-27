@@ -333,12 +333,11 @@
 				<include>detail_Title</include>
 				<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR Color2],[/COLOR]]</label>
 			</control>
-			<control type="textbox">
+			<control type="textbox" id="502">
 				<label>Show Description</label>
 				<top>35</top>
 				<width>900</width>
 				<height>110</height>
-				<info>Control.GetLabel(502)</info>
 				<include>detail_Text</include>
 			</control>  
 		</control>
@@ -420,7 +419,6 @@
 			<visible>false</visible>
 			<control type="label" id="500" description="Show Title Label" />
 			<control type="label" id="501" description="Show Name Label" />
-			<control type="label" id="502" description="Show Description Label" />
 		</control>
 
 	</controls>
