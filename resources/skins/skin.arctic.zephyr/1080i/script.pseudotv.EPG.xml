@@ -43,7 +43,7 @@
 					<font>Flag</font>
 					<width>auto</width>
 					<textcolor>Dark2</textcolor>
-					<label>$INFO[System.AddonVersion(script.pseudotv),[COLOR=Highlight]VER: [/COLOR],]</label>
+					<label>$INFO[System.AddonVersion(script.pseudotv),[COLOR Highlight]VER: [/COLOR],]</label>
 				</control>
 			</control>     
 		</control>
@@ -68,14 +68,31 @@
 				<bottom>10</bottom>
 				<left>30</left>
 				<right>30</right>
-				<control type="label">
-					<top>0</top>
-					<aligny>center</aligny>
-					<height>64</height>
-					<font>SmallBold</font>
-					<textcolor>PanelWhite100</textcolor>
-					<selectedcolor>PanelWhite100</selectedcolor>
-					<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR PanelWhite70],[/COLOR]]</label>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<control type="label" id="500">
+						<width>auto</width>
+						<aligny>center</aligny>
+						<height>64</height>
+						<font>SmallBold</font>
+						<textcolor>PanelWhite100</textcolor>
+					</control>
+					<control type="label">
+						<width>auto</width>
+						<aligny>center</aligny>
+						<height>64</height>
+						<label>: </label>
+						<font>SmallBold</font>
+						<textcolor>PanelWhite100</textcolor>
+						<visible>!IsEmpty(Control.GetLabel(501))</visible>
+					</control>
+					<control type="label" id="501">
+						<width>auto</width>
+						<aligny>center</aligny>
+						<height>64</height>
+						<font>SmallBold</font>
+						<textcolor>Highlight</textcolor>
+					</control>
 				</control>
 				<control type="textbox" description="Plot" id="502">
 					<top>60</top>
@@ -382,14 +399,12 @@
 			<left>550</left>
 			<top>220</top>
 			<width>20</width>
-			<height>426</height>
+			<height>430</height>
 		</control>
 
 		<control type="group">
 			<visible>false</visible>
 			<control type="image" id="503" description="Show Channel Icon" />
-			<control type="label" id="500" description="Show Title Label" />
-			<control type="label" id="501" description="Show Name Label" />
 		</control>
 	</controls>
 </window>

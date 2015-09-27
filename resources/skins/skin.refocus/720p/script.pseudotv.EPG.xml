@@ -13,7 +13,7 @@
 			<font>light_Window</font>
 			<textcolor>Color1</textcolor>
 			<include>transition_WindowTitle</include>
-			<label>pseudo[COLOR=Color2]tv[/COLOR]</label>
+			<label>pseudo[COLOR Color2]tv[/COLOR]</label>
 		</control>
 		<control type="label">
 			<right>20</right>
@@ -327,11 +327,26 @@
 		<control type="group">
 			<left>320</left>
 			<top>530</top>
-			<control type="label">
-				<description>Show Name Label</description>
+			<control type="grouplist">
 				<width>900</width>
-				<include>detail_Title</include>
-				<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR Color2],[/COLOR]]</label>
+				<orientation>horizontal</orientation>
+				<control type="label" id="500">
+					<width>auto</width>
+					<include>detail_Title</include>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<label>: </label>
+					<include>detail_Title</include>
+					<visible>!IsEmpty(Control.GetLabel(501))</visible>
+				</control>
+				<control type="label" id="501">
+					<width>auto</width>
+					<height>28</height>
+					<aligny>center</aligny>
+					<font>semibold_Big-U</font>
+					<textcolor>Color2</textcolor>
+				</control>
 			</control>
 			<control type="textbox" id="502">
 				<label>Show Description</label>
@@ -414,12 +429,5 @@
 			<width>20</width>
 			<height>276</height>
 		</control>
-
-		<control type="group">
-			<visible>false</visible>
-			<control type="label" id="500" description="Show Title Label" />
-			<control type="label" id="501" description="Show Name Label" />
-		</control>
-
 	</controls>
 </window>

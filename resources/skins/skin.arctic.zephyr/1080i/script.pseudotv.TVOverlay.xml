@@ -68,13 +68,30 @@
 								<font>TinyBold</font>
 								<textcolor>Highlight</textcolor>
 							</control>
-							<control type="label" description="Show">
-								<width>100%</width>
+							<control type="grouplist">
 								<top>50</top>
-								<height>40</height>
-								<font>MediumBold</font>
-								<textcolor>$VAR[OSDPanelWhite70]</textcolor>
-								<label>$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: ,]</label>
+								<width>100%</width>
+								<orientation>horizontal</orientation>
+								<control type="label" id="503">
+									<width>auto</width>
+									<height>40</height>
+									<font>MediumBold</font>
+									<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+								</control>
+								<control type="label">
+									<width>auto</width>
+									<height>40</height>
+									<label>: </label>
+									<font>MediumBold</font>
+									<textcolor>$VAR[OSDPanelWhite70]</textcolor>
+									<visible>!IsEmpty(Control.GetLabel(504))</visible>
+								</control>
+								<control type="label" id="504">
+									<width>auto</width>
+									<height>40</height>
+									<font>MediumBold</font>
+									<textcolor>$VAR[OSDPanelWhite30]</textcolor>
+								</control>
 							</control>
 							<control type="textbox" description="Plot" id="505">
 								<width>100%</width>
@@ -276,13 +293,10 @@
 			</control>
 		</control>
 
-		<control type="group" id="102">
-			<control type="group">
-				<visible>false</visible>
-				<control type="image" id="101" description="Background Channel Change" />
-				<control type="label" id="503" description="Label Show Title" />
-				<control type="label" id="504" description="Label Episode Title" />
-			</control>
+		<control type="group" id="102" />
+		<control type="group">
+			<visible>false</visible>
+			<control type="image" id="101" description="Background Channel Change" />
 		</control>
 	</controls>
 </window>

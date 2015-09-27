@@ -163,14 +163,15 @@
 				<aspectratio aligny="center">keep</aspectratio>
 				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
 			</control>
+			<control type="group">
+				<visible>false</visible>
+				<control type="label" id="503" description="Label Show Title" />
+				<control type="label" id="504" description="Label Episode Title" />
+			</control>
 		</control>
-
 		<control type="group">
 			<visible>false</visible>
 			<control type="image" id="101" description="Background Channel Change" />
-			<control type="label" id="503" description="Label Show Title" />
-			<control type="label" id="504" description="Label Episode Title" />
 		</control>
-
 	</controls>
 </window>
