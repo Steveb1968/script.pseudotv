@@ -73,6 +73,7 @@
 				<top>0</top>
 				<width>300</width>
 				<height>29</height>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -119,6 +120,7 @@
 				<top>35</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -157,6 +159,7 @@
 				<top>85</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -195,6 +198,7 @@
 				<top>135</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -233,6 +237,7 @@
 				<top>185</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -271,6 +276,7 @@
 				<top>235</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -309,6 +315,7 @@
 				<top>285</top>
 				<width>200</width>
 				<height>48</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -328,6 +335,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -338,6 +346,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -348,6 +357,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
+				<font>font12</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -416,6 +426,7 @@
 			<top>420</top>
 			<width>780</width>
 			<height>25</height>
+			<font>font12</font>
 			<info>Control.GetLabel(500)</info>
 			<textcolor>gray</textcolor>
 			<visible>!IsEmpty(Control.GetLabel(501))</visible>
@@ -458,6 +469,7 @@
 			<top>487</top>
 			<width>785</width>
 			<height>120</height>
+			<font>font13</font>
 			<textcolor>white</textcolor>
 			<align>justify</align>
 			<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
@@ -482,12 +494,84 @@
 			<aspectratio align="center" aligny="bottom">keep</aspectratio>
 			<colordiffuse>lightgrey</colordiffuse>
 		</control>
-
+		<control type="group">
+			<visible>Player.HasVideo</visible>
+			<control type="image">
+				<left>30</left>
+				<top>55r</top>
+				<width>45</width>
+				<height>45</height>
+				<texture border="5">ptv_floor_button.png</texture>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>53r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[Player.Title] - ([COLOR steelblue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>32r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.Studio]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.Artist]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+			</control>
+		</control>
 		<control type="group">
 			<visible>false</visible>
 			<control type="label" id="500" description="Show Title Label" />
 			<control type="label" id="501" description="Show Name Label" />
 		</control>
-
 	</controls>
 </window>

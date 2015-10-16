@@ -129,7 +129,7 @@
 				<height>40</height>
 				<font>font14</font>
 				<textoffsetx>15</textoffsetx>
-				<textcolor>themecolor</textcolor>
+				<textcolor>selected</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 			</control>
 			<control type="progress">
@@ -163,11 +163,11 @@
 				<top>78</top>
 				<width>1682</width>
 				<height>40</height>
-				<font>font14_title</font>
+				<font>font15_title</font>
 				<textoffsetx>15</textoffsetx>
 				<textcolor>grey2</textcolor>
 				<shadowcolor>shadow</shadowcolor>
-				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey3],[/COLOR]][/B]</label>
+				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR themecolor],[/COLOR]][/B]</label>
 			</control>
 			<control type="label">
 				<left>1420</left>

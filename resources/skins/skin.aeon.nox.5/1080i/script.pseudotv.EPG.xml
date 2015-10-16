@@ -523,7 +523,7 @@
 			<top>579</top>
 			<width>1320</width>
 			<height>87</height>
-		</control>		
+		</control>
 		<control type="group" id="116">
 			<left>520</left>
 			<top>669</top>
@@ -543,8 +543,8 @@
 				<textoffsetx>15</textoffsetx>
 				<align>left</align>
 				<textcolor>grey2</textcolor>
-				<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey3],[/COLOR]][/B]</label>
-				<font>font14_title</font>
+				<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR themecolor],[/COLOR]][/B]</label>
+				<font>font15_title</font>
 			</control>
 			<control type="image">
 				<description>separator image</description>

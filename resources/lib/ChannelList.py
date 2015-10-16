@@ -1123,18 +1123,18 @@ class ChannelList:
                     except:
                         dur = 0
 
-                    # As a last resort (since it's not as accurate), use runtime
                     if dur == 0:
                         duration = re.search('"runtime" *: *([0-9]*?),', f)
-
                         try:
                             dur = int(duration.group(1))
                         except:
                             dur = 0
 
-                    # If duration doesn't exist, try to figure it out
                     if dur == 0:
-                        dur = self.videoParser.getVideoLength(uni(match.group(1)).replace("\\\\", "\\"))
+                        try:
+                            dur = self.videoParser.getVideoLength(uni(match.group(1)).replace("\\\\", "\\"))
+                        except:
+                            dur = 0
 
                     # Remove any file types that we don't want
                     if match.group(1).replace("\\\\", "\\")[-4:].lower() == 'strm':
