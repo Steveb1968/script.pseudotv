@@ -88,61 +88,19 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>            
-			<control type="label">
+			<control type="fadelabel">
 				<left>350</left>
 				<top>565</top>
 				<width>770</width>
-				<height>25</height>
-				<align>left</align>
-				<font>font12</font>
-				<info>Control.GetLabel(503)</info>
-				<textcolor>gray</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
-			</control>
-			<control type="fadelabel">
-				<left>350</left>
-				<top>595</top>
-				<width>770</width>
-				<height>35</height>
+				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<info>Control.GetLabel(503)</info>
+				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey],[/COLOR]][/B]</label>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<scrollout>false</scrollout>
 				<pauseatend>1800</pauseatend>
 				<scrollspeed>40</scrollspeed>
-				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
-				<visible>IsEmpty(Control.GetLabel(504))</visible>
-			</control>               
-			<control type="fadelabel">
-				<left>350</left>
-				<top>595</top>
-				<width>770</width>
-				<height>35</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<info>Control.GetLabel(504)</info>
-				<textcolor>orange</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<scrollout>false</scrollout>
-				<pauseatend>1800</pauseatend>
-				<scrollspeed>40</scrollspeed>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
-			</control>
-			<control type="textbox" id="505">
-				<description>Show Description</description>
-				<left>350</left>
-				<top>635</top>
-				<width>880</width>
-				<height>53</height>
-				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>justify</align>
-				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="textbox" id="505">
 				<description>Plot</description>
@@ -155,16 +113,14 @@
 				<shadowcolor>black</shadowcolor>
 				<align>justify</align>
 				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
-				<visible>IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="image" id="506">
 				<description>Show Channel Icon</description>
 				<left>1110</left>
-				<top>565</top>
+				<top>545</top>
 				<width>100</width>
 				<height>68</height>
 				<aspectratio aligny="center">keep</aspectratio>
-				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
 			</control>
 			<control type="group">
 				<visible>false</visible>

@@ -419,25 +419,14 @@
 			<height>48</height>
 		</control>
 
-		<!--FOOTER-->           
-		<control type="label">
-			<description>Show Title Label</description>
-			<left>390</left>
-			<top>420</top>
-			<width>780</width>
-			<height>25</height>
-			<font>font12</font>
-			<info>Control.GetLabel(500)</info>
-			<textcolor>gray</textcolor>
-			<visible>!IsEmpty(Control.GetLabel(501))</visible>
-		</control>
+		<!--FOOTER-->
 		<control type="fadelabel">
 			<description>Show Title Label</description>
 			<left>390</left>
 			<top>445</top>
 			<width>780</width>
 			<height>35</height>
-			<info>Control.GetLabel(500)</info>
+			<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey],[/COLOR]][/B]</label>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>orange</textcolor>
@@ -445,23 +434,6 @@
 			<scrollout>false</scrollout>
 			<pauseatend>1800</pauseatend>
 			<scrollspeed>40</scrollspeed>
-			<visible>IsEmpty(Control.GetLabel(501))</visible>
-		</control>
-		<control type="fadelabel">
-			<description>Show Name Label</description>
-			<left>390</left>
-			<top>445</top>
-			<width>780</width>
-			<height>35</height>
-			<info>Control.GetLabel(501)</info>
-			<align>left</align>
-			<aligny>center</aligny>
-			<textcolor>orange</textcolor>
-			<shadowcolor>black</shadowcolor>
-			<scrollout>false</scrollout>
-			<pauseatend>1800</pauseatend>
-			<scrollspeed>40</scrollspeed>
-			<visible>!IsEmpty(Control.GetLabel(500))</visible>
 		</control>
 		<control type="textbox" id="502">
 			<description>Plot</description>
