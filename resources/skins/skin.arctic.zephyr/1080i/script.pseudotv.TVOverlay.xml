@@ -9,7 +9,7 @@
 			<width>161</width>
 			<height>109</height>
 			<aspectratio>keep</aspectratio>
-			<animation effect="fade" start="50" end="50" condition="True">conditional</animation>
+			<animation effect="fade" end="50" condition="True">conditional</animation>
 			<visible>Player.HasVideo + ![Window.IsActive(videoosd) | Player.Paused]</visible>
 		</control>
 		<control type="group">
@@ -296,7 +296,7 @@
 		<control type="group" id="102" />
 		<control type="group">
 			<visible>false</visible>
-			<control type="image" id="101" description="Background Channel Change" />
+			<control type="image" id="101" />
 		</control>
 	</controls>
 </window>

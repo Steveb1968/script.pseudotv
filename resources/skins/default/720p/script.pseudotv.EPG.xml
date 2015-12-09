@@ -542,8 +542,8 @@
 		</control>
 		<control type="group">
 			<visible>false</visible>
-			<control type="label" id="500" description="Show Title Label" />
-			<control type="label" id="501" description="Show Name Label" />
+			<control type="label" id="500" />
+			<control type="label" id="501" />
 		</control>
 	</controls>
 </window>
