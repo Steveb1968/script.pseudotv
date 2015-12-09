@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="30000">
-		<setting label="30007" type="lsep"/>
 		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/config.py)"/>
-		<setting label="30009" type="lsep"/>
-		<setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
+		<setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
 		<setting id="ChannelResetSetting" type="enum" label="30004" values="Automatic|Daily|Weekly|Monthly|Never|Every Time" default="0"/>
 		<setting id="StartMode" type="enum" label="30011" values="Resume|Real Time|Random" default="1" />
 		<setting id="ThreadMode" type="enum" label="30012" values="On|Minimum Use|Off" default="1" />

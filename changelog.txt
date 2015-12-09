@@ -1,4 +1,6 @@
 Changelog
+2.4.2 (steveb)
+    Jarvis code cleanup
 
 2.4.1 (steveb)
     Added option to set seek times forward/backward (Isengard & above).

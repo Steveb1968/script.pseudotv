@@ -94,12 +94,12 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
     def setTimeLabels(self, thetime):
         self.log('setTimeLabels')
         now = datetime.datetime.fromtimestamp(thetime)
-        self.getControl(104).setLabel(now.strftime('%a, %d %b %Y'))
+        self.getControl(104).setLabel(now.strftime('%A, %d %B %Y').lstrip("0").replace(" 0", " "))
         delta = datetime.timedelta(minutes=30)
 
         for i in range(3):
             if self.clockMode == "0":
-                self.getControl(101 + i).setLabel(now.strftime("%I:%M %p"))
+                self.getControl(101 + i).setLabel(now.strftime("%I:%M %p").lstrip("0").replace(" 0", " "))
             else:
                 self.getControl(101 + i).setLabel(now.strftime("%H:%M"))
 

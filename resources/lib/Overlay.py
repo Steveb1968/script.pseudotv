@@ -39,7 +39,7 @@ __icon__ = REAL_SETTINGS.getAddonInfo('icon')
 
 class MyPlayer(xbmc.Player):
     def __init__(self):
-        xbmc.Player.__init__(self, xbmc.PLAYER_CORE_AUTO)
+        xbmc.Player.__init__(self, xbmc.Player())
         self.stopped = False
         self.ignoreNextStop = False
 
