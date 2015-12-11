@@ -502,11 +502,6 @@ class ChannelList:
         if append == False:
             channelplaylist.write(uni("#EXTM3U\n"))
 
-        if len(fileList) == 0:
-            self.log("Unable to get information about channel " + str(channel), xbmc.LOGERROR)
-            channelplaylist.close()
-            return False
-
         if israndom:
             random.shuffle(fileList)
 
