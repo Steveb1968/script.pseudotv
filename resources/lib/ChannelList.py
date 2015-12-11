@@ -48,7 +48,6 @@ class ChannelList:
         self.channels = []
         self.videoParser = VideoParser()
         self.sleepTime = 0
-        self.discoveredWebServer = False
         self.threadPaused = False
         self.runningActionChannel = 0
         self.runningActionId = 0
@@ -491,8 +490,9 @@ class ChannelList:
 
         try:
             if append == True:
-                channelplaylist = FileAccess.open(CHANNELS_LOC + "channel_" + str(channel) + ".m3u", "r+")
+                channelplaylist = FileAccess.open(CHANNELS_LOC + "channel_" + str(channel) + ".m3u", "r")
                 channelplaylist.seek(0, 2)
+                channelplaylist.close()
             else:
                 channelplaylist = FileAccess.open(CHANNELS_LOC + "channel_" + str(channel) + ".m3u", "w")
         except:
@@ -592,10 +592,6 @@ class ChannelList:
         fle.write('    <rule field="tvshow" operator="is">\n')
         
         for i in range(len(self.showList)):
-            if self.threadPause() == False:
-                fle.close()
-                return ''
-
             if self.showList[i][1].lower() == network:
                 theshow = self.cleanString(self.showList[i][0])                
                 fle.write('        <value>' + theshow + '</value>\n')                
@@ -1008,7 +1004,7 @@ class ChannelList:
         fileList = []
         seasoneplist = []
         filecount = 0
-        json_query = uni('{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["season","episode","playcount","duration","runtime","showtitle","album","artist","plot"]}, "id": 1}' % (self.escapeDirJSON(dir_name)))
+        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["season","episode","playcount","duration","runtime","showtitle","album","artist","plot"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "querying database")

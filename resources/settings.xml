@@ -3,7 +3,7 @@
 	<category label="30000">
 		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/config.py)"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
-		<setting id="AutoOff" type="enum" label="30001" values="Disable|30|60|90|120|150|180|210|240" default="0"/>
+		<setting id="AutoOff" type="enum" label="30001" values="Disable|30 min|60 min|90 min|120 min|150 min|180 min|210 min|240 min" default="0"/>
 		<setting id="ChannelResetSetting" type="enum" label="30004" values="Automatic|Daily|Weekly|Monthly|Never|Every Time" default="0"/>
 		<setting id="StartMode" type="enum" label="30011" values="Resume|Real Time|Random" default="1" />
 		<setting id="ThreadMode" type="enum" label="30012" values="On|Minimum Use|Off" default="1" />
@@ -18,7 +18,7 @@
 		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
 		<setting id="HideClips" type="bool" label="30017" default="true"/>
-		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="5"/>
+		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="4"/>
 		<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
 	</category>
 

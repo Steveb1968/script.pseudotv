@@ -93,7 +93,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.maxChannels = 0
         self.notPlayingCount = 0
         self.ignoreInfoAction = False
-        self.shortItemLength = 60
+        self.shortItemLength = 120
         self.seekForward = 30
         self.seekBackward = -30
         self.runningActionChannel = 0

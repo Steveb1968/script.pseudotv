@@ -31,7 +31,7 @@ msgid "General"
 msgstr ""
 
 msgctxt "#30001"
-msgid "Auto-off Timer (in minutes)"
+msgid "Auto-off Timer"
 msgstr ""
 
 msgctxt "#30002"
@@ -54,17 +54,13 @@ msgctxt "#30006"
 msgid "Always show channel logo"
 msgstr ""
 
-msgctxt "#30007"
-msgid "Configure Channels"
-msgstr ""
+#empty string with id 30007
 
 msgctxt "#30008"
 msgid "Open Channel Configuration"
 msgstr ""
 
-msgctxt "#30009"
-msgid "Other Settings"
-msgstr ""
+#empty string with id 30009
 
 msgctxt "#30010"
 msgid "Channel Logo Folder"
