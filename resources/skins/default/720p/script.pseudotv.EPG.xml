@@ -41,6 +41,7 @@
 			<top>5</top>
 			<width>1000</width>
 			<height>30</height>
+			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
@@ -53,6 +54,7 @@
 			<top>5</top>
 			<width>200</width>
 			<height>30</height>
+			<font>font13</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
@@ -73,7 +75,7 @@
 				<top>0</top>
 				<width>300</width>
 				<height>29</height>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -102,6 +104,7 @@
 				<top>40</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -141,6 +144,7 @@
 				<top>88</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -180,6 +184,7 @@
 				<top>140</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -219,6 +224,7 @@
 				<top>188</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -258,6 +264,7 @@
 				<top>238</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -297,6 +304,7 @@
 				<top>290</top>
 				<width>40</width>
 				<height>35</height>
+				<font>font13</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>gray</textcolor>
@@ -335,7 +343,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -346,7 +354,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -357,7 +365,7 @@
 				<top>0</top>
 				<width>280</width>
 				<height>29</height>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -483,7 +491,7 @@
 				<label>$INFO[Player.Title] - ([COLOR steelblue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
@@ -495,7 +503,7 @@
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasAudio</visible>
@@ -508,7 +516,7 @@
 				<label>$INFO[VideoPlayer.Studio]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
@@ -521,7 +529,7 @@
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
@@ -534,7 +542,7 @@
 				<label>$INFO[VideoPlayer.Artist]</label>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font12</font>
+				<font>font13</font>
 				<textcolor>grey</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>

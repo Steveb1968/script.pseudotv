@@ -83,6 +83,7 @@
 						<top>0</top>
 						<width>150</width>
 						<height>40</height>
+						<font>font13</font>
 						<aligny>center</aligny>
 						<align>left</align>
 						<textcolor>gray</textcolor>
@@ -93,6 +94,7 @@
 						<top>0</top>
 						<width>420</width>
 						<height>40</height>
+						<font>font13</font>
 						<aligny>center</aligny>
 						<align>right</align>
 						<textcolor>gray</textcolor>
@@ -112,6 +114,7 @@
 						<top>0</top>
 						<width>150</width>
 						<height>40</height>
+						<font>font13</font>
 						<textcolor>white</textcolor>
 						<aligny>center</aligny>
 						<align>left</align>
@@ -122,6 +125,7 @@
 						<top>0</top>
 						<width>420</width>
 						<height>40</height>
+						<font>font13</font>
 						<aligny>center</aligny>
 						<align>right</align>
 						<textcolor>white</textcolor>
@@ -186,6 +190,7 @@
 				<top>60</top>
 				<width>200</width>
 				<height>40</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>left</align>
@@ -196,6 +201,7 @@
 				<top>60</top>
 				<width>270</width>
 				<height>40</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<aligny>center</aligny>
 				<align>right</align>
@@ -337,6 +343,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[705]:</label>
 					<aligny>center</aligny>
@@ -347,6 +354,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -405,6 +413,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[572]:</label>
 					<aligny>center</aligny>
@@ -415,6 +424,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -473,6 +483,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<aligny>center</aligny>
@@ -483,6 +494,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -541,6 +553,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<aligny>center</aligny>
@@ -551,6 +564,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -609,6 +623,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[515]:</label>
 					<aligny>center</aligny>
@@ -619,6 +634,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -677,6 +693,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[20364]:</label>
 					<aligny>center</aligny>
@@ -687,6 +704,7 @@
 					<top>105</top>
 					<width>270</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<aligny>center</aligny>
 					<align>right</align>
@@ -766,6 +784,7 @@
 					<top>105</top>
 					<width>200</width>
 					<height>40</height>
+					<font>font13</font>
 					<textcolor>white</textcolor>
 					<label>$LOCALIZE[16015]:</label>
 					<aligny>center</aligny>                   

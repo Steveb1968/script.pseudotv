@@ -84,6 +84,7 @@
 				<width>770</width>
 				<height>25</height>
 				<align>left</align>
+				<font>font13</font>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -95,6 +96,7 @@
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
+				<font>font13</font>
 				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey],[/COLOR]][/B]</label>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
