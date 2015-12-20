@@ -19,8 +19,8 @@
 import xbmc
 import os, struct
 
-from resources.lib.Globals import ascii
-from resources.lib.FileAccess import FileAccess
+from Globals import ascii
+from FileAccess import FileAccess
 
 
 

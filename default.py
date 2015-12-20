@@ -21,15 +21,16 @@ import sys
 import os, threading
 
 # Script constants
-__scriptname__ = "PseudoTV"
-__settings__   = xbmcaddon.Addon(id='script.pseudotv')
-__language__   = __settings__.getLocalizedString
-__cwd__        = __settings__.getAddonInfo('path')
+ADDON       = xbmcaddon.Addon(id='script.pseudotv')
+CWD         = ADDON.getAddonInfo('path').decode("utf-8")
+RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("utf-8")).decode("utf-8")
+
+sys.path.append(RESOURCE)
 
 def Start():
-    import resources.lib.Overlay as Overlay
+    import Overlay as Overlay
 
-    MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", __cwd__, "default")
+    MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", CWD, "default")
 
     del MyOverlayWindow
     xbmcgui.Window(10000).setProperty("PseudoTVRunning", '')

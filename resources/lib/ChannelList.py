@@ -57,20 +57,20 @@ class ChannelList:
 
 
     def readConfig(self):
-        self.channelResetSetting = int(REAL_SETTINGS.getSetting("ChannelResetSetting"))
+        self.channelResetSetting = int(ADDON.getSetting("ChannelResetSetting"))
         self.log('Channel Reset Setting is ' + str(self.channelResetSetting))
-        self.forceReset = REAL_SETTINGS.getSetting('ForceChannelReset') == "true"
+        self.forceReset = ADDON.getSetting('ForceChannelReset') == "true"
         self.log('Force Reset is ' + str(self.forceReset))
         self.updateDialog = xbmcgui.DialogProgress()
-        self.startMode = int(REAL_SETTINGS.getSetting("StartMode"))
+        self.startMode = int(ADDON.getSetting("StartMode"))
         self.log('Start Mode is ' + str(self.startMode))
-        self.backgroundUpdating = int(REAL_SETTINGS.getSetting("ThreadMode"))
-        self.mediaLimit = MEDIA_LIMIT[int(REAL_SETTINGS.getSetting("MediaLimit"))]
-        self.showSeasonEpisode = REAL_SETTINGS.getSetting("ShowSeEp") == "true"
+        self.backgroundUpdating = int(ADDON.getSetting("ThreadMode"))
+        self.mediaLimit = MEDIA_LIMIT[int(ADDON.getSetting("MediaLimit"))]
+        self.showSeasonEpisode = ADDON.getSetting("ShowSeEp") == "true"
         self.findMaxChannels()
 
         if self.forceReset:
-            REAL_SETTINGS.setSetting('ForceChannelReset', "False")
+            ADDON.setSetting('ForceChannelReset', "False")
             self.forceReset = False
 
         try:
@@ -114,7 +114,7 @@ class ChannelList:
                 foundvalid = True
 
         if makenewlists == True:
-            REAL_SETTINGS.setSetting('ForceChannelReset', 'false')
+            ADDON.setSetting('ForceChannelReset', 'false')
 
         if foundvalid == False and makenewlists == False:
             for i in range(self.maxChannels):
@@ -577,7 +577,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(REAL_SETTINGS.getLocalizedString(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, "episodes", self.getChannelName(1, network))
@@ -619,7 +619,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(REAL_SETTINGS.getLocalizedString(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, 'episodes', self.getChannelName(6, show))
@@ -639,7 +639,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(REAL_SETTINGS.getLocalizedString(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         epname = os.path.basename(self.createGenrePlaylist('episodes', 3, genre))
@@ -658,7 +658,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(REAL_SETTINGS.getLocalizedString(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, pltype, self.getChannelName(chtype, genre))
@@ -677,7 +677,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(REAL_SETTINGS.getLocalizedString(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, "movies", self.getChannelName(2, studio))
@@ -768,7 +768,7 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "reading TV data")
 
         json_folder_detail = self.sendJSON(json_query)
-        detail = re.compile( "{(.*?)}", re.DOTALL ).findall(json_folder_detail)
+        detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
 
         for f in detail:
             if self.threadPause() == False:
@@ -877,7 +877,7 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "reading movie data")
 
         json_folder_detail = self.sendJSON(json_query)
-        detail = re.compile( "{(.*?)}", re.DOTALL ).findall(json_folder_detail)
+        detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
 
         for f in detail:
             if self.threadPause() == False:
@@ -1005,7 +1005,7 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "querying database")
 
         json_folder_detail = self.sendJSON(json_query)
-        file_detail = re.compile( "{(.*?)}", re.DOTALL ).findall(json_folder_detail)
+        file_detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
 
         for f in file_detail:
             if self.threadPause() == False:

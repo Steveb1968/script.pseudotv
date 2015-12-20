@@ -49,8 +49,8 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
 
         # Decide whether to use the current skin or the default skin.  If the current skin has the proper
         # image, then it should work.
-        if os.path.exists(xbmc.translatePath(os.path.join(ADDON_INFO, 'resources', 'skins', xbmc.getSkinDir(), 'media'))):
-            self.mediaPath = xbmc.translatePath(os.path.join(ADDON_INFO, 'resources', 'skins', xbmc.getSkinDir(), 'media')) + '/'
+        if os.path.exists(xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', xbmc.getSkinDir(), 'media'))):
+            self.mediaPath = xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', xbmc.getSkinDir(), 'media')) + '/'
         elif os.path.exists(xbmc.translatePath('special://skin/media/' + ADDON_ID + '/' + TIME_BAR)):
             self.mediaPath = xbmc.translatePath('special://skin/media/' + ADDON_ID + '/')
         elif os.path.exists(xbmc.translatePath('special://skin/media/' + TIME_BAR)):
@@ -60,7 +60,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         elif xbmc.skinHasImage(TIME_BAR):
             self.mediaPath = ''
         else:
-            self.mediaPath = xbmc.translatePath(os.path.join(ADDON_INFO, 'resources', 'skins', 'default', 'media')) + '/'
+            self.mediaPath = xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', 'default', 'media')) + '/'
 
         self.log('Media Path is ' + self.mediaPath)
 

@@ -80,7 +80,7 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
             else:
                 dlg = xbmcgui.Dialog()
 
-                if dlg.yesno(xbmc.getLocalizedString(190), REAL_SETTINGS.getLocalizedString(30019)):
+                if dlg.yesno(xbmc.getLocalizedString(190), LANGUAGE(30019)):
                     self.saveRules()
 
                 self.close()

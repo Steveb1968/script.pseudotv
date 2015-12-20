@@ -27,7 +27,7 @@ from ChannelList import ChannelList
 from Channel import Channel
 from Globals import *
 
-__icon__ = REAL_SETTINGS.getAddonInfo('icon')
+ICON = ADDON.getAddonInfo('icon')
 
 class ChannelListThread(threading.Thread):
     def __init__(self):
@@ -66,7 +66,7 @@ class ChannelListThread(threading.Thread):
         # Don't load invalid channels if minimum threading mode is on
         if self.fullUpdating and self.myOverlay.isMaster:
             if validchannels < self.chanlist.enteredChannelCount:
-                xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % ( REAL_SETTINGS.getAddonInfo('name'), REAL_SETTINGS.getLocalizedString(30024), 4000, __icon__) )
+                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON.getAddonInfo('name'), LANGUAGE(30024), 4000, ICON))
 
             for i in range(self.myOverlay.maxChannels):
                 if self.myOverlay.channels[i].isValid == False:
@@ -94,13 +94,13 @@ class ChannelListThread(threading.Thread):
                             self.myOverlay.channels[i] = self.chanlist.channels[i]
 
                             if self.myOverlay.channels[i].isValid == True:
-                                xbmc.executebuiltin("Notification( %s, %s, %d, %s)" % ( REAL_SETTINGS.getAddonInfo('name'), xbmc.getLocalizedString(19029) + ' ' + str(i + 1) + ' ' + REAL_SETTINGS.getLocalizedString(30025), 4000, __icon__) )
+                                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON.getAddonInfo('name'), xbmc.getLocalizedString(19029) + ' ' + str(i + 1) + ' ' + LANGUAGE(30025), 4000, ICON))
                     except:
                         self.log("Unknown Channel Creation Exception", xbmc.LOGERROR)
                         self.log(traceback.format_exc(), xbmc.LOGERROR)
                         return
 
-        REAL_SETTINGS.setSetting('ForceChannelReset', 'false')
+        ADDON.setSetting('ForceChannelReset', 'false')
         self.chanlist.sleepTime = 0.3
 
         while True:

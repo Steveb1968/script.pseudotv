@@ -21,7 +21,7 @@ import threading
 import time
 import traceback
 
-from resources.lib.Globals import ascii, uni
+from Globals import ascii, uni
 from FileAccess import FileAccess
 
 

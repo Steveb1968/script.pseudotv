@@ -85,7 +85,7 @@ class Settings:
 
     def realGetSetting(self, name):
         try:
-            val = Globals.REAL_SETTINGS.getSetting(name)
+            val = Globals.ADDON.getSetting(name)
             return val
         except:
             return ''

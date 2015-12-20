@@ -23,12 +23,18 @@ import datetime
 import sys, re
 import random
 
+ADDON       = xbmcaddon.Addon(id='script.pseudotv')
+CWD         = ADDON.getAddonInfo('path').decode("utf-8")
+RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("utf-8")).decode("utf-8")
+
+sys.path.append(RESOURCE)
+
 from xml.dom.minidom import parse, parseString
-from resources.lib.Globals import *
-from resources.lib.ChannelList import ChannelList
-from resources.lib.AdvancedConfig import AdvancedConfig
-from resources.lib.FileAccess import FileAccess
-from resources.lib.Migrate import Migrate
+from Globals import *
+from ChannelList import ChannelList
+from AdvancedConfig import AdvancedConfig
+from FileAccess import FileAccess
+from Migrate import Migrate
 
 NUMBER_CHANNEL_TYPES = 8
 
@@ -45,7 +51,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.savedRules = False
 
         if CHANNEL_SHARING:
-            realloc = REAL_SETTINGS.getSetting('SettingsFolder')
+            realloc = ADDON.getSetting('SettingsFolder')
             FileAccess.copy(realloc + '/settings2.xml', SETTINGS_LOC + '/settings2.xml')
 
         ADDON_SETTINGS.loadSettings()
@@ -70,7 +76,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         migratemaster = Migrate()
         migratemaster.migrate()
         self.prepareConfig()
-        self.myRules = AdvancedConfig("script.pseudotv.AdvancedConfig.xml", ADDON_INFO, "default")
+        self.myRules = AdvancedConfig("script.pseudotv.AdvancedConfig.xml", CWD, "default")
         self.log("onInit return")
 
 
@@ -89,11 +95,11 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                 if self.madeChanges == 1:
                     dlg = xbmcgui.Dialog()
 
-                    if dlg.yesno(xbmc.getLocalizedString(190), REAL_SETTINGS.getLocalizedString(30032)):
+                    if dlg.yesno(xbmc.getLocalizedString(190), LANGUAGE(30032)):
                         ADDON_SETTINGS.writeSettings()
             
                         if CHANNEL_SHARING:
-                            realloc = REAL_SETTINGS.getSetting('SettingsFolder')
+                            realloc = ADDON.getSetting('SettingsFolder')
                             FileAccess.copy(SETTINGS_LOC + '/settings2.xml', realloc + '/settings2.xml')
 
                 self.close()
@@ -103,7 +109,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             if( (self.showingList == True) and (ADDON_SETTINGS.getSetting("Channel_" + str(curchan) + "_type") != "9999") ):
                 dlg = xbmcgui.Dialog()
 
-                if dlg.yesno(xbmc.getLocalizedString(190), REAL_SETTINGS.getLocalizedString(30033)):
+                if dlg.yesno(xbmc.getLocalizedString(190), LANGUAGE(30033)):
                     ADDON_SETTINGS.setSetting("Channel_" + str(curchan) + "_type", "9999")
                     self.updateListing(curchan)
                     self.madeChanges = 1
@@ -577,5 +583,5 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
         self.log("updateListing return")
 
-mydialog = ConfigWindow("script.pseudotv.ChannelConfig.xml", ADDON_INFO, "default")
+mydialog = ConfigWindow("script.pseudotv.ChannelConfig.xml", CWD, "default")
 del mydialog

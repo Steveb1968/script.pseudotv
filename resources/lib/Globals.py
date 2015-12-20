@@ -43,12 +43,12 @@ def ascii(string):
 
     return string
 
-ADDON_ID = 'script.pseudotv'
-REAL_SETTINGS = xbmcaddon.Addon(id=ADDON_ID)
-ADDON_INFO = REAL_SETTINGS.getAddonInfo('path')
-
-VERSION = REAL_SETTINGS.getAddonInfo('version')
-KODI_VER = float(xbmcaddon.Addon('xbmc.addon').getAddonInfo('version')[0:4])
+ADDON     = xbmcaddon.Addon(id='script.pseudotv')
+ADDON_ID  = ADDON.getAddonInfo('id')
+LANGUAGE  = ADDON.getLocalizedString
+CWD       = ADDON.getAddonInfo('path').decode("utf-8")
+VERSION   = ADDON.getAddonInfo('version')
+KODI_VER  = float(xbmcaddon.Addon('xbmc.addon').getAddonInfo('version')[0:4])
 
 TIMEOUT = 15 * 1000
 PREP_CHANNEL_TIME = 60 * 60 * 24 * 5
@@ -63,16 +63,16 @@ MODE_RANDOM = 8
 MODE_REALTIME = 16
 MODE_STARTMODES = MODE_RANDOM | MODE_REALTIME | MODE_RESUME
 
-SETTINGS_LOC = REAL_SETTINGS.getAddonInfo('profile')
+SETTINGS_LOC = ADDON.getAddonInfo('profile').decode("utf-8")
 CHANNEL_SHARING = False
 LOCK_LOC = xbmc.translatePath(os.path.join(SETTINGS_LOC, 'cache' + '/'))
 
-if REAL_SETTINGS.getSetting('ChannelSharing') == "true":
+if ADDON.getSetting('ChannelSharing') == "true":
     CHANNEL_SHARING = True
-    LOCK_LOC = xbmc.translatePath(os.path.join(REAL_SETTINGS.getSetting('SettingsFolder'), 'cache' + '/'))
+    LOCK_LOC = xbmc.translatePath(os.path.join(ADDON.getSetting('SettingsFolder'), 'cache' + '/'))
 
-IMAGES_LOC = xbmc.translatePath(os.path.join(ADDON_INFO, 'resources', 'images' + '/'))
-LOGOS_LOC = xbmc.translatePath(os.path.join(ADDON_INFO, 'resources', 'logos' + '/'))
+IMAGES_LOC = xbmc.translatePath(os.path.join(CWD, 'resources', 'images' + '/'))
+LOGOS_LOC = xbmc.translatePath(os.path.join(CWD, 'resources', 'logos' + '/'))
 CHANNELS_LOC = os.path.join(SETTINGS_LOC, 'cache' + '/')
 GEN_CHAN_LOC = os.path.join(CHANNELS_LOC, 'generated' + '/')
 MADE_CHAN_LOC = os.path.join(CHANNELS_LOC, 'stored' + '/')

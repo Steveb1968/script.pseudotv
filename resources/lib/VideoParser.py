@@ -20,11 +20,11 @@ import xbmc
 import os, platform
 import subprocess
 
-import parsers.MP4Parser as MP4Parser
-import parsers.AVIParser as AVIParser
-import parsers.MKVParser as MKVParser
-import parsers.FLVParser as FLVParser
-import parsers.TSParser  as TSParser
+import MP4Parser as MP4Parser
+import AVIParser as AVIParser
+import MKVParser as MKVParser
+import FLVParser as FLVParser
+import TSParser  as TSParser
 
 from Globals import *
 from FileAccess import FileAccess
