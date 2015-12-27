@@ -539,7 +539,7 @@
 				<top>75</top>
 				<width>1286</width>
 				<height>160</height>
-				<font>font15_textbox2</font>
+				<font>font14_textbox</font>
 				<textcolor>grey2</textcolor>
 				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
 			</control>

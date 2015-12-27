@@ -96,11 +96,19 @@
 				</control>
 				<control type="textbox" description="Plot" id="502">
 					<top>60</top>
+					<right>280</right>
 					<height>126</height>
 					<align>justify</align>
 					<font>Tiny</font>
 					<textcolor>PanelWhite100</textcolor>
 					<selectedcolor>PanelWhite100</selectedcolor>
+				</control>
+				<control type="image" id="503">
+					<right>0</right>
+					<top>15</top>
+					<width>250</width>
+					<bottom>5</bottom>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
 				</control>
 			</control>
 		</control>
@@ -400,11 +408,6 @@
 			<top>220</top>
 			<width>20</width>
 			<height>430</height>
-		</control>
-
-		<control type="group">
-			<visible>false</visible>
-			<control type="image" id="503" />
 		</control>
 	</controls>
 </window>
