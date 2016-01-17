@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<allowoverlay>no</allowoverlay>
 	<controls>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
@@ -11,9 +10,10 @@
 			<aspectratio>keep</aspectratio>
 			<animation effect="fade" end="40" condition="True">conditional</animation>
 			<visible>Player.HasVideo + ![Window.IsActive(videoosd) | Player.Paused]</visible>
+			<include>VisibleFadeEffect</include>
 		</control>
 		<control type="group">
-			<visible>Player.HasVideo + !Window.IsActive(videoosd) + Control.IsVisible(102)</visible>
+			<visible>Player.HasVideo + Control.IsVisible(102) + ![Window.IsActive(videoosd) | Player.Paused]</visible>
 			<animation effect="slide" start="0,-100" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="slide" start="0,-100" end="0,0" time="200">VisibleChange</animation>
 			<top>0</top>
@@ -97,7 +97,7 @@
 			<animation effect="slide" start="0,290" end="0,0" time="200">WindowOpen</animation>
 			<animation effect="slide" start="0,290" end="0,0" time="200">VisibleChange</animation>
 			<top>814</top>
-			<visible>Player.HasVideo + Control.IsVisible(102) + ![Window.IsActive(videoosd) | Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek]</visible>
+			<visible>Player.HasVideo + Control.IsVisible(102) + ![Window.IsActive(videoosd) | Player.Paused]</visible>
 			<control type="image">
 				<left>0</left>
 				<top>4</top>

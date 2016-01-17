@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<allowoverlay>no</allowoverlay>
 	<include>transition_Dialog</include>  
 	<controls>
 		<include>global_Background</include>
