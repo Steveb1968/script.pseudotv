@@ -1,4 +1,9 @@
 Changelog
+2.4.3 (steveb)
+    Check for playing media.
+    Improve timebar position.
+    Code cleanup.
+
 2.4.2 (steveb)
     Jarvis code cleanup
 

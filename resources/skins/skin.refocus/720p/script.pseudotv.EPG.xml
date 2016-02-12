@@ -381,42 +381,42 @@
 			<description>Show Listings - Channel 1</description>
 			<left>320</left>
 			<top>201</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>        
 		<control type="group" id="112">
 			<description>Show Listings - Channel 2</description>
 			<left>320</left>
 			<top>247</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>
 		<control type="group" id="113">
 			<description>Show Listings - Channel 3</description>
 			<left>320</left>
 			<top>293</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>
 		<control type="group" id="114">
 			<description>Show Listings - Channel 4</description>
 			<left>320</left>
 			<top>339</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>
 		<control type="group" id="115">
 			<description>Show Listings - Channel 5</description>
 			<left>320</left>
 			<top>385</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>
 		<control type="group" id="116">
 			<description>Show Listings - Channel 6</description>
 			<left>320</left>
 			<top>431</top>
-			<width>980</width>
+			<width>960</width>
 			<height>45</height>
 		</control>
 
