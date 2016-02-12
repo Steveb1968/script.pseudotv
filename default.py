@@ -28,14 +28,16 @@ RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("u
 sys.path.append(RESOURCE)
 
 def Start():
+    if xbmc.Player().isPlaying():
+        xbmc.Player().stop()
+    else:
+        pass
+
     import Overlay as Overlay
-
     MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", CWD, "default")
-
     del MyOverlayWindow
     xbmcgui.Window(10000).setProperty("PseudoTVRunning", '')
 
-# Adapting a solution from ronie (http://forum.xbmc.org/showthread.php?t=97353)
 if xbmcgui.Window(10000).getProperty("PseudoTVRunning") != "True":
     xbmcgui.Window(10000).setProperty("PseudoTVRunning", "True")
     shouldrestart = False
