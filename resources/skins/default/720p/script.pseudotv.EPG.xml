@@ -378,7 +378,7 @@
 
 		<!--TIME BAR-->
 		<control type="image" id="120">
-			<left>400</left>
+			<left>380</left>
 			<top>104</top>
 			<width>20</width>
 			<height>302</height>

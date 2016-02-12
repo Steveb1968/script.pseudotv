@@ -1,7 +1,7 @@
-PseudoTV for XBMC
+PseudoTV for Kodi
 =================
 
-**'GOTHAM / HELIX / ISENGARD' ONLY**
+**SUITABLE FOR KODI VER: 13+**
 
 ![screenshot](https://raw.githubusercontent.com/Steveb1968/script.pseudotv/master/_screenshots/screenshot05.png)
 
@@ -30,7 +30,7 @@ Features
     - Automatic channel creation based on your library.
     - Optionally customize the channels you want with the channel configuration
         tool.
-    - Utilize the XBMC smart playlist editor to create advanced channel setups.
+    - Utilize the Kodi smart playlist editor to create advanced channel setups.
     - Use an EPG and view what was on, is on, and will be on.  Would you rather
         see something that will be on later?  Select it and watch it now!
     - Want to pause a channel while you watch another?  And then come back to
@@ -84,12 +84,12 @@ Settings
 
     Configure Channels: This is the channel configuration tool.  From here you
     can modify the settings for each individual channel.
+    
+    Force Channel Reset: If you want your channels to be reanalyzed then you
+    can turn this on.
 
     Auto-off Timer: The amount of time (in minutes) of idle time before the script
     is automatically stopped.
-
-    Force Channel Reset: If you want your channels to be reanalyzed then you
-    can turn this on.
 
     Time Between Channel Resets: This is how often your channels will be reset.
     Generally, this is done automatically based on the duration of the individual

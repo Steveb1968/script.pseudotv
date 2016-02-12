@@ -683,7 +683,7 @@
 		</control>
 		<!--TIME BAR-->
 		<control type="image" id="120">
-			<left>430</left>
+			<left>393</left>
 			<top>228</top>
 			<width>10</width>
 			<height>308</height>

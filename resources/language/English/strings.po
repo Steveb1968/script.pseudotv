@@ -2,7 +2,7 @@
 # Addon Name: PseudoTV
 # Addon id: script.pseudotv
 # Addon version: 2.4.2
-# Addon Provider: Jason Anderson | steveb
+# Addon Provider: Jason Anderson | Steveb
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
