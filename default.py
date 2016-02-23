@@ -30,9 +30,6 @@ sys.path.append(RESOURCE)
 def Start():
     if xbmc.Player().isPlaying():
         xbmc.Player().stop()
-    else:
-        pass
-
     import Overlay as Overlay
     MyOverlayWindow = Overlay.TVOverlay("script.pseudotv.TVOverlay.xml", CWD, "default")
     del MyOverlayWindow
