@@ -66,7 +66,7 @@ class ChannelListThread(threading.Thread):
         # Don't load invalid channels if minimum threading mode is on
         if self.fullUpdating and self.myOverlay.isMaster:
             if validchannels < self.chanlist.enteredChannelCount:
-                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON.getAddonInfo('name'), LANGUAGE(30024), 4000, ICON))
+                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON_NAME, LANGUAGE(30024), 4000, ICON))
 
             for i in range(self.myOverlay.maxChannels):
                 if self.myOverlay.channels[i].isValid == False:
@@ -94,7 +94,7 @@ class ChannelListThread(threading.Thread):
                             self.myOverlay.channels[i] = self.chanlist.channels[i]
 
                             if self.myOverlay.channels[i].isValid == True:
-                                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON.getAddonInfo('name'), xbmc.getLocalizedString(19029) + ' ' + str(i + 1) + ' ' + LANGUAGE(30025), 4000, ICON))
+                                xbmc.executebuiltin("Notification(%s, %s, %d, %s)" % (ADDON_NAME, xbmc.getLocalizedString(19029) + ' ' + str(i + 1) + ' ' + LANGUAGE(30025), 4000, ICON))
                     except:
                         self.log("Unknown Channel Creation Exception", xbmc.LOGERROR)
                         self.log(traceback.format_exc(), xbmc.LOGERROR)

@@ -45,6 +45,7 @@ def ascii(string):
 
 ADDON     = xbmcaddon.Addon(id='script.pseudotv')
 ADDON_ID  = ADDON.getAddonInfo('id')
+ADDON_NAME= ADDON.getAddonInfo('name')
 LANGUAGE  = ADDON.getLocalizedString
 CWD       = ADDON.getAddonInfo('path').decode("utf-8")
 VERSION   = ADDON.getAddonInfo('version')

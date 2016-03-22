@@ -107,7 +107,7 @@
 			</control>
 			<control type="image" id="506">
 				<description>Show Channel Icon</description>
-				<left>20</left>
+				<left>25</left>
 				<top>38</top>
 				<width>203</width>
 				<height>223</height>

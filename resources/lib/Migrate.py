@@ -55,15 +55,10 @@ class Migrate:
 
 
     def initializeChannels(self):
-        updatedlg = xbmcgui.DialogProgress()
-        updatedlg.create("PseudoTV", "Initializing")
-        updatedlg.update(1, "Initializing", "Initial Channel Setup")
         chanlist = ChannelList.ChannelList()
         chanlist.background = True
         chanlist.fillTVInfo(True)
-        updatedlg.update(30)
         chanlist.fillMovieInfo(True)
-        updatedlg.update(60)
         # Now create TV networks, followed by mixed genres, followed by TV genres, and finally movie genres
         currentchan = 1
         mixedlist = []
@@ -78,7 +73,6 @@ class Migrate:
 
         mixedlist.sort(key=lambda x: x[1] + x[2], reverse=True)
         currentchan = self.initialAddChannels(chanlist.networkList, 1, currentchan)
-        updatedlg.update(70)
 
         # Mixed genres
         if len(mixedlist) > 0:
@@ -107,13 +101,8 @@ class Migrate:
                     if added > 10:
                         break
 
-                    updatedlg.update(int(70 + 10.0 / added))
-
-        updatedlg.update(80)
         currentchan = self.initialAddChannels(chanlist.showGenreList, 3, currentchan)
-        updatedlg.update(90)
         currentchan = self.initialAddChannels(chanlist.movieGenreList, 4, currentchan)
-        updatedlg.close()
 
         if currentchan > 1:
             return True

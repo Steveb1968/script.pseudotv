@@ -555,11 +555,11 @@
 		</control>
 		<control type="image" id="503">
 			<description>Show Channel Icon</description>
-			<left>200</left>
+			<left>170</left>
 			<top>730</top>
-			<width>200</width>
+			<width>260</width>
 			<height>300</height>
-			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<aspectratio>keep</aspectratio>
 		</control>            
 	</controls>
 </window>

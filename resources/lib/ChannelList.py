@@ -86,7 +86,7 @@ class ChannelList:
 
     def setupList(self):
         self.readConfig()
-        self.updateDialog.create("PseudoTV", "Updating channel list")
+        self.updateDialog.create(ADDON_NAME, "Updating channel list")
         self.updateDialog.update(0, "Updating channel list")
         self.updateDialogProgress = 0
         foundvalid = False

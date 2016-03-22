@@ -147,19 +147,14 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.background = self.getControl(101)
         self.getControl(102).setVisible(False)
         self.background.setVisible(True)
-        updateDialog = xbmcgui.DialogProgress()
-        updateDialog.create("PseudoTV", "Initializing")
-        self.backupFiles(updateDialog)
+        self.backupFiles()
         ADDON_SETTINGS.loadSettings()
         
         if CHANNEL_SHARING:
             FileAccess.makedirs(LOCK_LOC)
-            updateDialog.update(70, "Initializing", "Checking Other Instances")
             self.isMaster = GlobalFileLock.lockFile("MasterLock", False)
         else:
             self.isMaster = True
-
-        updateDialog.update(95, "Initializing", "Migrating")
 
         if self.isMaster:
             migratemaster = Migrate()
@@ -173,7 +168,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.myEPG.MyOverlayWindow = self
         # Don't allow any actions during initialization
         self.actionSemaphore.acquire()
-        updateDialog.close()
         self.timeStarted = time.time()
 
         if self.readConfig() == False:
@@ -292,20 +286,18 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.log('channelDown return')
         
         
-    def backupFiles(self, updatedlg):
+    def backupFiles(self):
         self.log('backupFiles')
 
         if CHANNEL_SHARING == False:
             return
 
-        updatedlg.update(1, "Initializing", "Copying Channels...")
         realloc = ADDON.getSetting('SettingsFolder')
         FileAccess.copy(realloc + '/settings2.xml', SETTINGS_LOC + '/settings2.xml')
         realloc = xbmc.translatePath(os.path.join(realloc, 'cache')) + '/'
 
         for i in range(999):
             FileAccess.copy(realloc + 'channel_' + str(i) + '.m3u', CHANNELS_LOC + 'channel_' + str(i) + '.m3u')
-            updatedlg.update(int(i * .07) + 1, "Initializing", "Copying Channels...")
 
 
     def storeFiles(self):
@@ -925,11 +917,11 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         curtime = time.time()
         xbmc.executebuiltin("PlayerControl(repeatoff)")
         self.isExiting = True
-        updateDialog = xbmcgui.DialogProgress()
-        updateDialog.create("PseudoTV", "Exiting")
+        updateDialog = xbmcgui.DialogProgressBG()
+        updateDialog.create(ADDON_NAME, '')
         
         if CHANNEL_SHARING and self.isMaster:
-            updateDialog.update(0, "Exiting", "Removing File Locks")
+            updateDialog.update(0, message='Exiting - Removing File Locks')
             GlobalFileLock.unlockFile('MasterLock')
         
         GlobalFileLock.close()
@@ -943,7 +935,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             self.lastPlaylistPosition = xbmc.PlayList(xbmc.PLAYLIST_MUSIC).getposition()
             self.Player.stop()
 
-        updateDialog.update(1, "Exiting", "Stopping Threads")
+        updateDialog.update(1, message='Exiting - Stopping Threads')
 
         try:
             if self.channelLabelTimer.isAlive():
@@ -991,7 +983,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 if self.channelThread.isAlive() == False:
                     break
 
-                updateDialog.update(6 + i, "Exiting", "Stopping Threads")
+                updateDialog.update(6 + i, message='Exiting - Stopping Threads')
 
             if self.channelThread.isAlive():
                 self.log("Problem joining channel thread", xbmc.LOGERROR)
@@ -1005,7 +997,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             ADDON_SETTINGS.setSetting('LastExitTime', str(int(curtime)))
 
         if self.timeStarted > 0 and self.isMaster:
-            updateDialog.update(35, "Exiting", "Saving Settings")
+            updateDialog.update(35, message='Exiting - Saving Settings')
             validcount = 0
 
             for i in range(self.maxChannels):

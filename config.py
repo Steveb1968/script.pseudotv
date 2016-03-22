@@ -507,14 +507,10 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.showList = []
         self.getControl(105).setVisible(False)
         self.getControl(106).setVisible(False)
-        self.dlg = xbmcgui.DialogProgress()
-        self.dlg.create("PseudoTV", "Preparing Configuration")
-        self.dlg.update(1)
+        xbmc.executebuiltin("ActivateWindow(busydialog)")
         chnlst = ChannelList()
         chnlst.fillTVInfo()
-        self.dlg.update(40)
         chnlst.fillMovieInfo()
-        self.dlg.update(80)
         self.mixedGenreList = chnlst.makeMixedList(chnlst.showGenreList, chnlst.movieGenreList)
         self.networkList = chnlst.networkList
         self.studioList = chnlst.studioList
@@ -532,10 +528,8 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             theitem.setLabel(str(i + 1))
             self.listcontrol.addItem(theitem)
 
-
-        self.dlg.update(90)
         self.updateListing()
-        self.dlg.close()
+        xbmc.executebuiltin("Dialog.Close(busydialog)")
         self.getControl(105).setVisible(True)
         self.getControl(106).setVisible(False)
         self.setFocusId(102)
