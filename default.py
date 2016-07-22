@@ -18,7 +18,8 @@
 
 import xbmc, xbmcgui, xbmcaddon
 import sys
-import os, threading
+import os
+
 
 # Script constants
 ADDON       = xbmcaddon.Addon(id='script.pseudotv')
@@ -26,6 +27,20 @@ CWD         = ADDON.getAddonInfo('path').decode("utf-8")
 RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("utf-8")).decode("utf-8")
 
 sys.path.append(RESOURCE)
+
+SkinID = xbmc.getSkinDir()
+if not SkinID in ('skin.confluence', 'skin.estuary'):
+    import MyFont
+    if MyFont.getSkinRes() == '1080i':
+        MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "24")
+        MyFont.addFont("PseudoTv12", "Lato-Regular.ttf", "25")
+        MyFont.addFont("PseudoTv13", "Lato-Regular.ttf", "30")
+        MyFont.addFont("PseudoTv14", "Lato-Regular.ttf", "33")
+    else:
+        MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "14")
+        MyFont.addFont("PseudoTv12", "Lato-Regular.ttf", "16")
+        MyFont.addFont("PseudoTv13", "Lato-Regular.ttf", "20")
+        MyFont.addFont("PseudoTv14", "Lato-Regular.ttf", "22")
 
 def Start():
     if xbmc.Player().isPlaying():

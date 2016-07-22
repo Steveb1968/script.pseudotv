@@ -1041,10 +1041,6 @@ class ChannelList:
                         except:
                             dur = 0
 
-                    # Remove any file types that we don't want
-                    if match.group(1).replace("\\\\", "\\")[-4:].lower() == 'strm':
-                        dur = 0
-
                     try:
                         if dur > 0:
                             filecount += 1

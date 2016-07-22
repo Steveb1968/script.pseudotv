@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="30000">
-		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/config.py)"/>
+		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/resources/lib/Config.py)"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
 		<setting id="AutoOff" type="enum" label="30001" values="Disable|30 min|60 min|90 min|120 min|150 min|180 min|210 min|240 min" default="0"/>
 		<setting id="ChannelResetSetting" type="enum" label="30004" values="Automatic|Daily|Weekly|Monthly|Never|Every Time" default="0"/>
@@ -14,6 +14,7 @@
 	<category label="30020">
 		<setting id="InfoOnChange" type="bool" label="30003" default="false"/>
 		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
+		<setting id="ShowEpgLogo" type="bool" label="30007" default="true"/>
 		<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
 		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>

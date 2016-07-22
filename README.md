@@ -3,7 +3,7 @@ PseudoTV for Kodi
 
 **SUITABLE FOR KODI VER: 13+**
 
-![screenshot](https://raw.githubusercontent.com/Steveb1968/script.pseudotv/master/_screenshots/screenshot05.png)
+![screenshot](https://raw.githubusercontent.com/Steveb1968/script.pseudotv/master/resources/screenshots/screenshot-01.png)
 
 -----------
 What is it?
@@ -123,7 +123,9 @@ Settings
     Info when Changing Channels: Pops up a small window on the bottom of the
     screen where the current show information is displayed when changing channels.
 
-    Always show channel logo: Always display the current channel logo.
+    Always show channel watermark: Always display the current channel logo watermark.
+    
+    Always show channel logo in epg grid: Shows the channel logo's in the epg grid.
 
     Channel Logo Folder: The place where channel logos are stored.
 

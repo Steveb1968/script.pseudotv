@@ -151,8 +151,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         ADDON_SETTINGS.loadSettings()
         
         if CHANNEL_SHARING:
+            xbmc.executebuiltin("ActivateWindow(busydialog)")
             FileAccess.makedirs(LOCK_LOC)
             self.isMaster = GlobalFileLock.lockFile("MasterLock", False)
+            xbmc.executebuiltin("Dialog.Close(busydialog)")
         else:
             self.isMaster = True
 
@@ -392,7 +394,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             xbmc.PlayList(xbmc.PLAYLIST_MUSIC).unshuffle()
 
         self.log("repeat all");
-        xbmc.executebuiltin("PlayerControl(repeatall)")
+        xbmc.executebuiltin("PlayerControl(RepeatAll)")
         curtime = time.time()
         timedif = (curtime - self.channels[self.currentChannel - 1].lastAccessTime)
 
@@ -402,11 +404,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 timedif -= self.channels[self.currentChannel - 1].getCurrentDuration() - self.channels[self.currentChannel - 1].showTimeOffset
                 self.channels[self.currentChannel - 1].addShowPosition(1)
                 self.channels[self.currentChannel - 1].setShowTime(0)
-
-        # First, check to see if the video is a strm
-        if self.channels[self.currentChannel - 1].getItemFilename(self.channels[self.currentChannel - 1].playlistPosition)[-4:].lower() == 'strm':
-            self.log("Ignoring a stop because of a stream")
-            self.Player.ignoreNextStop = True
 
         xbmc.sleep(self.channelDelay)
         # set the show offset
@@ -703,8 +700,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 self.hideInfo()
+                self.getControl(103).setVisible(False)
                 self.newChannel = 0
                 self.myEPG.doModal()
+                self.getControl(103).setVisible(True)
 
                 if self.channelThread.isAlive():
                     self.channelThread.unpause()
@@ -898,10 +897,9 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             self.notPlayingCount += 1
             self.log("Adding to notPlayingCount")
 
-        if self.channels[self.currentChannel - 1].getCurrentFilename()[-4:].lower() != 'strm':
-            if self.notPlayingCount >= 3:
-                self.end()
-                return
+        if self.notPlayingCount >= 3:
+            self.end()
+            return
 
         if self.Player.stopped == False:
             self.playerTimer.name = "PlayerTimer"
@@ -915,7 +913,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.Player.stopped = True
         self.background.setVisible(False)
         curtime = time.time()
-        xbmc.executebuiltin("PlayerControl(repeatoff)")
+        xbmc.executebuiltin("PlayerControl(RepeatOff)")
         self.isExiting = True
         updateDialog = xbmcgui.DialogProgressBG()
         updateDialog.create(ADDON_NAME, '')

@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: PseudoTV
 # Addon id: script.pseudotv
-# Addon version: 2.4.3
+# Addon version: 2.4.4
 # Addon Provider: Jason Anderson | Steveb
 msgid ""
 msgstr ""
@@ -55,10 +55,12 @@ msgid "Coming Up Next"
 msgstr "Em Seguida"
 
 msgctxt "#30006"
-msgid "Always show channel logo"
+msgid "Always show channel watermark"
 msgstr "Mostrar sempre o logotipo do canal"
 
-#empty string with id 30007
+msgctxt "#30007"
+msgid "Show channel logo in epg grid"
+msgstr "Mostrar logótipo do canal na grelha de EPG"
 
 msgctxt "#30008"
 msgid "Open Channel Configuration"
@@ -213,3 +215,11 @@ msgstr "Limite de mídias na Playlist"
 msgctxt "#30045"
 msgid "Channel Number Color"
 msgstr "Cor do Número do Canal"
+
+msgctxt "#30046"
+msgid "Seek step forward [I](Isengard)[/I]"
+msgstr "Procure passo em frente [I](Isengard)[/I]"
+
+msgctxt "#30047"
+msgid "Seek step backward [I](Isengard)[/I]"
+msgstr "Procure passo para trás [I](Isengard)[/I]"

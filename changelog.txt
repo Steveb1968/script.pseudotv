@@ -1,3 +1,8 @@
+2.4.4 (steveb)
+    Added option to enable/disable channel logo's in the epg grid.
+    New Default Skin (Estuary based).
+    Added default font.
+
 2.4.3 (steveb)
     Check for playing media.
     Improve timebar position.

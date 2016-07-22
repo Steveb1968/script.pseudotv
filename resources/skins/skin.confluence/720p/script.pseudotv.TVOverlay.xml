@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>   
+<window>
 	<controls>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
 			<left>1130</left>
-			<top>635</top>
+			<top>640</top>
 			<width>130</width>
-			<height>75</height>
+			<height>60</height>
 			<aspectratio>keep</aspectratio>
-			<animation effect="fade" end="50" condition="True">conditional</animation>
+			<animation effect="fade" end="20" condition="True">conditional</animation>
 			<visible>Player.HasVideo + !Window.IsActive(videoosd)</visible>
 		</control>
 		<control type="group" id="102">
-			<animation effect="fade" start="0" end="100" time="300" condition="Control.IsVisible(102)">Conditional</animation>
 			<visible>Player.HasVideo + !Window.IsActive(videoosd)</visible>
 			<!--HEADER-->
 			<control type="image">
@@ -48,39 +47,37 @@
 			<!--FOOTER-->
 			<control type="image">
 				<left>0</left>
-				<top>490</top>
+				<top>470</top>
 				<width>1280</width>
-				<height>230</height>
+				<height>250</height>
 				<texture border="1">HomeNowPlayingBack.png</texture>
 			</control>
-			<control type="image" id="1">
-				<description>cover image</description>
-				<left>20</left>
-				<top>460</top>
-				<width>300</width>
-				<height>230</height>
-				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-				<aspectratio aligny="bottom">keep</aspectratio>
+			<control type="image">
+				<left>40</left>
+				<top>500</top>
+				<width>150</width>
+				<height>210</height>
+				<texture>$INFO[Player.Art(tvshow.poster)]</texture>
+				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
-				<visible>!VideoPlayer.Content(Movies)</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
 			</control>
-			<control type="image" id="1">
-				<description>Movie cover image</description>
-				<left>20</left>
-				<top>370</top>
-				<width>300</width>
-				<height>330</height>
-				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-				<aspectratio aligny="bottom">keep</aspectratio>
+			<control type="image">
+				<left>40</left>
+				<top>500</top>
+				<width>150</width>
+				<height>210</height>
+				<texture fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
-				<visible>VideoPlayer.Content(Movies)</visible>
-			</control>                   
-			<control type="label"  id="502">
+				<visible>IsEmpty(Player.Art(tvshow.poster))</visible>
+			</control>
+			<control type="label" id="502">
 				<description>Heading label</description>
-				<left>330</left>
-				<top>535</top>
+				<left>210</left>
+				<top>525</top>
 				<width>770</width>
 				<height>25</height>
 				<align>left</align>
@@ -88,86 +85,93 @@
 				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
-			</control>            
-			<control type="label">
-				<left>350</left>
-				<top>565</top>
-				<width>770</width>
-				<height>25</height>
-				<align>left</align>
-				<font>font12</font>
-				<info>Control.GetLabel(503)</info>
-				<textcolor>grey2</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="fadelabel">
-				<left>350</left>
-				<top>595</top>
-				<width>770</width>
+				<left>230</left>
+				<top>555</top>
+				<width>890</width>
 				<height>35</height>
 				<font>font30</font>
 				<align>left</align>
 				<aligny>center</aligny>
-				<info>Control.GetLabel(503)</info>
+				<label>$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey2],[/COLOR]]</label>
 				<textcolor>orange</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<scrollout>false</scrollout>
 				<pauseatend>1800</pauseatend>
 				<scrollspeed>40</scrollspeed>
-				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
-				<visible>IsEmpty(Control.GetLabel(504))</visible>
-			</control>               
-			<control type="fadelabel">
-				<left>350</left>
-				<top>595</top>
-				<width>770</width>
-				<height>35</height>
-				<font>font30</font>
-				<align>left</align>
-				<aligny>center</aligny>
-				<info>Control.GetLabel(504)</info>
-				<textcolor>orange</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<scrollout>false</scrollout>
-				<pauseatend>1800</pauseatend>
-				<scrollspeed>40</scrollspeed>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
 			</control>
 			<control type="textbox" id="505">
 				<description>Plot</description>
-				<left>350</left>
-				<top>635</top>
-				<width>880</width>
+				<left>230</left>
+				<top>600</top>
+				<width>1000</width>
 				<height>50</height>
 				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<align>justify</align>
-				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
-				<visible>!IsEmpty(Control.GetLabel(504))</visible>
-			</control>
-			<control type="textbox" id="505">
-				<description>Plot</description>
-				<left>350</left>
-				<top>610</top>
-				<width>880</width>
-				<height>75</height>
-				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<align>justify</align>
-				<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
-				<visible>IsEmpty(Control.GetLabel(504))</visible>
+				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 			</control>
 			<control type="image" id="506">
 				<description>Show Channel Icon</description>
-				<left>1110</left>
-				<top>565</top>
+				<left>1130</left>
+				<top>535</top>
 				<width>100</width>
-				<height>68</height>
-				<aspectratio aligny="center">keep</aspectratio>
-				<animation effect="slide" start="0,0" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(504))">conditional</animation>
+				<height>60</height>
+				<aspectratio align="right">keep</aspectratio>
+			</control>
+			<control type="group">
+				<left>230</left>
+				<top>65r</top>
+				<control type="label">
+					<left>0</left>
+					<top>0</top>
+					<width>100</width>
+					<height>40</height>
+					<font>font13</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Time(hh:mm:ss)]</label>
+				</control>
+				<control type="progress">
+					<description>ProgressbarCache</description>
+					<left>90</left>
+					<top>15</top>
+					<width>820</width>
+					<height>16</height>
+					<info>Player.ProgressCache</info>
+					<midtexture border="6,0,6,0">OSDProgressMidLight.png</midtexture>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<left>90</left>
+					<top>15</top>
+					<width>820</width>
+					<height>16</height>
+					<info>Player.Progress</info>
+				</control>
+				<control type="label">
+					<left>900</left>
+					<top>0</top>
+					<width>100</width>
+					<height>40</height>
+					<font>font13</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+				</control>
+				<control type="label">
+					<left>90</left>
+					<top>32</top>
+					<width>820</width>
+					<height>25</height>
+					<label>$LOCALIZE[31049] $INFO[Player.FinishTime]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control>
 			</control>
 			<control type="group">
 				<visible>false</visible>

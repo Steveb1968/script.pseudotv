@@ -299,6 +299,23 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
             self.selectedRuleIndex = -1
             self.consolidateRules()
             self.makeList()
+        elif controlId == 115:      # Ok button
+            if self.selectedRuleIndex > -1:
+                xbmc.executebuiltin("SetProperty(itempress,100)")
+                xbmc.executebuiltin("Control.SetFocus(120)")
+                self.lineSelected = 0
+                self.onClick(130)
+            else:
+                self.saveRules()
+                self.close()
+        elif controlId == 116:      # Cancel button
+            if self.selectedRuleIndex > -1:
+                xbmc.executebuiltin("SetProperty(itempress,100)")
+                xbmc.executebuiltin("Control.SetFocus(120)")
+                self.lineSelected = 0
+                self.close()
+            else:
+                self.close()
 
 
     def consolidateRules(self):

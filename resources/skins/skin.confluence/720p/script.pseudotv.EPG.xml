@@ -8,37 +8,34 @@
 	</animation>
 	<controls>
 		<!--BACKGROUND-->
-		<control type="group">
-			<control type="image">
-				<left>0</left>
-				<top>100r</top>
-				<width>1280</width>
-				<height>100</height>
-				<texture>floor.png</texture>
-			</control>
-			<control type="image">
-				<left>55</left>
-				<top>60</top>
-				<width>1170</width>
-				<height>600</height>
-				<texture border="15">ContentPanel.png</texture>
-			</control>
-			<control type="image">
-				<left>55</left>
-				<top>652</top>
-				<width>1170</width>
-				<height>64</height>
-				<texture border="15">ContentPanelMirror.png</texture>
-			</control>
-			<control type="image">
-				<left>0</left>
-				<top>-40</top>
-				<width>1280</width>
-				<height>120</height>
-				<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
-			</control>
+		<control type="image">
+			<left>0</left>
+			<top>100r</top>
+			<width>1280</width>
+			<height>100</height>
+			<texture>floor.png</texture>
 		</control>
-
+		<control type="image">
+			<left>55</left>
+			<top>60</top>
+			<width>1170</width>
+			<height>600</height>
+			<texture border="15">ContentPanel.png</texture>
+		</control>
+		<control type="image">
+			<left>55</left>
+			<top>652</top>
+			<width>1170</width>
+			<height>64</height>
+			<texture border="15">ContentPanelMirror.png</texture>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>-40</top>
+			<width>1280</width>
+			<height>120</height>
+			<texture flipy="true" border="1">HomeNowPlayingBack.png</texture>
+		</control>
 		<!--HEADER-->
 		<control type="image">
 			<description>Section header image</description>
@@ -47,8 +44,8 @@
 			<width>35</width>
 			<height>35</height>
 			<aspectratio>keep</aspectratio>
-			<texture>icon_video.png</texture>
-		</control>       
+			<texture colordiffuse="FFF0F0F0">ptv_logo.png</texture>
+		</control>
 		<control type="label">
 			<left>65</left>
 			<top>5</top>
@@ -59,16 +56,13 @@
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
-			<label>$INFO[System.AddonTitle(script.pseudotv)]$INFO[System.AddonVersion(script.pseudotv),[COLOR=blue] - [/COLOR],]</label>
+			<label>$INFO[System.AddonTitle(script.pseudotv)]</label>
 		</control>
 		<include>Clock</include>
-
 		<!--CHANNEL BUTTONS AND LABELS-->
 		<control type="group">
 			<left>80</left>
 			<top>71</top>
-			<width>300</width>
-			<height>500</height>
 			<!--CHANNEL HEADER-->
 			<control type="label" id="104">
 				<description>Date Label</description>
@@ -90,14 +84,14 @@
 				<colordiffuse>88FFFFFF</colordiffuse>
 				<texture>separator2.png</texture>
 			</control>
-			<!--CHANNEL 1-->           
+			<!--CHANNEL 1-->
 			<control type="image">
 				<description>Channel 1 Back</description>
 				<left>0</left>
 				<top>35</top>
 				<width>300</width>
 				<height>48</height>
-				<texture>MenuItemNF.png</texture>                
+				<texture>MenuItemNF.png</texture>
 			</control>
 			<control type="label" id="311">
 				<description>Channel 1 Number</description>
@@ -109,7 +103,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>grey</textcolor>
-			</control>           
+			</control>
 			<control type="image" id="321">
 				<description>Channel 1 Icon</description>
 				<left>45</left>
@@ -128,6 +122,7 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(321))">Conditional</animation>
 			</control>
 			<!-- CHANNEL 2 -->
 			<control type="image">
@@ -136,8 +131,8 @@
 				<top>85</top>
 				<width>300</width>
 				<height>48</height>
-				<texture>MenuItemNF.png</texture>                
-			</control>           
+				<texture>MenuItemNF.png</texture>
+			</control>
 			<control type="label" id="312">
 				<description>Channel 2 Number</description>
 				<left>5</left>
@@ -167,6 +162,7 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(322))">Conditional</animation>
 			</control>
 			<!-- CHANNEL 3 -->
 			<control type="image">
@@ -206,6 +202,7 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(323))">Conditional</animation>
 			</control>
 			<!-- CHANNEL 4 -->
 			<control type="image">
@@ -245,6 +242,7 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(324))">Conditional</animation>
 			</control>
 			<!-- CHANNEL 5 -->
 			<control type="image">
@@ -284,6 +282,7 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(325))">Conditional</animation>
 			</control>
 			<!-- CHANNEL 6 -->
 			<control type="image">
@@ -323,15 +322,13 @@
 				<aligny>center</aligny>
 				<align>left</align>
 				<scroll>true</scroll>
+				<animation effect="slide" start="0,0" end="-55,0" time="0" condition="IsEmpty(Control.GetLabel(326))">Conditional</animation>
 			</control>
 		</control>
-
 		<!--LISTING HEADER AND TIME INFO-->
 		<control type="group">
 			<left>380</left>
 			<top>71</top>
-			<width>840</width>
-			<height>500</height>
 			<control type="label" id="101">
 				<description>Time 1 Label</description>
 				<left>10</left>
@@ -363,7 +360,6 @@
 				<aligny>center</aligny>
 			</control>
 		</control>
-
 		<!--TIME BAR-->
 		<control type="image" id="120">
 			<left>380</left>
@@ -410,15 +406,14 @@
 			<top>306</top>
 			<width>838</width>
 			<height>48</height>
-		</control>		
+		</control>
 		<control type="group" id="116">
 			<left>380</left>
 			<top>356</top>
 			<width>838</width>
 			<height>48</height>
 		</control>
-
-		<!--FOOTER-->           
+		<!--FOOTER-->
 		<control type="label">
 			<description>Show Title Label</description>
 			<left>390</left>
@@ -473,31 +468,103 @@
 			<font>font13</font>
 			<textcolor>white</textcolor>
 			<align>justify</align>
-			<autoscroll time="3600" delay="8000" repeat="8000">True</autoscroll>
+			<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 		</control>
 		<control type="image" id="503">
 			<description>Show Channel Icon</description>
-			<left>85</left>
+			<left>80</left>
 			<top>480</top>
-			<width>295</width>
+			<width>300</width>
 			<height>120</height>
-			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<aspectratio>keep</aspectratio>
 		</control>
-		<!-- NAV INFO -->
 		<control type="image">
 			<description>NAV INFO</description>
-			<left>900</left>
-			<top>615</top>
-			<width>295</width>
+			<left>875</left>
+			<top>620</top>
+			<width>310</width>
 			<height>30</height>
-			<align>right</align>
-			<texture>NavFlagEpg.png</texture>
-			<aspectratio align="center" aligny="bottom">keep</aspectratio>
-			<colordiffuse>lightgrey</colordiffuse>
-		</control>                
+			<texture colordiffuse="lightgrey">NavFlagEpg.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+		</control>
+		<control type="image">
+			<description>NAV INFO</description>
+			<left>875</left>
+			<top>660</top>
+			<width>310</width>
+			<height>30</height>
+			<texture flipy="true" colordiffuse="1A808080">NavFlagEpg.png</texture>
+			<aspectratio align="right">keep</aspectratio>
+		</control>
 		<control type="group">
 			<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes) | VideoPlayer.Content(MusicVideos)</visible>
-			<include>CommonNowPlaying</include>
+			<control type="image">
+				<left>30</left>
+				<top>55r</top>
+				<width>45</width>
+				<height>45</height>
+				<texture border="5">floor_button.png</texture>
+			</control>
+			<control type="image">
+				<description>Player Icon</description>
+				<left>35</left>
+				<top>50r</top>
+				<width>35</width>
+				<height>35</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_player.png</texture>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>53r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[Player.Title] - ([COLOR=blue]$INFO[Player.Time] / $INFO[Player.Duration,][/COLOR])</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.Genre]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.TVShowTitle]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>30r</top>
+				<width>700</width>
+				<height>20</height>
+				<label>$INFO[VideoPlayer.Artist]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>grey</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+			</control>
 		</control>
 		<control type="group">
 			<visible>false</visible>
