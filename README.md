@@ -1,4 +1,6 @@
-![Logo](https://github.com/Steveb1968/script.pseudotv/blob/master/resources/images/Default.png?raw=true "PseudoTV Logo") PseudoTV for Kodi
+![alt text](https://github.com/Steveb1968/script.pseudotv/blob/master/resources/images/Default.png?raw=true "PseudoTV Logo")
+
+PseudoTV for Kodi
 ======
 
 #### SUITABLE FOR KODI VER: 13+
