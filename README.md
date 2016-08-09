@@ -8,11 +8,11 @@ PseudoTV for Kodi
 ![screenshot](https://github.com/Steveb1968/script.pseudotv/blob/master/resources/screenshots/screenshot-01.png?raw=true)
 
 ### What is it?
-It's channel-surfing for your media center. Never again will you have to actually pick what you want to watch. Use an 	 electronic program guide (EPG) to view what's on or select a show to watch. This script will let you create your own channels and, you know, watch them. Doesn't actually sound useful when I have to write it in a readme. Eh, try it and decide if it works for you.
+It's channel-surfing for your media center. Never again will you have to actually pick what you want to watch. Use an electronic program guide (EPG) to view what's on or select a show to watch. This script will let you create your own channels and, you know, watch them. Doesn't actually sound useful when I have to write it in a readme. Eh, try it and decide if it works for you.
 
 ---
 ### Requirements
-This **ONLY** uses your existing video library to play video.  It will **NOT** play video from the internet.  If you do not have a significant number of videos in your library, then this script probably isn't for you. Sorry.
+This **ONLY** uses your existing video library to play video. It will **NOT** play video from the internet. If you do not have a significant number of videos in your library, then this script probably isn't for you. Sorry.
 
 ---
 ### Features
@@ -27,11 +27,14 @@ This **ONLY** uses your existing video library to play video.  It will **NOT** p
 
 ---
 ### Setup
-First, install it.  This is self-explanatory (hopefully).  Really, that's all that is necessary.  Default channels will be created without any intervention.  You can choose to setup channels (next step) if you wish. Instructions to create your own channels.  Inside of the addon config, you may open the channel configuration tool.  Inside of here you can select a channel to modify.  You may then select it's type and any options.  For a basic setup, that's all you need to do.  It's worth noting that you may create a playlist using the smart playlist editor and then select that playlist in the channel config tool (Custom Playlist channel type). Additionally, you may select to add advanced rules to a certain channel. There are quite a few rules that are currently available, and hopefully they should be relatively self-explanitory.  This is a readme and should include descriptions of them all... who knows, maybe it will some day.
+1. First, install it.  This is self-explanatory (hopefully).  Really, that's all that is necessary.  Default channels will be created without any intervention.  You can choose to setup channels (next step) if you wish.
+2. _Instructions to create your own channels:_ Inside of the addon config, you may open the channel configuration tool. Inside of here you can select a channel to modify. You may then select it's type and any options. For a basic setup, that's all you need to do. It's worth noting that you may create a playlist using the smart playlist editor and then select that playlist in the channel config tool (Custom Playlist channel type). Additionally, you may select to add advanced rules to a certain channels. There are quite a few rules that are currently available, and hopefully they should be relatively self-explanitory.
+
+	This is a readme and should include descriptions of them all... who knows, maybe it will some day.    
 
 --------
 ### Controls
-There are only a few things you need to know in order to control every-thing. First of all, the Stop button ('X') stops the video and exits the script. You may also press the Previous Menu ('Escape') button to do this (don't worry, it will prompt you to verify first). Scroll through channels using the arrow up and down keys, or alternatively by pressing Page up or down. To open the EPG, press the Select key ('Enter'). Move around using the arrow keys. Start a program by pressing Select. Pressing Previous Menu ('Escape') will close the EPG. Press 'I' to display or hide the info window.  When it is displayed, you can look at the previous and next shows on this channel using arrow left and right.
+There are only a few things you need to know in order to control everything. First of all, the Stop button ('X') stops the video and exits the script. You may also press the Previous Menu ('Escape') button to do this (don't worry, it will prompt you to verify first). Scroll through channels using the arrow up and down keys, or alternatively by pressing Page up or down. To open the EPG, press the Select key ('Enter'). Move around using the arrow keys. Start a program by pressing Select. Pressing Previous Menu ('Escape') will close the EPG. Press ('I') to display or hide the info window.  When it is displayed, you can look at the previous and next shows on this channel using arrow left and right.
 
 ---
 ### Settings
