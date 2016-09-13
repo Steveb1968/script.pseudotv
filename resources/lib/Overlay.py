@@ -151,10 +151,15 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         ADDON_SETTINGS.loadSettings()
         
         if CHANNEL_SHARING:
-            xbmc.executebuiltin("ActivateWindow(busydialog)")
+            updateDialog = xbmcgui.DialogProgressBG()
+            updateDialog.create(ADDON_NAME, '')
+            updateDialog.update(1, message='Initializing Channel Sharing')
             FileAccess.makedirs(LOCK_LOC)
+            updateDialog.update(50, message='Initializing Channel Sharing')
             self.isMaster = GlobalFileLock.lockFile("MasterLock", False)
-            xbmc.executebuiltin("Dialog.Close(busydialog)")
+            updateDialog.update(100, message='Initializing Channel Sharing')
+            xbmc.sleep(200)
+            updateDialog.close()
         else:
             self.isMaster = True
 
