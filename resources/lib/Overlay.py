@@ -303,7 +303,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         FileAccess.copy(realloc + '/settings2.xml', SETTINGS_LOC + '/settings2.xml')
         realloc = xbmc.translatePath(os.path.join(realloc, 'cache')) + '/'
 
-        for i in range(999):
+        for i in range(self.maxChannels + 1):
             FileAccess.copy(realloc + 'channel_' + str(i) + '.m3u', CHANNELS_LOC + 'channel_' + str(i) + '.m3u')
 
 
@@ -317,9 +317,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         FileAccess.copy(SETTINGS_LOC + '/settings2.xml', realloc + '/settings2.xml')
         realloc = xbmc.translatePath(os.path.join(realloc, 'cache')) + '/'
 
-        for i in range(self.maxChannels):
-            if self.channels[i].isValid:
-                FileAccess.copy(CHANNELS_LOC + 'channel_' + str(i) + '.m3u', realloc + 'channel_' + str(i) + '.m3u')
+        for i in range(self.maxChannels + 1):
+            FileAccess.copy(CHANNELS_LOC + 'channel_' + str(i) + '.m3u', realloc + 'channel_' + str(i) + '.m3u')
 
 
     def channelUp(self):
