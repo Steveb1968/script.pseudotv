@@ -221,19 +221,18 @@
 				<overlaytexture>-</overlaytexture>
 				<info>Player.Progress</info>
 			</control>
-			<control type="slider">
+			<control type="label">
 				<left>232</left>
-				<top>1035</top>
-				<width>1659</width>
+				<top>1034</top>
+				<width>1644</width>
 				<height>30</height>
-				<onup>noop</onup>
-				<ondown>noop</ondown>
-				<controloffsetx>75</controloffsetx>
-				<controloffsety>0</controloffsety>
-				<texturesliderbar colordiffuse="00FFFFFF">ptv_nub_bar.png</texturesliderbar>
-				<textureslidernib>ptv_nub_bar.png</textureslidernib>
-				<textureslidernibfocus>-</textureslidernibfocus>
-				<info>Player.Progress</info>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>PseudoTv10</font>
+				<textcolor>FFF0F0F0</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<label>$INFO[Player.FinishTime,$LOCALIZE[19081] $LOCALIZE[142] ,]</label>
+				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="group">
 				<visible>false</visible>

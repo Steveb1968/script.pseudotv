@@ -404,6 +404,13 @@
 			<visible>false</visible>
 			<label>PseudoTv12</label><!--text font-->
 		</control>
+		<control type="image">
+			<left>480</left>
+			<top>545</top>
+			<width>1440</width>
+			<height>362</height>
+			<texture>ptv_black.png</texture>
+		</control>
 		<control type="group" id="111">
 			<left>480</left>
 			<top>545</top>
