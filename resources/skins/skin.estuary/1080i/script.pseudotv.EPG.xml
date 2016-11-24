@@ -87,6 +87,13 @@
 			<height>580</height>
 			<texture flipy="true" border="2">ptv_InfoBar.png</texture>
 		</control>
+		<control type="image">
+			<left>0</left>
+			<top>580</top>
+			<width>1920</width>
+			<height>500</height>
+			<texture>ptv_LogoBack.png</texture>
+		</control>
 		<!--TIME INFO-->
 		<control type="group">
 			<left>480</left>

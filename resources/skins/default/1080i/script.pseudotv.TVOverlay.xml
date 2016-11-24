@@ -83,7 +83,7 @@
 				<aligny>top</aligny>
 				<textcolor>FFF0F0F0</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<label>$INFO[System.Date]</label>
+				<label>$INFO[Player.FinishTime,$LOCALIZE[19081] $LOCALIZE[142] ,]</label>
 			</control>
 			<!--FOOTER-->
 			<control type="image">
@@ -92,6 +92,13 @@
 				<width>1920</width>
 				<height>290</height>
 				<texture flipy="true" border="2">ptv_InfoBar.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>540</top>
+				<width>1920</width>
+				<height>540</height>
+				<texture>ptv_LogoBack.png</texture>
 			</control>
 			<control type="image">
 				<left>30</left>
@@ -220,19 +227,6 @@
 				<righttexture>-</righttexture>
 				<overlaytexture>-</overlaytexture>
 				<info>Player.Progress</info>
-			</control>
-			<control type="label">
-				<left>232</left>
-				<top>1034</top>
-				<width>1644</width>
-				<height>30</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>PseudoTv10</font>
-				<textcolor>FFF0F0F0</textcolor>
-				<shadowcolor>22000000</shadowcolor>
-				<label>$INFO[Player.FinishTime,$LOCALIZE[19081] $LOCALIZE[142] ,]</label>
-				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="group">
 				<visible>false</visible>
