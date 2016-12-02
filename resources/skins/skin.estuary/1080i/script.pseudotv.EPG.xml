@@ -151,14 +151,14 @@
 		<!--CHANNEL 1-->
 		<control type="image">
 			<left>0</left>
-			<top>547</top>
+			<top>544</top>
 			<width>480</width>
 			<height>61</height>
 			<texture flipy="true" border="5">lists/separator.png</texture>
 		</control>
 		<control type="image">
 			<left>0</left>
-			<top>548</top>
+			<top>545</top>
 			<width>480</width>
 			<height>61</height>
 			<texture border="5">lists/separator.png</texture>
@@ -166,9 +166,9 @@
 		<control type="label" id="311">
 			<description>Channel 1 Number</description>
 			<left>0</left>
-			<top>548</top>
+			<top>545</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -178,9 +178,9 @@
 		<control type="label" id="301">
 			<description>Channel 1 Name</description>
 			<left>60</left>
-			<top>548</top>
+			<top>545</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -191,7 +191,7 @@
 		<control type="image" id="321">
 			<description>Channel 1 Icon</description>
 			<left>405</left>
-			<top>548</top>
+			<top>545</top>
 			<width>60</width>
 			<height>60</height>
 			<aspectratio>keep</aspectratio>
@@ -199,7 +199,7 @@
 		<!-- CHANNEL 2 -->
 		<control type="image">
 			<left>0</left>
-			<top>608</top>
+			<top>606</top>
 			<width>480</width>
 			<height>61</height>
 			<texture border="5">lists/separator.png</texture>
@@ -207,9 +207,9 @@
 		<control type="label" id="312">
 			<description>Channel 2 Number</description>
 			<left>0</left>
-			<top>608</top>
+			<top>606</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -219,9 +219,9 @@
 		<control type="label" id="302">
 			<description>Channel 2 Name</description>
 			<left>60</left>
-			<top>608</top>
+			<top>606</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -232,7 +232,7 @@
 		<control type="image" id="322">
 			<description>Channel 2 Icon</description>
 			<left>405</left>
-			<top>608</top>
+			<top>606</top>
 			<width>60</width>
 			<height>60</height>
 			<aspectratio>keep</aspectratio>
@@ -240,7 +240,7 @@
 		<!-- CHANNEL 3 -->
 		<control type="image">
 			<left>0</left>
-			<top>668</top>
+			<top>667</top>
 			<width>480</width>
 			<height>61</height>
 			<texture border="5">lists/separator.png</texture>
@@ -248,9 +248,9 @@
 		<control type="label" id="313">
 			<description>Channel 3 Number</description>
 			<left>0</left>
-			<top>668</top>
+			<top>667</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -260,9 +260,9 @@
 		<control type="label" id="303">
 			<description>Channel 3 Name</description>
 			<left>60</left>
-			<top>668</top>
+			<top>667</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -273,7 +273,7 @@
 		<control type="image" id="323">
 			<description>Channel 3 Icon</description>
 			<left>405</left>
-			<top>668</top>
+			<top>667</top>
 			<width>60</width>
 			<height>60</height>
 			<aspectratio>keep</aspectratio>
@@ -291,7 +291,7 @@
 			<left>0</left>
 			<top>728</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -303,7 +303,7 @@
 			<left>60</left>
 			<top>728</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -330,9 +330,9 @@
 		<control type="label" id="315">
 			<description>Channel 5 Number</description>
 			<left>0</left>
-			<top>788</top>
+			<top>789</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -342,9 +342,9 @@
 		<control type="label" id="305">
 			<description>Channel 5 Name</description>
 			<left>60</left>
-			<top>788</top>
+			<top>789</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -355,7 +355,7 @@
 		<control type="image" id="325">
 			<description>Channel 5 Icon</description>
 			<left>405</left>
-			<top>788</top>
+			<top>789</top>
 			<width>60</width>
 			<height>60</height>
 			<aspectratio>keep</aspectratio>
@@ -363,17 +363,17 @@
 		<!-- CHANNEL 6 -->
 		<control type="image">
 			<left>0</left>
-			<top>848</top>
+			<top>850</top>
 			<width>480</width>
-			<height>61</height>
+			<height>60</height>
 			<texture border="5">lists/separator.png</texture>
 		</control>
 		<control type="label" id="316">
 			<description>Channel 6 Number</description>
 			<left>0</left>
-			<top>848</top>
+			<top>850</top>
 			<width>50</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<align>right</align>
 			<aligny>center</aligny>
@@ -383,9 +383,9 @@
 		<control type="label" id="306">
 			<description>Channel 6 Name</description>
 			<left>60</left>
-			<top>848</top>
+			<top>850</top>
 			<width>340</width>
-			<height>60</height>
+			<height>58</height>
 			<font>font12</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
@@ -396,7 +396,7 @@
 		<control type="image" id="326">
 			<description>Channel 6 Icon</description>
 			<left>405</left>
-			<top>848</top>
+			<top>850</top>
 			<width>60</width>
 			<height>60</height>
 			<aspectratio>keep</aspectratio>
@@ -411,48 +411,55 @@
 			<visible>false</visible>
 			<label>font12</label><!--text font-->
 		</control>
+		<control type="image">
+			<left>480</left>
+			<top>545</top>
+			<width>1440</width>
+			<height>362</height>
+			<texture>colors/black.png</texture>
+		</control>
 		<control type="group" id="111">
 			<left>480</left>
-			<top>548</top>
+			<top>545</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<control type="group" id="112">
 			<left>480</left>
-			<top>608</top>
+			<top>606</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<control type="group" id="113">
 			<left>480</left>
-			<top>668</top>
+			<top>667</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<control type="group" id="114">
 			<left>480</left>
 			<top>728</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<control type="group" id="115">
 			<left>480</left>
-			<top>788</top>
+			<top>789</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<control type="group" id="116">
 			<left>480</left>
-			<top>848</top>
+			<top>850</top>
 			<width>1440</width>
-			<height>60</height>
+			<height>58</height>
 		</control>
 		<!--TIME BAR-->
 		<control type="image" id="120">
 			<left>480</left>
-			<top>547</top>
+			<top>545</top>
 			<width>20</width>
-			<height>362</height>
+			<height>364</height>
 		</control>
 		<!--SELECTED INFO-->
 		<control type="fadelabel">
@@ -475,7 +482,7 @@
 			<description>Plot</description>
 			<left>30</left>
 			<top>980</top>
-			<width>1650</width>
+			<width>1660</width>
 			<height>75</height>
 			<font>font13</font>
 			<textcolor>white</textcolor>
