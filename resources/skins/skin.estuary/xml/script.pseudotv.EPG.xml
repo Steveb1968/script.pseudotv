@@ -52,7 +52,7 @@
 			<top>20</top>
 			<width>40</width>
 			<height>40</height>
-			<texture colordiffuse="button_focus">frame/clock.png</texture>
+			<texture colordiffuse="button_focus">ptv_clock.png</texture>
 			<aspectratio>keep</aspectratio>
 		</control>
 		<control type="label">
@@ -89,9 +89,9 @@
 		</control>
 		<control type="image">
 			<left>0</left>
-			<top>580</top>
+			<top>560</top>
 			<width>1920</width>
-			<height>500</height>
+			<height>520</height>
 			<texture>ptv_LogoBack.png</texture>
 		</control>
 		<!--TIME INFO-->
@@ -154,14 +154,14 @@
 			<top>547</top>
 			<width>480</width>
 			<height>61</height>
-			<texture flipy="true" border="5">lists/separator.png</texture>
+			<texture flipy="true" border="5">ptv_separator.png</texture>
 		</control>
 		<control type="image">
 			<left>0</left>
 			<top>548</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="311">
 			<description>Channel 1 Number</description>
@@ -202,7 +202,7 @@
 			<top>608</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="312">
 			<description>Channel 2 Number</description>
@@ -243,7 +243,7 @@
 			<top>668</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="313">
 			<description>Channel 3 Number</description>
@@ -284,7 +284,7 @@
 			<top>728</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="314">
 			<description>Channel 4 Number</description>
@@ -325,7 +325,7 @@
 			<top>789</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="315">
 			<description>Channel 5 Number</description>
@@ -366,7 +366,7 @@
 			<top>848</top>
 			<width>480</width>
 			<height>61</height>
-			<texture border="5">lists/separator.png</texture>
+			<texture border="5">ptv_separator.png</texture>
 		</control>
 		<control type="label" id="316">
 			<description>Channel 6 Number</description>

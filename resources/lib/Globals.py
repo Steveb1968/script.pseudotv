@@ -49,7 +49,6 @@ ADDON_NAME= ADDON.getAddonInfo('name')
 LANGUAGE  = ADDON.getLocalizedString
 CWD       = ADDON.getAddonInfo('path').decode("utf-8")
 VERSION   = ADDON.getAddonInfo('version')
-KODI_VER  = float(xbmcaddon.Addon('xbmc.addon').getAddonInfo('version')[0:4])
 
 TIMEOUT = 15 * 1000
 PREP_CHANNEL_TIME = 60 * 60 * 24 * 5

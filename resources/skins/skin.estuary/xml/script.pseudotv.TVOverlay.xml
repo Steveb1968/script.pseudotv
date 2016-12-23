@@ -58,7 +58,7 @@
 				<top>20</top>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="button_focus">frame/clock.png</texture>
+				<texture colordiffuse="button_focus">ptv_clock.png</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 				<control type="label">
@@ -95,9 +95,9 @@
 			</control>
 			<control type="image">
 				<left>0</left>
-				<top>540</top>
+				<top>560</top>
 				<width>1920</width>
-				<height>540</height>
+				<height>520</height>
 				<texture>ptv_LogoBack.png</texture>
 			</control>
 			<control type="image">

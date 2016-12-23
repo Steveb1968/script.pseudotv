@@ -3,7 +3,7 @@
 PseudoTV for Kodi
 ======
 
-#### SUITABLE FOR KODI VER: 13+
+#### SUITABLE FOR KODI VER:15(Isengard) and above.
 
 ![screenshot](https://github.com/Steveb1968/script.pseudotv/blob/master/resources/screenshots/screenshot-01.png?raw=true)
 

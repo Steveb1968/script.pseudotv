@@ -727,19 +727,15 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 self.infoOffset -= 1
                 self.showInfo(10.0)
             else:
-                if KODI_VER >= 15.0:
-                    xbmc.executebuiltin("Seek("+str(self.seekBackward)+")")
-                else:
-                    xbmc.executebuiltin("PlayerControl(SmallSkipBackward)")
+                xbmc.executebuiltin("Seek("+str(self.seekBackward)+")")
+
         elif action == ACTION_MOVE_RIGHT:
             if self.showingInfo:
                 self.infoOffset += 1
                 self.showInfo(10.0)
             else:
-                if KODI_VER >= 15.0:
-                    xbmc.executebuiltin("Seek("+str(self.seekForward)+")")
-                else:
-                    xbmc.executebuiltin("PlayerControl(SmallSkipForward)")
+                xbmc.executebuiltin("Seek("+str(self.seekForward)+")")
+
         elif action in ACTION_PREVIOUS_MENU:
             if self.showingInfo:
                 self.hideInfo()

@@ -217,9 +217,9 @@ msgid "Channel Number Color"
 msgstr "Cor do Número do Canal"
 
 msgctxt "#30046"
-msgid "Seek step forward [I](Isengard)[/I]"
-msgstr "Procure passo em frente [I](Isengard)[/I]"
+msgid "Seek step forward"
+msgstr "Procure passo em frente"
 
 msgctxt "#30047"
-msgid "Seek step backward [I](Isengard)[/I]"
-msgstr "Procure passo para trás [I](Isengard)[/I]"
+msgid "Seek step backward"
+msgstr "Procure passo para trás"

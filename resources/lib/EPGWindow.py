@@ -47,30 +47,21 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
         self.clockMode = 0
         self.textfont  = "font13"
 
-        # Decide whether to use the current skin or the default skin.  If the current skin has the proper
-        # image, then it should work.
+        # Set media path.
         if os.path.exists(xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', xbmc.getSkinDir(), 'media'))):
             self.mediaPath = xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', xbmc.getSkinDir(), 'media' + '/'))
-        elif os.path.exists(xbmc.translatePath('special://skin/media/' + ADDON_ID + '/' + TIME_BAR)):
-            self.mediaPath = xbmc.translatePath('special://skin/media/' + ADDON_ID + '/')
-        elif os.path.exists(xbmc.translatePath('special://skin/media/' + TIME_BAR)):
-            self.mediaPath = xbmc.translatePath('special://skin/media/')
         else:
             self.mediaPath = xbmc.translatePath(os.path.join(CWD, 'resources', 'skins', 'default', 'media' + '/'))
 
         self.log('Media Path is ' + self.mediaPath)
 
         # Use the given focus and non-focus textures if they exist.  Otherwise use the defaults.
-        if os.path.exists(self.mediaPath + BUTTON_FOCUS):
-            self.textureButtonFocus = self.mediaPath + BUTTON_FOCUS
-        elif xbmc.skinHasImage(self.mediaPath + BUTTON_FOCUS):
+        if xbmc.skinHasImage(self.mediaPath + BUTTON_FOCUS):
             self.textureButtonFocus = self.mediaPath + BUTTON_FOCUS
         else:
             self.textureButtonFocus = 'button-focus.png'
 
-        if os.path.exists(self.mediaPath + BUTTON_NO_FOCUS):
-            self.textureButtonNoFocus = self.mediaPath + BUTTON_NO_FOCUS
-        elif xbmc.skinHasImage(self.mediaPath + BUTTON_NO_FOCUS):
+        if xbmc.skinHasImage(self.mediaPath + BUTTON_NO_FOCUS):
             self.textureButtonNoFocus = self.mediaPath + BUTTON_NO_FOCUS
         else:
             self.textureButtonNoFocus = 'button-nofocus.png'

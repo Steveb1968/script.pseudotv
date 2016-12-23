@@ -117,7 +117,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<visible allowhiddenfocus="true">Control.HasFocus(120) | ![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,120)</onclick>
 						<onclick>SetFocus(130)</onclick>
@@ -132,7 +132,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>120</onup>
 						<ondown>122</ondown>
 						<onleft>9001</onleft>
@@ -153,7 +153,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>126</onup>
 						<ondown>123</ondown>
 						<onleft>9001</onleft>
@@ -174,7 +174,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>122</onup>
 						<ondown>124</ondown>
 						<onleft>9001</onleft>
@@ -195,7 +195,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>123</onup>
 						<ondown>125</ondown>
 						<onleft>9001</onleft>
@@ -216,7 +216,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>124</onup>
 						<ondown>126</ondown>
 						<onleft>9001</onleft>
@@ -237,7 +237,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onup>125</onup>
 						<onleft>9001</onleft>
 						<onright>9001</onright>
@@ -262,7 +262,7 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onclick>SetProperty(itempress,100)</onclick>
 						<onclick>SetFocus(120)</onclick>
 						<visible allowhiddenfocus="true">Control.HasFocus(130) | StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
@@ -330,7 +330,7 @@
 							<textcolor>white</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
 							<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-							<texturenofocus border="5">lists/separator.png</texturenofocus>
+							<texturenofocus border="5">ptv_separator.png</texturenofocus>
 							<onup>130</onup>
 							<ondown>160</ondown>
 						</control>

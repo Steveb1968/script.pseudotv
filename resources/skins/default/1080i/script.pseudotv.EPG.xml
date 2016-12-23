@@ -89,9 +89,9 @@
 		</control>
 		<control type="image">
 			<left>0</left>
-			<top>580</top>
+			<top>560</top>
 			<width>1920</width>
-			<height>500</height>
+			<height>520</height>
 			<texture>ptv_LogoBack.png</texture>
 		</control>
 		<!--TIME INFO-->

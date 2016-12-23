@@ -119,7 +119,7 @@
 							<top>0</top>
 							<width>1060</width>
 							<height>63</height>
-							<texture border="5">lists/separator.png</texture>
+							<texture border="5">ptv_separator.png</texture>
 						</control>
 						<control type="label">
 							<left>0</left>
@@ -154,7 +154,7 @@
 							<top>0</top>
 							<width>1060</width>
 							<height>63</height>
-							<texture border="5">lists/separator.png</texture>
+							<texture border="5">ptv_separator.png</texture>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -228,7 +228,7 @@
 					<top>0</top>
 					<width>1060</width>
 					<height>63</height>
-					<texture  border="5">lists/separator.png</texture>
+					<texture  border="5">ptv_separator.png</texture>
 					<visible>![Control.HasFocus(110) | Control.HasFocus(111)]</visible>
 				</control>
 				<control type="label" id="104">
@@ -286,7 +286,7 @@
 						<width>1058</width>
 						<height>63</height>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<textoffsetx>40</textoffsetx>
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -330,7 +330,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(140) | Control.HasFocus(141)]</visible>
 					</control>
 					<control type="label">
@@ -399,7 +399,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(150) | Control.HasFocus(151)]</visible>
 					</control>
 					<control type="label">
@@ -468,7 +468,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(160) | Control.HasFocus(161)]</visible>
 					</control>
 					<control type="label">
@@ -537,7 +537,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(170) | Control.HasFocus(171)]</visible>
 					</control>
 					<control type="label">
@@ -606,7 +606,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(180) | Control.HasFocus(181)]</visible>
 					</control>
 					<control type="label">
@@ -675,7 +675,7 @@
 						<top>0</top>
 						<width>1060</width>
 						<height>63</height>
-						<texture  border="5">lists/separator.png</texture>
+						<texture  border="5">ptv_separator.png</texture>
 						<visible>![Control.HasFocus(190) | Control.HasFocus(191)]</visible>
 					</control>
 					<control type="label">
@@ -739,7 +739,7 @@
 						<textureradioofffocus>buttons/radio-button-off.png</textureradioofffocus>
 						<textureradiooffnofocus>buttons/radio-button-off.png</textureradiooffnofocus>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<font>font13</font>
 						<textcolor>white</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
@@ -762,7 +762,7 @@
 						<width>1058</width>
 						<height>63</height>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-						<texturenofocus border="5">lists/separator.png</texturenofocus>
+						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<textoffsetx>40</textoffsetx>
 						<font>font13</font>
 						<textcolor>white</textcolor>
