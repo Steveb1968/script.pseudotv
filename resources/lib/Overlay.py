@@ -748,8 +748,9 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 if dlg.yesno(xbmc.getLocalizedString(13012), LANGUAGE(30031)):
-                    self.end()
-                    return  # Don't release the semaphore
+                    self.Player.stop()
+                    #self.end()
+                    #return  # Don't release the semaphore
                 else:
                     self.startSleepTimer()
 
@@ -942,7 +943,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(2)
+        updateDialog.update(2, message='Exiting - Stopping Threads')
 
         try:
             if self.notificationTimer.isAlive():
@@ -951,7 +952,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(3)
+        updateDialog.update(3, message='Exiting - Stopping Threads')
 
         try:
             if self.infoTimer.isAlive():
@@ -960,7 +961,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(4)
+        updateDialog.update(4, message='Exiting - Stopping Threads')
 
         try:
             if self.sleepTimeValue > 0:
@@ -969,7 +970,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(5)
+        updateDialog.update(5, message='Exiting - Stopping Threads')
 
         if self.channelThread.isAlive():
             for i in range(30):
