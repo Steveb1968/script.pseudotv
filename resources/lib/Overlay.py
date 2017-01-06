@@ -595,7 +595,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
     # Called from the timer to hide the channel label.
     def hideChannelLabel(self):
         self.log('hideChannelLabel')
-        self.channelLabelTimer = threading.Timer(5.0, self.hideChannelLabel)
+        self.channelLabelTimer = threading.Timer(3.0, self.hideChannelLabel)
 
         for i in range(3):
             self.channelLabel[i].setVisible(False)
@@ -754,7 +754,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 else:
                     self.startSleepTimer()
 
-                del dlg
         elif action == ACTION_SHOW_INFO:
             if self.ignoreInfoAction:
                 self.ignoreInfoAction = False
@@ -919,8 +918,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         updateDialog = xbmcgui.DialogProgressBG()
         updateDialog.create(ADDON_NAME, '')
         
-        if CHANNEL_SHARING and self.isMaster:
-            updateDialog.update(0, message='Exiting - Removing File Locks')
+        if self.isMaster and CHANNEL_SHARING == True:
+            updateDialog.update(1, message='Exiting - Removing File Locks')
             GlobalFileLock.unlockFile('MasterLock')
         
         GlobalFileLock.close()
@@ -934,7 +933,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             self.lastPlaylistPosition = xbmc.PlayList(xbmc.PLAYLIST_MUSIC).getposition()
             self.Player.stop()
 
-        updateDialog.update(1, message='Exiting - Stopping Threads')
+        updateDialog.update(2, message='Exiting - Stopping Threads')
 
         try:
             if self.channelLabelTimer.isAlive():
@@ -943,7 +942,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(2, message='Exiting - Stopping Threads')
+        updateDialog.update(3, message='Exiting - Stopping Threads')
 
         try:
             if self.notificationTimer.isAlive():
@@ -952,7 +951,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(3, message='Exiting - Stopping Threads')
+        updateDialog.update(4, message='Exiting - Stopping Threads')
 
         try:
             if self.infoTimer.isAlive():
@@ -961,7 +960,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(4, message='Exiting - Stopping Threads')
+        updateDialog.update(5, message='Exiting - Stopping Threads')
 
         try:
             if self.sleepTimeValue > 0:
@@ -970,7 +969,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         except:
             pass
 
-        updateDialog.update(5, message='Exiting - Stopping Threads')
+        updateDialog.update(6, message='Exiting - Stopping Threads')
 
         if self.channelThread.isAlive():
             for i in range(30):
