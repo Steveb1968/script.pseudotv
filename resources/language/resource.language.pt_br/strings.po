@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"Language: pt_br\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.6.4\n"
 
@@ -213,7 +213,7 @@ msgid "Playlist Media Limit"
 msgstr "Limite de mídias na Playlist"
 
 msgctxt "#30045"
-msgid "Channel Number Color"
+msgid "Channel Number Colour"
 msgstr "Cor do Número do Canal"
 
 msgctxt "#30046"

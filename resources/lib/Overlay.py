@@ -167,7 +167,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             migratemaster = Migrate()
             migratemaster.migrate()
 
-        self.channelLabelTimer = threading.Timer(5.0, self.hideChannelLabel)
+        self.channelLabelTimer = threading.Timer(3.0, self.hideChannelLabel)
         self.playerTimer = threading.Timer(2.0, self.playerTimerAction)
         self.playerTimer.name = "PlayerTimer"
         self.infoTimer = threading.Timer(5.0, self.hideInfo)
@@ -541,7 +541,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.channelLabelTimer.isAlive():
             self.channelLabelTimer.cancel()
-            self.channelLabelTimer = threading.Timer(5.0, self.hideChannelLabel)
+            self.channelLabelTimer = threading.Timer(3.0, self.hideChannelLabel)
 
         tmp = self.inputChannel
         self.hideChannelLabel()
@@ -563,7 +563,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.inputChannel == -1 and self.infoOnChange == True:
             self.infoOffset = 0
-            self.showInfo(5.0)
+            self.showInfo(3.0)
 
         if self.showChannelBug == True:
             try:
@@ -767,7 +767,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.channelList.sendJSON(json_query);
                         
                 else:
-                    self.showInfo(20.0)
+                    self.showInfo(10.0)
         elif action >= ACTION_NUMBER_0 and action <= ACTION_NUMBER_9:
             if self.inputChannel < 0:
                 self.inputChannel = action - ACTION_NUMBER_0
