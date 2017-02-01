@@ -2,7 +2,7 @@
 <window>
 	<zorder>1</zorder>
 	<coordinates>
-		<left>100</left>
+		<left>50</left>
 		<top>140</top>
 	</coordinates>
 	<animation type="WindowOpen" reversible="false">
@@ -17,14 +17,14 @@
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>1720</width>
+			<width>1820</width>
 			<height>800</height>
-			<texture border="2">dialogs/dialog-bg-solid.png</texture>
+			<texture colordiffuse="dialog_tint">colors/white.png</texture>
 		</control>
 		<control type="image">
 			<left>0</left>
 			<top>0</top>
-			<width>1720</width>
+			<width>1820</width>
 			<height>70</height>
 			<texture colordiffuse="button_focus" border="2">colors/white70.png</texture>
 		</control>
@@ -35,15 +35,15 @@
 			<width>1720</width>
 			<height>70</height>
 			<textoffsetx>50</textoffsetx>
-			<font>font13</font>
+			<font>font32_title</font>
 			<align>left</align>
 			<aligny>center</aligny>
 			<textcolor>white</textcolor>
 			<shadowcolor>black</shadowcolor>
-			<label>[B]$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507][/B]</label>
+			<label>$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507]</label>
 		</control>
 		<control type="image">
-			<left>1635</left>
+			<left>1725</left>
 			<top>8</top>
 			<width>55</width>
 			<height>55</height>
@@ -52,14 +52,14 @@
 		</control>
 		<!-- left group -->
 		<control type="group">
-			<left>20</left>
+			<left>55</left>
 			<top>90</top>
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
 				<width>310</width>
 				<height>63</height>
-				<font>font13</font>
+				<font>font25_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>center</align>
@@ -80,7 +80,7 @@
 				<top>378</top>
 				<width>310</width>
 				<height>63</height>
-				<font>font12</font>
+				<font>font25_title</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>center</align>
@@ -91,14 +91,14 @@
 		<!-- middle group -->
 		<control type="group">
 			<control type="image">
-				<left>330</left>
+				<left>400</left>
 				<top>70</top>
 				<width>1100</width>
 				<height>722</height>
 				<texture border="40">buttons/dialogbutton-nofo.png</texture>
 			</control>
 			<control type="group" id="105">
-				<left>350</left>
+				<left>420</left>
 				<top>90</top>
 				<control type="list" id="102">
 					<description>All channels list</description>
@@ -213,7 +213,7 @@
 			</control>
 			<!-- Controls for configuring a single channel -->
 			<control type="group" id="106">
-				<left>350</left>
+				<left>420</left>
 				<top>90</top>
 				<control type="image">
 					<left>0</left>
@@ -278,7 +278,7 @@
 			<control type="group" id="107">
 				<!-- Controls for type Custom Playlist -->
 				<control type="group" id="120">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="button" id="130">
 						<left>0</left>
@@ -315,7 +315,7 @@
 				</control>
 				<!-- Controls for type TV Network -->
 				<control type="group" id="121">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -384,7 +384,7 @@
 				</control>
 				<!-- Controls for type Movie Studio -->
 				<control type="group" id="122">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -453,7 +453,7 @@
 				</control>
 				<!-- Controls for type TV Genre -->
 				<control type="group" id="123">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -522,7 +522,7 @@
 				</control>
 				<!-- Controls for type Movie Genre -->
 				<control type="group" id="124">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -591,7 +591,7 @@
 				</control>
 				<!-- Controls for type Mixed Genre -->
 				<control type="group" id="125">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -660,7 +660,7 @@
 				</control>
 				<!-- Controls for type TV Show -->
 				<control type="group" id="126">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="image">
 						<left>0</left>
@@ -754,7 +754,7 @@
 				</control>
 				<!-- Controls for type Directory -->
 				<control type="group" id="127">
-					<left>350</left>
+					<left>420</left>
 					<top>153</top>
 					<control type="button" id="200">
 						<left>0</left>
@@ -793,11 +793,11 @@
 		</control>
 		<!-- right group -->
 		<control type="grouplist" id="9002">
-			<left>1410</left>
+			<left>1510</left>
 			<top>70</top>
 			<width>300</width>
-			<height>400</height>
-			<itemgap>-15</itemgap>
+			<height>700</height>
+			<itemgap>-20</itemgap>
 			<orientation>vertical</orientation>
 			<onleft condition="Control.IsVisible(106)">106</onleft>
 			<onright condition="Control.IsVisible(106)">106</onright>
@@ -808,9 +808,9 @@
 				<left>0</left>
 				<top>0</top>
 				<width>300</width>
-				<height>90</height>
-				<label>[B]$LOCALIZE[186][/B]</label>
-				<font>font12</font>
+				<height>100</height>
+				<label>$LOCALIZE[186]</label>
+				<font>font25_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
@@ -823,9 +823,9 @@
 				<left>0</left>
 				<top>0</top>
 				<width>300</width>
-				<height>90</height>
-				<label>[B]$LOCALIZE[222][/B]</label>
-				<font>font12</font>
+				<height>100</height>
+				<label>$LOCALIZE[222]</label>
+				<font>font25_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
@@ -839,9 +839,9 @@
 				<left>0</left>
 				<top>0</top>
 				<width>300</width>
-				<height>90</height>
-				<label>[B]$LOCALIZE[10038] $LOCALIZE[5][/B]</label>
-				<font>font12</font>
+				<height>100</height>
+				<label>$LOCALIZE[10038] $LOCALIZE[5]</label>
+				<font>font25_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
