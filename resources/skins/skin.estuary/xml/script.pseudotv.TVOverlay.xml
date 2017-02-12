@@ -236,6 +236,7 @@
 			<top>0</top>
 			<width>1920</width>
 			<height>1080</height>
+			<texture>colors/black.png</texture>
 		</control>
 	</controls>
 </window>
