@@ -109,16 +109,14 @@ msgid "Visuals"
 msgstr ""
 
 msgctxt "#30021"
-msgid "Show Season/Episode"
+msgid "Show Season/Episode number"
 msgstr ""
 
 msgctxt "#30022"
 msgid "Tweaks"
 msgstr ""
 
-msgctxt "#30023"
-msgid "Channel Change Delay"
-msgstr ""
+#empty string with id 30023
 
 msgctxt "#30024"
 msgid "Background Loading..."

@@ -114,15 +114,13 @@ msgstr "Visuals"
 
 msgctxt "#30021"
 msgid "Show Season/Episode"
-msgstr "Mostrar Temporada / Episódio"
+msgstr "Mostrar Temporada / Episódio Número"
 
 msgctxt "#30022"
 msgid "Tweaks"
 msgstr "Tweaks"
 
-msgctxt "#30023"
-msgid "Channel Change Delay"
-msgstr "Delay na Troca de Canal"
+#empty string with id 30023
 
 msgctxt "#30024"
 msgid "Background Loading..."

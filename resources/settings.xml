@@ -20,15 +20,14 @@
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
 		<setting id="HideClips" type="bool" label="30017" default="true"/>
 		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="4"/>
-		<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
 	</category>
 
 	<category label="30022">
-		<setting id="ChannelDelay" type="enum" label="30023" default="1" values="None|0.25 sec|0.5 sec|0.75 sec|1.0 sec|1.25 sec|1.5 sec|1.75 sec|2.0 sec"/>
 		<setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="1"/>
 		<setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Orange|Magenta|Gray|White" default="1"/>
 		<setting id="SeekForward" type="enum" label="30046" values="10 sec|30 sec|60 sec|3 min|5 min|10 min|30 min" default="1"/>
 		<setting id="SeekBackward" type="enum" label="30047" values="-10 sec|-30 sec|-60 sec|-3 min|-5 min|-10 min|-30 min" default="1"/>
+		<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
 	</category>
 
 	<category label="30026">

@@ -97,7 +97,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.seekForward = 30
         self.seekBackward = -30
         self.runningActionChannel = 0
-        self.channelDelay = 0
+        self.channelDelay = 250
         self.numberColor = '0xFF00FF00'
 
         for i in range(3):
@@ -251,7 +251,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.seekForward = SEEK_FORWARD[int(ADDON.getSetting("SeekForward"))]
         self.seekBackward = SEEK_BACKWARD[int(ADDON.getSetting("SeekBackward"))]
         self.log("Short item length - " + str(self.shortItemLength))
-        self.channelDelay = int(ADDON.getSetting("ChannelDelay")) * 250
 
         if FileAccess.exists(self.channelLogos) == False:
             self.channelLogos = LOGOS_LOC
