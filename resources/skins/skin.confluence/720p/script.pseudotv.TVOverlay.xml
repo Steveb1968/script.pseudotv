@@ -179,9 +179,12 @@
 				<control type="label" id="504" />
 			</control>
 		</control>
-		<control type="group">
-			<visible>false</visible>
-			<control type="image" id="101" />
+		<control type="image" id="101">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<texture>ptv_black.png</texture>
 		</control>
 	</controls>
 </window>

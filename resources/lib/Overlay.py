@@ -685,9 +685,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             # If we're manually typing the channel, set it now
             if self.inputChannel > 0:
                 if self.inputChannel != self.currentChannel and self.inputChannel <= self.maxChannels:
+                    self.background.setVisible(True)
                     self.setChannel(self.inputChannel)
-
                 self.inputChannel = -1
+                self.background.setVisible(False)
             else:
                 # Otherwise, show the EPG
                 if self.channelThread.isAlive():
