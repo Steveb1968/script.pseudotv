@@ -97,7 +97,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.seekForward = 30
         self.seekBackward = -30
         self.runningActionChannel = 0
-        self.channelDelay = 250
+        self.channelDelay = 500
         self.numberColor = '0xFF00FF00'
 
         for i in range(3):
