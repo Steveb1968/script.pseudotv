@@ -68,7 +68,7 @@
 				<top>500</top>
 				<width>150</width>
 				<height>210</height>
-				<texture fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+				<texture>$INFO[Player.Art(poster)]</texture>
 				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
