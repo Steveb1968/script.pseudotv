@@ -72,7 +72,6 @@
 				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
 				<bordersize>8</bordersize>
-				<visible>IsEmpty(Player.Art(tvshow.poster))</visible>
 			</control>
 			<control type="label" id="502">
 				<description>Heading label</description>

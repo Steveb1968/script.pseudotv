@@ -102,9 +102,9 @@
 			</control>
 			<control type="image">
 				<left>30</left>
-				<top>810</top>
-				<width>173</width>
-				<height>255</height>
+				<top>805</top>
+				<width>177</width>
+				<height>260</height>
 				<texture>$INFO[Player.Art(tvshow.poster)]</texture>
 				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="1" colordiffuse="88000000">ptv_white50.png</bordertexture>
@@ -113,14 +113,13 @@
 			</control>
 			<control type="image">
 				<left>30</left>
-				<top>810</top>
-				<width>173</width>
-				<height>255</height>
-				<texture fallback="DefaultVideo.png">$INFO[Player.Art(poster)]</texture>
+				<top>805</top>
+				<width>177</width>
+				<height>260</height>
+				<texture>$INFO[Player.Art(poster)]</texture>
 				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="1" colordiffuse="88000000">ptv_white50.png</bordertexture>
 				<bordersize>1</bordersize>
-				<visible>IsEmpty(Player.Art(tvshow.poster))</visible>
 			</control>
 			<control type="label" id="502">
 				<description>Heading label</description>
