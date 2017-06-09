@@ -33,7 +33,10 @@ from ChannelList import ChannelList
 from ChannelListThread import ChannelListThread
 from FileAccess import FileLock, FileAccess
 from Migrate import Migrate
-from PIL import Image, ImageEnhance
+try:
+	from PIL import Image, ImageEnhance
+except:
+	pass
 
 ICON = ADDON.getAddonInfo('icon')
 
@@ -748,8 +751,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 if dlg.yesno(xbmc.getLocalizedString(13012), LANGUAGE(30031)):
-                    self.end()
-                    return  # Don't release the semaphore
+					self.Player.stop()
+					xbmc.executebuiltin("PlayerControl(RepeatOff)")
+					#self.end()
+                    #return  # Don't release the semaphore
                 else:
                     self.startSleepTimer()
 
