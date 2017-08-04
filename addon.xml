@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.pseudotv" version="2.4.4" name="PseudoTV" provider-name="Jason Anderson | Steveb">
+<addon id="script.pseudotv" version="2.4.5" name="PseudoTV" provider-name="Jason Anderson | Steveb">
 	<requires>
 		<import addon="xbmc.python" version="2.14.0"/>
 		<import addon="script.module.pil" version="1.1.7"/>
 	</requires>
-	<extension point="xbmc.python.script" defaultresolution="720p" library="default.py"/>
+	<extension point="xbmc.python.script" library="default.py"/>
 	<extension point="xbmc.service" library="service.py" start="startup"/>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
@@ -22,8 +22,6 @@
 			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshots/screenshot-01.png</screenshot>
 			<screenshot>resources/screenshots/screenshot-02.png</screenshot>
-			<screenshot>resources/screenshots/screenshot-03.png</screenshot>
-			<screenshot>resources/screenshots/screenshot-04.png</screenshot>
 		</assets>
 	</extension>
 </addon>

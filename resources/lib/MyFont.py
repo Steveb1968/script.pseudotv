@@ -63,7 +63,7 @@ def addFont(fontname, filename, size, style=""):
                     tree = ET.parse(fontxml_path, parser=parser)
                     root = tree.getroot()
                     for sets in root.getchildren():
-                        sets.findall("font")[-1].tail = "\n\t\t"                        
+                        sets.findall("font")[-1].tail = "\n\t\t"
                         new = ET.SubElement(sets, "font")
                         new.text, new.tail = "\n\t\t\t", "\n\t"
                         subnew1 = ET.SubElement(new, "name")

@@ -27,7 +27,6 @@ from ChannelList import ChannelList
 from Channel import Channel
 from Globals import *
 
-ICON = ADDON.getAddonInfo('icon')
 
 class ChannelListThread(threading.Thread):
     def __init__(self):

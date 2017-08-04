@@ -109,7 +109,7 @@
 				<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				<bordertexture border="1" colordiffuse="88000000">ptv_white50.png</bordertexture>
 				<bordersize>1</bordersize>
-				<visible>!IsEmpty(Player.Art(tvshow.poster))</visible>
+				<visible>!String.IsEmpty(Player.Art(tvshow.poster))</visible>
 			</control>
 			<control type="image">
 				<left>30</left>
@@ -232,13 +232,6 @@
 				<control type="label" id="503" />
 				<control type="label" id="504" />
 			</control>
-		</control>
-		<control type="image" id="101">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<texture>ptv_black.png</texture>
 		</control>
 	</controls>
 </window>

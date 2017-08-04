@@ -29,7 +29,7 @@ RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("u
 sys.path.append(RESOURCE)
 
 SkinID = xbmc.getSkinDir()
-if not SkinID in ('skin.confluence', 'skin.estuary'):
+if SkinID != 'skin.estuary':
     import MyFont
     if MyFont.getSkinRes() == '1080i':
         MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "24")

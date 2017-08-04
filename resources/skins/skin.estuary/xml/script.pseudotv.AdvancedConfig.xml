@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<zorder>1</zorder>
 	<defaultcontrol always="true">104</defaultcontrol>
 	<coordinates>
 		<left>50</left>
 		<top>140</top>
 	</coordinates>
-	<animation type="WindowOpen" reversible="false">
-		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
-		<effect type="fade" delay="160" end="100" time="240" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
-		<effect type="fade" start="100" end="0" time="240" />
-	</animation>
+	<include>Animation_DialogPopupOpenClose</include>
 	<controls>
 		<control type="image">
 			<left>0</left>
@@ -118,7 +110,7 @@
 						<shadowcolor>text_shadow</shadowcolor>
 						<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
 						<texturenofocus border="5">ptv_separator.png</texturenofocus>
-						<visible allowhiddenfocus="true">Control.HasFocus(120) | ![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(120) | ![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,120)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -139,7 +131,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,121)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -160,7 +152,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,122)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -181,7 +173,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,123)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -202,7 +194,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,124)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -223,7 +215,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,125)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -243,7 +235,7 @@
 						<onright>9001</onright>
 						<width>1058</width>
 						<height>63</height>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,126)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -265,23 +257,23 @@
 						<texturenofocus border="5">ptv_separator.png</texturenofocus>
 						<onclick>SetProperty(itempress,100)</onclick>
 						<onclick>SetFocus(120)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(130) | StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
-						<animation condition="StringCompare(Window.Property(itempress),121)" reversible="false">
+						<visible allowhiddenfocus="true">Control.HasFocus(130) | String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)</visible>
+						<animation condition="String.IsEqual(Window.Property(itempress),121)" reversible="false">
 							<effect type="slide" start="0,52" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),122)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),122)" reversible="false">
 							<effect type="slide" start="0,105" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),123)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),123)" reversible="false">
 							<effect type="slide" start="0,158" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),124)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),124)" reversible="false">
 							<effect type="slide" start="0,210" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),125)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),125)" reversible="false">
 							<effect type="slide" start="0,262" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),126)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),126)" reversible="false">
 							<effect type="slide" start="0,315" time="500" />
 						</animation>
 					</control>
@@ -290,32 +282,32 @@
 						<left>0</left>
 						<top>63</top>
 						<width>1058</width>
-						<visible>StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
-						<animation condition="StringCompare(Window.Property(itempress),120)" reversible="false">
+						<visible>String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)</visible>
+						<animation condition="String.IsEqual(Window.Property(itempress),120)" reversible="false">
 							<effect type="slide" start="0,45" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),121)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),121)" reversible="false">
 							<effect type="slide" start="0,98" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),122)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),122)" reversible="false">
 							<effect type="slide" start="0,150" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),123)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),123)" reversible="false">
 							<effect type="slide" start="0,202" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),124)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),124)" reversible="false">
 							<effect type="slide" start="0,255" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),125)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),125)" reversible="false">
 							<effect type="slide" start="0,308" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>
-						<animation condition="StringCompare(Window.Property(itempress),126)" reversible="false">
+						<animation condition="String.IsEqual(Window.Property(itempress),126)" reversible="false">
 							<effect type="slide" start="0,360" time="500" />
 							<effect type="zoom" start="100,0" time="500" />
 						</animation>

@@ -30,7 +30,7 @@ RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("u
 sys.path.append(RESOURCE)
 
 SkinID = xbmc.getSkinDir()
-if not SkinID in ('skin.confluence', 'skin.estuary'):
+if SkinID != 'skin.estuary':
     import MyFont
     if MyFont.getSkinRes() == '1080i':
         MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "24")
@@ -232,7 +232,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                 self.hideChanDetails()
             else:
                 if self.madeChanges == 1:
-                    ADDON_SETTINGS.writeSettings()            
+                    ADDON_SETTINGS.writeSettings()
                     if CHANNEL_SHARING:
                         realloc = ADDON.getSetting('SettingsFolder')
                         FileAccess.copy(SETTINGS_LOC + '/settings2.xml', realloc + '/settings2.xml')

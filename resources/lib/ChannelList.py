@@ -588,8 +588,8 @@ class ChannelList:
         
         for i in range(len(self.showList)):
             if self.showList[i][1].lower() == network:
-                theshow = self.cleanString(self.showList[i][0])                
-                fle.write('        <value>' + theshow + '</value>\n')                
+                theshow = self.cleanString(self.showList[i][0])
+                fle.write('        <value>' + theshow + '</value>\n')
                 added = True
         
         fle.write('    </rule>\n')

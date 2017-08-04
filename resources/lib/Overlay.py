@@ -34,11 +34,10 @@ from ChannelListThread import ChannelListThread
 from FileAccess import FileLock, FileAccess
 from Migrate import Migrate
 try:
-	from PIL import Image, ImageEnhance
+    from PIL import Image, ImageEnhance
 except:
-	pass
+    pass
 
-ICON = ADDON.getAddonInfo('icon')
 
 class MyPlayer(xbmc.Player):
     def __init__(self):
@@ -59,7 +58,6 @@ class MyPlayer(xbmc.Player):
                 if self.overlay.sleepTimeValue == 0:
                     self.overlay.sleepTimer = threading.Timer(1, self.overlay.sleepAction)
 
-                self.overlay.background.setVisible(True)
                 self.overlay.sleepTimeValue = 1
                 self.overlay.startSleepTimer()
                 self.stopped = True
@@ -147,9 +145,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                     self.Error(LANGUAGE(30036))
                     return
 
-        self.background = self.getControl(101)
         self.getControl(102).setVisible(False)
-        self.background.setVisible(True)
         self.backupFiles()
         ADDON_SETTINGS.loadSettings()
         
@@ -216,7 +212,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         self.resetChannelTimes()
         self.setChannel(self.currentChannel)
-        self.background.setVisible(False)
         self.startSleepTimer()
         self.startNotificationTimer()
         self.playerTimer.start()
@@ -288,10 +283,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if self.maxChannels == 1:
             return
 
-        self.background.setVisible(True)
         channel = self.fixChannel(self.currentChannel - 1, False)
         self.setChannel(channel)
-        self.background.setVisible(False)
         self.log('channelDown return')
         
         
@@ -329,10 +322,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if self.maxChannels == 1:
             return
 
-        self.background.setVisible(True)
         channel = self.fixChannel(self.currentChannel + 1)
         self.setChannel(channel)
-        self.background.setVisible(False)
         self.log('channelUp return')
 
 
@@ -571,7 +562,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             try:
                 if not FileAccess.exists(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
                     self.getControl(103).setImage(IMAGES_LOC + 'Default2.png')
-                original = Image.open(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')               
+                original = Image.open(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
                 converted_img = original.convert('LA')
                 img_bright = ImageEnhance.Brightness(converted_img)
                 converted_img = img_bright.enhance(2.0)
@@ -688,9 +679,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             # If we're manually typing the channel, set it now
             if self.inputChannel > 0:
                 if self.inputChannel != self.currentChannel and self.inputChannel <= self.maxChannels:
-                    self.background.setVisible(True)
                     self.setChannel(self.inputChannel)
-                    self.background.setVisible(False)
                 self.inputChannel = -1
             else:
                 # Otherwise, show the EPG
@@ -718,9 +707,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                 self.startNotificationTimer()
 
                 if self.newChannel != 0:
-                    self.background.setVisible(True)
                     self.setChannel(self.newChannel)
-                    self.background.setVisible(False)
+
         elif action == ACTION_MOVE_UP or action == ACTION_PAGEUP:
             self.channelUp()
         elif action == ACTION_MOVE_DOWN or action == ACTION_PAGEDOWN:
@@ -751,9 +739,9 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 if dlg.yesno(xbmc.getLocalizedString(13012), LANGUAGE(30031)):
-					self.Player.stop()
-					xbmc.executebuiltin("PlayerControl(RepeatOff)")
-					#self.end()
+                    self.Player.stop()
+                    xbmc.executebuiltin("PlayerControl(RepeatOff)")
+                    #self.end()
                     #return  # Don't release the semaphore
                 else:
                     self.startSleepTimer()
@@ -915,7 +903,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.log('end')
         # Prevent the player from setting the sleep timer
         self.Player.stopped = True
-        self.background.setVisible(False)
         curtime = time.time()
         xbmc.executebuiltin("PlayerControl(RepeatOff)")
         self.isExiting = True
