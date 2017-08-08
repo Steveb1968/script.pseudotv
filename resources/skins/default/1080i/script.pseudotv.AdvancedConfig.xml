@@ -5,19 +5,19 @@
 	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<left>100</left>
-			<top>140</top>
+			<left>50</left>
+			<top>105</top>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>1720</width>
-				<height>803</height>
+				<width>1820</width>
+				<height>870</height>
 				<texture border="2">ptv_settings/ptv_dialog-bg-solid.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>1720</width>
+				<width>1820</width>
 				<height>70</height>
 				<texture colordiffuse="FF12B2E7" border="2">ptv_settings/ptv_white70.png</texture>
 			</control>
@@ -27,7 +27,7 @@
 				<top>0</top>
 				<width>1720</width>
 				<height>70</height>
-				<textoffsetx>50</textoffsetx>
+				<textoffsetx>40</textoffsetx>
 				<font>PseudoTv13</font>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -36,7 +36,7 @@
 				<label>[B]$LOCALIZE[10038] $LOCALIZE[19029] $LOCALIZE[5][/B]</label>
 			</control>
 			<control type="image">
-				<left>1635</left>
+				<left>1730</left>
 				<top>8</top>
 				<width>55</width>
 				<height>55</height>
@@ -45,7 +45,7 @@
 			</control>
 			<!-- left group -->
 			<control type="group">
-				<left>20</left>
+				<left>55</left>
 				<top>90</top>
 				<control type="label">
 					<left>0</left>
@@ -84,14 +84,14 @@
 			<!-- middle group -->
 			<control type="group">
 				<control type="image">
-					<left>330</left>
+					<left>400</left>
 					<top>70</top>
 					<width>1100</width>
-					<height>735</height>
+					<height>800</height>
 					<texture border="40">ptv_settings/ptv_dialogbutton-nofo.png</texture>
 				</control>
 				<control type="group" id="105">
-					<left>350</left>
+					<left>420</left>
 					<top>90</top>
 					<control type="group" id="104">
 						<control type="button" id="120">
@@ -418,11 +418,11 @@
 			</control>
 			<!-- right group -->
 			<control type="grouplist" id="9001">
-				<left>1410</left>
-				<top>70</top>
+				<left>1510</left>
+				<top>92</top>
 				<width>300</width>
 				<height>400</height>
-				<itemgap>-15</itemgap>
+				<itemgap>-10</itemgap>
 				<orientation>vertical</orientation>
 				<onleft>105</onleft>
 				<onright>105</onright>

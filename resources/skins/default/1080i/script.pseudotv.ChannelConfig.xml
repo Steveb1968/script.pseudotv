@@ -4,19 +4,19 @@
 	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 	<controls>
 		<control type="group">
-			<left>100</left>
-			<top>140</top>
+			<left>50</left>
+			<top>105</top>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>1720</width>
-				<height>803</height>
+				<width>1820</width>
+				<height>870</height>
 				<texture border="2">ptv_settings/ptv_dialog-bg-solid.png</texture>
 			</control>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
-				<width>1720</width>
+				<width>1820</width>
 				<height>70</height>
 				<texture colordiffuse="FF12B2E7" border="2">ptv_settings/ptv_white70.png</texture>
 			</control>
@@ -26,7 +26,7 @@
 				<top>0</top>
 				<width>1720</width>
 				<height>70</height>
-				<textoffsetx>50</textoffsetx>
+				<textoffsetx>40</textoffsetx>
 				<font>PseudoTv13</font>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -35,7 +35,7 @@
 				<label>[B]$INFO[System.AddonTitle(script.pseudotv),, - ]$LOCALIZE[19029] $LOCALIZE[10507][/B]</label>
 			</control>
 			<control type="image">
-				<left>1635</left>
+				<left>1730</left>
 				<top>8</top>
 				<width>55</width>
 				<height>55</height>
@@ -44,7 +44,7 @@
 			</control>
 			<!-- left group -->
 			<control type="group">
-				<left>20</left>
+				<left>55</left>
 				<top>90</top>
 				<control type="label">
 					<left>0</left>
@@ -83,14 +83,14 @@
 			<!-- middle group -->
 			<control type="group">
 				<control type="image">
-					<left>330</left>
+					<left>400</left>
 					<top>70</top>
 					<width>1100</width>
-					<height>735</height>
+					<height>800</height>
 					<texture border="40">ptv_settings/ptv_dialogbutton-nofo.png</texture>
 				</control>
 				<control type="group" id="105">
-					<left>350</left>
+					<left>420</left>
 					<top>90</top>
 					<control type="list" id="102">
 						<description>All channels list</description>
@@ -101,7 +101,7 @@
 						<onright>103</onright>
 						<onleft>9002</onleft>
 						<width>1060</width>
-						<height>693</height>
+						<height>756</height>
 						<itemgap>0</itemgap>
 						<scrolltime>200</scrolltime>
 						<pagecontrol>103</pagecontrol>
@@ -188,7 +188,7 @@
 						<left>1063</left>
 						<top>0</top>
 						<width>12</width>
-						<height>693</height>
+						<height>756</height>
 						<texturesliderbackground colordiffuse="29FFFFFF">ptv_settings/ptv_white70.png</texturesliderbackground>
 						<texturesliderbar colordiffuse="AAFFFFFF">ptv_settings/ptv_white70.png</texturesliderbar>
 						<texturesliderbarfocus colordiffuse="FF12B2E7">ptv_settings/ptv_white70.png</texturesliderbarfocus>
@@ -205,7 +205,7 @@
 				</control>
 				<!-- Controls for configuring a single channel -->
 				<control type="group" id="106">
-					<left>350</left>
+					<left>420</left>
 					<top>90</top>
 					<control type="image">
 						<left>0</left>
@@ -269,7 +269,7 @@
 				<control type="group" id="107">
 					<!-- Controls for type Custom Playlist -->
 					<control type="group" id="120">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="button" id="130">
 							<left>0</left>
@@ -307,7 +307,7 @@
 					</control>
 					<!-- Controls for type TV Network -->
 					<control type="group" id="121">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -375,7 +375,7 @@
 					</control>
 					<!-- Controls for type Movie Studio -->
 					<control type="group" id="122">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -443,7 +443,7 @@
 					</control>
 					<!-- Controls for type TV Genre -->
 					<control type="group" id="123">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -511,7 +511,7 @@
 					</control>
 					<!-- Controls for type Movie Genre -->
 					<control type="group" id="124">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -579,7 +579,7 @@
 					</control>
 					<!-- Controls for type Mixed Genre -->
 					<control type="group" id="125">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -647,7 +647,7 @@
 					</control>
 					<!-- Controls for type TV Show -->
 					<control type="group" id="126">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="image">
 							<left>0</left>
@@ -741,7 +741,7 @@
 					</control>
 					<!-- Controls for type Directory -->
 					<control type="group" id="127">
-						<left>350</left>
+						<left>420</left>
 						<top>153</top>
 						<control type="button" id="200">
 							<left>0</left>
@@ -781,11 +781,11 @@
 			</control>
 			<!-- right group -->
 			<control type="grouplist" id="9002">
-				<left>1410</left>
-				<top>70</top>
+				<left>1510</left>
+				<top>92</top>
 				<width>300</width>
 				<height>400</height>
-				<itemgap>-15</itemgap>
+				<itemgap>-10</itemgap>
 				<orientation>vertical</orientation>
 				<onleft condition="Control.IsVisible(106)">106</onleft>
 				<onright condition="Control.IsVisible(106)">106</onright>
