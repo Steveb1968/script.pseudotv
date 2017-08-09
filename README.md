@@ -3,7 +3,8 @@
 PseudoTV for Kodi
 ======
 
-#### SUITABLE FOR KODI VER:17 and above.
+[View branch download information.](#branches-guide)
+
 
 ![screenshot](https://github.com/Steveb1968/script.pseudotv/blob/master/resources/screenshots/screenshot-01.png?raw=true)
 
@@ -76,6 +77,13 @@ There are only a few things you need to know in order to control everything. Fir
 * **Activate Service:** Activate auto start. Pseudotv will automatically start when kodi is started.
 * **Service Delay:** Delay the auto start of Pseudotv at Kodi start-up. This is useful for low end hardware or if your skin loads multi-pal scripts at start-up.
 * **Show Notification:** Self explanatory I hope. Will show a notification of Pseudotv's attempt to auto-start.
+
+---
+### Branches guide
+
+
+* **Master branch:** Suitable for Kodi VER:17 and above.  
+* **Krypton branch:** Suitable for Kodi VER:17 and below.
 
 ---
 ### Credits

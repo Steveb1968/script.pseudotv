@@ -51,6 +51,7 @@ from FileAccess import FileAccess
 from Migrate import Migrate
 
 NUMBER_CHANNEL_TYPES = 8
+BUSY = xbmcgui.DialogBusy()
 
 class ConfigWindow(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
@@ -532,7 +533,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.showList = []
         self.getControl(105).setVisible(False)
         self.getControl(106).setVisible(False)
-        xbmc.executebuiltin("ActivateWindow(busydialog)")
+        BUSY.create()
         chnlst = ChannelList()
         chnlst.fillTVInfo()
         chnlst.fillMovieInfo()
@@ -554,7 +555,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             self.listcontrol.addItem(theitem)
 
         self.updateListing()
-        xbmc.executebuiltin("Dialog.Close(busydialog)")
+        BUSY.close()
         self.getControl(105).setVisible(True)
         self.getControl(106).setVisible(False)
         self.setFocusId(102)

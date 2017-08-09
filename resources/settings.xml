@@ -18,7 +18,7 @@
 		<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
 		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
-		<setting id="HideClips" type="bool" label="30017" default="true"/>
+		<setting id="HideClips" type="bool" label="30017" default="false"/>
 		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="4"/>
 	</category>
 
