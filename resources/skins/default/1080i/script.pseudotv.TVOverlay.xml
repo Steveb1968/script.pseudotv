@@ -8,7 +8,7 @@
 			<width>161</width>
 			<height>109</height>
 			<aspectratio>keep</aspectratio>
-			<visible>Player.HasVideo</visible>
+			<visible>Player.HasVideo + !Player.Paused</visible>
 			<animation effect="fade" end="20" condition="True">conditional</animation>
 		</control>
 		<control type="group" id="102">

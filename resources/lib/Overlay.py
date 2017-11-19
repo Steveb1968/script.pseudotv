@@ -522,8 +522,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.getControl(506).setImage(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png')
         if not FileAccess.exists(self.channelLogos + ascii(self.channels[self.currentChannel - 1].name) + '.png'):
             self.getControl(506).setImage(IMAGES_LOC + 'Default.png')
-            
-            
+
         self.log('setShowInfo return')
 
 
@@ -739,10 +738,10 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 if dlg.yesno(xbmc.getLocalizedString(13012), LANGUAGE(30031)):
-                    self.Player.stop()
-                    xbmc.executebuiltin("PlayerControl(RepeatOff)")
-                    #self.end()
-                    #return  # Don't release the semaphore
+                    #self.Player.stop()
+                    #xbmc.executebuiltin("PlayerControl(RepeatOff)")
+                    self.end()
+                    return  # Don't release the semaphore
                 else:
                     self.startSleepTimer()
 
