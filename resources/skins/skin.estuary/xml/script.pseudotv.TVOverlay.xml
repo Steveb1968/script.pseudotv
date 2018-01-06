@@ -43,10 +43,10 @@
 			</control>
 			<control type="label">
 				<left>85</left>
-				<top>40</top>
+				<top>42</top>
 				<width>500</width>
 				<height>60</height>
-				<font>font10</font>
+				<font>font20_title</font>
 				<align>left</align>
 				<aligny>top</aligny>
 				<textcolor>white</textcolor>
@@ -75,10 +75,10 @@
 			</control>
 			<control type="label">
 				<left>1340</left>
-				<top>40</top>
+				<top>42</top>
 				<width>500</width>
 				<height>60</height>
-				<font>font10</font>
+				<font>font20_title</font>
 				<align>right</align>
 				<aligny>top</aligny>
 				<textcolor>white</textcolor>
@@ -140,21 +140,21 @@
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font14</font>
+				<font>font32_title</font>
 				<textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<scrollout>false</scrollout>
 				<pauseatend>1800</pauseatend>
 				<scrollspeed>40</scrollspeed>
-				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey],[/COLOR]][/B]</label>
+				<label>$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR grey],[/COLOR]]</label>
 			</control>
 			<control type="textbox" id="505">
 				<description>Plot</description>
 				<left>233</left>
 				<top>890</top>
 				<width>1657</width>
-				<height>75</height>
-				<font>font27</font>
+				<height>85</height>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>justify</align>
@@ -204,16 +204,16 @@
 			</control>
 			<!--PROGRESS-->
 			<control type="label">
-				<left>230</left>
-				<top>985</top>
+				<left>232</left>
+				<top>988</top>
 				<width>500</width>
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>font14</font>
+				<font>font13</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<label>[B]$INFO[Player.Time]$INFO[Player.Duration, / ][/B]</label>
 			</control>
 			<control type="progress" id="23">
 				<left>232</left>

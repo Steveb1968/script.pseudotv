@@ -1,3 +1,7 @@
+2.4.5 (steveb)
+    Hebrew translation. Thanks 'Eng2Heb'
+    Added year for movie info.
+
 2.4.4 (steveb)
     Added option to enable/disable channel logo's in the epg grid.
     New Default Skin (Estuary based).

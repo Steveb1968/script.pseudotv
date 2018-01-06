@@ -27,7 +27,6 @@
 		<setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Orange|Magenta|Gray|White" default="1"/>
 		<setting id="SeekForward" type="enum" label="30046" values="10 sec|30 sec|60 sec|3 min|5 min|10 min|30 min" default="1"/>
 		<setting id="SeekBackward" type="enum" label="30047" values="-10 sec|-30 sec|-60 sec|-3 min|-5 min|-10 min|-30 min" default="1"/>
-		<setting id="ShowSeEp" type="bool" label="30021" default="false"/>
 	</category>
 
 	<category label="30026">

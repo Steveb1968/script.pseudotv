@@ -204,7 +204,7 @@
 			</control>
 			<!--PROGRESS-->
 			<control type="label">
-				<left>230</left>
+				<left>232</left>
 				<top>985</top>
 				<width>500</width>
 				<height>40</height>

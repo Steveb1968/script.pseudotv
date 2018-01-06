@@ -66,7 +66,6 @@ class ChannelList:
         self.log('Start Mode is ' + str(self.startMode))
         self.backgroundUpdating = int(ADDON.getSetting("ThreadMode"))
         self.mediaLimit = MEDIA_LIMIT[int(ADDON.getSetting("MediaLimit"))]
-        self.showSeasonEpisode = ADDON.getSetting("ShowSeEp") == "true"
         self.findMaxChannels()
 
         if self.forceReset:
@@ -693,7 +692,7 @@ class ChannelList:
     def createDirectoryPlaylist(self, setting1):
         self.log("createDirectoryPlaylist " + setting1)
         fileList = []
-        filecount = 0        
+        filecount = 0
         
         def listdir_fullpath(dir):
             return [os.path.join(dir, f) for f in xbmcvfs.listdir(dir)[1]]
@@ -722,7 +721,7 @@ class ChannelList:
                 afile = os.path.basename(f)
                 afile, ext = os.path.splitext(afile)
                 tmpstr = str(duration) + ','
-                tmpstr += afile + "//" + '' + "//" + 'Directory Video  -  ' + setting1 + os.path.basename(f) + "\n"
+                tmpstr += afile + "//" + "//" + xbmc.getLocalizedString(21801) + ': ' + setting1 + "\n"
                 tmpstr += setting1 + os.path.basename(f)
                 tmpstr = tmpstr[:2036]
                 fileList.append(tmpstr)
@@ -999,7 +998,7 @@ class ChannelList:
         fileList = []
         seasoneplist = []
         filecount = 0
-        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["season","episode","playcount","duration","runtime","showtitle","album","artist","plot"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
+        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","season","episode","year","playcount"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "querying database")
@@ -1014,7 +1013,6 @@ class ChannelList:
 
             f = uni(f)
             match = re.search('"file" *: *"(.*?)",', f)
-            istvshow = False
 
             if match:
                 if(match.group(1).endswith("/") or match.group(1).endswith("\\")):
@@ -1044,8 +1042,6 @@ class ChannelList:
                     try:
                         if dur > 0:
                             filecount += 1
-                            seasonval = -1
-                            epval = -1
 
                             if self.background == False:
                                 if filecount == 1:
@@ -1053,52 +1049,46 @@ class ChannelList:
                                 else:
                                     self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entries")
 
-                            title = re.search('"label" *: *"(.*?)"', f)
                             tmpstr = str(dur) + ','
+                            title = re.search('"label" *: *"(.*?)"', f)
                             showtitle = re.search('"showtitle" *: *"(.*?)"', f)
                             plot = re.search('"plot" *: *"(.*?)",', f)
 
-                            if plot == None:
-                                theplot = ""
-                            else:
+                            if len(plot.group(1)) > 0:
                                 theplot = plot.group(1)
+                            else:
+                                theplot = xbmc.getLocalizedString(161)
 
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
+                                swtitle = title.group(1)
                                 season = re.search('"season" *: *(.*?),', f)
                                 episode = re.search('"episode" *: *(.*?),', f)
-                                swtitle = title.group(1)
+                                seasonval = int(season.group(1))
+                                epval = int(episode.group(1))
 
-                                try:
-                                    seasonval = int(season.group(1))
-                                    epval = int(episode.group(1))
-
-                                    if self.showSeasonEpisode:
-                                        swtitle = swtitle + ' (S' + ('0' if seasonval < 10 else '') + str(seasonval) + 'E' + ('0' if epval < 10 else '') + str(epval) + ')'
-                                except:
-                                    seasonval = -1
-                                    epval = -1
-
+                                if epval != None and len(episode.group(1)) > 0:
+                                    swtitle = swtitle + ' (' + str(seasonval) + 'x' + str(epval).zfill(2) + ')'
 
                                 tmpstr += showtitle.group(1) + "//" + swtitle + "//" + theplot
-                                istvshow = True
                             else:
-                                tmpstr += title.group(1) + "//"
-                                album = re.search('"album" *: *"(.*?)"', f)
-
                                 # This is a movie
-                                if album == None or len(album.group(1)) == 0:
-                                    tmpstr += "//" + theplot
-                                else:
-                                    artist = re.search('"artist" *: *"(.*?)"', f)
-                                    tmpstr += album.group(1) + "//" + artist.group(1)
+                                if showtitle == None or len(showtitle.group(1)) == 0:
+                                    tmpstr += title.group(1)
+                                    years = re.search('"year" *: *([\d.]*\d+)', f)
+
+                                    if len(years.group(1)) > 0:
+                                        year = '(' + str(years.group(1)) + ')'
+                                        tmpstr += "//" + year + "//" + theplot
+                                    else:
+                                        tmpstr += "//" + "//" + theplot
 
                             tmpstr = tmpstr[:2036]
                             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
                             tmpstr = tmpstr + '\n' + match.group(1).replace("\\\\", "\\")
 
                             if self.channels[channel - 1].mode & MODE_ORDERAIRDATE > 0:
-                                    seasoneplist.append([seasonval, epval, tmpstr])
+                                seasoneplist.append([seasonval, epval, tmpstr])
                             else:
                                 fileList.append(tmpstr)
                     except:

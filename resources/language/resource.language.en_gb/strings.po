@@ -108,9 +108,7 @@ msgctxt "#30020"
 msgid "Visuals"
 msgstr ""
 
-msgctxt "#30021"
-msgid "Show Season/Episode number"
-msgstr ""
+#empty string with id 30021
 
 msgctxt "#30022"
 msgid "Tweaks"

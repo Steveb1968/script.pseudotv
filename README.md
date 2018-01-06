@@ -31,7 +31,7 @@ This **ONLY** uses your existing video library to play video. It will **NOT** pl
 1. First, install it.  This is self-explanatory (hopefully).  Really, that's all that is necessary.  Default channels will be created without any intervention.  You can choose to setup channels (next step) if you wish.
 2. _Instructions to create your own channels:_ Inside of the addon config, you may open the channel configuration tool. Inside of here you can select a channel to modify. You may then select it's type and any options. For a basic setup, that's all you need to do. It's worth noting that you may create a playlist using the smart playlist editor and then select that playlist in the channel config tool (Custom Playlist channel type). Additionally, you may select to add advanced rules to certain channels. There are quite a few rules that are currently available, and hopefully they should be relatively self-explanitory.
 
-	This is a readme and should include descriptions of them all... who knows, maybe it will some day.    
+	This is a readme and should include descriptions of them all... who knows, maybe it will some day.
 
 ---
 ### Controls
@@ -69,7 +69,6 @@ There are only a few things you need to know in order to control everything. Fir
 * **OSD Channel Number Color:** Change the color of the channel number located at the top left, seen when changing channels and on startup.
 * **Seek step forward:** Option to adjust the seek step forward (right arrow key in fullscreen video). Options include 10 sec,30 sec,60 sec,3 min,5 min,10 min,30 min.
 * **Seek step backward:** Option to adjust the seek step backward (left arrow key in fullscreen video). Options include -10 sec,-30 sec,-60 sec,-3 min,-5 min,-10 min,-30 min.
-* **Show Season/Episode:** Add '(SxxExx)' numbering to the end of the episode title. A "Force Channel Reset" is needed for first time use.
 
 
 **Auto Start -**
@@ -79,10 +78,15 @@ There are only a few things you need to know in order to control everything. Fir
 * **Show Notification:** Self explanatory I hope. Will show a notification of Pseudotv's attempt to auto-start.
 
 ---
+###Addon boolean condition
+
+**&lsaquo;visible&rsaquo;String.IsEmpty(Window(home).Property(PseudoTVRunning))&lsaquo;/visible&rsaquo;**  
+Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml  
+
+---
 ### Branches guide
 
-
-* **Master branch:** Suitable for Kodi VER:17 and above.  
+* **Master branch:** Suitable for Kodi VER:17 and above.
 * **Krypton branch:** Suitable for Kodi VER:17 and below.
 
 ---
@@ -92,4 +96,4 @@ There are only a few things you need to know in order to control everything. Fir
 **Code Additions:** Sranshaft, TheOddLinguist, Steveb.<br>
 **Skins:** Sranshaft, Zepfan, Steveb.<br>
 **Preset Images:** Jtucker1972.<br>
-**Languages:** CyberXaz, Machine-Sanctum, Rafael Vieira.
+**Languages:** CyberXaz, Machine-Sanctum, Rafael Vieira, Eng2Heb.

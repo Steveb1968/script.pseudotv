@@ -738,8 +738,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.sleepTimer = threading.Timer(self.sleepTimeValue, self.sleepAction)
 
                 if dlg.yesno(xbmc.getLocalizedString(13012), LANGUAGE(30031)):
-                    #self.Player.stop()
-                    #xbmc.executebuiltin("PlayerControl(RepeatOff)")
                     self.end()
                     return  # Don't release the semaphore
                 else:

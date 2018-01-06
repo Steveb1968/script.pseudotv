@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<animation type="WindowOpen" reversible="false">
-		<effect type="fade" start="0" end="100" time="200"/>
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="fade" start="100" end="0" time="200"/>
-	</animation>
 	<controls>
 		<!--HEADER-->
 		<control type="image">
@@ -37,10 +31,10 @@
 		</control>
 		<control type="label">
 			<left>85</left>
-			<top>40</top>
+			<top>42</top>
 			<width>500</width>
 			<height>60</height>
-			<font>font10</font>
+			<font>font20_title</font>
 			<align>left</align>
 			<aligny>top</aligny>
 			<textcolor>white</textcolor>
@@ -69,10 +63,10 @@
 		</control>
 		<control type="label">
 			<left>1340</left>
-			<top>40</top>
+			<top>42</top>
 			<width>500</width>
 			<height>60</height>
-			<font>font10</font>
+			<font>font20_title</font>
 			<align>right</align>
 			<aligny>top</aligny>
 			<textcolor>white</textcolor>
@@ -104,7 +98,7 @@
 				<top>5</top>
 				<width>480</width>
 				<height>30</height>
-				<font>font12</font>
+				<font>font25_title</font>
 				<textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
@@ -116,7 +110,7 @@
 				<top>5</top>
 				<width>480</width>
 				<height>30</height>
-				<font>font12</font>
+				<font>font25_title</font>
 				<textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
@@ -128,7 +122,7 @@
 				<top>5</top>
 				<width>480</width>
 				<height>30</height>
-				<font>font12</font>
+				<font>font25_title</font>
 				<textcolor>button_focus</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>left</align>
@@ -142,7 +136,7 @@
 			<top>505</top>
 			<width>460</width>
 			<height>30</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<textcolor>button_focus</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
 			<align>left</align>
@@ -150,18 +144,12 @@
 		</control>
 		<!--CHANNEL 1-->
 		<control type="image">
-			<left>0</left>
-			<top>547</top>
-			<width>480</width>
-			<height>61</height>
-			<texture flipy="true" border="5">ptv_separator.png</texture>
-		</control>
-		<control type="image">
-			<left>0</left>
+			<left>-1</left>
 			<top>548</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="311">
 			<description>Channel 1 Number</description>
@@ -169,7 +157,7 @@
 			<top>548</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -198,11 +186,12 @@
 		</control>
 		<!-- CHANNEL 2 -->
 		<control type="image">
-			<left>0</left>
+			<left>-1</left>
 			<top>608</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="312">
 			<description>Channel 2 Number</description>
@@ -210,7 +199,7 @@
 			<top>608</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -239,11 +228,12 @@
 		</control>
 		<!-- CHANNEL 3 -->
 		<control type="image">
-			<left>0</left>
+			<left>-1</left>
 			<top>668</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="313">
 			<description>Channel 3 Number</description>
@@ -251,7 +241,7 @@
 			<top>668</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -280,11 +270,12 @@
 		</control>
 		<!-- CHANNEL 4 -->
 		<control type="image">
-			<left>0</left>
+			<left>-1</left>
 			<top>728</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="314">
 			<description>Channel 4 Number</description>
@@ -292,7 +283,7 @@
 			<top>728</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -321,11 +312,12 @@
 		</control>
 		<!-- CHANNEL 5 -->
 		<control type="image">
-			<left>0</left>
-			<top>789</top>
+			<left>-1</left>
+			<top>788</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="315">
 			<description>Channel 5 Number</description>
@@ -333,7 +325,7 @@
 			<top>788</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -362,11 +354,12 @@
 		</control>
 		<!-- CHANNEL 6 -->
 		<control type="image">
-			<left>0</left>
+			<left>-1</left>
 			<top>848</top>
 			<width>480</width>
-			<height>61</height>
-			<texture border="5">ptv_separator.png</texture>
+			<height>60</height>
+			<bordersize>1</bordersize>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="label" id="316">
 			<description>Channel 6 Number</description>
@@ -374,7 +367,7 @@
 			<top>848</top>
 			<width>50</width>
 			<height>60</height>
-			<font>font12</font>
+			<font>font25_title</font>
 			<align>right</align>
 			<aligny>center</aligny>
 			<textcolor>grey</textcolor>
@@ -410,6 +403,13 @@
 		<control type="button" id="105">
 			<visible>false</visible>
 			<label>font12</label><!--text font-->
+		</control>
+		<control type="image">
+			<left>480</left>
+			<top>548</top>
+			<width>1440</width>
+			<height>360</height>
+			<texture colordiffuse="80808080">colors/black.png</texture>
 		</control>
 		<control type="group" id="111">
 			<left>480</left>
@@ -461,10 +461,10 @@
 			<top>930</top>
 			<width>1660</width>
 			<height>40</height>
-			<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey],[/COLOR]][/B]</label>
+			<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey],[/COLOR]]</label>
 			<align>left</align>
 			<aligny>center</aligny>
-			<font>font14</font>
+			<font>font32_title</font>
 			<textcolor>button_focus</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
 			<scrollout>false</scrollout>
@@ -476,8 +476,8 @@
 			<left>30</left>
 			<top>980</top>
 			<width>1650</width>
-			<height>75</height>
-			<font>font27</font>
+			<height>85</height>
+			<font>font13</font>
 			<textcolor>white</textcolor>
 			<shadowcolor>text_shadow</shadowcolor>
 			<align>justify</align>
