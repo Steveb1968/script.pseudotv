@@ -155,63 +155,67 @@
 				<width>1657</width>
 				<height>85</height>
 				<font>font13</font>
-				<textcolor>white</textcolor>
+				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<align>justify</align>
 				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 			</control>
 			<control type="image" id="506">
 				<description>Show Channel Icon</description>
-				<left>1730</left>
-				<top>810</top>
+				<left>1740</left>
+				<top>803</top>
 				<width>150</width>
-				<height>70</height>
+				<height>80</height>
 				<aspectratio align="right">keep</aspectratio>
 			</control>
 			<!--MEDIA FLAGS-->
 			<control type="grouplist">
-				<left>1295</left>
-				<top>980</top>
-				<width>600</width>
-				<height>100</height>
+				<left>1253</left>
+				<top>967</top>
+				<width>640</width>
+				<height>90</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<itemgap>10</itemgap>
+				<itemgap>25</itemgap>
 				<control type="image">
-					<width>115</width>
-					<height>60</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</texture>
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>7</bordersize>
+					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.VideoResolution,flags/videoresolution/,.png]</texture>
 				</control>
 				<control type="image">
-					<width>115</width>
-					<height>60</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]</texture>
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>7</bordersize>
+					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.VideoCodec,flags/videocodec/,.png]</texture>
 				</control>
 				<control type="image">
-					<width>115</width>
-					<height>60</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]</texture>
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>7</bordersize>
+					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.AudioChannels,flags/audiochannel/,.png]</texture>
 				</control>
 				<control type="image">
-					<width>115</width>
-					<height>60</height>
-					<aspectratio align="center" aligny="top">keep</aspectratio>
-					<texture>$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>7</bordersize>
+					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
 				</control>
 			</control>
 			<!--PROGRESS-->
 			<control type="label">
-				<left>232</left>
+				<left>234</left>
 				<top>988</top>
 				<width>500</width>
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textcolor>white</textcolor>
+				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<label>[B]$INFO[Player.Time]$INFO[Player.Duration, / ][/B]</label>
 			</control>
