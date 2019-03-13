@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
 	<controls>
 		<control type="group">
 			<left>50</left>

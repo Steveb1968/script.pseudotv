@@ -23,6 +23,7 @@ import datetime
 import sys, re
 import random
 
+
 ADDON       = xbmcaddon.Addon(id='script.pseudotv')
 CWD         = ADDON.getAddonInfo('path').decode("utf-8")
 RESOURCE    = xbmc.translatePath(os.path.join(CWD, 'resources', 'lib').encode("utf-8")).decode("utf-8")
@@ -49,9 +50,17 @@ from ChannelList import ChannelList
 from AdvancedConfig import AdvancedConfig
 from FileAccess import FileAccess
 from Migrate import Migrate
+from contextlib import contextmanager
 
 NUMBER_CHANNEL_TYPES = 8
-BUSY = xbmcgui.DialogBusy()
+
+@contextmanager
+def busy_dialog():
+    xbmc.executebuiltin('ActivateWindow(busydialognocancel)')
+    try:
+        yield
+    finally:
+        xbmc.executebuiltin('Dialog.Close(busydialognocancel)')
 
 class ConfigWindow(xbmcgui.WindowXMLDialog):
     def __init__(self, *args, **kwargs):
@@ -90,7 +99,8 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
         migratemaster = Migrate()
         migratemaster.migrate()
-        self.prepareConfig()
+        with busy_dialog():
+            self.prepareConfig()
         self.myRules = AdvancedConfig("script.pseudotv.AdvancedConfig.xml", CWD, "default")
         self.log("onInit return")
 
@@ -533,7 +543,6 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.showList = []
         self.getControl(105).setVisible(False)
         self.getControl(106).setVisible(False)
-        BUSY.create()
         chnlst = ChannelList()
         chnlst.fillTVInfo()
         chnlst.fillMovieInfo()
@@ -555,7 +564,6 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             self.listcontrol.addItem(theitem)
 
         self.updateListing()
-        BUSY.close()
         self.getControl(105).setVisible(True)
         self.getControl(106).setVisible(False)
         self.setFocusId(102)

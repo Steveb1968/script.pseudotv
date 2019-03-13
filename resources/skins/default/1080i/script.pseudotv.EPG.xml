@@ -2,76 +2,79 @@
 <window>
 	<controls>
 		<!--HEADER-->
-		<control type="image">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>80</height>
-			<texture border="2">ptv_InfoBar.png</texture>
-		</control>
-		<control type="image">
-			<left>13</left>
-			<top>10</top>
-			<width>60</width>
-			<height>60</height>
-			<texture colordiffuse="FF12B2E7">ptv_logo.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
-		<control type="label">
-			<left>85</left>
-			<top>7</top>
-			<width>500</width>
-			<height>100</height>
-			<font>PseudoTv13</font>
-			<align>left</align>
-			<aligny>top</aligny>
-			<textcolor>FFF0F0F0</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<label>[B]$INFO[System.AddonTitle(script.pseudotv)][/B]</label>
-		</control>
-		<control type="label">
-			<left>85</left>
-			<top>40</top>
-			<width>500</width>
-			<height>60</height>
-			<font>PseudoTv10</font>
-			<align>left</align>
-			<aligny>top</aligny>
-			<textcolor>FFF0F0F0</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<label>$INFO[System.AddonVersion(script.pseudotv),Ver: ,]</label>
-		</control>
-		<control type="image">
-			<left>1855</left>
-			<top>20</top>
-			<width>40</width>
-			<height>40</height>
-			<texture colordiffuse="FF12B2E7">ptv_clock.png</texture>
-			<aspectratio>keep</aspectratio>
-		</control>
-		<control type="label">
-			<left>1340</left>
-			<top>7</top>
-			<width>500</width>
-			<height>100</height>
-			<font>PseudoTv13</font>
-			<align>right</align>
-			<aligny>top</aligny>
-			<textcolor>FFF0F0F0</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<label>[B]$INFO[System.Time][/B]</label>
-		</control>
-		<control type="label">
-			<left>1340</left>
-			<top>40</top>
-			<width>500</width>
-			<height>60</height>
-			<font>PseudoTv10</font>
-			<align>right</align>
-			<aligny>top</aligny>
-			<textcolor>FFF0F0F0</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<label>$INFO[System.Date]</label>
+		<control type="group">
+			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>80</height>
+				<texture border="2">ptv_InfoBar.png</texture>
+			</control>
+			<control type="image">
+				<left>13</left>
+				<top>10</top>
+				<width>60</width>
+				<height>60</height>
+				<texture colordiffuse="FF12B2E7">ptv_logo.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>7</top>
+				<width>500</width>
+				<height>100</height>
+				<font>PseudoTv13</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textcolor>FFF0F0F0</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<label>[B]$INFO[System.AddonTitle(script.pseudotv)][/B]</label>
+			</control>
+			<control type="label">
+				<left>85</left>
+				<top>40</top>
+				<width>500</width>
+				<height>60</height>
+				<font>PseudoTv10</font>
+				<align>left</align>
+				<aligny>top</aligny>
+				<textcolor>FFF0F0F0</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<label>$INFO[System.AddonVersion(script.pseudotv),Ver: ,]</label>
+			</control>
+			<control type="image">
+				<left>1855</left>
+				<top>20</top>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="FF12B2E7">ptv_clock.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="label">
+				<left>1340</left>
+				<top>7</top>
+				<width>500</width>
+				<height>100</height>
+				<font>PseudoTv13</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<textcolor>FFF0F0F0</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<label>[B]$INFO[System.Time][/B]</label>
+			</control>
+			<control type="label">
+				<left>1340</left>
+				<top>40</top>
+				<width>500</width>
+				<height>60</height>
+				<font>PseudoTv10</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<textcolor>FFF0F0F0</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<label>$INFO[System.Date]</label>
+			</control>
 		</control>
 		<!--FOOTER-->
 		<control type="image">
@@ -455,41 +458,44 @@
 			<height>362</height>
 		</control>
 		<!--SELECTED INFO-->
-		<control type="fadelabel">
-			<description>Show Title Label</description>
-			<left>30</left>
-			<top>930</top>
-			<width>1660</width>
-			<height>40</height>
-			<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR FFA0A0A0],[/COLOR]][/B]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>PseudoTv14</font>
-			<textcolor>FF12B2E7</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<scrollout>false</scrollout>
-			<pauseatend>1800</pauseatend>
-			<scrollspeed>40</scrollspeed>
-		</control>
-		<control type="textbox" id="502">
-			<description>Plot</description>
-			<left>30</left>
-			<top>980</top>
-			<width>1650</width>
-			<height>75</height>
-			<font>PseudoTv13</font>
-			<textcolor>AAFFFFFF</textcolor>
-			<shadowcolor>22000000</shadowcolor>
-			<align>justify</align>
-			<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
-		</control>
-		<control type="image" id="503">
-			<description>Show Channel Icon</description>
-			<left>1720</left>
-			<top>930</top>
-			<width>170</width>
-			<height>125</height>
-			<aspectratio>keep</aspectratio>
+		<control type="group">
+			<visible>Player.HasVideo + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<control type="fadelabel">
+				<description>Show Title Label</description>
+				<left>30</left>
+				<top>930</top>
+				<width>1660</width>
+				<height>40</height>
+				<label>[B]$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR FFA0A0A0],[/COLOR]][/B]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>PseudoTv14</font>
+				<textcolor>FF12B2E7</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<scrollout>false</scrollout>
+				<pauseatend>1800</pauseatend>
+				<scrollspeed>40</scrollspeed>
+			</control>
+			<control type="textbox" id="502">
+				<description>Plot</description>
+				<left>30</left>
+				<top>980</top>
+				<width>1650</width>
+				<height>75</height>
+				<font>PseudoTv13</font>
+				<textcolor>AAFFFFFF</textcolor>
+				<shadowcolor>22000000</shadowcolor>
+				<align>justify</align>
+				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
+			</control>
+			<control type="image" id="503">
+				<description>Show Channel Icon</description>
+				<left>1720</left>
+				<top>930</top>
+				<width>170</width>
+				<height>125</height>
+				<aspectratio>keep</aspectratio>
+			</control>
 		</control>
 		<control type="group">
 			<visible>false</visible>

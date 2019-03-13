@@ -78,7 +78,7 @@ There are only a few things you need to know in order to control everything. Fir
 * **Show Notification:** Self explanatory I hope. Will show a notification of Pseudotv's attempt to auto-start.
 
 ---
-### Addon boolean condition
+###Addon boolean condition
 
 **&lsaquo;visible&rsaquo;String.IsEmpty(Window(home).Property(PseudoTVRunning))&lsaquo;/visible&rsaquo;**  
 Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml  
@@ -86,7 +86,8 @@ Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml
 ---
 ### Branches guide
 
-* **Master branch:** Suitable for Kodi VER:17 and above.
+* **Master branch:** Suitable for Kodi VER:18 and above.
+* **Leia branch:** Suitable for Kodi VER:18.
 * **Krypton branch:** Suitable for Kodi VER:17 and below.
 
 ---
