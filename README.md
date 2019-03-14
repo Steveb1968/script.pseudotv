@@ -78,7 +78,7 @@ There are only a few things you need to know in order to control everything. Fir
 * **Show Notification:** Self explanatory I hope. Will show a notification of Pseudotv's attempt to auto-start.
 
 ---
-###Addon boolean condition
+### Addon boolean condition
 
 **&lsaquo;visible&rsaquo;String.IsEmpty(Window(home).Property(PseudoTVRunning))&lsaquo;/visible&rsaquo;**  
 Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml  
