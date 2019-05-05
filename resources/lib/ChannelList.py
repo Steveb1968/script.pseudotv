@@ -998,6 +998,7 @@ class ChannelList:
         fileList = []
         seasoneplist = []
         filecount = 0
+        YearEpInfo = ADDON.getSetting('HideYearEpInfo')
         json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","season","episode","year","playcount"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
@@ -1067,7 +1068,7 @@ class ChannelList:
                                 seasonval = int(season.group(1))
                                 epval = int(episode.group(1))
 
-                                if epval != None and len(episode.group(1)) > 0:
+                                if epval != None and len(episode.group(1)) > 0 and YearEpInfo == 'false':
                                     swtitle = swtitle + ' (' + str(seasonval) + 'x' + str(epval).zfill(2) + ')'
 
                                 tmpstr += showtitle.group(1) + "//" + swtitle + "//" + theplot
@@ -1077,7 +1078,7 @@ class ChannelList:
                                     tmpstr += title.group(1)
                                     years = re.search('"year" *: *([\d.]*\d+)', f)
 
-                                    if len(years.group(1)) > 0:
+                                    if len(years.group(1)) > 0 and YearEpInfo == 'false':
                                         year = '(' + str(years.group(1)) + ')'
                                         tmpstr += "//" + year + "//" + theplot
                                     else:

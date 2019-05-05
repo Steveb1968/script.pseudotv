@@ -62,7 +62,9 @@ msgctxt "#30008"
 msgid "Open Channel Configuration"
 msgstr ""
 
-#empty string with id 30009
+msgctxt "#30009"
+msgid "Hide year and episode information"
+msgstr ""
 
 msgctxt "#30010"
 msgid "Channel Logo Folder"

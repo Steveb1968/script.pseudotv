@@ -14,6 +14,7 @@
 	<category label="30020">
 		<setting id="InfoOnChange" type="bool" label="30003" default="false"/>
 		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
+		<setting id="HideYearEpInfo" type="bool" label="30009" default="false"/>
 		<setting id="ShowEpgLogo" type="bool" label="30007" default="true"/>
 		<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
 		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>

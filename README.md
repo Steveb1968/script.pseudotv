@@ -55,7 +55,8 @@ There are only a few things you need to know in order to control everything. Fir
 **Visual Settings -**
 
 * **Info when Changing Channels:** Pops up a small window on the bottom of the screen where the current show information is displayed when changing channels.
-* **Always show channel watermark:** Always display the current channel logo watermark.    
+* **Always show channel watermark:** Always display the current channel logo watermark.
+* **Hide year and episode information:** Removes the year (movies) and SxEP (episodes). A force channel reset is needed for the setting to take effect.  
 * **Always show channel logo in epg grid:** Shows the channel logo's in the epg grid.
 * **Channel Logo Folder:** The place where channel logos are stored.
 * **Clock Display:** Select between a 12-hour or 24-hour clock in the EPG.
