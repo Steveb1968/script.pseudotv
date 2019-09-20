@@ -13,6 +13,7 @@
 
 	<category label="30020">
 		<setting id="InfoOnChange" type="bool" label="30003" default="false"/>
+		<setting id="InfoLength" type="enum" subsetting="true" label="30021" visible="eq(-1,true)" values="2 sec|3 sec|4 sec|5 sec|6 sec|7 sec|8 sec|9 sec|10 sec|11 sec|12 sec" default="8"/>
 		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
 		<setting id="HideYearEpInfo" type="bool" label="30009" default="false"/>
 		<setting id="ShowEpgLogo" type="bool" label="30007" default="true"/>

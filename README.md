@@ -54,14 +54,14 @@ There are only a few things you need to know in order to control everything. Fir
 
 **Visual Settings -**
 
-* **Info when Changing Channels:** Pops up a small window on the bottom of the screen where the current show information is displayed when changing channels.
+* **Info when Changing Channels:** Pops up a window on the bottom of the screen where the current show information is displayed when changing channels. The duration of the info can be set in the sub-setting "Changing channel info duration".
 * **Always show channel watermark:** Always display the current channel logo watermark.
 * **Hide year and episode information:** Removes the year (movies) and SxEP (episodes). A force channel reset is needed for the setting to take effect.  
 * **Always show channel logo in epg grid:** Shows the channel logo's in the epg grid.
 * **Channel Logo Folder:** The place where channel logos are stored.
 * **Clock Display:** Select between a 12-hour or 24-hour clock in the EPG.
 * **Show Coming Up Next box:** A little box will notify you of what's coming up next when the current show is nearly finished.
-* **Hide very short videos:** Don't show clips shorter than the "Duration of Short videos" setting, in the EPG, coming up next box, or info box. This is helpful if you use bumpers or commercials.
+* **Hide very short videos:** Don't show clips shorter than the "Duration of Short videos" setting. Effects the EPG, coming up next box and the info box. This is helpful if you use bumpers or commercials.
 
 
 **Tweaks -**
@@ -82,14 +82,18 @@ There are only a few things you need to know in order to control everything. Fir
 ### Addon boolean condition
 
 **&lsaquo;visible&rsaquo;String.IsEmpty(Window(home).Property(PseudoTVRunning))&lsaquo;/visible&rsaquo;**  
-Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml  
+Useful for hiding skin xml files such as DialogBusy.xml/DialogSeekBar.xml 
+ 
+**Tip: DialogSeekBar.xml**  
+Replace *"Player.DisplayAfterSeek"* with  
+*"[Player.DisplayAfterSeek\+String.IsEmpty(Window(home).Property(PseudoTVRunning))]"*    
 
 ---
 ### Branches guide
 
 * **Master branch:** Suitable for Kodi VER:18 and above.
 * **Leia branch:** Suitable for Kodi VER:18.
-* **Krypton branch:** Suitable for Kodi VER:17 and below.
+* **Krypton branch:** Suitable for Kodi VER:17 and below. 
 
 ---
 ### Credits

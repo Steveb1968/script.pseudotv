@@ -80,6 +80,7 @@ MADE_CHAN_LOC = os.path.join(CHANNELS_LOC, 'stored' + '/')
 CHANNELBUG_LOC = xbmc.translatePath(os.path.join(CHANNELS_LOC, 'ChannelBug' + '/'))
 
 SHORT_CLIP_ENUM = [15, 30, 60, 90, 120, 180, 240, 300, 360]
+INFO_DUR = [2.0,3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0,11.0,12.0]
 SEEK_FORWARD = [10, 30, 60, 180, 300, 600, 1800]
 SEEK_BACKWARD = [-10, -30, -60, -180, -300, -600, -1800]
 MEDIA_LIMIT = [10, 25, 50, 100, 250, 500, 1000, 0]

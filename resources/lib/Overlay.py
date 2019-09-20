@@ -82,7 +82,8 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelThread = ChannelListThread()
         self.channelThread.myOverlay = self
         self.timeStarted = 0
-        self.infoOnChange = True
+        self.infoOnChange = False
+        self.infoDuration = 10.0
         self.infoOffset = 0
         self.invalidatedChannelCount = 0
         self.showingInfo = False
@@ -232,6 +233,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.sleepTimeValue = int(ADDON.getSetting('AutoOff')) * 1800
         self.log('Auto off is ' + str(self.sleepTimeValue))
         self.infoOnChange = ADDON.getSetting("InfoOnChange") == "true"
+        self.infoDuration = INFO_DUR[int(ADDON.getSetting("InfoLength"))]
         self.log('Show info label on channel change is ' + str(self.infoOnChange))
         self.showChannelBug = ADDON.getSetting("ShowChannelBug") == "true"
         self.log('Show channel bug - ' + str(self.showChannelBug))
@@ -555,7 +557,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.inputChannel == -1 and self.infoOnChange == True:
             self.infoOffset = 0
-            self.showInfo(10.0)
+            self.showInfo(self.infoDuration)
 
         if self.showChannelBug == True:
             try:
@@ -679,6 +681,9 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             if self.inputChannel > 0:
                 if self.inputChannel != self.currentChannel and self.inputChannel <= self.maxChannels:
                     self.setChannel(self.inputChannel)
+                    if self.infoOnChange == True:
+                        self.infoOffset = 0
+                        self.showInfo(self.infoDuration)
                 self.inputChannel = -1
             else:
                 # Otherwise, show the EPG

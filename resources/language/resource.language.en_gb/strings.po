@@ -17,15 +17,6 @@ msgstr ""
 "Language: en_gb\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-msgctxt "Addon Summary"
-msgid "Channel surfing for your video library"
-msgstr ""
-
-msgctxt "Addon Description"
-msgid "PseudoTV acts similar to normal broadcast or cable TV, complete with multiple preset and user-defined channels and an EPG."
-msgstr ""
-
-
 msgctxt "#30000"
 msgid "General"
 msgstr ""
@@ -110,7 +101,9 @@ msgctxt "#30020"
 msgid "Visuals"
 msgstr ""
 
-#empty string with id 30021
+msgctxt "#30021"
+msgid " Changing channel info duration"
+msgstr ""
 
 msgctxt "#30022"
 msgid "Tweaks"
