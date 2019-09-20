@@ -555,7 +555,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.inputChannel == -1 and self.infoOnChange == True:
             self.infoOffset = 0
-            self.showInfo(3.0)
+            self.showInfo(10.0)
 
         if self.showChannelBug == True:
             try:
