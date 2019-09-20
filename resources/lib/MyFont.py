@@ -1,4 +1,6 @@
-# modules
+#!/usr/bin/python
+# coding: utf-8
+
 import os
 import xml.etree.ElementTree as ET
 import xbmc, xbmcaddon, xbmcvfs
@@ -6,7 +8,7 @@ import xbmc, xbmcaddon, xbmcvfs
 ADDON = xbmcaddon.Addon(id='script.pseudotv')
 SkinPath = xbmc.translatePath('special://skin')
 ScriptPath = xbmc.translatePath(ADDON.getAddonInfo('path'))
-SourceFontPath = os.path.join(ScriptPath, 'resources', 'fonts', 'Lato-Regular.ttf')
+SourceFontPath = os.path.join(ScriptPath, 'resources', 'fonts', 'NotoSans-Regular.ttf')
 ListDir = os.listdir(SkinPath)
 
 class PCParser(ET.XMLTreeBuilder):
@@ -40,7 +42,7 @@ def isFontInstalled(fontxml_path, fontname):
         return True
 
 def copyFont(SourceFontPath, SkinPath):
-    dest = os.path.join(SkinPath, 'fonts', 'Lato-Regular.ttf')
+    dest = os.path.join(SkinPath, 'fonts', 'NotoSans-Regular.ttf')
     if os.path.exists(dest):
         return
     xbmcvfs.copy(SourceFontPath, dest)

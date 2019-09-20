@@ -34,15 +34,15 @@ SkinID = xbmc.getSkinDir()
 if SkinID != 'skin.estuary':
     import MyFont
     if MyFont.getSkinRes() == '1080i':
-        MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "24")
-        MyFont.addFont("PseudoTv12", "Lato-Regular.ttf", "25")
-        MyFont.addFont("PseudoTv13", "Lato-Regular.ttf", "30")
-        MyFont.addFont("PseudoTv14", "Lato-Regular.ttf", "33")
+        MyFont.addFont("PseudoTv10", "NotoSans-Regular.ttf", "23")
+        MyFont.addFont("PseudoTv12", "NotoSans-Regular.ttf", "25")
+        MyFont.addFont("PseudoTv13", "NotoSans-Regular.ttf", "30")
+        MyFont.addFont("PseudoTv14", "NotoSans-Regular.ttf", "32")
     else:
-        MyFont.addFont("PseudoTv10", "Lato-Regular.ttf", "14")
-        MyFont.addFont("PseudoTv12", "Lato-Regular.ttf", "16")
-        MyFont.addFont("PseudoTv13", "Lato-Regular.ttf", "20")
-        MyFont.addFont("PseudoTv14", "Lato-Regular.ttf", "22")
+        MyFont.addFont("PseudoTv10", "NotoSans-Regular.ttf", "14")
+        MyFont.addFont("PseudoTv12", "NotoSans-Regular.ttf", "16")
+        MyFont.addFont("PseudoTv13", "NotoSans-Regular.ttf", "20")
+        MyFont.addFont("PseudoTv14", "NotoSans-Regular.ttf", "22")
 
 from xml.dom.minidom import parse, parseString
 from Globals import *
