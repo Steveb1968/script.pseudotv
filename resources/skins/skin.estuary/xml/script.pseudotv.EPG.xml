@@ -3,7 +3,7 @@
 	<controls>
 		<!--HEADER-->
 		<control type="group">
-			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<visible>!Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -464,7 +464,7 @@
 			<control type="fadelabel">
 				<description>Show Title Label</description>
 				<left>30</left>
-				<top>930</top>
+				<top>923</top>
 				<width>1660</width>
 				<height>40</height>
 				<label>$INFO[Control.GetLabel(500)]$INFO[Control.GetLabel(501),: [COLOR grey],[/COLOR]]</label>
@@ -480,7 +480,7 @@
 			<control type="textbox" id="502">
 				<description>Plot</description>
 				<left>30</left>
-				<top>980</top>
+				<top>973</top>
 				<width>1650</width>
 				<height>85</height>
 				<font>font13</font>

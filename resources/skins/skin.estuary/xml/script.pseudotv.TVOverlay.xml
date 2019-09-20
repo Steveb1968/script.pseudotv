@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
-		<control type="image" id="103">
-			<description>Channel Bug</description>
-			<left>1695</left>
-			<top>952</top>
-			<width>161</width>
-			<height>109</height>
-			<aspectratio>keep</aspectratio>
-			<visible>Player.HasVideo + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
-			<animation effect="fade" end="20" condition="True">conditional</animation>
-		</control>
 		<control type="group" id="102">
-			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<visible>!Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<!--HEADER-->
 			<control type="image">
 				<left>0</left>
@@ -133,7 +123,7 @@
 			</control>
 			<control type="fadelabel">
 				<left>252</left>
-				<top>830</top>
+				<top>833</top>
 				<width>1475</width>
 				<height>40</height>
 				<align>left</align>
@@ -149,7 +139,7 @@
 			<control type="textbox" id="505">
 				<description>Plot</description>
 				<left>252</left>
-				<top>885</top>
+				<top>883</top>
 				<width>1640</width>
 				<height>85</height>
 				<font>font13</font>
@@ -230,6 +220,16 @@
 				<control type="label" id="503" />
 				<control type="label" id="504" />
 			</control>
+		</control>
+		<control type="image" id="103">
+			<description>Channel Bug</description>
+			<left>1695</left>
+			<top>952</top>
+			<width>161</width>
+			<height>109</height>
+			<aspectratio>keep</aspectratio>
+			<visible>Player.HasVideo + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<animation effect="fade" end="20" condition="True">conditional</animation>
 		</control>
 	</controls>
 </window>
