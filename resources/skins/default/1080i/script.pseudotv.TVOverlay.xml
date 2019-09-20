@@ -151,11 +151,10 @@
 				<left>252</left>
 				<top>885</top>
 				<width>1640</width>
-				<height>75</height>
+				<height>85</height>
 				<font>PseudoTv13</font>
 				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<align>justify</align>
 				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 			</control>
 			<control type="image" id="506">
@@ -207,15 +206,15 @@
 			<!--PROGRESS-->
 			<control type="label">
 				<left>252</left>
-				<top>985</top>
+				<top>990</top>
 				<width>500</width>
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<font>PseudoTv14</font>
+				<font>PseudoTv13</font>
 				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
+				<label>[B]$INFO[Player.Time]$INFO[Player.Duration, / ][/B]</label>
 			</control>
 			<control type="progress" id="23">
 				<left>252</left>

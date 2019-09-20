@@ -481,11 +481,10 @@
 				<left>30</left>
 				<top>980</top>
 				<width>1650</width>
-				<height>75</height>
+				<height>85</height>
 				<font>PseudoTv13</font>
 				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<align>justify</align>
 				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 			</control>
 			<control type="image" id="503">

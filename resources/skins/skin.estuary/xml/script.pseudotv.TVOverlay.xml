@@ -151,11 +151,10 @@
 				<left>252</left>
 				<top>885</top>
 				<width>1640</width>
-				<height>83</height>
+				<height>85</height>
 				<font>font13</font>
 				<textcolor>AAFFFFFF</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
-				<align>justify</align>
 				<autoscroll time="4000" delay="6000" repeat="6000">True</autoscroll>
 			</control>
 			<control type="image" id="506">
