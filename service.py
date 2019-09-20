@@ -1,8 +1,9 @@
-# modules
+#!/usr/bin/python
+# coding: utf-8
+
 import xbmc
 import xbmcaddon
 
-# get addon info
 ADDON       = xbmcaddon.Addon(id='script.pseudotv')
 ADDON_ID    = ADDON.getAddonInfo('id')
 LANGUAGE    = ADDON.getLocalizedString

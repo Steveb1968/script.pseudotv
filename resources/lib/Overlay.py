@@ -83,7 +83,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.channelThread.myOverlay = self
         self.timeStarted = 0
         self.infoOnChange = False
-        self.infoDuration = 10.0
+        self.infoDuration = 10
         self.infoOffset = 0
         self.invalidatedChannelCount = 0
         self.showingInfo = False
@@ -582,7 +582,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             
         self.channelLabelTimer.name = "ChannelLabel"
         self.channelLabelTimer.start()
-        self.startNotificationTimer(10.0)
+        self.startNotificationTimer()
         self.log('showChannelLabel return')
 
 
@@ -720,14 +720,14 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         elif action == ACTION_MOVE_LEFT:
             if self.showingInfo:
                 self.infoOffset -= 1
-                self.showInfo(10.0)
+                self.showInfo(10)
             else:
                 xbmc.executebuiltin("Seek("+str(self.seekBackward)+")")
 
         elif action == ACTION_MOVE_RIGHT:
             if self.showingInfo:
                 self.infoOffset += 1
-                self.showInfo(10.0)
+                self.showInfo(10)
             else:
                 xbmc.executebuiltin("Seek("+str(self.seekForward)+")")
 
@@ -761,7 +761,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                         self.channelList.sendJSON(json_query);
                         
                 else:
-                    self.showInfo(10.0)
+                    self.showInfo(10)
         elif action >= ACTION_NUMBER_0 and action <= ACTION_NUMBER_9:
             if self.inputChannel < 0:
                 self.inputChannel = action - ACTION_NUMBER_0
