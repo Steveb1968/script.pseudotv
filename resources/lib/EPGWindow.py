@@ -296,7 +296,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
                 # The only way this isn't true is if the current channel is curchannel since
                 # it could have been fast forwarded or rewinded (rewound)?
                 if curchannel == self.MyOverlayWindow.currentChannel:
-                    playlistpos = int(xbmc.PlayList(xbmc.PLAYLIST_VIDEO).getposition())
+                    playlistpos = xbmc.PlayList(xbmc.PLAYLIST_MUSIC).getposition()
                     videotime = xbmc.Player().getTime()
                     reftime = time.time()
                 else:

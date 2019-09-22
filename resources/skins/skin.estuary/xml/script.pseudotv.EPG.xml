@@ -3,7 +3,7 @@
 	<controls>
 		<!--HEADER-->
 		<control type="group">
-			<visible>!Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
+			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -460,7 +460,7 @@
 		</control>
 		<!--SELECTED INFO-->
 		<control type="group">
-			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<control type="fadelabel">
 				<description>Show Title Label</description>
 				<left>30</left>

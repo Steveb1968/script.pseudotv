@@ -104,7 +104,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         for i in range(3):
             self.numberColor = NUM_COLOUR[int(ADDON.getSetting("NumberColour"))]
-            self.channelLabel.append(xbmcgui.ControlImage(50 + (35 * i), 50, 50, 50, IMAGES_LOC, colorDiffuse=self.numberColor))
+            self.channelLabel.append(xbmcgui.ControlImage(90 + (35 * i), 90, 50, 50, IMAGES_LOC, colorDiffuse=self.numberColor))
             self.addControl(self.channelLabel[i])
             self.channelLabel[i].setVisible(False)
 
@@ -557,6 +557,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
         if self.inputChannel == -1 and self.infoOnChange == True:
             self.infoOffset = 0
+            xbmc.sleep(self.channelDelay)
             self.showInfo(self.infoDuration)
 
         if self.showChannelBug == True:
@@ -683,6 +684,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                     self.setChannel(self.inputChannel)
                     if self.infoOnChange == True:
                         self.infoOffset = 0
+                        xbmc.sleep(self.channelDelay)
                         self.showInfo(self.infoDuration)
                 self.inputChannel = -1
             else:

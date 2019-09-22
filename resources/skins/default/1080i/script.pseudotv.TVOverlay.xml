@@ -2,7 +2,7 @@
 <window>
 	<controls>
 		<control type="group" id="102">
-			<visible>!Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
+			<visible>Player.HasVideo + !Window.IsActive(videoosd) + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<!--HEADER-->
 			<control type="image">
 				<left>0</left>
@@ -231,7 +231,7 @@
 			<width>161</width>
 			<height>109</height>
 			<aspectratio>keep</aspectratio>
-			<visible>Player.HasVideo + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.DisplayAfterSeek | Player.IsTempo]</visible>
+			<visible>Player.HasVideo + ![Player.Seeking | Player.Paused | Player.Forwarding | Player.Rewinding | Player.IsTempo]</visible>
 			<animation effect="fade" end="20" condition="True">conditional</animation>
 		</control>
 	</controls>
