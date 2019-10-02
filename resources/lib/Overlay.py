@@ -1026,6 +1026,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                                 ADDON_SETTINGS.setSetting('Channel_' + str(i + 1) + '_time', str(int(tottime)))
                                 
                 self.storeFiles()
+                xbmc.PlayList(xbmc.PLAYLIST_MUSIC).clear()
 
         updateDialog.close()
         self.close()

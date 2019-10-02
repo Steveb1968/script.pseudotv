@@ -66,6 +66,7 @@ class ChannelList:
         self.log('Start Mode is ' + str(self.startMode))
         self.backgroundUpdating = int(ADDON.getSetting("ThreadMode"))
         self.mediaLimit = MEDIA_LIMIT[int(ADDON.getSetting("MediaLimit"))]
+        self.YearEpInfo = ADDON.getSetting('HideYearEpInfo')
         self.findMaxChannels()
 
         if self.forceReset:
@@ -576,21 +577,21 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.log(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, "episodes", self.getChannelName(1, network))
         network = network.lower()
         added = False
-        
+
         fle.write('    <rule field="tvshow" operator="is">\n')
-        
+
         for i in range(len(self.showList)):
             if self.showList[i][1].lower() == network:
                 theshow = self.cleanString(self.showList[i][0])
                 fle.write('        <value>' + theshow + '</value>\n')
                 added = True
-        
+
         fle.write('    </rule>\n')
 
         self.writeXSPFooter(fle, 0, "random")
@@ -618,7 +619,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.log(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, 'episodes', self.getChannelName(6, show))
@@ -638,7 +639,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.log(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         epname = os.path.basename(self.createGenrePlaylist('episodes', 3, genre))
@@ -657,7 +658,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.log(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, pltype, self.getChannelName(chtype, genre))
@@ -676,7 +677,7 @@ class ChannelList:
         try:
             fle = FileAccess.open(flename, "w")
         except:
-            self.Error(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
+            self.log(LANGUAGE(30034) + ' ' + flename, xbmc.LOGERROR)
             return ''
 
         self.writeXSPHeader(fle, "movies", self.getChannelName(2, studio))
@@ -693,7 +694,7 @@ class ChannelList:
         self.log("createDirectoryPlaylist " + setting1)
         fileList = []
         filecount = 0
-        
+
         def listdir_fullpath(dir):
             return [os.path.join(dir, f) for f in xbmcvfs.listdir(dir)[1]]
 
@@ -701,23 +702,23 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "getting file list")
 
         file_detail = listdir_fullpath(setting1)
-        
+
         for f in file_detail:
             if self.threadPause() == False:
                 del fileList[:]
                 break
-            
+
             duration = self.videoParser.getVideoLength(f)
-            
+
             if duration > 0:
                 filecount += 1
-                
+
                 if self.background == False:
                     if filecount == 1:
                         self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entry")
                     else:
                         self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "added " + str(filecount) + " entries")
-                
+
                 afile = os.path.basename(f)
                 afile, ext = os.path.splitext(afile)
                 tmpstr = str(duration) + ','
@@ -725,7 +726,7 @@ class ChannelList:
                 tmpstr += setting1 + os.path.basename(f)
                 tmpstr = tmpstr[:2036]
                 fileList.append(tmpstr)
-                
+
         if filecount == 0:
             self.log('Unable to access Videos files in ' + setting1)
 
@@ -748,15 +749,12 @@ class ChannelList:
         fle.write('</smartplaylist>\n')
 
 
-
     def cleanString(self, string):
         newstr = uni(string)
         newstr = newstr.replace('&', '&amp;')
         newstr = newstr.replace('>', '&gt;')
         newstr = newstr.replace('<', '&lt;')
         return uni(newstr)
-
-
 
 
     def fillTVInfo(self, sortbycount = False):
@@ -821,7 +819,7 @@ class ChannelList:
 
             if match:
                 genres = match.group(1).split(',')
-                
+
                 for genre in genres:
                     found = False
                     curgenre = genre.lower().strip('"').strip()
@@ -889,7 +887,7 @@ class ChannelList:
 
             if match:
                 genres = match.group(1).split(',')
-               
+
                 for genre in genres:
                     found = False
                     curgenre = genre.lower().strip('"').strip()
@@ -915,10 +913,10 @@ class ChannelList:
                             self.movieGenreList.append(genre.strip('"').strip())
 
             match = re.search('"studio" *: *\[(.*?)\]', f)
-           
+
             if match:
                 studios = match.group(1).split(',')
-                
+
                 for studio in studios:
                     curstudio = studio.strip('"').strip()
                     found = False
@@ -992,14 +990,12 @@ class ChannelList:
         return newlist
 
 
-
     def buildFileList(self, dir_name, channel):
         self.log("buildFileList")
         fileList = []
         seasoneplist = []
         filecount = 0
-        YearEpInfo = ADDON.getSetting('HideYearEpInfo')
-        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","season","episode","year","playcount"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
+        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","plotoutline","season","episode","year","playcount"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "querying database")
@@ -1053,33 +1049,38 @@ class ChannelList:
                             tmpstr = str(dur) + ','
                             title = re.search('"label" *: *"(.*?)"', f)
                             showtitle = re.search('"showtitle" *: *"(.*?)"', f)
-                            plot = re.search('"plot" *: *"(.*?)",', f)
+                            plot = re.search('"plot" *: *"(.*?)","', f)
+                            plotoutline = re.search('"plotoutline" *: *"(.*?)","', f)
 
-                            if len(plot.group(1)) > 0:
+                            if len(plotoutline.group(1)) > 0:
+                                theplot = plotoutline.group(1)
+                            elif len(plotoutline.group(1)) == 0 and len(plot.group(1)) > 0:
                                 theplot = plot.group(1)
                             else:
-                                theplot = xbmc.getLocalizedString(161)
+                                theplot = LANGUAGE(30023)
 
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
                                 swtitle = title.group(1)
+                                param, swtitle = swtitle.split(". ", 1)
+                                swtitle = ('"{}"'.format(swtitle))
                                 season = re.search('"season" *: *(.*?),', f)
                                 episode = re.search('"episode" *: *(.*?),', f)
-                                seasonval = int(season.group(1))
-                                epval = int(episode.group(1))
+                                seasonval = season.group(1)
+                                epval = episode.group(1)
+                                sxexx = (' ({})'.format(seasonval + 'x' + epval.zfill(2)))
 
-                                if epval != None and len(episode.group(1)) > 0 and YearEpInfo == 'false':
-                                    swtitle = swtitle + ' (' + str(seasonval) + 'x' + str(epval).zfill(2) + ')'
-
+                                if epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'false':
+                                    swtitle = swtitle + sxexx
                                 tmpstr += showtitle.group(1) + "//" + swtitle + "//" + theplot
                             else:
                                 # This is a movie
                                 if showtitle == None or len(showtitle.group(1)) == 0:
                                     tmpstr += title.group(1)
                                     years = re.search('"year" *: *([\d.]*\d+)', f)
+                                    year = ('({})'.format(years.group(1)))
 
-                                    if len(years.group(1)) > 0 and YearEpInfo == 'false':
-                                        year = '(' + str(years.group(1)) + ')'
+                                    if len(years.group(1)) > 0 and self.YearEpInfo == 'false':
                                         tmpstr += "//" + year + "//" + theplot
                                     else:
                                         tmpstr += "//" + "//" + theplot
@@ -1134,7 +1135,6 @@ class ChannelList:
 
         self.log("buildMixedFileList returning")
         return fileList
-
 
 
     # Run rules for a channel

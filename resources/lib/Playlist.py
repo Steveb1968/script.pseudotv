@@ -91,8 +91,6 @@ class Playlist:
 
         if index >= 0 and index < len(self.itemlist):
             epit = self.itemlist[index].episodetitle
-            if ". " in epit:
-                param, epit = epit.split(". ",1)
             self.processingSemaphore.release()
             return epit
 

@@ -54,7 +54,7 @@ There are only a few things you need to know in order to control everything. Fir
 
 **Visual Settings -**
 
-* **Info when Changing Channels:** Pops up a window on the bottom of the screen where the current show information is displayed when changing channels. The duration of the info can be set in the sub-setting "Changing channel info duration".
+* **Info when Changing Channels:** Shows the current media information when changing channels. The duration of the info can be set in the sub-setting "Changing channel info duration".
 * **Always show channel watermark:** Always display the current channel logo watermark.
 * **Hide year and episode information:** Removes the year (movies) and SxEP (episodes). A force channel reset is needed for the setting to take effect.  
 * **Always show channel logo in epg grid:** Shows the channel logo's in the epg grid.

@@ -1196,8 +1196,8 @@ class PlayShowInOrder(BaseRule):
             episode = re.search('"episode" *: *(.*?),', filedata)
 
             try:
-                seasonval = int(season.group(1))
-                epval = int(episode.group(1))
+                seasonval = season.group(1)
+                epval = episode.group(1)
                 self.showInfo.append([showtitle.group(1), match.group(1).replace("\\\\", "\\"), seasonval, epval])
             except:
                 pass

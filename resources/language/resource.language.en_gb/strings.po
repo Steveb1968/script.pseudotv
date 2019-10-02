@@ -109,7 +109,9 @@ msgctxt "#30022"
 msgid "Tweaks"
 msgstr ""
 
-#empty string with id 30023
+msgctxt "#30023"
+msgid "Plot unavailable."
+msgstr ""
 
 msgctxt "#30024"
 msgid "Background Loading..."

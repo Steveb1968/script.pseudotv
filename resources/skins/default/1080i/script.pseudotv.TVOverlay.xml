@@ -134,7 +134,7 @@
 				<scrollout>false</scrollout>
 				<pauseatend>1800</pauseatend>
 				<scrollspeed>40</scrollspeed>
-				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504),: [COLOR FFA0A0A0],[/COLOR]][/B]</label>
+				<label>[B]$INFO[Control.GetLabel(503)]$INFO[Control.GetLabel(504), [COLOR FFA0A0A0],[/COLOR]][/B]</label>
 			</control>
 			<control type="textbox" id="505">
 				<description>Plot</description>
