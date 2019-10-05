@@ -111,12 +111,13 @@
 				<visible>String.IsEmpty(Player.Art(tvshow.poster)) + !String.IsEmpty(Player.Art(poster))</visible>
 			</control>
 			<control type="image">
-				<top>780</top>
+				<top>715</top>
 				<width>253</width>
-				<height>300</height>
-				<texture>DefaultVideo.png</texture>
+				<height>372</height>
+				<texture>ptv_DefaultVideo.png</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="20">ptv_thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<aspectratio aligny="center">keep</aspectratio>
 				<visible>String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Player.Art(poster))</visible>
 			</control>
 			<control type="label" id="502">
