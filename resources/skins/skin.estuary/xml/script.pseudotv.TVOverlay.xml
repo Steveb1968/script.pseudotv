@@ -108,6 +108,17 @@
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="20">ptv_thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
+				<visible>String.IsEmpty(Player.Art(tvshow.poster)) + !String.IsEmpty(Player.Art(poster))</visible>
+			</control>
+			<control type="image">
+				<top>715</top>
+				<width>253</width>
+				<height>372</height>
+				<texture>DefaultVideo.png</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="20">ptv_thumb_shadow.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>String.IsEmpty(Player.Art(tvshow.poster)) + String.IsEmpty(Player.Art(poster))</visible>
 			</control>
 			<control type="label" id="502">
 				<description>Heading label</description>
