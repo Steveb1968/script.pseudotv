@@ -696,7 +696,7 @@ class ChannelList:
         filecount = 0
 
         def listdir_fullpath(dir):
-            return [os.path.join(dir, f) for f in xbmcvfs.listdir(dir)[1]]
+            return [(os.path.join(dir, f)).decode('utf-8', "ignore") for f in xbmcvfs.listdir(dir)[1]]
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, "Updating channel " + str(self.settingChannel), "adding videos", "getting file list")
