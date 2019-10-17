@@ -208,3 +208,7 @@ msgstr ""
 msgctxt "#30047"
 msgid "Seek step backward"
 msgstr ""
+
+msgctxt "#30048"
+msgid "Set watermark position"
+msgstr ""
