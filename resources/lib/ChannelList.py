@@ -25,7 +25,8 @@ import random
 import httplib
 import base64
 
-
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 from xml.dom.minidom import parse, parseString
 
