@@ -216,3 +216,143 @@ msgstr ""
 msgctxt "#30049"
 msgid "Directory channel"
 msgstr ""
+
+msgctxt "#30050"
+msgid "Set Channel Name"
+msgstr ""
+
+msgctxt "#30051"
+msgid "New Channel Name"
+msgstr ""
+
+msgctxt "#30052"
+msgid "Rename Channel to"
+msgstr ""
+
+msgctxt "#30053"
+msgid "Don't Include a Show"
+msgstr ""
+
+msgctxt "#30054"
+msgid "Show Name"
+msgstr ""
+
+msgctxt "#30055"
+msgid "Don't Include"
+msgstr ""
+
+msgctxt "#30056"
+msgid "Best-Effort Channel Scheduling"
+msgstr ""
+
+msgctxt "#30057"
+msgid "Channel Number"
+msgstr ""
+
+msgctxt "#30058"
+msgid "Days of the Week (UMTWHFS)"
+msgstr ""
+
+msgctxt "#30059"
+msgid "Time (HH:MM)"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Episode Count"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Starting Episode"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Starting Date (DD/MM/YYYY)"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Schedule Channel"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Only Played Watched Items"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Don't Play This Channel"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Interleave Another Channel"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Channel Number"
+msgstr ""
+
+msgctxt "#30068"
+msgid "Min Interleave Count"
+msgstr ""
+
+msgctxt "#30069"
+msgid "Max Interleave Count"
+msgstr ""
+
+msgctxt "#30070"
+msgid "Starting Episode"
+msgstr ""
+
+msgctxt "#30071"
+msgid "Interleave Channel"
+msgstr ""
+
+msgctxt "#30072"
+msgid "Force Real-Time Mode"
+msgstr ""
+
+msgctxt "#30073"
+msgid "Pause When Not Watching"
+msgstr ""
+
+msgctxt "#30074"
+msgid "Force Resume Mode"
+msgstr ""
+
+msgctxt "#30075"
+msgid "Force Random Mode"
+msgstr ""
+
+msgctxt "#30076"
+msgid "Only Played Unwatched Items"
+msgstr ""
+
+msgctxt "#30077"
+msgid "Play TV Shows In Order"
+msgstr ""
+
+msgctxt "#30078"
+msgid "Reset Every %s Days"
+msgstr ""
+
+msgctxt "#30079"
+msgid "Number of Days"
+msgstr ""
+
+msgctxt "#30080"
+msgid "Reset Every Day"
+msgstr ""
+
+msgctxt "#30081"
+msgid "Channel Logo"
+msgstr ""
+
+msgctxt "#30082"
+msgid "Display the Logo"
+msgstr ""
+
+msgctxt "#30083"
+msgid "Display the Channel Logo"
+msgstr ""
+
+msgctxt "#30084"
+msgid "Hide the Channel Logo"
+msgstr ""

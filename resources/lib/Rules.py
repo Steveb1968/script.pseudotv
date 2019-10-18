@@ -376,8 +376,8 @@ class BaseRule:
 
 class RenameRule(BaseRule):
     def __init__(self):
-        self.name = "Set Channel Name"
-        self.optionLabels = ['New Channel Name']
+        self.name = LANGUAGE(30050)
+        self.optionLabels = [LANGUAGE(30051)]
         self.optionValues = ['']
         self.myId = 1
         self.actions = RULES_ACTION_FINAL_MADE | RULES_ACTION_FINAL_LOADED
@@ -389,7 +389,7 @@ class RenameRule(BaseRule):
 
     def getTitle(self):
         if len(self.optionValues[0]) > 0:
-            return 'Rename Channel to ' + self.optionValues[0]
+            return LANGUAGE(30052) + ' ' + self.optionValues[0]
 
         return self.name
 
@@ -415,8 +415,8 @@ class RenameRule(BaseRule):
 
 class NoShowRule(BaseRule):
     def __init__(self):
-        self.name = "Don't Include a Show"
-        self.optionLabels = ['Show Name']
+        self.name = LANGUAGE(30053)
+        self.optionLabels = [LANGUAGE(30054)]
         self.optionValues = ['']
         self.myId = 2
         self.actions = RULES_ACTION_LIST
@@ -428,7 +428,7 @@ class NoShowRule(BaseRule):
 
     def getTitle(self):
         if len(self.optionValues[0]) > 0:
-            return "Don't Include '" + self.optionValues[0] + "'"
+            return LANGUAGE(30055) + " '" + self.optionValues[0] + "'"
 
         return self.name
 
@@ -472,8 +472,8 @@ class NoShowRule(BaseRule):
 
 class ScheduleChannelRule(BaseRule):
     def __init__(self):
-        self.name = "Best-Effort Channel Scheduling"
-        self.optionLabels = ['Channel Number', 'Days of the Week (UMTWHFS)', 'Time (HH:MM)', 'Episode Count', 'Starting Episode', 'Starting Date (DD/MM/YYYY)']
+        self.name = LANGUAGE(30056)
+        self.optionLabels = [LANGUAGE(30057), LANGUAGE(30058), LANGUAGE(30059), LANGUAGE(30060), LANGUAGE(30061), LANGUAGE(30062)]
         self.optionValues = ['0', '', '00:00', '1', '1', '']
         self.myId = 3
         self.actions = RULES_ACTION_START | RULES_ACTION_BEFORE_CLEAR | RULES_ACTION_FINAL_MADE | RULES_ACTION_FINAL_LOADED
@@ -490,7 +490,7 @@ class ScheduleChannelRule(BaseRule):
 
     def getTitle(self):
         if len(self.optionValues[0]) > 0:
-            return "Schedule Channel " + self.optionValues[0]
+            return LANGUAGE(30063) + " " + self.optionValues[0]
 
         return self.name
 
@@ -888,7 +888,7 @@ class ScheduleChannelRule(BaseRule):
 
 class OnlyWatchedRule(BaseRule):
     def __init__(self):
-        self.name = "Only Played Watched Items"
+        self.name = LANGUAGE(30064)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 4
@@ -918,7 +918,7 @@ class OnlyWatchedRule(BaseRule):
 
 class DontAddChannel(BaseRule):
     def __init__(self):
-        self.name = "Don't Play This Channel"
+        self.name = LANGUAGE(30065)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 5
@@ -939,8 +939,8 @@ class DontAddChannel(BaseRule):
 
 class InterleaveChannel(BaseRule):
     def __init__(self):
-        self.name = "Interleave Another Channel"
-        self.optionLabels = ['Channel Number', 'Min Interleave Count', 'Max Interleave Count', 'Starting Episode']
+        self.name = LANGUAGE(30066)
+        self.optionLabels = [LANGUAGE(30067), LANGUAGE(30068), LANGUAGE(30069), LANGUAGE(30070)]
         self.optionValues = ['0', '1', '1', '1']
         self.myId = 6
         self.actions = RULES_ACTION_LIST
@@ -952,7 +952,7 @@ class InterleaveChannel(BaseRule):
 
     def getTitle(self):
         if len(self.optionValues[0]) > 0:
-            return "Interleave Channel " + self.optionValues[0]
+            return LANGUAGE(30067) + " " + self.optionValues[0]
 
         return self.name
 
@@ -1045,7 +1045,7 @@ class InterleaveChannel(BaseRule):
 
 class ForceRealTime(BaseRule):
     def __init__(self):
-        self.name = "Force Real-Time Mode"
+        self.name = LANGUAGE(30072)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 7
@@ -1067,7 +1067,7 @@ class ForceRealTime(BaseRule):
 
 class AlwaysPause(BaseRule):
     def __init__(self):
-        self.name = "Pause When Not Watching"
+        self.name = LANGUAGE(30073)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 8
@@ -1087,7 +1087,7 @@ class AlwaysPause(BaseRule):
 
 class ForceResume(BaseRule):
     def __init__(self):
-        self.name = "Force Resume Mode"
+        self.name = LANGUAGE(30074)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 9
@@ -1109,7 +1109,7 @@ class ForceResume(BaseRule):
 
 class ForceRandom(BaseRule):
     def __init__(self):
-        self.name = "Force Random Mode"
+        self.name = LANGUAGE(30075)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 10
@@ -1131,7 +1131,7 @@ class ForceRandom(BaseRule):
 
 class OnlyUnWatchedRule(BaseRule):
     def __init__(self):
-        self.name = "Only Played Unwatched Items"
+        self.name = LANGUAGE(30076)
         self.optionLabels = []
         self.optionValues = []
         self.myId = 11
@@ -1161,7 +1161,7 @@ class OnlyUnWatchedRule(BaseRule):
 
 class PlayShowInOrder(BaseRule):
     def __init__(self):
-        self.name = "Play TV Shows In Order"
+        self.name = LANGUAGE(30077)
         self.optionLabels = []
         self.optionValues = []
         self.showInfo = []
@@ -1284,8 +1284,8 @@ class PlayShowInOrder(BaseRule):
 
 class SetResetTime(BaseRule):
     def __init__(self):
-        self.name = "Reset Every x Days"
-        self.optionLabels = ['Number of Days']
+        self.name = ''.join(LANGUAGE(30078)) % 'x'
+        self.optionLabels = [LANGUAGE(30079)]
         self.optionValues = ['5']
         self.myId = 13
         self.actions = RULES_ACTION_START
@@ -1298,9 +1298,9 @@ class SetResetTime(BaseRule):
     def getTitle(self):
         if len(self.optionValues[0]) > 0:
             if self.optionValues[0] == '1':
-                return "Reset Every Day"
+                return LANGUAGE(30080)
             else:
-                return "Reset Every " + self.optionValues[0] + " Days"
+                return ''.join(LANGUAGE(30078)) % (self.optionValues[0])
 
         return self.name
 
@@ -1349,12 +1349,12 @@ class SetResetTime(BaseRule):
 
 class HandleChannelLogo(BaseRule):
     def __init__(self):
-        self.name = "Channel Logo"
-        self.optionLabels = ['Display the Logo']
-        self.optionValues = ['Yes']
+        self.name = LANGUAGE(30081)
+        self.optionLabels = [LANGUAGE(30082)]
+        self.optionValues = [LANGUAGE(107)]
         self.myId = 15
         self.actions = RULES_ACTION_OVERLAY_SET_CHANNEL | RULES_ACTION_OVERLAY_SET_CHANNEL_END
-        self.selectBoxOptions = [["Yes", "No"]]
+        self.selectBoxOptions = [[LANGUAGE(107), LANGUAGE(106)]]
 
 
     def copy(self):
@@ -1362,10 +1362,10 @@ class HandleChannelLogo(BaseRule):
 
 
     def getTitle(self):
-        if self.optionValues[0] == 'Yes':
-            return 'Display the Channel Logo'
+        if self.optionValues[0] == LANGUAGE(107):
+            return LANGUAGE(30083)
         else:
-            return 'Hide the Channel Logo'
+            return LANGUAGE(30084)
 
 
     def onAction(self, act, optionindex):
@@ -1377,7 +1377,7 @@ class HandleChannelLogo(BaseRule):
         if actionid == RULES_ACTION_OVERLAY_SET_CHANNEL:
             self.storedLogoValue = overlay.showChannelBug
 
-            if self.optionValues[0] == 'Yes':
+            if self.optionValues[0] == LANGUAGE(107):
                 overlay.showChannelBug = True
                 self.log("setting channel bug to true")
             else:
