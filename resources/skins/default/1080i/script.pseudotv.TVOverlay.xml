@@ -168,13 +168,13 @@
 			</control>
 			<!--MEDIA FLAGS-->
 			<control type="grouplist">
-				<left>1253</left>
+				<right>24</right>
 				<top>967</top>
-				<width>640</width>
+				<width>770</width>
 				<height>90</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<itemgap>25</itemgap>
+				<itemgap>20</itemgap>
 				<control type="image">
 					<width>135</width>
 					<height>90</height>
@@ -202,6 +202,14 @@
 					<aspectratio>keep</aspectratio>
 					<bordersize>7</bordersize>
 					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.AudioCodec,ptv_flags/audiocodec/,.png]</texture>
+				</control>
+				<control type="image">
+					<width>135</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<bordersize>7</bordersize>
+					<texture colordiffuse="AAFFFFFF">ptv_flags/ptv_cc.png</texture>
+					<visible>VideoPlayer.HasSubtitles</visible>
 				</control>
 			</control>
 			<!--PROGRESS-->
@@ -237,8 +245,6 @@
 		</control>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
-			<left>1695</left>
-			<top>952</top>
 			<width>161</width>
 			<height>109</height>
 			<aspectratio>keep</aspectratio>

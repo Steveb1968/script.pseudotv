@@ -102,7 +102,7 @@ msgid "Visuals"
 msgstr ""
 
 msgctxt "#30021"
-msgid " Changing channel info duration"
+msgid "Changing channel info duration"
 msgstr ""
 
 msgctxt "#30022"
@@ -211,4 +211,8 @@ msgstr ""
 
 msgctxt "#30048"
 msgid "Set watermark position"
+msgstr ""
+
+msgctxt "#30049"
+msgid "Directory channel"
 msgstr ""
