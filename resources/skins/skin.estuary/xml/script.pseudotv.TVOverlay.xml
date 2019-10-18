@@ -168,13 +168,14 @@
 			</control>
 			<!--MEDIA FLAGS-->
 			<control type="grouplist">
-				<left>1253</left>
-				<top>967</top>
-				<width>640</width>
+				<right>24</right>
+				<top>960</top>
+				<width>770</width>
 				<height>90</height>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<itemgap>25</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<itemgap>20</itemgap>
 				<control type="image">
 					<width>135</width>
 					<height>90</height>
@@ -202,6 +203,20 @@
 					<aspectratio>keep</aspectratio>
 					<bordersize>7</bordersize>
 					<texture colordiffuse="AAFFFFFF">$INFO[VideoPlayer.AudioCodec,flags/audiocodec/,.png]</texture>
+				</control>
+				<control type="button">
+					<top>15</top>
+					<width>135</width>
+					<height>60</height>
+					<aspectratio>keep</aspectratio>
+					<texturefocus colordiffuse="AAFFFFFF" border="5">flags/flag.png</texturefocus>
+					<texturenofocus colordiffuse="AAFFFFFF" border="5">flags/flag.png</texturenofocus>
+					<font>font10</font>
+					<textcolor>AAFFFFFF</textcolor>
+					<label>[B]CC[/B]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>VideoPlayer.HasSubtitles</visible>
 				</control>
 			</control>
 			<!--PROGRESS-->
@@ -234,8 +249,6 @@
 		</control>
 		<control type="image" id="103">
 			<description>Channel Bug</description>
-			<left>1695</left>
-			<top>952</top>
 			<width>161</width>
 			<height>109</height>
 			<aspectratio>keep</aspectratio>
