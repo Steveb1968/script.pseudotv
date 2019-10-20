@@ -35,7 +35,7 @@ This **ONLY** uses your existing video library to play video. It will **NOT** pl
 
 ---
 ### Controls
-There are only a few things you need to know in order to control everything. First of all, the Stop button ('X') stops the video and exits the script. You may also press the Previous Menu ('Escape\Back') button to do this (don't worry, it will prompt you to verify first). Scroll through channels using the arrow up and down keys, or alternatively by pressing Page up or down. To open the EPG, press the Select key ('Enter'). Move around using the arrow keys. Start a program by pressing Select. Pressing Previous Menu ('Escape\Back') will close the EPG. Press the info key ('I') to display or hide the info window.  When it is displayed, you can look at the previous and next shows on this channel using the arrow keys left and right.
+There are only a few things you need to know in order to control everything. First of all, the Stop button ('X') stops the video and exits the script. You may also press the Previous Menu ('Escape\Back') button to do this (don't worry, it will prompt you to verify first). Scroll through channels using the arrow up and down keys, or alternatively by pressing Page up or down. To open the EPG, press the Select key ('Enter'). Move around using the arrow keys. Start a program by pressing Select. Pressing Previous Menu ('Escape\Back') will close the EPG. Press the info key ('I') to display or hide the info window.  When it is displayed, you can look at the previous and next shows on this channel using the arrow keys left and right. To access the video osd window press the context menu key ('C\Menu'), to exit the osd press ('Escape\Back').
 
 ---
 ### Settings
@@ -55,7 +55,7 @@ There are only a few things you need to know in order to control everything. Fir
 **Visual Settings -**
 
 * **Info when Changing Channels:** Shows the current media information when changing channels. The duration of the info can be set in the sub-setting "Changing channel info duration".
-* **Always show channel watermark:** Always display the current channel logo watermark.
+* **Always show channel watermark:** Always display the current channel logo watermark. The position of the logo can be adjusted via the sub-setting "Set watermark position" (upper left, upper right, lower right, lower left).
 * **Hide year and episode information:** Removes the year (movies) and SxEP (episodes). A force channel reset is needed for the setting to take effect.  
 * **Always show channel logo in epg grid:** Shows the channel logo's in the epg grid.
 * **Channel Logo Folder:** The place where channel logos are stored.
