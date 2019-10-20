@@ -99,7 +99,7 @@ Replace *"Player.DisplayAfterSeek"* with
 ### Credits
 
 **Developer:** Jason102, Steveb.<br>
-**Code Additions:** Sranshaft, TheOddLinguist, Steveb.<br>
+**Code Additions:** Sranshaft, TheOddLinguist, Canuma, rafaelvieiras, Steveb.<br>
 **Skins:** Sranshaft, Zepfan, Steveb.<br>
 **Preset Images:** Jtucker1972.<br>
-**Languages:** CyberXaz, Machine-Sanctum, Rafael Vieira, Eng2Heb.
+**Languages:** CyberXaz, Machine-Sanctum, rafaelvieiras, Eng2Heb.
