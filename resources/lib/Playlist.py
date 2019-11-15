@@ -213,7 +213,7 @@ class Playlist:
         for i in range(self.size()):
             tmpstr = str(self.getduration(i)) + ','
             tmpstr += self.getTitle(i) + "//" + self.getepisodetitle(i) + "//" + self.getdescription(i)
-            tmpstr = tmpstr[:2036]
+            tmpstr = uni(tmpstr[:2036])
             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
             tmpstr = tmpstr + '\n' + self.getfilename(i)
             flewrite += "#EXTINF:" + tmpstr + "\n"
