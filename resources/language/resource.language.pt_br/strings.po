@@ -7,28 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2014-03-08 04:23+0000\n"
-"PO-Revision-Date: 2014-04-29 19:01-0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-10-18 22:30-0300\n"
 "Last-Translator: Rafael Vieira <contato@rafaelvieiras.com>\n"
 "Language-Team: Rafael\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_br\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.4\n"
-
-msgctxt "Addon Summary"
-msgid "Channel surfing for your video library"
-msgstr "Crie Canais de TV fictícios sua biblioteca de vídeo"
-
-msgctxt "Addon Description"
-msgid ""
-"PseudoTV acts similar to normal broadcast or cable TV, complete with "
-"multiple preset and user-defined channels and an EPG."
-msgstr ""
-"PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-"
-"ajuste múltiplo e canais definidos pelo usuário."
+"X-Generator: Poedit 2.2.4\n"
 
 msgctxt "#30000"
 msgid "General"
@@ -36,7 +24,7 @@ msgstr "Geral"
 
 msgctxt "#30001"
 msgid "Auto-off Timer"
-msgstr "Auto-off Timer"
+msgstr "Temporizador de desligamento"
 
 msgctxt "#30002"
 msgid "Force channel reset on next start"
@@ -66,8 +54,11 @@ msgctxt "#30008"
 msgid "Open Channel Configuration"
 msgstr "Abrir Configuração de Canal"
 
-#empty string with id 30009
+msgctxt "#30009"
+msgid "Hide year and episode information"
+msgstr "Ocultar ano e informações do episódio"
 
+# empty string with id 30009
 msgctxt "#30010"
 msgid "Channel Logo Folder"
 msgstr "Pasta com Logo de Canais"
@@ -113,15 +104,18 @@ msgid "Visuals"
 msgstr "Visuals"
 
 msgctxt "#30021"
-msgid "Show Season/Episode"
-msgstr "Mostrar Temporada / Episódio Número"
+msgid "Changing channel info duration"
+msgstr "Alterar duração do info do Canal"
 
 msgctxt "#30022"
 msgid "Tweaks"
-msgstr "Tweaks"
+msgstr "Ajustes"
 
-#empty string with id 30023
+msgctxt "#30023"
+msgid "Plot unavailable."
+msgstr "Trama indisponível."
 
+# empty string with id 30023
 msgctxt "#30024"
 msgid "Background Loading..."
 msgstr "Carregando em Segundo Plano..."
@@ -139,8 +133,8 @@ msgid "Activate Service"
 msgstr "Ativar o serviço"
 
 msgctxt "#30028"
-msgid "Delay Service"
-msgstr "Delay no Serviço"
+msgid "Service Delay"
+msgstr "Atraso do Serviço"
 
 msgctxt "#30029"
 msgid "Show Notification"
@@ -210,8 +204,11 @@ msgctxt "#30044"
 msgid "Playlist Media Limit"
 msgstr "Limite de mídias na Playlist"
 
+#, fuzzy
+#| msgctxt "#30045"
+#| msgid "Channel Number Colour"
 msgctxt "#30045"
-msgid "Channel Number Colour"
+msgid "OSD Channel Number Colour"
 msgstr "Cor do Número do Canal"
 
 msgctxt "#30046"
@@ -221,3 +218,172 @@ msgstr "Procure passo em frente"
 msgctxt "#30047"
 msgid "Seek step backward"
 msgstr "Procure passo para trás"
+
+msgctxt "#30048"
+msgid "Set watermark position"
+msgstr "Definir posição da marca d'água"
+
+msgctxt "#30049"
+msgid "Directory channel"
+msgstr "Diretório do canal"
+
+msgctxt "#30050"
+msgid "Set Channel Name"
+msgstr "Definir nome do Canal"
+
+msgctxt "#30051"
+msgid "New Channel Name"
+msgstr "Novo Nome do Canal"
+
+msgctxt "#30052"
+msgid "Rename Channel to"
+msgstr "Renomear Canal para"
+
+msgctxt "#30053"
+msgid "Don't Include a Show"
+msgstr "Não inclua um programa"
+
+msgctxt "#30054"
+msgid "Show Name"
+msgstr "Mostrar nome"
+
+msgctxt "#30055"
+msgid "Don't Include"
+msgstr "Não inclua"
+
+msgctxt "#30056"
+msgid "Best-Effort Channel Scheduling"
+msgstr "Programação do canal com melhor esforço"
+
+msgctxt "#30057"
+msgid "Channel Number"
+msgstr "Numero do Canal"
+
+msgctxt "#30058"
+msgid "Days of the Week (UMTWHFS)"
+msgstr "Dias da semana (UMTWHFS)"
+
+msgctxt "#30059"
+msgid "Time (HH:MM)"
+msgstr "Tempo (HH:MM)"
+
+msgctxt "#30060"
+msgid "Episode Count"
+msgstr "Contagem de episódios"
+
+msgctxt "#30061"
+msgid "Starting Episode"
+msgstr "Episódio inicial"
+
+msgctxt "#30062"
+msgid "Starting Date (DD/MM/YYYY)"
+msgstr "Data de início (DD/MM/AAAA)"
+
+msgctxt "#30063"
+msgid "Schedule Channel"
+msgstr "Agendar canal"
+
+msgctxt "#30064"
+msgid "Only Played Watched Items"
+msgstr "Apenas itens já assistidos"
+
+msgctxt "#30065"
+msgid "Don't Play This Channel"
+msgstr "Não reproduza este canal"
+
+msgctxt "#30066"
+msgid "Interleave Another Channel"
+msgstr "Intercalar outro canal"
+
+msgctxt "#30067"
+msgid "Channel Number"
+msgstr "Número do canal"
+
+msgctxt "#30068"
+msgid "Min Interleave Count"
+msgstr "Contagem mínima de intercalação"
+
+msgctxt "#30069"
+msgid "Max Interleave Count"
+msgstr "Contagem máxima de intercalação"
+
+msgctxt "#30070"
+msgid "Starting Episode"
+msgstr "Episódio inicial"
+
+msgctxt "#30071"
+msgid "Interleave Channel"
+msgstr "Canal de intercalação"
+
+msgctxt "#30072"
+msgid "Force Real-Time Mode"
+msgstr "Forçar modo em tempo real"
+
+msgctxt "#30073"
+msgid "Pause When Not Watching"
+msgstr "Pausar quando não assistindo"
+
+msgctxt "#30074"
+msgid "Force Resume Mode"
+msgstr "Forçar modo de resumo"
+
+msgctxt "#30075"
+msgid "Force Random Mode"
+msgstr "Forçar modo aleatório"
+
+msgctxt "#30076"
+msgid "Only Played Unwatched Items"
+msgstr "Apenas itens não assistidos"
+
+msgctxt "#30077"
+msgid "Play TV Shows In Order"
+msgstr "Reproduzir programas de TV em ordem"
+
+msgctxt "#30078"
+msgid "Reset Every %s Days"
+msgstr "Redefinir a cada %s dias"
+
+msgctxt "#30079"
+msgid "Number of Days"
+msgstr "Número de dias"
+
+msgctxt "#30080"
+msgid "Reset Every Day"
+msgstr "Redefinir todos os dias"
+
+# empty string with id 30009
+msgctxt "#30081"
+msgid "Channel Logo"
+msgstr "Logotipo do canal"
+
+msgctxt "#30082"
+msgid "Display the Logo"
+msgstr "Exibir o logotipo"
+
+msgctxt "#30083"
+msgid "Display the Channel Logo"
+msgstr "Exibir o logotipo do canal"
+
+msgctxt "#30084"
+msgid "Hide the Channel Logo"
+msgstr "Ocultar o logotipo do canal"
+
+#~ msgctxt "Addon Summary"
+#~ msgid "Channel surfing for your video library"
+#~ msgstr "Crie Canais de TV fictícios sua biblioteca de vídeo"
+
+#~ msgctxt "Addon Description"
+#~ msgid ""
+#~ "PseudoTV acts similar to normal broadcast or cable TV, complete with "
+#~ "multiple preset and user-defined channels and an EPG."
+#~ msgstr ""
+#~ "PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-"
+#~ "ajuste múltiplo e canais definidos pelo usuário."
+
+#~ msgctxt "#30021"
+#~ msgid "Show Season/Episode"
+#~ msgstr "Mostrar Temporada / Episódio Número"
+
+#~ msgctxt "#30028"
+#~ msgid "Delay Service"
+#~ msgstr "Delay no Serviço"
