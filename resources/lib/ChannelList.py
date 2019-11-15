@@ -590,7 +590,7 @@ class ChannelList:
         for i in range(len(self.showList)):
             if self.showList[i][1].lower() == network:
                 theshow = self.cleanString(self.showList[i][0])
-                fle.write('        <value>' + theshow + '</value>\n')
+                fle.write('        <value>' + uni(theshow) + '</value>\n')
                 added = True
 
         fle.write('    </rule>\n')
@@ -615,7 +615,7 @@ class ChannelList:
         except:
             pass
 
-        flename = xbmc.makeLegalFilename(GEN_CHAN_LOC + 'Show_' + show + '_' + order + '.xsp')
+        flename = xbmc.makeLegalFilename(GEN_CHAN_LOC + 'Show_' + uni(show) + '_' + order + '.xsp')
 
         try:
             fle = FileAccess.open(flename, "w")
@@ -626,7 +626,7 @@ class ChannelList:
         self.writeXSPHeader(fle, 'episodes', self.getChannelName(6, show))
         show = self.cleanString(show)
         fle.write('    <rule field="tvshow" operator="is">\n')
-        fle.write('        <value>' + show + '</value>\n')
+        fle.write('        <value>' + uni(show) + '</value>\n')
         fle.write('    </rule>\n')
         self.writeXSPFooter(fle, 0, order)
         fle.close()
@@ -665,7 +665,7 @@ class ChannelList:
         self.writeXSPHeader(fle, pltype, self.getChannelName(chtype, genre))
         genre = self.cleanString(genre)
         fle.write('    <rule field="genre" operator="is">\n')
-        fle.write('        <value>' + genre + '</value>\n')
+        fle.write('        <value>' + uni(genre) + '</value>\n')
         fle.write('    </rule>\n')
         self.writeXSPFooter(fle, 0, "random")
         fle.close()
@@ -684,7 +684,7 @@ class ChannelList:
         self.writeXSPHeader(fle, "movies", self.getChannelName(2, studio))
         studio = self.cleanString(studio)
         fle.write('    <rule field="studio" operator="is">\n')
-        fle.write('        <value>' + studio + '</value>\n')
+        fle.write('        <value>' + uni(studio) + '</value>\n')
         fle.write('    </rule>\n')
         self.writeXSPFooter(fle, 0, "random")
         fle.close()
@@ -723,9 +723,9 @@ class ChannelList:
                 afile = os.path.basename(f)
                 afile, ext = os.path.splitext(afile)
                 tmpstr = str(duration) + ','
-                tmpstr += afile + "//" + "//" + xbmc.getLocalizedString(21801) + ': ' + setting1 + "\n"
+                tmpstr += afile + "//" + "//" + LANGUAGE(30049) + (' "{}"'.format(setting1)) + "\n"
                 tmpstr += setting1 + os.path.basename(f)
-                tmpstr = tmpstr[:2036]
+                tmpstr = uni(tmpstr[:2036])
                 fileList.append(tmpstr)
 
         if filecount == 0:
@@ -1086,7 +1086,7 @@ class ChannelList:
                                     else:
                                         tmpstr += "//" + "//" + theplot
 
-                            tmpstr = tmpstr[:2036]
+                            tmpstr = uni(tmpstr[:2036])
                             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
                             tmpstr = tmpstr + '\n' + match.group(1).replace("\\\\", "\\")
 
