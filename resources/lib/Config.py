@@ -518,23 +518,23 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
     def getChanTypeLabel(self, chantype):
         if chantype == 0:
-            return "Custom Playlist"
+            return LANGUAGE(30181)
         elif chantype == 1:
-            return "TV Network"
+            return LANGUAGE(30182)
         elif chantype == 2:
-            return "Movie Studio"
+            return LANGUAGE(30183)
         elif chantype == 3:
-            return "TV Genre"
+            return LANGUAGE(30184)
         elif chantype == 4:
-            return "Movie Genre"
+            return LANGUAGE(30185)
         elif chantype == 5:
-            return "Mixed Genre"
+            return LANGUAGE(30186)
         elif chantype == 6:
-            return "TV Show"
+            return LANGUAGE(30187)
         elif chantype == 7:
-            return "Directory"
+            return LANGUAGE(30189)
         elif chantype == 9999:
-            return "None"
+            return LANGUAGE(30164)
 
         return ''
 

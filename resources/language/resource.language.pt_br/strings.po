@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2019-10-18 22:30-0300\n"
+"PO-Revision-Date: 2019-11-16 01:08-0300\n"
 "Last-Translator: Rafael Vieira <contato@rafaelvieiras.com>\n"
 "Language-Team: Rafael\n"
 "Language: pt_BR\n"
@@ -367,6 +367,418 @@ msgstr "Exibir o logotipo do canal"
 msgctxt "#30084"
 msgid "Hide the Channel Logo"
 msgstr "Ocultar o logotipo do canal"
+
+msgctxt "#30085"
+msgid "Disable"
+msgstr "Desativado"
+
+msgctxt "#30086"
+msgid "30 min"
+msgstr "30 minutos"
+
+msgctxt "#30087"
+msgid "60 min"
+msgstr "60 minutos"
+
+msgctxt "#30088"
+msgid "90 min"
+msgstr "90 minutos"
+
+msgctxt "#30089"
+msgid "120 min"
+msgstr "120 minutos"
+
+msgctxt "#30090"
+msgid "150 min"
+msgstr "150 minutos"
+
+msgctxt "#30091"
+msgid "180 min"
+msgstr "180 minutos"
+
+msgctxt "#30092"
+msgid "210 min"
+msgstr "210 minutos"
+
+msgctxt "#30093"
+msgid "240 min"
+msgstr "240 minutos"
+
+msgctxt "#30094"
+msgid "Automatic"
+msgstr "Automático"
+
+msgctxt "#30095"
+msgid "Daily"
+msgstr "Diário"
+
+msgctxt "#30096"
+msgid "Weekly"
+msgstr "Semanal"
+
+msgctxt "#30097"
+msgid "Monthly"
+msgstr "Mensal"
+
+msgctxt "#30098"
+msgid "Never"
+msgstr "Nunca"
+
+msgctxt "#30099"
+msgid "Every Time"
+msgstr "Toda Vez"
+
+msgctxt "#30100"
+msgid "Resume"
+msgstr "Retomar"
+
+msgctxt "#30101"
+msgid "Real Time"
+msgstr "Tempo Real"
+
+msgctxt "#30102"
+msgid "Random"
+msgstr "Aleatório"
+
+msgctxt "#30103"
+msgid "On"
+msgstr "Ligado"
+
+msgctxt "#30104"
+msgid "Minimum Use"
+msgstr "Uso Mínimo"
+
+msgctxt "#30105"
+msgid "Off"
+msgstr "Desligado"
+
+msgctxt "#30106"
+msgid "2 sec"
+msgstr "2 seg"
+
+msgctxt "#30107"
+msgid "3 sec"
+msgstr "﻿3 seg"
+
+msgctxt "#30108"
+msgid "4 sec"
+msgstr "4 seg"
+
+msgctxt "#30109"
+msgid "5 sec"
+msgstr "5 seg"
+
+msgctxt "#30110"
+msgid "6 sec"
+msgstr "6 seg"
+
+msgctxt "#30111"
+msgid "7 sec"
+msgstr "7 seg"
+
+msgctxt "#30112"
+msgid "8 sec"
+msgstr "8 seg"
+
+msgctxt "#30113"
+msgid "9 sec"
+msgstr "9 seg"
+
+msgctxt "#30114"
+msgid "10 sec"
+msgstr "10 segundos"
+
+msgctxt "#30115"
+msgid "11 sec"
+msgstr "11 segundos"
+
+msgctxt "#30116"
+msgid "12 sec"
+msgstr "12 segundos"
+
+msgctxt "#30117"
+msgid "upper left"
+msgstr "superior esquerdo"
+
+msgctxt "#30118"
+msgid "upper right"
+msgstr "superior direito"
+
+msgctxt "#30119"
+msgid "lower right"
+msgstr "inferior direito"
+
+msgctxt "#30120"
+msgid "lower left"
+msgstr "inferior esquerdo"
+
+msgctxt "#30121"
+msgid "12 Hour"
+msgstr "12 Horas"
+
+msgctxt "#30122"
+msgid "24 Hour"
+msgstr "24 Horas"
+
+msgctxt "#30123"
+msgid "15 sec"
+msgstr "15 segundos"
+
+msgctxt "#30124"
+msgid "30 sec"
+msgstr "30 segundos"
+
+msgctxt "#30125"
+msgid "60 sec"
+msgstr "60 segundos"
+
+msgctxt "#30126"
+msgid "90 sec"
+msgstr "90 segundos"
+
+msgctxt "#30127"
+msgid "120 sec"
+msgstr "120 segundos"
+
+msgctxt "#30128"
+msgid "180 sec"
+msgstr "180 segundos"
+
+msgctxt "#30129"
+msgid "240 sec"
+msgstr "240 segundos"
+
+msgctxt "#30130"
+msgid "300 sec"
+msgstr "300 segundos"
+
+msgctxt "#30131"
+msgid "360 sec"
+msgstr "360 segundos"
+
+msgctxt "#30132"
+msgid "10 items"
+msgstr "10 itens"
+
+msgctxt "#30133"
+msgid "25 items"
+msgstr "25 itens"
+
+msgctxt "#30134"
+msgid "50 items"
+msgstr "50 itens"
+
+msgctxt "#30135"
+msgid "100 items"
+msgstr "100 itens"
+
+msgctxt "#30136"
+msgid "250 items"
+msgstr "250 itens"
+
+msgctxt "#30137"
+msgid "500 items"
+msgstr "500 itens"
+
+msgctxt "#30138"
+msgid "1000 items"
+msgstr "1000 itens"
+
+msgctxt "#30139"
+msgid "No limit"
+msgstr "Sem limite"
+
+msgctxt "#30140"
+msgid "Red"
+msgstr "Vermelho"
+
+msgctxt "#30141"
+msgid "Green"
+msgstr "Verde"
+
+msgctxt "#30142"
+msgid "Blue"
+msgstr "Azul"
+
+msgctxt "#30143"
+msgid "Yellow"
+msgstr "Amarelo"
+
+msgctxt "#30144"
+msgid "Cyan"
+msgstr "Ciano"
+
+msgctxt "#30145"
+msgid "Orange"
+msgstr "Laranja"
+
+msgctxt "#30146"
+msgid "Magenta"
+msgstr "Magenta"
+
+msgctxt "#30147"
+msgid "Gray"
+msgstr "Cinza"
+
+msgctxt "#30148"
+msgid "White"
+msgstr "Branco"
+
+msgctxt "#30149"
+msgid "10 sec"
+msgstr "10 seg"
+
+msgctxt "#30150"
+msgid "30 sec"
+msgstr "30 seg"
+
+msgctxt "#30151"
+msgid "60 sec"
+msgstr "60 seb"
+
+msgctxt "#30152"
+msgid "3 min"
+msgstr "3 minutos"
+
+msgctxt "#30153"
+msgid "5 min"
+msgstr "5 minutos"
+
+msgctxt "#30154"
+msgid "10 min"
+msgstr "10 minutos"
+
+msgctxt "#30155"
+msgid "30 min"
+msgstr "30 minutos"
+
+msgctxt "#30156"
+msgid "-10 sec"
+msgstr "-10 seg"
+
+msgctxt "#30157"
+msgid "-30 sec"
+msgstr "-30 seg"
+
+msgctxt "#30158"
+msgid "-60 sec"
+msgstr "-60 seg"
+
+msgctxt "#30159"
+msgid "-3 min"
+msgstr "-3 minutos"
+
+msgctxt "#30160"
+msgid "-5 min"
+msgstr "-5 minutos"
+
+msgctxt "#30161"
+msgid "-10 min"
+msgstr "-10 minutos"
+
+msgctxt "#30162"
+msgid "-30 min"
+msgstr "-30 minutos"
+
+msgctxt "#30163"
+msgid "20 sec"
+msgstr "20 seg"
+
+msgctxt "#30164"
+msgid "None"
+msgstr "Nenhum"
+
+msgctxt "#30165"
+msgid "waiting for file lock"
+msgstr "aguardando bloqueio de arquivo"
+
+msgctxt "#30166"
+msgid "Loading channel %s"
+msgstr "Carregando canal %s"
+
+msgctxt "#30167"
+msgid "Updating channel list"
+msgstr "Atualizando lista de canais"
+
+msgctxt "#30168"
+msgid "Updating channel %s"
+msgstr "Atualizando o canal %s"
+
+msgctxt "#30170"
+msgid "Update complete"
+msgstr "Atualização completa"
+
+msgctxt "#30171"
+msgid "reading playlist"
+msgstr "lendo lista de reprodução"
+
+msgctxt "#30172"
+msgid "adding videos"
+msgstr "adicionando vídeos"
+
+msgctxt "#30173"
+msgid "clearing history"
+msgstr "limpando histórico"
+
+msgctxt "#30174"
+msgid "getting file list"
+msgstr "obtendo lista de arquivos"
+
+msgctxt "#30175"
+msgid "added %s entry"
+msgstr "adicionou %s entrada"
+
+msgctxt "#30176"
+msgid "added %s entries"
+msgstr "adicionou %s entradas"
+
+msgctxt "#30177"
+msgid "reading TV data"
+msgstr "lendo dados de TV"
+
+msgctxt "#30178"
+msgid "reading movie data"
+msgstr "lendo dados do filme"
+
+msgctxt "#30179"
+msgid "querying database"
+msgstr "consultando banco de dados"
+
+msgctxt "#30180"
+msgid "processing rule %s"
+msgstr "regra de processamento %s"
+
+msgctxt "#30181"
+msgid "Custom Playlist"
+msgstr "Lista de reprodução personalizada"
+
+msgctxt "#30182"
+msgid "TV Network"
+msgstr "Rede de TV"
+
+msgctxt "#30183"
+msgid "Movie Studio"
+msgstr "Estúdio de filme"
+
+msgctxt "#30184"
+msgid "TV Genre"
+msgstr "Gênero de TV"
+
+msgctxt "#30185"
+msgid "Movie Genre"
+msgstr "Gênero de filme"
+
+msgctxt "#30186"
+msgid "Mixed Genre"
+msgstr "Gênero Misto"
+
+msgctxt "#30187"
+msgid "TV Show"
+msgstr "Seriado"
+
+msgctxt "#30189"
+msgid "Directory"
+msgstr "Diretório"
 
 #~ msgctxt "Addon Summary"
 #~ msgid "Channel surfing for your video library"
