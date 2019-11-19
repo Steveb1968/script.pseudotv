@@ -1,2 +1,3 @@
 *.pyo
 *Thumbs.db
+.vscode

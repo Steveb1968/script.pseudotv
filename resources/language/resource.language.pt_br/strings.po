@@ -7,28 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2014-03-08 04:23+0000\n"
-"PO-Revision-Date: 2014-04-29 19:01-0300\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-11-16 01:08-0300\n"
 "Last-Translator: Rafael Vieira <contato@rafaelvieiras.com>\n"
 "Language-Team: Rafael\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_br\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.4\n"
-
-msgctxt "Addon Summary"
-msgid "Channel surfing for your video library"
-msgstr "Crie Canais de TV fictícios sua biblioteca de vídeo"
-
-msgctxt "Addon Description"
-msgid ""
-"PseudoTV acts similar to normal broadcast or cable TV, complete with "
-"multiple preset and user-defined channels and an EPG."
-msgstr ""
-"PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-"
-"ajuste múltiplo e canais definidos pelo usuário."
+"X-Generator: Poedit 2.2.4\n"
 
 msgctxt "#30000"
 msgid "General"
@@ -36,7 +24,7 @@ msgstr "Geral"
 
 msgctxt "#30001"
 msgid "Auto-off Timer"
-msgstr "Auto-off Timer"
+msgstr "Temporizador de desligamento"
 
 msgctxt "#30002"
 msgid "Force channel reset on next start"
@@ -66,8 +54,11 @@ msgctxt "#30008"
 msgid "Open Channel Configuration"
 msgstr "Abrir Configuração de Canal"
 
-#empty string with id 30009
+msgctxt "#30009"
+msgid "Hide year and episode information"
+msgstr "Ocultar ano e informações do episódio"
 
+# empty string with id 30009
 msgctxt "#30010"
 msgid "Channel Logo Folder"
 msgstr "Pasta com Logo de Canais"
@@ -113,15 +104,18 @@ msgid "Visuals"
 msgstr "Visuals"
 
 msgctxt "#30021"
-msgid "Show Season/Episode"
-msgstr "Mostrar Temporada / Episódio Número"
+msgid "Changing channel info duration"
+msgstr "Alterar duração do info do Canal"
 
 msgctxt "#30022"
 msgid "Tweaks"
-msgstr "Tweaks"
+msgstr "Ajustes"
 
-#empty string with id 30023
+msgctxt "#30023"
+msgid "Plot unavailable."
+msgstr "Trama indisponível."
 
+# empty string with id 30023
 msgctxt "#30024"
 msgid "Background Loading..."
 msgstr "Carregando em Segundo Plano..."
@@ -139,8 +133,8 @@ msgid "Activate Service"
 msgstr "Ativar o serviço"
 
 msgctxt "#30028"
-msgid "Delay Service"
-msgstr "Delay no Serviço"
+msgid "Service Delay"
+msgstr "Atraso do Serviço"
 
 msgctxt "#30029"
 msgid "Show Notification"
@@ -210,8 +204,11 @@ msgctxt "#30044"
 msgid "Playlist Media Limit"
 msgstr "Limite de mídias na Playlist"
 
+#, fuzzy
+#| msgctxt "#30045"
+#| msgid "Channel Number Colour"
 msgctxt "#30045"
-msgid "Channel Number Colour"
+msgid "OSD Channel Number Colour"
 msgstr "Cor do Número do Canal"
 
 msgctxt "#30046"
@@ -221,3 +218,584 @@ msgstr "Procure passo em frente"
 msgctxt "#30047"
 msgid "Seek step backward"
 msgstr "Procure passo para trás"
+
+msgctxt "#30048"
+msgid "Set watermark position"
+msgstr "Definir posição da marca d'água"
+
+msgctxt "#30049"
+msgid "Directory channel"
+msgstr "Diretório do canal"
+
+msgctxt "#30050"
+msgid "Set Channel Name"
+msgstr "Definir nome do Canal"
+
+msgctxt "#30051"
+msgid "New Channel Name"
+msgstr "Novo Nome do Canal"
+
+msgctxt "#30052"
+msgid "Rename Channel to"
+msgstr "Renomear Canal para"
+
+msgctxt "#30053"
+msgid "Don't Include a Show"
+msgstr "Não inclua um programa"
+
+msgctxt "#30054"
+msgid "Show Name"
+msgstr "Mostrar nome"
+
+msgctxt "#30055"
+msgid "Don't Include"
+msgstr "Não inclua"
+
+msgctxt "#30056"
+msgid "Best-Effort Channel Scheduling"
+msgstr "Programação do canal com melhor esforço"
+
+msgctxt "#30057"
+msgid "Channel Number"
+msgstr "Numero do Canal"
+
+msgctxt "#30058"
+msgid "Days of the Week (UMTWHFS)"
+msgstr "Dias da semana (UMTWHFS)"
+
+msgctxt "#30059"
+msgid "Time (HH:MM)"
+msgstr "Tempo (HH:MM)"
+
+msgctxt "#30060"
+msgid "Episode Count"
+msgstr "Contagem de episódios"
+
+msgctxt "#30061"
+msgid "Starting Episode"
+msgstr "Episódio inicial"
+
+msgctxt "#30062"
+msgid "Starting Date (DD/MM/YYYY)"
+msgstr "Data de início (DD/MM/AAAA)"
+
+msgctxt "#30063"
+msgid "Schedule Channel"
+msgstr "Agendar canal"
+
+msgctxt "#30064"
+msgid "Only Played Watched Items"
+msgstr "Apenas itens já assistidos"
+
+msgctxt "#30065"
+msgid "Don't Play This Channel"
+msgstr "Não reproduza este canal"
+
+msgctxt "#30066"
+msgid "Interleave Another Channel"
+msgstr "Intercalar outro canal"
+
+msgctxt "#30067"
+msgid "Channel Number"
+msgstr "Número do canal"
+
+msgctxt "#30068"
+msgid "Min Interleave Count"
+msgstr "Contagem mínima de intercalação"
+
+msgctxt "#30069"
+msgid "Max Interleave Count"
+msgstr "Contagem máxima de intercalação"
+
+msgctxt "#30070"
+msgid "Starting Episode"
+msgstr "Episódio inicial"
+
+msgctxt "#30071"
+msgid "Interleave Channel"
+msgstr "Canal de intercalação"
+
+msgctxt "#30072"
+msgid "Force Real-Time Mode"
+msgstr "Forçar modo em tempo real"
+
+msgctxt "#30073"
+msgid "Pause When Not Watching"
+msgstr "Pausar quando não assistindo"
+
+msgctxt "#30074"
+msgid "Force Resume Mode"
+msgstr "Forçar modo de resumo"
+
+msgctxt "#30075"
+msgid "Force Random Mode"
+msgstr "Forçar modo aleatório"
+
+msgctxt "#30076"
+msgid "Only Played Unwatched Items"
+msgstr "Apenas itens não assistidos"
+
+msgctxt "#30077"
+msgid "Play TV Shows In Order"
+msgstr "Reproduzir programas de TV em ordem"
+
+msgctxt "#30078"
+msgid "Reset Every %s Days"
+msgstr "Redefinir a cada %s dias"
+
+msgctxt "#30079"
+msgid "Number of Days"
+msgstr "Número de dias"
+
+msgctxt "#30080"
+msgid "Reset Every Day"
+msgstr "Redefinir todos os dias"
+
+# empty string with id 30009
+msgctxt "#30081"
+msgid "Channel Logo"
+msgstr "Logotipo do canal"
+
+msgctxt "#30082"
+msgid "Display the Logo"
+msgstr "Exibir o logotipo"
+
+msgctxt "#30083"
+msgid "Display the Channel Logo"
+msgstr "Exibir o logotipo do canal"
+
+msgctxt "#30084"
+msgid "Hide the Channel Logo"
+msgstr "Ocultar o logotipo do canal"
+
+msgctxt "#30085"
+msgid "Disable"
+msgstr "Desativado"
+
+msgctxt "#30086"
+msgid "30 min"
+msgstr "30 minutos"
+
+msgctxt "#30087"
+msgid "60 min"
+msgstr "60 minutos"
+
+msgctxt "#30088"
+msgid "90 min"
+msgstr "90 minutos"
+
+msgctxt "#30089"
+msgid "120 min"
+msgstr "120 minutos"
+
+msgctxt "#30090"
+msgid "150 min"
+msgstr "150 minutos"
+
+msgctxt "#30091"
+msgid "180 min"
+msgstr "180 minutos"
+
+msgctxt "#30092"
+msgid "210 min"
+msgstr "210 minutos"
+
+msgctxt "#30093"
+msgid "240 min"
+msgstr "240 minutos"
+
+msgctxt "#30094"
+msgid "Automatic"
+msgstr "Automático"
+
+msgctxt "#30095"
+msgid "Daily"
+msgstr "Diário"
+
+msgctxt "#30096"
+msgid "Weekly"
+msgstr "Semanal"
+
+msgctxt "#30097"
+msgid "Monthly"
+msgstr "Mensal"
+
+msgctxt "#30098"
+msgid "Never"
+msgstr "Nunca"
+
+msgctxt "#30099"
+msgid "Every Time"
+msgstr "Toda Vez"
+
+msgctxt "#30100"
+msgid "Resume"
+msgstr "Retomar"
+
+msgctxt "#30101"
+msgid "Real Time"
+msgstr "Tempo Real"
+
+msgctxt "#30102"
+msgid "Random"
+msgstr "Aleatório"
+
+msgctxt "#30103"
+msgid "On"
+msgstr "Ligado"
+
+msgctxt "#30104"
+msgid "Minimum Use"
+msgstr "Uso Mínimo"
+
+msgctxt "#30105"
+msgid "Off"
+msgstr "Desligado"
+
+msgctxt "#30106"
+msgid "2 sec"
+msgstr "2 seg"
+
+msgctxt "#30107"
+msgid "3 sec"
+msgstr "﻿3 seg"
+
+msgctxt "#30108"
+msgid "4 sec"
+msgstr "4 seg"
+
+msgctxt "#30109"
+msgid "5 sec"
+msgstr "5 seg"
+
+msgctxt "#30110"
+msgid "6 sec"
+msgstr "6 seg"
+
+msgctxt "#30111"
+msgid "7 sec"
+msgstr "7 seg"
+
+msgctxt "#30112"
+msgid "8 sec"
+msgstr "8 seg"
+
+msgctxt "#30113"
+msgid "9 sec"
+msgstr "9 seg"
+
+msgctxt "#30114"
+msgid "10 sec"
+msgstr "10 segundos"
+
+msgctxt "#30115"
+msgid "11 sec"
+msgstr "11 segundos"
+
+msgctxt "#30116"
+msgid "12 sec"
+msgstr "12 segundos"
+
+msgctxt "#30117"
+msgid "upper left"
+msgstr "superior esquerdo"
+
+msgctxt "#30118"
+msgid "upper right"
+msgstr "superior direito"
+
+msgctxt "#30119"
+msgid "lower right"
+msgstr "inferior direito"
+
+msgctxt "#30120"
+msgid "lower left"
+msgstr "inferior esquerdo"
+
+msgctxt "#30121"
+msgid "12 Hour"
+msgstr "12 Horas"
+
+msgctxt "#30122"
+msgid "24 Hour"
+msgstr "24 Horas"
+
+msgctxt "#30123"
+msgid "15 sec"
+msgstr "15 segundos"
+
+msgctxt "#30124"
+msgid "30 sec"
+msgstr "30 segundos"
+
+msgctxt "#30125"
+msgid "60 sec"
+msgstr "60 segundos"
+
+msgctxt "#30126"
+msgid "90 sec"
+msgstr "90 segundos"
+
+msgctxt "#30127"
+msgid "120 sec"
+msgstr "120 segundos"
+
+msgctxt "#30128"
+msgid "180 sec"
+msgstr "180 segundos"
+
+msgctxt "#30129"
+msgid "240 sec"
+msgstr "240 segundos"
+
+msgctxt "#30130"
+msgid "300 sec"
+msgstr "300 segundos"
+
+msgctxt "#30131"
+msgid "360 sec"
+msgstr "360 segundos"
+
+msgctxt "#30132"
+msgid "10 items"
+msgstr "10 itens"
+
+msgctxt "#30133"
+msgid "25 items"
+msgstr "25 itens"
+
+msgctxt "#30134"
+msgid "50 items"
+msgstr "50 itens"
+
+msgctxt "#30135"
+msgid "100 items"
+msgstr "100 itens"
+
+msgctxt "#30136"
+msgid "250 items"
+msgstr "250 itens"
+
+msgctxt "#30137"
+msgid "500 items"
+msgstr "500 itens"
+
+msgctxt "#30138"
+msgid "1000 items"
+msgstr "1000 itens"
+
+msgctxt "#30139"
+msgid "No limit"
+msgstr "Sem limite"
+
+msgctxt "#30140"
+msgid "Red"
+msgstr "Vermelho"
+
+msgctxt "#30141"
+msgid "Green"
+msgstr "Verde"
+
+msgctxt "#30142"
+msgid "Blue"
+msgstr "Azul"
+
+msgctxt "#30143"
+msgid "Yellow"
+msgstr "Amarelo"
+
+msgctxt "#30144"
+msgid "Cyan"
+msgstr "Ciano"
+
+msgctxt "#30145"
+msgid "Orange"
+msgstr "Laranja"
+
+msgctxt "#30146"
+msgid "Magenta"
+msgstr "Magenta"
+
+msgctxt "#30147"
+msgid "Gray"
+msgstr "Cinza"
+
+msgctxt "#30148"
+msgid "White"
+msgstr "Branco"
+
+msgctxt "#30149"
+msgid "10 sec"
+msgstr "10 seg"
+
+msgctxt "#30150"
+msgid "30 sec"
+msgstr "30 seg"
+
+msgctxt "#30151"
+msgid "60 sec"
+msgstr "60 seb"
+
+msgctxt "#30152"
+msgid "3 min"
+msgstr "3 minutos"
+
+msgctxt "#30153"
+msgid "5 min"
+msgstr "5 minutos"
+
+msgctxt "#30154"
+msgid "10 min"
+msgstr "10 minutos"
+
+msgctxt "#30155"
+msgid "30 min"
+msgstr "30 minutos"
+
+msgctxt "#30156"
+msgid "-10 sec"
+msgstr "-10 seg"
+
+msgctxt "#30157"
+msgid "-30 sec"
+msgstr "-30 seg"
+
+msgctxt "#30158"
+msgid "-60 sec"
+msgstr "-60 seg"
+
+msgctxt "#30159"
+msgid "-3 min"
+msgstr "-3 minutos"
+
+msgctxt "#30160"
+msgid "-5 min"
+msgstr "-5 minutos"
+
+msgctxt "#30161"
+msgid "-10 min"
+msgstr "-10 minutos"
+
+msgctxt "#30162"
+msgid "-30 min"
+msgstr "-30 minutos"
+
+msgctxt "#30163"
+msgid "20 sec"
+msgstr "20 seg"
+
+msgctxt "#30164"
+msgid "None"
+msgstr "Nenhum"
+
+msgctxt "#30165"
+msgid "waiting for file lock"
+msgstr "aguardando bloqueio de arquivo"
+
+msgctxt "#30166"
+msgid "Loading channel %s"
+msgstr "Carregando canal %s"
+
+msgctxt "#30167"
+msgid "Updating channel list"
+msgstr "Atualizando lista de canais"
+
+msgctxt "#30168"
+msgid "Updating channel %s"
+msgstr "Atualizando o canal %s"
+
+msgctxt "#30170"
+msgid "Update complete"
+msgstr "Atualização completa"
+
+msgctxt "#30171"
+msgid "reading playlist"
+msgstr "lendo lista de reprodução"
+
+msgctxt "#30172"
+msgid "adding videos"
+msgstr "adicionando vídeos"
+
+msgctxt "#30173"
+msgid "clearing history"
+msgstr "limpando histórico"
+
+msgctxt "#30174"
+msgid "getting file list"
+msgstr "obtendo lista de arquivos"
+
+msgctxt "#30175"
+msgid "added %s entry"
+msgstr "adicionou %s entrada"
+
+msgctxt "#30176"
+msgid "added %s entries"
+msgstr "adicionou %s entradas"
+
+msgctxt "#30177"
+msgid "reading TV data"
+msgstr "lendo dados de TV"
+
+msgctxt "#30178"
+msgid "reading movie data"
+msgstr "lendo dados do filme"
+
+msgctxt "#30179"
+msgid "querying database"
+msgstr "consultando banco de dados"
+
+msgctxt "#30180"
+msgid "processing rule %s"
+msgstr "regra de processamento %s"
+
+msgctxt "#30181"
+msgid "Custom Playlist"
+msgstr "Lista de reprodução personalizada"
+
+msgctxt "#30182"
+msgid "TV Network"
+msgstr "Rede de TV"
+
+msgctxt "#30183"
+msgid "Movie Studio"
+msgstr "Estúdio de filme"
+
+msgctxt "#30184"
+msgid "TV Genre"
+msgstr "Gênero de TV"
+
+msgctxt "#30185"
+msgid "Movie Genre"
+msgstr "Gênero de filme"
+
+msgctxt "#30186"
+msgid "Mixed Genre"
+msgstr "Gênero Misto"
+
+msgctxt "#30187"
+msgid "TV Show"
+msgstr "Seriado"
+
+msgctxt "#30189"
+msgid "Directory"
+msgstr "Diretório"
+
+#~ msgctxt "Addon Summary"
+#~ msgid "Channel surfing for your video library"
+#~ msgstr "Crie Canais de TV fictícios sua biblioteca de vídeo"
+
+#~ msgctxt "Addon Description"
+#~ msgid ""
+#~ "PseudoTV acts similar to normal broadcast or cable TV, complete with "
+#~ "multiple preset and user-defined channels and an EPG."
+#~ msgstr ""
+#~ "PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-"
+#~ "ajuste múltiplo e canais definidos pelo usuário."
+
+#~ msgctxt "#30021"
+#~ msgid "Show Season/Episode"
+#~ msgstr "Mostrar Temporada / Episódio Número"
+
+#~ msgctxt "#30028"
+#~ msgid "Delay Service"
+#~ msgstr "Delay no Serviço"

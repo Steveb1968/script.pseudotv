@@ -3,38 +3,38 @@
 	<category label="30000">
 		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/resources/lib/Config.py)"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
-		<setting id="AutoOff" type="enum" label="30001" values="Disable|30 min|60 min|90 min|120 min|150 min|180 min|210 min|240 min" default="0"/>
-		<setting id="ChannelResetSetting" type="enum" label="30004" values="Automatic|Daily|Weekly|Monthly|Never|Every Time" default="0"/>
-		<setting id="StartMode" type="enum" label="30011" values="Resume|Real Time|Random" default="1" />
-		<setting id="ThreadMode" type="enum" label="30012" values="On|Minimum Use|Off" default="1" />
+		<setting id="AutoOff" type="enum" label="30001" lvalues="30085|30086|30087|30088|30089|30090|30091|30092|30093" default="0"/>
+		<setting id="ChannelResetSetting" type="enum" label="30004" lvalues="30094|30095|30096|30097|30098|30099" default="0"/>
+		<setting id="StartMode" type="enum" label="30011" lvalues="30100|30101|30102" default="1" />
+		<setting id="ThreadMode" type="enum" label="30012" lvalues="30103|30104|30105" default="1" />
 		<setting id="ChannelSharing" type="bool" label="30015" default="false"/>
 		<setting id="SettingsFolder" subsetting="true" type="folder" source="auto" visible="eq(-1,true)" label="30013" default="" />
 	</category>
 
 	<category label="30020">
 		<setting id="InfoOnChange" type="bool" label="30003" default="false"/>
-		<setting id="InfoLength" type="enum" subsetting="true" label="30021" visible="eq(-1,true)" values="2 sec|3 sec|4 sec|5 sec|6 sec|7 sec|8 sec|9 sec|10 sec|11 sec|12 sec" default="8"/>
+		<setting id="InfoLength" type="enum" subsetting="true" label="30021" visible="eq(-1,true)" lvalues="30106|30107|30108|30109|30110|30111|30112|30113|30114|30115|30116" default="8"/>
 		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
-        <setting id="ChannelBugPosition" type="enum" subsetting="true" label="30048" visible="eq(-1,true)" values="upper left|upper right|lower right|lower left" default="2"/>
+        <setting id="ChannelBugPosition" type="enum" subsetting="true" label="30048" visible="eq(-1,true)" lvalues="30117|30118|30119|30120" default="2"/>
 		<setting id="HideYearEpInfo" type="bool" label="30009" default="false"/>
 		<setting id="ShowEpgLogo" type="bool" label="30007" default="true"/>
 		<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
-		<setting id="ClockMode" type="enum" label="30014" default="0" values="12 Hour|24 Hour"/>
+		<setting id="ClockMode" type="enum" label="30014" default="0" lvalues="30121|30122"/>
 		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
 		<setting id="HideClips" type="bool" label="30017" default="false"/>
-		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" values="15 sec|30 sec|60 sec|90 sec|120 sec|180 sec|240 sec|300 sec|360 sec" default="4"/>
+		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" lvalues="30123|30124|30125|30126|30127|30128|30129|30130|30131" default="4"/>
 	</category>
 
 	<category label="30022">
-		<setting id="MediaLimit" type="enum" label="30044" values="10 items|25 items|50 items|100 items|250 items|500 items|1000 items|No limit" default="1"/>
-		<setting id="NumberColour" type="enum" label="30045" values="Red|Green|Blue|Yellow|Cyan|Orange|Magenta|Gray|White" default="1"/>
-		<setting id="SeekForward" type="enum" label="30046" values="10 sec|30 sec|60 sec|3 min|5 min|10 min|30 min" default="1"/>
-		<setting id="SeekBackward" type="enum" label="30047" values="-10 sec|-30 sec|-60 sec|-3 min|-5 min|-10 min|-30 min" default="1"/>
+		<setting id="MediaLimit" type="enum" label="30044" lvalues="30132|30133|30134|30135|30136|30137|30138|30139" default="1"/>
+		<setting id="NumberColour" type="enum" label="30045" lvalues="30140|30141|30142|30143|30144|30145|30146|30147|30148" default="1"/>
+		<setting id="SeekForward" type="enum" label="30046" lvalues="30149|30150|30151|30152|30153|30154|30155" default="1"/>
+		<setting id="SeekBackward" type="enum" label="30047" lvalues="30156|30157|30158|30159|30160|30161|30162" default="1"/>
 	</category>
 
 	<category label="30026">
 		<setting id="enable" type="bool" label="30027" default="false"/>
-		<setting id="timer_amount" type="enum" values="None|5 sec|10 sec|15 sec|20 sec" label="30028" enable="eq(-1,true)" default="1"/>
+		<setting id="timer_amount" type="enum" lvalues="30164|30109|30114|30123|30163" label="30028" enable="eq(-1,true)" default="1"/>
 		<setting id="notify" type="bool" label="30029" enable="eq(-2,true)" default="true"/>
 	</category>
 </settings>
