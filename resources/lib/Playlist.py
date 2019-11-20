@@ -33,6 +33,8 @@ class PlaylistItem:
         self.description = ''
         self.title = ''
         self.episodetitle = ''
+        self.playcount = 0
+        self.resume = 0
 
 
 
@@ -96,7 +98,17 @@ class Playlist:
 
         self.processingSemaphore.release()
         return ''
+        
+    def getplaycount(self, index):
+        self.processingSemaphore.acquire()
 
+        if index >= 0 and index < len(self.itemlist):
+            pcount = self.itemlist[index].playcount
+            self.processingSemaphore.release()
+            return pcount
+
+        self.processingSemaphore.release()
+        return ''
 
     def getTitle(self, index):
         self.processingSemaphore.acquire()
@@ -184,6 +196,11 @@ class Playlist:
                         if index >= 0:
                             tmpitem.description = tmpitem.episodetitle[index + 2:]
                             tmpitem.episodetitle = tmpitem.episodetitle[:index]
+                            index = tmpitem.description.find('//')   #closing off description now that there are parameters beyond it
+
+                            if index >= 0:                             #we don't actually need playcount (or resume) here but this is how we close off description
+                                tmpitem.playcount = tmpitem.description[index + 2:]
+                                tmpitem.description = tmpitem.description[:index]
 
                 realindex += 1
                 tmpitem.filename = uni(lines[realindex].rstrip())
