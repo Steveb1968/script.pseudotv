@@ -799,3 +799,7 @@ msgstr "Diretório"
 #~ msgctxt "#30028"
 #~ msgid "Delay Service"
 #~ msgstr "Delay no Serviço"
+
+msgctxt "#30190"
+msgid "Reset Watched Status"
+msgstr "Redefinir status assistido"

@@ -30,6 +30,7 @@
 		<setting id="NumberColour" type="enum" label="30045" lvalues="30140|30141|30142|30143|30144|30145|30146|30147|30148" default="1"/>
 		<setting id="SeekForward" type="enum" label="30046" lvalues="30149|30150|30151|30152|30153|30154|30155" default="1"/>
 		<setting id="SeekBackward" type="enum" label="30047" lvalues="30156|30157|30158|30159|30160|30161|30162" default="1"/>
+		<setting id="ResetWatched" type="bool" label="30190" default="false"/>
 	</category>
 
 	<category label="30026">
