@@ -211,3 +211,7 @@ msgstr "מחפש צעד קדימה"
 msgctxt "#30047"
 msgid "Seek step backward"
 msgstr "מחפש צעד אחורה"
+
+msgctxt "#30190"
+msgid "Reset Watched Status"
+msgstr "אפס סטטוס נצפה"

@@ -24,6 +24,7 @@ import sys, re
 import random, traceback
 
 from xml.dom.minidom import parse, parseString
+from ResetWatched import ResetWatched
 
 from Playlist import Playlist
 from Globals import *
@@ -997,6 +998,11 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
             ADDON_SETTINGS.setSetting('LastExitTime', str(int(curtime)))
 
+        if ADDON.getSettingBool("ResetWatched"):
+            updateDialog.update(33, message='Exiting - Resetting Watched Status')
+            Reset = ResetWatched()
+            Reset.Resetter()
+            
         if self.timeStarted > 0 and self.isMaster:
             updateDialog.update(35, message='Exiting - Saving Settings')
             validcount = 0

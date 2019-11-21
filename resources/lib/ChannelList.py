@@ -36,8 +36,6 @@ from Channel import Channel
 from VideoParser import VideoParser
 from FileAccess import FileLock, FileAccess
 
-
-
 class ChannelList:
     def __init__(self):
         self.networkList = []
@@ -996,12 +994,17 @@ class ChannelList:
         fileList = []
         seasoneplist = []
         filecount = 0
-        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","plotoutline","season","episode","year","playcount"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
+        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","plotoutline","season","episode","year","lastplayed","playcount","resume"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, ''.join(LANGUAGE(30168)) % (str(self.settingChannel)), LANGUAGE(30172), LANGUAGE(30179))
 
         json_folder_detail = self.sendJSON(json_query)
+        
+        #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
+        json_folder_detail = json_folder_detail.replace('"resume":{', '')
+        json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
+        
         file_detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
 
         for f in file_detail:
@@ -1059,6 +1062,19 @@ class ChannelList:
                                 theplot = plot.group(1)
                             else:
                                 theplot = LANGUAGE(30023)
+                                
+                            theplot = theplot.replace('//','')
+                                
+                            #values needed to reset watched status should be captured whether or not the setting is enabled, in case user changes setting later
+                            playcount = re.search('"playcount" *: *([0-9]+)', f)
+                            lastplayed = re.search('"lastplayed" *: *"(.*?)"', f)
+                            resumePosition = re.search('"position" *: *([0-9]+\.[0-9]),', f)
+                            id = re.search('"id" *: *([0-9][0-9]+)', f)
+
+                            playcountval = playcount.group(1)
+                            resumePositionval = resumePosition.group(1)
+                            lastplayedval = lastplayed.group(1)
+                            idval = id.group(1)    
 
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
@@ -1086,7 +1102,15 @@ class ChannelList:
                                     else:
                                         tmpstr += "//" + "//" + theplot
 
-                            tmpstr = uni(tmpstr[:2036])
+                            #tmpstr = tmpstr[:2036]
+                            tmpstr = uni(tmpstr[:1990])
+                            #^^^stealing some characters from plot for reset values
+                            #then adding those values
+                            tmpstr += "//"  + playcountval
+                            tmpstr += "//"  + resumePositionval
+                            tmpstr += "//"  + lastplayedval
+                            tmpstr += "//"  + idval
+                            
                             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
                             tmpstr = tmpstr + '\n' + match.group(1).replace("\\\\", "\\")
 
@@ -1127,7 +1151,7 @@ class ChannelList:
 
         for rule in rules:
             rulename = rule.childNodes[0].nodeValue
-
+            
             if FileAccess.exists(xbmc.translatePath('special://profile/playlists/video/') + rulename):
                 FileAccess.copy(xbmc.translatePath('special://profile/playlists/video/') + rulename, MADE_CHAN_LOC + rulename)
                 fileList.extend(self.buildFileList(MADE_CHAN_LOC + rulename, channel))
