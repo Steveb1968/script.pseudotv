@@ -1084,8 +1084,8 @@ class ChannelList:
                                 season = re.search('"season" *: *(.*?),', f)
                                 episode = re.search('"episode" *: *(.*?),', f)
                                 seasonval = season.group(1)
-                                epval = episode.group(1)
-                                sxexx = (' ({})'.format(seasonval + 'x' + epval.zfill(2)))
+                                epval = episode.group(1).zfill(2)
+                                sxexx = (' ({})'.format(seasonval + 'x' + epval))
 
                                 if epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'false':
                                     swtitle = swtitle + sxexx

@@ -1199,7 +1199,7 @@ class PlayShowInOrder(BaseRule):
 
             try:
                 seasonval = season.group(1)
-                epval = episode.group(1)
+                epval = episode.group(1).zfill(2)
                 self.showInfo.append([showtitle.group(1), match.group(1).replace("\\\\", "\\"), seasonval, epval])
             except:
                 pass
