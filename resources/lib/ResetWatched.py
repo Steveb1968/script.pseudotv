@@ -45,7 +45,7 @@ class ResetWatched:
     def __init__(self):
         self.itemlist = []
         self.channels = []
-        #self.processingSemaphore = threading.BoundedSemaphore()
+        self.processingSemaphore = threading.BoundedSemaphore()
         
     def readFile(self, maxChannels):
         channel = 1
@@ -82,14 +82,14 @@ class ResetWatched:
     
     def load(self, filename):
         self.log("Reset " + filename)
-        #self.processingSemaphore.acquire()
+        self.processingSemaphore.acquire()
         self.clear()
         
         try:
             fle = FileAccess.open(filename, 'r')
         except IOError:
             self.log('Unable to open the file: ' + filename)
-            #self.processingSemaphore.release()
+            self.processingSemaphore.release()
             return False
 
         # find and read the header
@@ -109,7 +109,7 @@ class ResetWatched:
 
         if realindex == -1:
             self.log('Unable to find playlist header for the file: ' + filename)
-            #self.processingSemaphore.release()
+            self.processingSemaphore.release()
             return False
 
         # past the header, so get the info
@@ -175,7 +175,7 @@ class ResetWatched:
                 M3Uresume = float(tmpitem.resume)
                 M3Ulastplayed = tmpitem.lastplayed
                 episodetitle = tmpitem.episodetitle
-                #self.log("Parsing index Count: " + str(M3Ucount) + " Resume: " + str(M3Uresume) + "  lastplayed: " + M3Ulastplayed + " ID: " + str(ID))
+                self.log("Parsing index Count: " + str(M3Ucount) + " Resume: " + str(M3Uresume) + "  lastplayed: " + M3Ulastplayed + " ID: " + str(ID))
                 
                 if ID != 0:         #avoiding Directory channels or any other invalid
                     if episodetitle.find('x') != -1:
@@ -197,14 +197,15 @@ class ResetWatched:
                             JSONresume = details.get('position')
                             JSONlastplayed = details.get('lastplayed')
                             
-                            if (JSONcount != 0) and (JSONresume !=0):
+                            #if (JSONcount != 0) and (JSONresume !=0):
                             
-                                self.log("TV JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
-                                self.log("TV M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
-                                
-                                if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
-                                    self.log("TV Resetting: " + episodetitle)
-                                    response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetEpisodeDetails", "params": {"episodeid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                            self.log("TV JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
+                            self.log("TV M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+                            
+                            if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
+                                self.log("TV Resetting: " + episodetitle)
+                                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetEpisodeDetails", "params": {"episodeid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                                self.log("Response: " + response)
                         except:
                             self.log("Failed to reset " + str(ID), xbmc.LOGWARNING)
                         
@@ -227,14 +228,15 @@ class ResetWatched:
                             JSONresume = details.get('position')
                             JSONlastplayed = details.get('lastplayed')
                             
-                            if (JSONcount != 0) and (JSONresume !=0):
+                            #if (JSONcount != 0) and (JSONresume !=0):
                             
-                                self.log("Movie JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
-                                self.log("Movie M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
-                                
-                                if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
-                                    self.log("Movie Resetting: " + str(ID))
-                                    response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                            self.log("Movie JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
+                            self.log("Movie M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+                            
+                            if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
+                                self.log("Movie Resetting: " + str(ID))
+                                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                                self.log("Response: " + response)
                     
                         except:
                             self.log("Failed to reset " + str(ID), xbmc.LOGWARNING)
@@ -246,7 +248,7 @@ class ResetWatched:
 
             realindex += 1
 
-        #self.processingSemaphore.release()
+        self.processingSemaphore.release()
 
         if len(self.itemlist) == 0:
             return False
