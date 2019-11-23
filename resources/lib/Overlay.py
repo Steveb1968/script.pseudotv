@@ -102,6 +102,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.runningActionChannel = 0
         self.channelDelay = 500
         self.numberColor = '0xFF00FF00'
+        self.sleepTimeValue = 0
 
         for i in range(3):
             self.numberColor = NUM_COLOUR[int(ADDON.getSetting("NumberColour"))]

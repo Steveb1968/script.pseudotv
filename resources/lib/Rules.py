@@ -132,7 +132,7 @@ class BaseRule:
     def onActionTextBox(self, act, optionindex):
         action = act.getId()
 
-        if act.getId() == ACTION_SELECT_ITEM:
+        if act.getId() == ACTION_SELECT_ITEM or act.getId() == ACTION_SELECT_ITEM2:
             keyb = xbmc.Keyboard(self.optionValues[optionindex], self.name, False)
             keyb.doModal()
 
@@ -174,7 +174,7 @@ class BaseRule:
     def onActionDateBox(self, act, optionindex):
         self.log("onActionDateBox")
 
-        if act.getId() == ACTION_SELECT_ITEM:
+        if act.getId() == ACTION_SELECT_ITEM or act.getId() == ACTION_SELECT_ITEM2:
             dlg = xbmcgui.Dialog()
             info = dlg.numeric(1, self.optionLabels[optionindex], self.optionValues[optionindex])
 
@@ -186,7 +186,7 @@ class BaseRule:
         self.log("onActionTimeBox")
         action = act.getId()
 
-        if action == ACTION_SELECT_ITEM:
+        if action == ACTION_SELECT_ITEM or action == ACTION_SELECT_ITEM2:
             dlg = xbmcgui.Dialog()
             info = dlg.numeric(2, self.optionLabels[optionindex], self.optionValues[optionindex])
 
@@ -259,7 +259,7 @@ class BaseRule:
 
 
     def onActionSelectBox(self, act, optionindex):
-        if act.getId() == ACTION_SELECT_ITEM:
+        if act.getId() == ACTION_SELECT_ITEM or act.getId() == ACTION_SELECT_ITEM2:
             optioncount = len(self.selectBoxOptions[optionindex])
             cursel = -1
 
@@ -279,7 +279,7 @@ class BaseRule:
     def onActionDaysofWeekBox(self, act, optionindex):
         self.log("onActionDaysofWeekBox")
 
-        if act.getId() == ACTION_SELECT_ITEM:
+        if act.getId() == ACTION_SELECT_ITEM or act.getId() == ACTION_SELECT_ITEM2:
             keyb = xbmc.Keyboard(self.optionValues[optionindex], self.name, False)
             keyb.doModal()
 
@@ -350,7 +350,7 @@ class BaseRule:
     def onActionDigitBox(self, act, optionindex):
         action = act.getId()
 
-        if action == ACTION_SELECT_ITEM:
+        if action == ACTION_SELECT_ITEM or action == ACTION_SELECT_ITEM2:
             dlg = xbmcgui.Dialog()
             value = dlg.numeric(0, self.optionLabels[optionindex], self.optionValues[optionindex])
 
@@ -1023,7 +1023,9 @@ class InterleaveChannel(BaseRule):
 
                 newstr = str(channelList.channels[chan - 1].getItemDuration(startingep - 1)) + ',' + channelList.channels[chan - 1].getItemTitle(startingep - 1)
                 newstr += "//" + channelList.channels[chan - 1].getItemEpisodeTitle(startingep - 1)
-                newstr += "//" + channelList.channels[chan - 1].getItemDescription(startingep - 1) + '\n' + channelList.channels[chan - 1].getItemFilename(startingep - 1)
+                newstr += "//" + channelList.channels[chan - 1].getItemDescription(startingep - 1)
+                newstr += "//" + channelList.channels[chan - 1].getItemPlaycount(startingep - 1)
+                newstr += '\n' + channelList.channels[chan - 1].getItemFilename(startingep - 1)
                 newfilelist.append(newstr)
                 realindex += random.randint(minint, maxint)
                 startingep += 1
@@ -1196,8 +1198,8 @@ class PlayShowInOrder(BaseRule):
             episode = re.search('"episode" *: *(.*?),', filedata)
 
             try:
-                seasonval = season.group(1)
-                epval = episode.group(1)
+                seasonval = season.group(1).zfill(2)
+                epval = episode.group(1).zfill(2)
                 self.showInfo.append([showtitle.group(1), match.group(1).replace("\\\\", "\\"), seasonval, epval])
             except:
                 pass
