@@ -51,7 +51,7 @@ class ChannelListThread(threading.Thread):
         if self.myOverlay == None:
             self.log("Overlay not defined. Exiting.")
             return
-            
+
         self.chanlist.myOverlay = self.myOverlay
         self.fullUpdating = (self.myOverlay.backgroundUpdating == 0)
         validchannels = 0
@@ -74,7 +74,7 @@ class ChannelListThread(threading.Thread):
                             self.log("Closing thread")
                             return
 
-                        time.sleep(1)
+                        xbmc.sleep(1000)
 
                         if self.paused == False:
                             break
@@ -88,7 +88,7 @@ class ChannelListThread(threading.Thread):
                                     self.log("IsExiting")
                                     return
 
-                                time.sleep(1)
+                                xbmc.sleep(1000)
 
                             self.myOverlay.channels[i] = self.chanlist.channels[i]
 
@@ -117,7 +117,7 @@ class ChannelListThread(threading.Thread):
                         self.log("Closing thread")
                         return
 
-                    time.sleep(2)
+                    xbmc.sleep(2000)
                     curtotal = self.myOverlay.channels[i].getTotalDuration()
 
                     if self.myOverlay.isMaster:
@@ -132,7 +132,7 @@ class ChannelListThread(threading.Thread):
                             self.chanlist.channels[i].isPaused = self.myOverlay.channels[i].isPaused
                             self.chanlist.channels[i].mode = self.myOverlay.channels[i].mode
                             # Only allow appending valid channels, don't allow erasing them
-                            
+
                             try:
                                 self.chanlist.setupChannel(i + 1, True, False, True)
                             except:
@@ -176,7 +176,7 @@ class ChannelListThread(threading.Thread):
                             self.log("Closing thread")
                             return
 
-                        time.sleep(2)
+                        xbmc.sleep(2000)
 
                         if self.paused == False:
                             break
@@ -192,7 +192,7 @@ class ChannelListThread(threading.Thread):
                     self.log("IsExiting")
                     return
 
-                time.sleep(2)
+                xbmc.sleep(2000)
                 timeslept += 2
 
         self.log("All channels up to date.  Exiting thread.")

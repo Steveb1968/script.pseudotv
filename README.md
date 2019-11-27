@@ -70,6 +70,7 @@ There are only a few things you need to know in order to control everything. Fir
 * **OSD Channel Number Color:** Change the color of the channel number located at the top left, seen when changing channels and on startup.
 * **Seek step forward:** Option to adjust the seek step forward (right arrow key in fullscreen video). Options include 10 sec,30 sec,60 sec,3 min,5 min,10 min,30 min.
 * **Seek step backward:** Option to adjust the seek step backward (left arrow key in fullscreen video). Options include -10 sec,-30 sec,-60 sec,-3 min,-5 min,-10 min,-30 min.
+* **Reset Watched Status:** Option to reset watched status and resume points of videos while watching PseudoTV.
 
 
 **Auto Start -**
@@ -99,7 +100,7 @@ Replace *"Player.DisplayAfterSeek"* with
 ### Credits
 
 **Developer:** Jason102, Steveb.<br>
-**Code Additions:** Sranshaft, TheOddLinguist, Canuma, rafaelvieiras, Steveb.<br>
+**Code Additions:** Sranshaft, TheOddLinguist, Canuma, rafaelvieiras, fnord12.<br>
 **Skins:** Sranshaft, Zepfan, Steveb.<br>
 **Preset Images:** Jtucker1972.<br>
 **Languages:** CyberXaz, Machine-Sanctum, rafaelvieiras, Eng2Heb.

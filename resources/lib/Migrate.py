@@ -43,7 +43,7 @@ class Migrate:
 
         if curver == Globals.VERSION:
             return True
-        
+
         Globals.ADDON_SETTINGS.setSetting("Version", Globals.VERSION)
         self.log("version is " + curver)
 

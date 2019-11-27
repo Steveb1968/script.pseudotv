@@ -98,7 +98,7 @@ class Playlist:
 
         self.processingSemaphore.release()
         return ''
-        
+
     def getplaycount(self, index):
         self.processingSemaphore.acquire()
 
@@ -165,7 +165,6 @@ class Playlist:
 
         # past the header, so get the info
         for i in range(len(lines)):
-            time.sleep(0)
 
             if realindex + 1 >= len(lines):
                 break

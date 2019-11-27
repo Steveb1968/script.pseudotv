@@ -204,7 +204,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
             if singlerow == -1 or singlerow == i:
                 self.setButtons(starttime, basecur, i)
                 myadds.extend(self.channelButtons[i])
-                
+
             basecur = self.MyOverlayWindow.fixChannel(basecur + 1)
 
         basecur = curchannel
@@ -213,7 +213,7 @@ class EPGWindow(xbmcgui.WindowXMLDialog):
             self.getControl(301 + i).setLabel(self.MyOverlayWindow.channels[basecur - 1].name)
             basecur = self.MyOverlayWindow.fixChannel(basecur + 1)
 
-        for i in range(self.rowCount): 
+        for i in range(self.rowCount):
             try:
                 self.getControl(311 + i).setLabel(str(curchannel))
             except:

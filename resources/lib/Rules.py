@@ -1422,7 +1422,7 @@ class EvenShowsRule(BaseRule):
     def runAction(self, actionid, channelList, filelist):
         if actionid == RULES_ACTION_LIST:
             self.validate()
-            
+
             try:
                 opt = int(self.optionValues[0])
                 self.log("Allowed shows in a row: " + str(opt))
@@ -1445,10 +1445,10 @@ class EvenShowsRule(BaseRule):
                             if showname == lastshow.lower():
                                 inarow += 1
                                 self.log("same show now at " + str(inarow))
-                                
+
                                 if inarow >= opt:
                                     nextline = self.insertNewShow(filelist, lastshow, index)
-                                    
+
                                     if nextline == '':
                                         filelist = filelist[:index]
                                         return filelist
@@ -1463,8 +1463,8 @@ class EvenShowsRule(BaseRule):
                 pass
 
         return filelist
-        
-        
+
+
     def insertNewShow(self, filelist, lastshow, startindex):
         self.log("insertNewShow: " + str(startindex) + ", " + str(len(filelist)))
         for index in range(startindex + 1, len(filelist)):
@@ -1483,7 +1483,7 @@ class EvenShowsRule(BaseRule):
                         self.log("insertNewShow found " + showname)
                         filelist.pop(index)
                         return item
-                        
+
         return ''
 
 

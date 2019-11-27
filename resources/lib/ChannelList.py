@@ -22,8 +22,6 @@ import time, threading
 import datetime
 import sys, re
 import random
-import httplib
-import base64
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -1000,11 +998,11 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, ''.join(LANGUAGE(30168)) % (str(self.settingChannel)), LANGUAGE(30172), LANGUAGE(30179))
 
         json_folder_detail = self.sendJSON(json_query)
-        
+
         #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
         json_folder_detail = json_folder_detail.replace('"resume":{', '')
         json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
-        
+
         file_detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
 
         for f in file_detail:
@@ -1062,9 +1060,9 @@ class ChannelList:
                                 theplot = plot.group(1)
                             else:
                                 theplot = LANGUAGE(30023)
-                                
+
                             theplot = theplot.replace('//','')
-                                
+
                             #values needed to reset watched status should be captured whether or not the setting is enabled, in case user changes setting later
                             playcount = re.search('"playcount" *: *([0-9]+)', f)
                             lastplayed = re.search('"lastplayed" *: *"(.*?)"', f)
@@ -1074,7 +1072,7 @@ class ChannelList:
                             playcountval = playcount.group(1)
                             resumePositionval = resumePosition.group(1)
                             lastplayedval = lastplayed.group(1)
-                            idval = id.group(1)    
+                            idval = id.group(1)
 
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
@@ -1110,7 +1108,7 @@ class ChannelList:
                             tmpstr += "//"  + resumePositionval
                             tmpstr += "//"  + lastplayedval
                             tmpstr += "//"  + idval
-                            
+
                             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
                             tmpstr = tmpstr + '\n' + match.group(1).replace("\\\\", "\\")
 
@@ -1151,7 +1149,7 @@ class ChannelList:
 
         for rule in rules:
             rulename = rule.childNodes[0].nodeValue
-            
+
             if FileAccess.exists(xbmc.translatePath('special://profile/playlists/video/') + rulename):
                 FileAccess.copy(xbmc.translatePath('special://profile/playlists/video/') + rulename, MADE_CHAN_LOC + rulename)
                 fileList.extend(self.buildFileList(MADE_CHAN_LOC + rulename, channel))

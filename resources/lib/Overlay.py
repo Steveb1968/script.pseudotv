@@ -349,7 +349,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.runActions(RULES_ACTION_OVERLAY_SET_CHANNEL, channel, self.channels[channel - 1])
 
         if self.Player.stopped:
-            self.log('setChannel player already stopped', xbmc.LOGERROR);
+            self.log('setChannel player already stopped', xbmc.LOGERROR)
             return
 
         if channel < 1 or channel > self.maxChannels:
@@ -383,7 +383,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         self.currentChannel = channel
         # now load the proper channel playlist
         xbmc.PlayList(xbmc.PLAYLIST_MUSIC).clear()
-        self.log("about to load");
+        self.log("about to load")
 
         if xbmc.PlayList(xbmc.PLAYLIST_MUSIC).load(self.channels[channel - 1].fileName) == False:
             self.log("Error loading playlist", xbmc.LOGERROR)
@@ -395,7 +395,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             self.log('Random on.  Disabling.')
             xbmc.PlayList(xbmc.PLAYLIST_MUSIC).unshuffle()
 
-        self.log("repeat all");
+        self.log("repeat all")
         xbmc.executebuiltin("PlayerControl(RepeatAll)")
         curtime = time.time()
         timedif = (curtime - self.channels[self.currentChannel - 1].lastAccessTime)
@@ -410,7 +410,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         xbmc.sleep(self.channelDelay)
         # set the show offset
         self.Player.playselected(self.channels[self.currentChannel - 1].playlistPosition)
-        self.log("playing selected file");
+        self.log("playing selected file")
         # set the time offset
         self.channels[self.currentChannel - 1].setAccessTime(curtime)
 
@@ -431,7 +431,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
             seektime = self.channels[self.currentChannel - 1].showTimeOffset + timedif + int((time.time() - curtime))
 
             try:
-                self.log("Seeking");
+                self.log("Seeking")
                 self.Player.seekTime(seektime)
             except:
                 self.log("Unable to set proper seek time, trying different value")
@@ -568,7 +568,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if xbmc.getCondVisibility('Player.ShowInfo'):
             json_query = '{"jsonrpc": "2.0", "method": "Input.Info", "id": 1}'
             self.ignoreInfoAction = True
-            self.channelList.sendJSON(json_query);
+            self.channelList.sendJSON(json_query)
         self.channelLabelTimer.name = "ChannelLabel"
         self.channelLabelTimer.start()
         self.startNotificationTimer()
@@ -642,7 +642,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         if xbmc.getCondVisibility('Player.ShowInfo'):
             json_query = '{"jsonrpc": "2.0", "method": "Input.Info", "id": 1}'
             self.ignoreInfoAction = True
-            self.channelList.sendJSON(json_query);
+            self.channelList.sendJSON(json_query)
 
         self.infoTimer.start()
 
@@ -770,7 +770,7 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                     if xbmc.getCondVisibility('Player.ShowInfo'):
                         json_query = '{"jsonrpc": "2.0", "method": "Input.Info", "id": 1}'
                         self.ignoreInfoAction = True
-                        self.channelList.sendJSON(json_query);
+                        self.channelList.sendJSON(json_query)
 
                 else:
                     self.showInfo(10)
@@ -918,7 +918,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
         # Prevent the player from setting the sleep timer
         self.Player.stopped = True
         curtime = time.time()
-        xbmc.executebuiltin("PlayerControl(RepeatOff)")
         self.isExiting = True
         updateDialog = xbmcgui.DialogProgressBG()
         updateDialog.create(ADDON_NAME, '')
@@ -999,11 +998,6 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
             ADDON_SETTINGS.setSetting('LastExitTime', str(int(curtime)))
 
-        if ADDON.getSettingBool("ResetWatched"):
-            updateDialog.update(33, message='Exiting - Resetting Watched Status')
-            Reset = ResetWatched()
-            Reset.Resetter()
-            
         if self.timeStarted > 0 and self.isMaster:
             updateDialog.update(35, message='Exiting - Saving Settings')
             validcount = 0
@@ -1042,6 +1036,12 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
 
                 self.storeFiles()
                 xbmc.PlayList(xbmc.PLAYLIST_MUSIC).clear()
+                xbmc.executebuiltin("PlayerControl(RepeatOff)")
+
+        if ADDON.getSettingBool("ResetWatched"):
+            updateDialog.update(100, message='Exiting - Resetting Watched Status')
+            Reset = ResetWatched()
+            Reset.Resetter()
 
         updateDialog.close()
         self.close()

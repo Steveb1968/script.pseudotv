@@ -114,7 +114,7 @@ class MP4Parser:
         try:
             self.MovieHeader.version = struct.unpack('>b', self.File.read(1))[0]
             self.File.read(3)   #skip flags for now
-    
+
             if self.MovieHeader.version == 1:
                 data = struct.unpack('>QQIQQ', self.File.read(36))
             else:
@@ -130,18 +130,18 @@ class MP4Parser:
 
     def readBlock(self):
         box = MP4DataBlock()
-        
+
         try:
             data = self.File.read(4)
             box.size = struct.unpack('>I', data)[0]
             box.boxtype = self.File.read(4)
-    
+
             if box.size == 1:
                 box.size = struct.unpack('>q', self.File.read(8))[0]
                 box.size -= 8
-    
+
             box.size -= 8
-    
+
             if box.boxtype == 'uuid':
                 box.boxtype = self.File.read(16)
                 box.size -= 16

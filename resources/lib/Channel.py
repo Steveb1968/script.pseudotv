@@ -111,7 +111,7 @@ class Channel:
 
     def getCurrentEpisodeTitle(self):
         return self.getItemEpisodeTitle(self.playlistPosition)
-        
+
     def getItemPlaycount(self, index):
         return self.Playlist.getplaycount(self.fixPlaylistIndex(index))
 

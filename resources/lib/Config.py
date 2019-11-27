@@ -122,7 +122,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
                     if dlg.yesno(xbmc.getLocalizedString(190), LANGUAGE(30032)):
                         ADDON_SETTINGS.writeSettings()
-            
+
                         if CHANNEL_SHARING:
                             realloc = ADDON.getSetting('SettingsFolder')
                             FileAccess.copy(SETTINGS_LOC + '/settings2.xml', realloc + '/settings2.xml')
@@ -153,7 +153,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         elif act.getButtonCode() == 61575:      # Delete button
             curchan = self.listcontrol.getSelectedPosition() + 1
             self.clearChannel(curchan)
-    
+
     def saveSettings(self):
         self.log("saveSettings channel " + str(self.channel))
         chantype = 9999
@@ -250,8 +250,8 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             self.setFocusId(110)
             self.showingList = False
             self.savedRules = False
-            
-            
+
+
         elif controlId == 110 or controlId == 111 or controlId == 109:
             ChannelTypeOptions = ("Custom Playlist", "TV Network", "Movie Studio", "TV Genre", "Movie Genre", "Mixed Genre", "TV Show", "Directory", "None")
             ChannelType = xbmcgui.Dialog().select("Choose A Channel Type",ChannelTypeOptions)
@@ -327,7 +327,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                 self.getControl(200).setLabel(retval)
 
         self.log("onClick return")
-    
+
     def copyChannel(self,origchannel,newchannel):
         self.log("copyChannel channel " + str(newchannel))
         chantype = 9999
@@ -335,11 +335,11 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         newchan = str(newchannel)
         set1 = ''
         set2 = ''
-        
+
         try:
             chantype = int(ADDON_SETTINGS.getSetting("Channel_" + chan + "_type"))
             self.log("chantype: " + str(chantype))
-            
+
         except:
             self.log("Unable to get channel type")
 
@@ -348,7 +348,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         settingnewtype = "Channel_" + newchan + "_type"
         settingnew1 = "Channel_" + newchan + "_1"
         settingnew2 = "Channel_" + newchan + "_2"
-        
+
         if chantype == 9999:
             ADDON_SETTINGS.setSetting(setting1, '')
             ADDON_SETTINGS.setSetting(setting2, '')
@@ -368,7 +368,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.madeChanges = 1
         self.updateListing(newchannel)
         self.log("copyChannel return")
-    
+
     def clearChannel(self, curchan):
         self.log("clearChannel channel " + str(curchan))
         ADDON_SETTINGS.setSetting("Channel_" + str(curchan) + "_type", "9999")
@@ -386,7 +386,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.updateListing(curchan)
         self.madeChanges = 1
         self.log("clearChannel return")
-    
+
     def swapChannel(self, curchan, swapChannel,firstEmpty):
         self.log("swapChannel channel " + str(curchan))
         self.copyChannel(curchan,firstEmpty)
@@ -394,14 +394,14 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.copyChannel(firstEmpty,swapChannel)
         self.clearChannel(firstEmpty)
         self.log("swapChannel return")
-        
+
     def insertChannel(self,curchan,lastchan):
         self.log("insertChannel channel " + str(curchan))
         for i in range(lastchan, curchan-1, -1):
             self.copyChannel(i,i+1)
         self.clearChannel(curchan)
         self.log("insertChannel return")
-        
+
     def deleteChannel(self,curchan,lastchan):
         self.log("deleteChannel channel " + str(curchan))
         for i in range(curchan+1, lastchan):
@@ -409,10 +409,10 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             self.clearChannel(i)
         self.madeChanges = 1
         self.log("deleteChannel return")
-    
+
     def setListData(self, thelist, controlid, val):
         self.getControl(controlid).setLabel(thelist[val])
-       
+
     def getSmartPlaylistName(self, fle):
         self.log("getSmartPlaylistName " + fle)
         fle = xbmc.translatePath(fle)
@@ -454,7 +454,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         chantype = val
 
         ADDON_SETTINGS.setSetting("Channel_" + str(channel) + "_type", str(chantype))
-       
+
         for i in range(NUMBER_CHANNEL_TYPES):
             if i == chantype:
                 self.getControl(120 + i).setVisible(True)
@@ -598,7 +598,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                         break
         except:
             self.ruleList = []
-            
+
     def checkRules(self, channel):
         self.log("checkRules")
         rulecheck = False
@@ -677,7 +677,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
         for i in range(len(chnlst.showList)):
             self.showList.append(chnlst.showList[i][0])
-            
+
         self.showList.sort()
 
         self.mixedGenreList.sort(key=lambda x: x.lower())
@@ -693,12 +693,12 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.getControl(106).setVisible(False)
         self.setFocusId(102)
         self.log("prepareConfig return")
-    
+
     def findFirstEmpty(self, channel):
         self.log("findFirstEmpty")
         start = channel
         end = 999
-        
+
         for i in range(start, end):
             self.log(str(i))
             try:
@@ -709,9 +709,9 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             except:
                 return i
                 break
-        self.log("findFirstEmpty return") 
-                
-            
+        self.log("findFirstEmpty return")
+
+
     def updateListing(self, channel = -1):
         self.log("updateListing")
         start = 0
@@ -727,7 +727,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             chansetting1 = ''
             chansetting2 = ''
             newlabel = ''
-            
+
             try:
                 chantype = int(ADDON_SETTINGS.getSetting("Channel_" + str(i + 1) + "_type"))
                 chansetting1 = ADDON_SETTINGS.getSetting("Channel_" + str(i + 1) + "_1")
@@ -748,8 +748,8 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                     newlabel = os.path.split(chansetting1[:-1])[1]
                 else:
                     newlabel = os.path.split(chansetting1)[1]
-            
-            
+
+
             #if uncommented (replacing the final line), this would put a marker on the main channel list indicating which channels had advanced rules
             #ruleMarker = ''
             #if self.checkRules(str(i+1)) == True:
@@ -757,7 +757,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
 
             #theitem.setLabel2(newlabel + ruleMarker)
             theitem.setLabel2(newlabel)
-            
+
         self.log("updateListing return")
 
 mydialog = ConfigWindow("script.pseudotv.ChannelConfig.xml", CWD, "default")

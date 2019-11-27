@@ -141,7 +141,7 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
                         self.setRule(RuleChoice)
             except:
                 pass
-       
+
     def setRule(self, RuleChoice):
         self.log("setRule")
 
@@ -298,7 +298,7 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
 
     def onClick(self, controlId):
         self.log("onClick " + str(controlId))
-        
+
         if controlId >= 120 and controlId <= (119 + RULES_PER_PAGE):
             self.optionRowSelected = 0
             self.optionRowOffset = 0
@@ -330,7 +330,7 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
                 self.close()
             else:
                 self.close()
-    
+
     def consolidateRules(self):
         self.log("consolidateRules")
         index = 0

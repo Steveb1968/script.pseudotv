@@ -103,7 +103,7 @@ class MKVParser:
     def findHeader(self):
         self.log("findHeader")
         filesize = self.getFileSize()
-        
+
         if filesize == 0:
             self.log("Empty file")
             return 0
@@ -116,7 +116,7 @@ class MKVParser:
             return 0
 
         datasize = self.getDataSize()
-        
+
         try:
             self.File.seek(datasize, 1)
         except:
@@ -162,7 +162,7 @@ class MKVParser:
 
     def getFileSize(self):
         size = 0
-        
+
         try:
             pos = self.File.tell()
             self.File.seek(0, 2)
@@ -186,18 +186,18 @@ class MKVParser:
             firstbyte = struct.unpack('>B', data)[0]
             datasize = firstbyte
             mask = 0xFFFF
-    
+
             for i in range(8):
                 if datasize >> (7 - i) == 1:
                     mask = mask ^ (1 << (7 - i))
                     break
 
             datasize = datasize & mask
-    
+
             if firstbyte >> 7 != 1:
                 for i in range(1, 8):
                     datasize = (datasize << 8) + struct.unpack('>B', self.File.read(1))[0]
-    
+
                     if firstbyte >> (7 - i) == 1:
                         break
         except:
@@ -212,11 +212,11 @@ class MKVParser:
         try:
             firstbyte = struct.unpack('>B', data)[0]
             ID = firstbyte
-    
+
             if firstbyte >> 7 != 1:
                 for i in range(1, 4):
                     ID = (ID << 8) + struct.unpack('>B', self.File.read(1))[0]
-    
+
                     if firstbyte >> (7 - i) == 1:
                         break
         except:

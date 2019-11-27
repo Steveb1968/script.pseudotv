@@ -33,7 +33,7 @@ class Settings:
 
 
     def loadSettings(self):
-        self.log("Loading settings from " + self.logfile);
+        self.log("Loading settings from " + self.logfile)
         del self.currentSettings[:]
 
         if FileAccess.exists(self.logfile):

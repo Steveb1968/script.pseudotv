@@ -42,7 +42,7 @@ class FileAccess:
     def open(filename, mode, encoding = "utf-8"):
         fle = 0
         FileAccess.log("trying to open " + filename)
-        
+
         try:
             return VFSFile(filename, mode)
         except UnicodeDecodeError:
@@ -164,48 +164,48 @@ class VFSFile:
 
         if mode == 'w':
             self.currentFile = xbmcvfs.File(filename, 'wb')
-        else:        
+        else:
             self.currentFile = xbmcvfs.File(filename)
 
         Globals.log("VFSFile: Opening " + filename, xbmc.LOGDEBUG)
-        
+
         if self.currentFile == None:
             Globals.log("VFSFile: Couldnt open " + filename, xbmc.LOGERROR)
 
 
     def read(self, bytes):
         return self.currentFile.read(bytes)
-        
-        
+
+
     def write(self, data):
         if isinstance(data, unicode):
             data = bytearray(data, "utf-8")
             data = bytes(data)
-    
+
         return self.currentFile.write(data)
-        
-        
+
+
     def close(self):
         return self.currentFile.close()
-        
-        
+
+
     def seek(self, bytes, offset):
         return self.currentFile.seek(bytes, offset)
-        
-        
+
+
     def size(self):
         loc = self.currentFile.size()
         return loc
-        
-        
+
+
     def readlines(self):
         return self.currentFile.read().split('\n')
-        
-        
+
+
     def tell(self):
         loc = self.currentFile.seek(0, 1)
         return loc
-        
+
 
 
 
@@ -278,7 +278,7 @@ class FileLock:
             if curval > -1:
                 self.releaseLockFile()
                 self.grabSemaphore.release()
-                time.sleep(1)
+                xbmc.sleep(1000)
 
             self.grabSemaphore.acquire()
 
@@ -356,10 +356,10 @@ class FileLock:
                 fle.close()
                 return True
             except:
-                time.sleep(0.5)
+                xbmc.sleep(500)
 
         self.log("Creating lock file")
-        
+
         try:
             fle = FileAccess.open(self.lockName, 'w')
             fle.close()
