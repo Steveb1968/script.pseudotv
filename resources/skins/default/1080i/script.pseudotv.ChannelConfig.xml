@@ -828,7 +828,7 @@
 					<top>0</top>
 					<width>300</width>
 					<height>90</height>
-					<label>[B]$LOCALIZE[10038] $LOCALIZE[5][/B]</label>
+					<label />
 					<font>PseudoTv12</font>
 					<align>center</align>
 					<aligny>center</aligny>

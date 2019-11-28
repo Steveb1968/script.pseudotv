@@ -256,7 +256,6 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
     def makeList(self):
         self.log("makeList")
         self.getControl(115).setVisible(True)
-        self.getControl(116).setVisible(False)
         self.getControl(130).setVisible(False)
         self.getControl(130).setPosition(999,999)
         if self.listOffset + (RULES_PER_PAGE - 1) > len(self.ruleList):
@@ -306,7 +305,6 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
             self.getControl(160).controlUp(self.getControl(131))
             self.getControl(161).controlUp(self.getControl(131))
             self.getControl(115).setVisible(False)
-            self.getControl(116).setVisible(False)
             self.getControl(130).setPosition(0,0)
             self.getControl(130).setVisible(True)
         elif controlId == 130:
@@ -321,14 +319,6 @@ class AdvancedConfig(xbmcgui.WindowXMLDialog):
                 self.lineSelected = 0
             else:
                 self.saveRules()
-                self.close()
-        elif controlId == 116:      # Cancel button
-            if self.selectedRuleIndex > -1:
-                xbmc.executebuiltin("SetProperty(itempress,100)")
-                xbmc.executebuiltin("Control.SetFocus(120)")
-                self.lineSelected = 0
-                self.close()
-            else:
                 self.close()
 
     def consolidateRules(self):

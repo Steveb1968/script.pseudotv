@@ -830,8 +830,8 @@
 					<top>0</top>
 					<width>300</width>
 					<height>100</height>
-					<label>$LOCALIZE[10038] $LOCALIZE[5]</label>
-					<font>font25_title</font>
+					<label />
+					<font>font12</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>white</textcolor>

@@ -442,22 +442,6 @@
 					<texturefocus border="40">ptv_settings/ptv_dialogbutton-fo.png</texturefocus>
 					<texturenofocus border="40">ptv_settings/ptv_dialogbutton-nofo.png</texturenofocus>
 				</control>
-				<control type="button" id="116">
-					<description>Cancel Button</description>
-					<left>0</left>
-					<top>0</top>
-					<width>300</width>
-					<height>90</height>
-					<label>[B]$LOCALIZE[222][/B]</label>
-					<font>PseudoTv12</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>FFF0F0F0</textcolor>
-					<focusedcolor>FFF0F0F0</focusedcolor>
-					<textoffsetx>20</textoffsetx>
-					<texturefocus border="40">ptv_settings/ptv_dialogbutton-fo.png</texturefocus>
-					<texturenofocus border="40">ptv_settings/ptv_dialogbutton-nofo.png</texturenofocus>
-				</control>
 			</control>
 		</control>
 	</controls>
