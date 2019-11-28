@@ -4,7 +4,7 @@
 	<controls>
 		<control type="group">
 			<left>50</left>
-			<top>105</top>
+			<top>90</top>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -44,7 +44,7 @@
 			<!-- left group -->
 			<control type="group">
 				<left>55</left>
-				<top>90</top>
+				<top>100</top>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
@@ -64,7 +64,7 @@
 					<height>310</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[System.AddonIcon(script.pseudotv)]</texture>
-					<bordersize>20</bordersize>
+					<bordersize>15</bordersize>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -83,14 +83,14 @@
 			<control type="group">
 				<control type="image">
 					<left>400</left>
-					<top>70</top>
+					<top>80</top>
 					<width>1100</width>
 					<height>800</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="group" id="105">
 					<left>420</left>
-					<top>90</top>
+					<top>100</top>
 					<control type="group" id="104">
 						<control type="button" id="120">
 							<description>Rule Entry 1</description>

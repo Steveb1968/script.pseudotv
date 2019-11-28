@@ -3,7 +3,7 @@
 	<controls>
 		<control type="group">
 			<left>50</left>
-			<top>105</top>
+			<top>90</top>
 			<control type="image">
 				<left>0</left>
 				<top>0</top>
@@ -43,7 +43,7 @@
 			<!-- left group -->
 			<control type="group">
 				<left>55</left>
-				<top>90</top>
+				<top>100</top>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
@@ -82,14 +82,14 @@
 			<control type="group">
 				<control type="image">
 					<left>400</left>
-					<top>70</top>
+					<top>80</top>
 					<width>1100</width>
 					<height>800</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="group" id="105">
 					<left>420</left>
-					<top>90</top>
+					<top>100</top>
 					<control type="list" id="102">
 						<description>All channels list</description>
 						<left>0</left>
@@ -204,7 +204,7 @@
 				<!-- Controls for configuring a single channel -->
 				<control type="group" id="106">
 					<left>420</left>
-					<top>90</top>
+					<top>100</top>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
@@ -269,7 +269,7 @@
 					<!-- Controls for type Custom Playlist -->
 					<control type="group" id="120">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="button" id="130">
 							<left>0</left>
 							<top>0</top>
@@ -306,7 +306,7 @@
 					<!-- Controls for type TV Network -->
 					<control type="group" id="121">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -375,7 +375,7 @@
 					<!-- Controls for type Movie Studio -->
 					<control type="group" id="122">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -444,7 +444,7 @@
 					<!-- Controls for type TV Genre -->
 					<control type="group" id="123">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -513,7 +513,7 @@
 					<!-- Controls for type Movie Genre -->
 					<control type="group" id="124">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -582,7 +582,7 @@
 					<!-- Controls for type Mixed Genre -->
 					<control type="group" id="125">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -651,7 +651,7 @@
 					<!-- Controls for type TV Show -->
 					<control type="group" id="126">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -745,7 +745,7 @@
 					<!-- Controls for type Directory -->
 					<control type="group" id="127">
 						<left>420</left>
-						<top>153</top>
+						<top>163</top>
 						<control type="button" id="200">
 							<left>0</left>
 							<top>0</top>
