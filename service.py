@@ -4,11 +4,11 @@
 import xbmc
 import xbmcaddon
 
-ADDON       = xbmcaddon.Addon(id='script.pseudotv')
-ADDON_ID    = ADDON.getAddonInfo('id')
-LANGUAGE    = ADDON.getLocalizedString
-ADDON_NAME  = ADDON.getAddonInfo('name')
-ICON        = ADDON.getAddonInfo('icon')
+ADDON = xbmcaddon.Addon()
+ADDON_ID = ADDON.getAddonInfo('id')
+LANGUAGE = ADDON.getLocalizedString
+ADDON_NAME = ADDON.getAddonInfo('name')
+ICON = ADDON.getAddonInfo('icon')
 
 timer_amounts = [0, 5, 10, 15, 20]
 

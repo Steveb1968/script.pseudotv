@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with PseudoTV.  If not, see <http://www.gnu.org/licenses/>.
 
-import xbmc, xbmcgui, xbmcaddon
+import xbmc, xbmcgui
 import subprocess, os
 import time, threading
 import datetime
@@ -1035,13 +1035,13 @@ class TVOverlay(xbmcgui.WindowXMLDialog):
                                 ADDON_SETTINGS.setSetting('Channel_' + str(i + 1) + '_time', str(int(tottime)))
 
                 self.storeFiles()
-                xbmc.PlayList(xbmc.PLAYLIST_MUSIC).clear()
-                xbmc.executebuiltin("PlayerControl(RepeatOff)")
 
         if ADDON.getSettingBool("ResetWatched"):
             updateDialog.update(100, message='Exiting - Resetting Watched Status')
             Reset = ResetWatched()
             Reset.Resetter()
 
+        xbmc.PlayList(xbmc.PLAYLIST_MUSIC).clear()
+        xbmc.executebuiltin("PlayerControl(RepeatOff)")
         updateDialog.close()
         self.close()

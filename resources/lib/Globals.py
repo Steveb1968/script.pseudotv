@@ -22,6 +22,14 @@ import Settings
 
 from FileAccess import FileLock
 
+ADDON = xbmcaddon.Addon(id='script.pseudotv')
+ADDON_ID = ADDON.getAddonInfo('id')
+ADDON_NAME = ADDON.getAddonInfo('name')
+LANGUAGE = ADDON.getLocalizedString
+CWD = ADDON.getAddonInfo('path').decode("utf-8")
+VERSION = ADDON.getAddonInfo('version')
+ICON = ADDON.getAddonInfo('icon')
+
 def log(msg, level = xbmc.LOGDEBUG):
     try:
         xbmc.log(ADDON_ID + '-' + ascii(msg), level)
@@ -43,13 +51,6 @@ def ascii(string):
 
     return string
 
-ADDON     = xbmcaddon.Addon(id='script.pseudotv')
-ADDON_ID  = ADDON.getAddonInfo('id')
-ADDON_NAME= ADDON.getAddonInfo('name')
-LANGUAGE  = ADDON.getLocalizedString
-CWD       = ADDON.getAddonInfo('path').decode("utf-8")
-VERSION   = ADDON.getAddonInfo('version')
-ICON      = ADDON.getAddonInfo('icon')
 
 TIMEOUT = 15 * 1000
 PREP_CHANNEL_TIME = 60 * 60 * 24 * 5
