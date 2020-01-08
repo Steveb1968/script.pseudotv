@@ -1068,7 +1068,7 @@ class ChannelList:
                             playcount = re.search('"playcount" *: *([0-9]+)', f)
                             lastplayed = re.search('"lastplayed" *: *"(.*?)"', f)
                             resumePosition = re.search('"position" *: *([0-9]+\.[0-9]),', f)
-                            id = re.search('"id" *: *([0-9][0-9]+)', f)
+                            id = re.search('"id" *: *([0-9]+)', f)
 
                             playcountval = playcount.group(1)
                             resumePositionval = resumePosition.group(1)
