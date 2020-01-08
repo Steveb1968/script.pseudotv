@@ -998,6 +998,7 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, ''.join(LANGUAGE(30168)) % (str(self.settingChannel)), LANGUAGE(30172), LANGUAGE(30179))
 
         json_folder_detail = self.sendJSON(json_query)
+        json_folder_detail = json_folder_detail.replace('"id":1,"jsonrpc":"2.0"','')
 
         #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
         json_folder_detail = json_folder_detail.replace('"resume":{', '')
@@ -1077,7 +1078,10 @@ class ChannelList:
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
                                 swtitle = title.group(1)
-                                param, swtitle = swtitle.split(". ", 1)
+                                
+                                if "." in swtitle:
+                                    param, swtitle = swtitle.split(". ", 1)
+                                
                                 swtitle = ('"{}"'.format(swtitle))
                                 season = re.search('"season" *: *(.*?),', f)
                                 episode = re.search('"episode" *: *(.*?),', f)
