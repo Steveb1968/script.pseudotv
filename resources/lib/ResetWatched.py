@@ -1,4 +1,4 @@
-# This file is part of PseudoTV.  It resets thee watched status (playcount and resume) for all files in all playlists
+# This file is part of PseudoTV.  It resets the watched status (playcount and resume) for all files in all playlists
 # PseudoTV is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -204,7 +204,7 @@ class ResetWatched:
                                 response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetEpisodeDetails", "params": {"episodeid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
                                 self.log("Response: " + response)
                         except:
-                            self.log("Failed to reset " + str(ID), xbmc.LOGWARNING)
+                            self.log("Failed to reset Episode " + str(ID), xbmc.LOGWARNING)
 
                     else:
                         #movie
@@ -236,7 +236,7 @@ class ResetWatched:
                                 self.log("Response: " + response)
 
                         except:
-                            self.log("Failed to reset " + str(ID), xbmc.LOGWARNING)
+                            self.log("Failed to reset Movie " + str(ID), xbmc.LOGWARNING)
 
                 realindex += 1
                 tmpitem.filename = uni(lines[realindex].rstrip())
