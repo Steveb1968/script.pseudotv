@@ -1024,7 +1024,7 @@ class InterleaveChannel(BaseRule):
                 newstr = str(channelList.channels[chan - 1].getItemDuration(startingep - 1)) + ',' + channelList.channels[chan - 1].getItemTitle(startingep - 1)
                 newstr += "//" + channelList.channels[chan - 1].getItemEpisodeTitle(startingep - 1)
                 newstr += "//" + channelList.channels[chan - 1].getItemDescription(startingep - 1)
-                newstr += "//" + channelList.channels[chan - 1].getItemPlaycount(startingep - 1)
+                newstr += "//" + str(channelList.channels[chan - 1].getItemPlaycount(startingep - 1))
                 newstr += '\n' + channelList.channels[chan - 1].getItemFilename(startingep - 1)
                 newfilelist.append(newstr)
                 realindex += random.randint(minint, maxint)
