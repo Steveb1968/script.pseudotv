@@ -2,40 +2,78 @@
 <settings>
 	<category label="30000">
 		<setting id="ConfigDialog" type="action" label="30008" action="RunScript($CWD/resources/lib/Config.py)"/>
+		<setting type="sep"/>
 		<setting id="ForceChannelReset" type="bool" label="30002" default="false"/>
-		<setting id="AutoOff" type="enum" label="30001" lvalues="30085|30086|30087|30088|30089|30090|30091|30092|30093" default="0"/>
 		<setting id="ChannelResetSetting" type="enum" label="30004" lvalues="30094|30095|30096|30097|30098|30099" default="0"/>
 		<setting id="StartMode" type="enum" label="30011" lvalues="30100|30101|30102" default="1" />
 		<setting id="ThreadMode" type="enum" label="30012" lvalues="30103|30104|30105" default="1" />
+		<setting type="sep"/>
+		<setting id="AutoOff" type="enum" label="30001" lvalues="30085|30086|30087|30088|30089|30090|30091|30092|30093" default="0"/>
+		<setting type="sep"/>
 		<setting id="ChannelSharing" type="bool" label="30015" default="false"/>
 		<setting id="SettingsFolder" subsetting="true" type="folder" source="auto" visible="eq(-1,true)" label="30013" default="" />
+		<setting type="sep"/>
+		<setting id="ResetWatched" type="bool" label="30190" default="false"/>
+		<setting type="sep"/>
 	</category>
 
 	<category label="30020">
 		<setting id="InfoOnChange" type="bool" label="30003" default="false"/>
-		<setting id="InfoLength" type="enum" subsetting="true" label="30021" visible="eq(-1,true)" lvalues="30106|30107|30108|30109|30110|30111|30112|30113|30114|30115|30116" default="8"/>
-		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
-        <setting id="ChannelBugPosition" type="enum" subsetting="true" label="30048" visible="eq(-1,true)" lvalues="30117|30118|30119|30120" default="2"/>
-		<setting id="HideYearEpInfo" type="bool" label="30009" default="false"/>
+		<setting id="InfoLength" type="enum" subsetting="true" label="30021" visible="eq(-1,true)" lvalues="30195|30106|30107|30108|30109|30110|30111|30112|30113|30114|30115|30116" default="8"/>
+		<setting type="sep"/>
 		<setting id="ShowEpgLogo" type="bool" label="30007" default="true"/>
 		<setting id="ChannelLogoFolder" type="folder" source="auto" label="30010" default="special://home/addons/script.pseudotv/resources/logos/"/>
+		<setting type="sep"/>
+		<setting id="ShowChannelBug" type="bool" label="30006" default="false"/>
+        <setting id="ChannelBugPosition" type="enum" subsetting="true" label="30048" visible="eq(-1,true)" lvalues="30117|30118|30119|30120" default="2"/>
+		<setting id="ColorBug" type="bool" subsetting="true" label="30210" visible="eq(-2,true)" default="false"/>
+		<setting id="BugBrightness" type="enum" subsetting="true" label="30208" values=".25|.5|.75|1 (Unchanged)|1.25|1.5|1.75|2|2.25|2.5|2.75|3" default="7" visible="eq(-3,true)"/>
+		<setting type="sep"/>
+		
+		<setting id="HideYearEpInfo" type="bool" label="30009" default="false"/>
+		<setting id="SingleShowTitleIsEp" type="bool" label="30211" default="true"/>
+		<setting type="sep"/>
 		<setting id="ClockMode" type="enum" label="30014" default="0" lvalues="30121|30122"/>
-		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
+		<setting type="sep"/>
 		<setting id="HideClips" type="bool" label="30017" default="false"/>
 		<setting id="ClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" lvalues="30123|30124|30125|30126|30127|30128|30129|30130|30131" default="4"/>
+		<setting type="sep"/>
+		<setting id="EnableComingUp" type="bool" label="30016" default="true"/>
+		<setting id="HideClipsDuringShort" type="bool" label="30196" default="false" visible="eq(-1,true)"/>
+		<setting id="ComingUpClipLength" type="enum" subsetting="true" label="30018" visible="eq(-1,true)" lvalues="30123|30124|30125|30126|30127|30128|30129|30130|30131" default="4"/>
 	</category>
 
 	<category label="30022">
 		<setting id="MediaLimit" type="enum" label="30044" lvalues="30132|30133|30134|30135|30136|30137|30138|30139" default="1"/>
 		<setting id="NumberColour" type="enum" label="30045" lvalues="30140|30141|30142|30143|30144|30145|30146|30147|30148" default="1"/>
+		<setting id="HideLeadingZeroes" type="bool" label="30209" default="false"/>
 		<setting id="SeekForward" type="enum" label="30046" lvalues="30149|30150|30151|30152|30153|30154|30155" default="1"/>
 		<setting id="SeekBackward" type="enum" label="30047" lvalues="30156|30157|30158|30159|30160|30161|30162" default="1"/>
-		<setting id="ResetWatched" type="bool" label="30190" default="false"/>
+		<setting type="sep"/>
+		<setting id="StartChannel" type="text" label="30191" default="1"/>
+		<setting id="AlwaysUseStartChannel" type="bool" label="30192" default="false"/>
 	</category>
+
+	<category label="30197">
+		<setting id="maxNeededChannels" type="enum" label="30198" default="2" values="100|150|200|250|300|350|400|450|500|550|600|650|700|750|800|850|900|950|999"/> 
+		<setting id="ChannelDelay" type="enum" label="30199" default="6" values="25|50|100|200|300|400|500|600|700|800|900|1000"/>
+		<setting id="holdActions" type="enum" label="30200" default="4" values=".25|.5|1|1.5|2|2.5|3|3.5|4"/>
+		<setting type="sep"/>
+		<setting label="30201" type="lsep"/>
+		<setting id="FailWarning" type="bool" label="30202" default="false"/>
+		<setting id="AssignDuration" type="bool" label="30203" default="false"/>
+		<setting id="AssignedDuration" type="enum" subsetting="true" label="30204" default="4" visible="eq(-1,true)" values="1|5|10|15|30|45|60|90|120"/>
+		<setting label="30205" type="lsep"/>
+		<setting id="DirFailWarning" type="bool" label="30206" default="false"/>
+		<setting id="DirAssignDuration" type="bool" label="30207" default="false"/>
+		<setting id="DirAssignedDuration" type="enum" subsetting="true" label="30204" default="4" visible="eq(-1,true)" values="1|5|10|15|30|45|60|90|120"/>
+	</category>	
 
 	<category label="30026">
 		<setting id="enable" type="bool" label="30027" default="false"/>
 		<setting id="timer_amount" type="enum" lvalues="30164|30109|30114|30123|30163" label="30028" enable="eq(-1,true)" default="1"/>
 		<setting id="notify" type="bool" label="30029" enable="eq(-2,true)" default="true"/>
 	</category>
+	
+	
 </settings>

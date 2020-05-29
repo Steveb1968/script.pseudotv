@@ -1,3 +1,12 @@
+2.5.0 (fnord12)
+	Fully baked Reset Watched.  
+	Startup Channel.  
+	Additional new settings and performance tweaks.  
+	A large-ish update; see Release Notes for details.
+2.4.5+ (steveb & fnord12)
+	Initial Reset Watched.
+	Admin UI update.
+	Several other smaller fixes and improvements.
 2.4.5 (steveb)
     Hebrew translation. Thanks 'Eng2Heb'
     Added year for movie info.

@@ -185,13 +185,13 @@
 					<control type="scrollbar" id="103">
 						<left>1063</left>
 						<top>0</top>
-						<width>12</width>
+						<width>25</width>
 						<height>756</height>
 						<texturesliderbackground colordiffuse="29FFFFFF">ptv_settings/ptv_white70.png</texturesliderbackground>
 						<texturesliderbar colordiffuse="AAFFFFFF">ptv_settings/ptv_white70.png</texturesliderbar>
 						<texturesliderbarfocus colordiffuse="FF12B2E7">ptv_settings/ptv_white70.png</texturesliderbarfocus>
-						<textureslidernib>-</textureslidernib>
-						<textureslidernibfocus>-</textureslidernibfocus>
+						<textureslidernib></textureslidernib>
+						<textureslidernibfocus></textureslidernibfocus>
 						<onup>103</onup>
 						<ondown>103</ondown>
 						<onleft>102</onleft>

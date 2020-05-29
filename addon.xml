@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.pseudotv" version="2.4.5" name="PseudoTV" provider-name="Jason Anderson | Steveb">
+<addon id="script.pseudotv" version="2.5.0" name="PseudoTV" provider-name="Jason Anderson, Steveb, fnord12">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0"/>
 		<import addon="script.module.pil" version="1.1.7"/>
@@ -14,11 +14,12 @@
 		<summary lang="pt_BR">Crie Canais de TV fictícios sua biblioteca de vídeo</summary>
 		<description lang="en">PseudoTV acts similar to normal broadcast or cable TV, complete with multiple preset and user-defined channels and an EPG.</description>
 		<description lang="pt_BR">PseudoTV atua semelhante a um transmissão normal de TV a cabo, com pré-ajuste múltiplo e canais definidos pelo usuário.</description>
-		<source>https://github.com/Steveb1968/script.pseudotv</source>
-		<website>https://github.com/Steveb1968/script.pseudotv</website>
+		<source>https://github.com/fnord12/script.pseudotv</source>
+		<website>https://github.com/fnord12/script.pseudotv</website>
 		<license>GNU GENERAL PUBLIC LICENSE Version 3</license>
-		<forum />
-		<news>Added option to enable/disable channel logo's in the epg grid.[CR]New Default Skin (Estuary based).[CR]Added default font.</news>
+		<forum />n
+		<news>Fully baked Reset Watched.  Startup Channel.  Additional new settings and performance tweaks.  See Release Notes.
+		</news>
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
