@@ -215,3 +215,83 @@ msgstr "מחפש צעד אחורה"
 msgctxt "#30190"
 msgid "Reset Watched Status"
 msgstr "אפס סטטוס נצפה"
+
+msgctxt "#30191"
+msgid "Start Channel"
+msgstr "התחל ערוץ"
+
+msgctxt "#30192"
+msgid "Always Use Start Channel (only on channel reset if False)"
+msgstr "השתמש תמיד בערוץ התחלה (רק באיפוס ערוץ אם False)"
+
+msgctxt "#30193"
+msgid "Join "
+msgstr "הצטרף "
+
+msgctxt "#30194"
+msgid " for "
+msgstr " עבור "
+
+msgctxt "#30196"
+msgid "Hide Coming Up Box DURING Short Videos"
+msgstr ""
+
+msgctxt "#30197"
+msgid "Performance"
+msgstr ""
+
+msgctxt "#30198"
+msgid "Max Needed Channels"
+msgstr ""
+
+msgctxt "#30199"
+msgid "Delay Before Changing Channel"
+msgstr ""
+
+msgctxt "#30200"
+msgid "Delay After Changing Channel"
+msgstr ""
+
+msgctxt "#30201"
+msgid "Skipped Videos - Regular Channels"
+msgstr ""
+
+msgctxt "#30202"
+msgid "Alert when PSTV can't find video duration"
+msgstr ""
+
+msgctxt "#30203"
+msgid "Instead of skipping, assign default duration for regular channels"
+msgstr ""
+
+msgctxt "#30204"
+msgid "Duration in minutes"
+msgstr ""
+
+msgctxt "#30205"
+msgid "Skipped Videos - Directory Channels"
+msgstr ""
+
+msgctxt "#30206"
+msgid "Alert when PSTV can't find video duration"
+msgstr ""
+
+msgctxt "#30207"
+msgid "Instead of skipping, assign default duration for directory channels"
+msgstr ""
+
+msgctxt "#30208"
+msgid "Watermark Brightness"
+msgstr ""
+
+msgctxt "#30209"
+msgid "Hide leading zeroes for Channels"
+msgstr ""
+
+msgctxt "#30210"
+msgid "Color Watermark"
+msgstr ""
+
+msgctxt "#30211"
+msgid "Show episode titles in EPG for Single Show Channels"
+msgstr ""

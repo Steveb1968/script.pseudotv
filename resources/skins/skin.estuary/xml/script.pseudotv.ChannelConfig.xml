@@ -185,7 +185,7 @@
 					<control type="scrollbar" id="103">
 						<left>1063</left>
 						<top>0</top>
-						<width>12</width>
+						<width>25</width>
 						<height>756</height>
 						<texturesliderbackground colordiffuse="29FFFFFF">colors/white.png</texturesliderbackground>
 						<texturesliderbar colordiffuse="AAFFFFFF">colors/white.png</texturesliderbar>
