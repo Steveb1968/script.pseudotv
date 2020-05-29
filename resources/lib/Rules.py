@@ -1176,8 +1176,6 @@ class PlayShowInOrder(BaseRule):
 
 
     def runAction(self, actionid, channelList, param):
-        debug('runAction actionid = ', actionid)
-        self.log('runAction start param = ' + str(param))
         if actionid == RULES_ACTION_START:
             del self.showInfo[:]
 
@@ -1186,14 +1184,14 @@ class PlayShowInOrder(BaseRule):
 
         if actionid == RULES_ACTION_LIST:
             return self.sortShows(channelList, param)
-        debug('runAction end param = ', param)
+
         return param
 
 
     def storeShowInfo(self, channelList, filedata):
         # Store the filename, season, and episode number
         match = re.search('"file" *: *"(.*?)",', filedata)
-        
+
         if match:
             showtitle = re.search('"showtitle" *: *"(.*?)"', filedata)
             season = re.search('"season" *: *(.*?),', filedata)
@@ -1210,7 +1208,7 @@ class PlayShowInOrder(BaseRule):
     def sortShows(self, channelList, filelist):
         if len(self.showInfo) == 0:
             return filelist
-        debug('sortShows')
+
         newfilelist = []
         self.showInfo.sort(key=lambda seep: seep[3])
         self.showInfo.sort(key=lambda seep: seep[2])
@@ -1224,7 +1222,7 @@ class PlayShowInOrder(BaseRule):
         showlist.append([])
         showlist[0].append(curshow.lower())
         showlist[0].append(0)
-        debug('showlist = ', showlist)
+
         for item in self.showInfo:
             if channelList.threadPause() == False:
                 return filelist
@@ -1234,12 +1232,12 @@ class PlayShowInOrder(BaseRule):
                 showlist.append([])
                 showlist[-1].append(curshow.lower())
                 showlist[-1].append(0)
-                debug('showlist = ', showlist)
+
             showstr = self.findInFileList(filelist, item[1])
 
             if len(showstr) > 0:
                 showlist[-1].append(showstr)
-                debug('showlist = ', showlist)
+
         curindex = 0
 
         for item in filelist:

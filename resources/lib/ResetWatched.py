@@ -17,6 +17,7 @@ import subprocess, os
 import time, threading
 import datetime
 import sys, re
+import random
 import json
 
 from xml.dom.minidom import parse, parseString
@@ -26,37 +27,37 @@ from Globals import *
 from Channel import Channel
 from FileAccess import FileLock, FileAccess
 
+class PlaylistItem:
+    def __init__(self):
+        self.duration = 0
+        self.filename = ''
+        self.description = ''
+        self.title = ''
+        self.episodetitle = ''
+        self.playcount = 0
+        self.resume = 0
+        self.ID = 0
+        self.lastplayed = ''
+
 class ResetWatched:
     def __init__(self):
         self.itemlist = []
         self.channels = []
-        self.updateIndex = 0
         self.processingSemaphore = threading.BoundedSemaphore()
-        self.maxNeededChannels = int(ADDON.getSetting("maxNeededChannels"))*50 + 100
 
-    def readFile(self,maxChannels,watchedList):
+    def readFile(self, maxChannels):
         channel = 1
-        
-        debug('watchedList = ', watchedList)
-        
-        updateDialog = xbmcgui.DialogProgressBG()
-        updateDialog.create(ADDON_NAME, '')
-        uIndex = self.updateIndex
-            
+
         while channel <= maxChannels:
-            uIndex = int((channel/float(maxChannels))*100)
-            updateDialog.update(uIndex, message='Exiting - Resetting Watched Status')
-            
             filepath = CHANNELS_LOC + 'channel_' + str(channel) + '.m3u'
-            index = self.load(filepath,watchedList)
+            index = self.load(filepath)
             channel = channel +1
-        updateDialog.close()
-        
+
     def findMaxChannels(self):
         self.log('findMaxChannels')
         self.maxChannels = 0
 
-        for i in range(self.maxNeededChannels):
+        for i in range(999):
             chtype = 9999
 
             try:
@@ -69,6 +70,7 @@ class ResetWatched:
         self.log('findMaxChannels return: '  + str(self.maxChannels))
         return(self.maxChannels)
 
+
     def clear(self):
         del self.itemlist[:]
 
@@ -76,11 +78,11 @@ class ResetWatched:
         data = xbmc.executeJSONRPC(command)
         return unicode(data, 'utf-8', errors='ignore')
 
-    def load(self,filename,watchedList):
-        self.log("RESET CHANNEL " + filename)
+    def load(self, filename):
+        self.log("Reset " + filename)
         self.processingSemaphore.acquire()
         self.clear()
-        
+
         try:
             fle = FileAccess.open(filename, 'r')
         except IOError:
@@ -94,122 +96,166 @@ class ResetWatched:
         except:
             self.log("ERROR loading playlist: " + filename)
             self.log(traceback.format_exc(), xbmc.LOGERROR)
+
         fle.close()
-        
-        for itemPath in watchedList:
-            if itemPath in lines:
-                previousline = int(lines.index(itemPath)) - 1
-                dataline=lines[previousline].split('//')
+        realindex = -1
 
-                if len(dataline) != 7:
-                    #avoiding Directory channels or any other invalid
-                    self.log ("Skipping line with no reset fields: " + str(dataline))
-                else: 
-                    ID = dataline[6]
-                    M3Ucount = int(dataline[3])
-                    M3Uresume = float(dataline[4])
-                    M3Ulastplayed = dataline[5]
-                    episodetitle = dataline[1]
-                    
-                    self.log ("GETTING READY TO DO COMPARISON FOR ID: " + str(ID))
+        for i in range(len(lines)):
+            if lines[i].startswith('#EXTM3U'):
+                realindex = i
+                break
 
-                    if ID != 0 and "MTV" not in ID:         #avoiding music videos
-                        ID = int(ID)
-                        
-                        #if HideYearEpInfo is turned on, episodetitle will be blank for movies.  If it's off, episodetitle will contain an x (movies will have just a year)
-                        debug("ADDON.getSetting('HideYearEpInfo') = ", ADDON.getSetting('HideYearEpInfo'))
-                        debug('episodetitle = ', episodetitle)
-                        
-                        if ADDON.getSetting('HideYearEpInfo') == "true":
-                            if episodetitle:
-                                asset = "episode"
-                            else:
-                                asset = "movie"
-                        else:
-                            if episodetitle.find('x') != -1:
-                                 asset = "episode"
-                            else:
-                                asset = "movie"
-                        debug('asset = ', asset)
-                        
-                        
-                        
-                        if asset == "episode":
-                            
-                            #episode
-                            json_query = '{"jsonrpc": "2.0", "method": "VideoLibrary.GetEpisodeDetails", "params": {"episodeid": %d, "properties": ["lastplayed","playcount","resume"]}, "id": 1}' % ID
+        if realindex == -1:
+            self.log('Unable to find playlist header for the file: ' + filename)
+            self.processingSemaphore.release()
+            return False
 
-                            json_folder_detail = self.sendJSON(json_query)
+        # past the header, so get the info
+        for i in range(len(lines)):
 
-                            #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
-                            json_folder_detail = json_folder_detail.replace('"resume":{', '')
-                            json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
+            if realindex + 1 >= len(lines):
+                break
 
-                            if 'error":{"code"' in json_folder_detail:
-                                self.log("JSON Error: " +  json_folder_detail, xbmc.LOGWARNING)
-                                assetMsg = "Possible Failure.  Check log."
-                                xbmc.executebuiltin("Notification(\"PseudoTV Reset\", \"%s\")" % assetMsg)
-                                self.log("Failed to reset Episode " + str(ID), xbmc.LOGWARNING)
-                            
-                            else:
-                                params = json.loads(json_folder_detail)
-                                result = params['result']
-                                details = result['episodedetails']
-                                JSONcount = details.get('playcount')
-                                JSONresume = details.get('position')
-                                JSONlastplayed = details.get('lastplayed')
+            if len(self.itemlist) > 16384:
+                break
 
-                                self.log("TV JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
-                                self.log("TV M3U  playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+            try:
+                line = uni(lines[realindex].rstrip())
+            except:
+                self.log("ERROR: Invalid line in playlist - " + filename)
+                self.log(traceback.format_exc(), xbmc.LOGERROR)
 
-                                if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
-                                    self.log("TV Resetting: " + episodetitle)
-                                    response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetEpisodeDetails", "params": {"episodeid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
-                                    self.log("Response: " + response)
-                        else:
-                            #movie
-                            json_query = '{"jsonrpc": "2.0", "method": "VideoLibrary.GetMovieDetails", "params": {"movieid": %d, "properties": ["lastplayed","playcount","resume"]}, "id": 1}' % ID
+            if line[:8] == '#EXTINF:':
+                tmpitem = PlaylistItem()
+                index = line.find(',')
 
-                            json_folder_detail = self.sendJSON(json_query)
+                if index > 0:
+                    tmpitem.duration = int(line[8:index])
+                    tmpitem.title = line[index + 1:]
+                    index = tmpitem.title.find('//')
 
-                            #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
-                            json_folder_detail = json_folder_detail.replace('"resume":{', '')
-                            json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
+                    if index >= 0:
+                        tmpitem.episodetitle = tmpitem.title[index + 2:]
+                        tmpitem.title = tmpitem.title[:index]
+                        index = tmpitem.episodetitle.find('//')
 
-                            if 'error":{"code"' in json_folder_detail:
-                                self.log("JSON Error: " +  json_folder_detail, xbmc.LOGWARNING)
-                                assetMsg = "Possible Failure.  Check log."
-                                xbmc.executebuiltin("Notification(\"PseudoTV Reset\", \"%s\")" % assetMsg)
-                                self.log("Failed to reset Movie " + str(ID), xbmc.LOGWARNING)
-                                
-                            else: 
+                        if index >= 0:
+                            tmpitem.description = tmpitem.episodetitle[index + 2:]
+                            tmpitem.episodetitle = tmpitem.episodetitle[:index]
+                            index = tmpitem.description.find('//')
 
-                                params = json.loads(json_folder_detail)
-                                result = params['result']
-                                details = result['moviedetails']
-                                JSONcount = details.get('playcount')
-                                JSONresume = details.get('position')
-                                JSONlastplayed = details.get('lastplayed')
+                            if index >= 0:
+                                tmpitem.playcount = tmpitem.description[index + 2:]
+                                tmpitem.description = tmpitem.description[:index]
+                                index = tmpitem.playcount.find('//')
 
-                                self.log("Movie JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
-                                self.log("Movie M3U  playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+                                if index >= 0:
+                                    tmpitem.resume = tmpitem.playcount[index + 2:]
+                                    tmpitem.playcount = tmpitem.playcount[:index]
+                                    index = tmpitem.resume.find('//')
 
-                                if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
-                                    self.log("Movie Resetting: " + str(ID))
-                                    
-                                    response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
-                                    self.log("Response: " + response)
+                                    if index >= 0:
+                                        tmpitem.lastplayed = tmpitem.resume[index + 2:]
+                                        tmpitem.resume = tmpitem.resume[:index]
+                                        index = tmpitem.lastplayed.find('//')
+
+                                        if index >= 0:
+                                            tmpitem.ID = tmpitem.lastplayed[index + 2:]
+                                            tmpitem.lastplayed = tmpitem.lastplayed[:index]
+                                            index = tmpitem.ID.find('//')
+
+                                            if index >= 0:
+                                                tmpitem.ID = tmpitem.resume[index + 2:]
+
+                ID = int(tmpitem.ID)
+                M3Ucount = int(tmpitem.playcount)
+                M3Uresume = float(tmpitem.resume)
+                M3Ulastplayed = tmpitem.lastplayed
+                episodetitle = tmpitem.episodetitle
+                self.log("Parsing index Count: " + str(M3Ucount) + " Resume: " + str(M3Uresume) + "  lastplayed: " + M3Ulastplayed + " ID: " + str(ID))
+
+                if ID != 0:         #avoiding Directory channels or any other invalid
+                    if episodetitle.find('x') != -1:
+                        #episode
+
+                        json_query = '{"jsonrpc": "2.0", "method": "VideoLibrary.GetEpisodeDetails", "params": {"episodeid": %d, "properties": ["lastplayed","playcount","resume"]}, "id": 1}' % ID
+
+                        json_folder_detail = self.sendJSON(json_query)
+
+                        #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
+                        json_folder_detail = json_folder_detail.replace('"resume":{', '')
+                        json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
+
+                        try:
+                            params = json.loads(json_folder_detail)
+                            result = params['result']
+                            details = result['episodedetails']
+                            JSONcount = details.get('playcount')
+                            JSONresume = details.get('position')
+                            JSONlastplayed = details.get('lastplayed')
+
+                            #if (JSONcount != 0) and (JSONresume !=0):
+
+                            self.log("TV JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
+                            self.log("TV M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+
+                            if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
+                                self.log("TV Resetting: " + episodetitle)
+                                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetEpisodeDetails", "params": {"episodeid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                                self.log("Response: " + response)
+                        except:
+                            self.log("Failed to reset Episode " + str(ID), xbmc.LOGWARNING)
+
+                    else:
+                        #movie
+                        json_query = '{"jsonrpc": "2.0", "method": "VideoLibrary.GetMovieDetails", "params": {"movieid": %d, "properties": ["lastplayed","playcount","resume"]}, "id": 1}' % ID
+
+                        json_folder_detail = self.sendJSON(json_query)
+
+                        #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
+                        json_folder_detail = json_folder_detail.replace('"resume":{', '')
+                        json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
+
+                        try:
+
+                            params = json.loads(json_folder_detail)
+                            result = params['result']
+                            details = result['moviedetails']
+                            JSONcount = details.get('playcount')
+                            JSONresume = details.get('position')
+                            JSONlastplayed = details.get('lastplayed')
+
+                            #if (JSONcount != 0) and (JSONresume !=0):
+
+                            self.log("Movie JSON playcount: " + str(JSONcount) + " resume: " + str(JSONresume) + " lastplayed: " + JSONlastplayed)
+                            self.log("Movie M3U playcount: " + str(M3Ucount) + " resume: " + str(M3Uresume) + " lastplayed: " + M3Ulastplayed)
+
+                            if (JSONcount != M3Ucount) or (JSONresume != M3Uresume) or (JSONlastplayed != M3Ulastplayed):
+                                self.log("Movie Resetting: " + str(ID))
+                                response = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "id": 1, "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %d, "lastplayed": "%s", "playcount": %d , "resume": {"position": %d}   }} ' % (ID, M3Ulastplayed, M3Ucount, M3Uresume))
+                                self.log("Response: " + response)
+
+                        except:
+                            self.log("Failed to reset Movie " + str(ID), xbmc.LOGWARNING)
+
+                realindex += 1
+                tmpitem.filename = uni(lines[realindex].rstrip())
+                self.itemlist.append(tmpitem)
+
+
+            realindex += 1
 
         self.processingSemaphore.release()
 
         if len(self.itemlist) == 0:
             return False
-        return
-    
-    def Resetter (self,watchedList):
+
+        return index
+
+    def Resetter (self):
         maxChannels = self.findMaxChannels()
-        self.readFile(maxChannels,watchedList)
-        
+        EndTime = datetime.datetime.now()
+        self.readFile(maxChannels)
 
     def log(self, msg, level = xbmc.LOGDEBUG):
         log('ResetWatched: ' + msg, level)
