@@ -73,7 +73,6 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.setting1 = ''
         self.setting2 = ''
         self.savedRules = False
-        self.maxNeededChannels = int(ADDON.getSetting("maxNeededChannels"))*50 + 100
 
         if CHANNEL_SHARING:
             realloc = ADDON.getSetting('SettingsFolder')
@@ -145,6 +144,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
                 elif ChannelAction == 2:
                     firstEmpty = self.findFirstEmpty(curchan)
                     self.insertChannel(curchan,firstEmpty)
+                    #xbmc.executebuiltin('Notification(%s,%s)' % (curchan,FirstEmpty))
                 elif ChannelAction == 3:
                     firstEmpty = self.findFirstEmpty(curchan)
                     self.deleteChannel(curchan,firstEmpty)
@@ -437,7 +437,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
             self.log("getSmartPlaylistName return " + plname[0].childNodes[0].nodeValue)
             return plname[0].childNodes[0].nodeValue
         except:
-            self.log('Unable to find element name')
+            self.playlisy('Unable to find element name')
 
         self.log("getSmartPlaylistName return")
 
@@ -683,7 +683,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
         self.mixedGenreList.sort(key=lambda x: x.lower())
         self.listcontrol = self.getControl(102)
 
-        for i in range(self.maxNeededChannels):
+        for i in range(999):
             theitem = xbmcgui.ListItem()
             theitem.setLabel(str(i + 1))
             self.listcontrol.addItem(theitem)
@@ -697,7 +697,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
     def findFirstEmpty(self, channel):
         self.log("findFirstEmpty")
         start = channel
-        end = self.maxNeededChannels
+        end = 999
 
         for i in range(start, end):
             self.log(str(i))
@@ -715,7 +715,7 @@ class ConfigWindow(xbmcgui.WindowXMLDialog):
     def updateListing(self, channel = -1):
         self.log("updateListing")
         start = 0
-        end = self.maxNeededChannels
+        end = 999
 
         if channel > -1:
             start = channel - 1

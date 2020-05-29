@@ -22,25 +22,6 @@ import Settings
 
 from FileAccess import FileLock
 
-def debug(msg, *args):
-    try:
-        txt=u''
-        msg=unicode(msg)
-        for arg in args:
-            if type(arg) == int:
-                arg = unicode(arg)
-            if type(arg) == list:
-                arg = unicode(arg)
-            txt = txt + u"/" + arg
-        if txt == u'':
-            xbmc.log(u"PSTV: {0}".format(msg).encode('ascii','xmlcharrefreplace'), xbmc.LOGDEBUG)
-        else:
-            xbmc.log(u"PSTV: {0}#{1}#".format(msg, txt).encode('ascii','xmlcharrefreplace'), xbmc.LOGDEBUG)
-    except:
-        print "PSTV: Error in Debugoutput"
-        print msg
-        print args
-
 ADDON = xbmcaddon.Addon(id='script.pseudotv')
 ADDON_ID = ADDON.getAddonInfo('id')
 ADDON_NAME = ADDON.getAddonInfo('name')
@@ -102,17 +83,10 @@ CHANNELBUG_LOC = xbmc.translatePath(os.path.join(CHANNELS_LOC, 'ChannelBug' + '/
 CHANNELBUG_POS =[[19,19],[1695,19],[1695,952],[19,952]]
 
 SHORT_CLIP_ENUM = [15, 30, 60, 90, 120, 180, 240, 300, 360]
-INFO_DUR = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+INFO_DUR = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 SEEK_FORWARD = [10, 30, 60, 180, 300, 600, 1800]
 SEEK_BACKWARD = [-10, -30, -60, -180, -300, -600, -1800]
 MEDIA_LIMIT = [10, 25, 50, 100, 250, 500, 1000, 0]
-CHANNEL_DELAY = [25, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
-HOLD_ACTIONS = [.25, .5, 1, 1.5, 2, 2.5, 3, 3.5, 4]
-ASSIGNED_DURATION = [1, 5, 10, 15, 30, 45, 60, 90, 120]
-DIR_ASSIGNED_DURATION = [1, 5, 10, 15, 30, 45, 60, 90, 120]
-BUG_BRIGHTNESS = [.25, .5, .75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0]
-
-
 NUM_COLOUR = ['0xFFFF0000', '0xFF00FF00', '0xFF0000FF', '0xFFFFFF00', '0xFF00FFFF', '0xFFFFA500', '0xFFFF00FF', '0xFF808080', '0xFFFFFFFF']
 
 GlobalFileLock = FileLock()
@@ -152,4 +126,3 @@ ACTION_NUMBER_9 = 67
 ACTION_INVALID = 999
 ACTION_MOUSE_RIGHT_CLICK = 101 #Mouse Right Click
 CONTEXT_MENU = 117
-ACTION_PREV_PICTURE = 29

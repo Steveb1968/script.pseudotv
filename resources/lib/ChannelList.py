@@ -50,18 +50,7 @@ class ChannelList:
         self.runningActionId = 0
         self.enteredChannelCount = 0
         self.background = True
-        self.AlreadyWarned = False
-        self.DirAlreadyWarned = False
-        self.FailWarning = False
-        self.DirFailWarning = False
-        self.AssignDuration = False
-        self.DirAssignDuration = False
-        self.AssignedDuration = 30
-        self.DirAssignedDuration = 30
-        self.SingleShowTitleIsEp = True
-        
         random.seed()
-        self.maxNeededChannels = 999
 
 
     def readConfig(self):
@@ -75,15 +64,7 @@ class ChannelList:
         self.backgroundUpdating = int(ADDON.getSetting("ThreadMode"))
         self.mediaLimit = MEDIA_LIMIT[int(ADDON.getSetting("MediaLimit"))]
         self.YearEpInfo = ADDON.getSetting('HideYearEpInfo')
-        self.maxNeededChannels = int(ADDON.getSetting("maxNeededChannels"))*50 + 100
         self.findMaxChannels()
-        self.FailWarning = ADDON.getSetting('FailWarning') == "true"
-        self.DirFailWarning = ADDON.getSetting('DirFailWarning') == "true"
-        self.AssignDuration = ADDON.getSetting('AssignDuration') == "true"
-        self.DirAssignDuration = ADDON.getSetting('DirAssignDuration') == "true"
-        self.AssignedDuration = ASSIGNED_DURATION[int(ADDON.getSetting("AssignedDuration"))]
-        self.DirAssignedDuration = DIR_ASSIGNED_DURATION[int(ADDON.getSetting("DirAssignedDuration"))]
-        self.SingleShowTitleIsEp = ADDON.getSetting('SingleShowTitleIsEp') == "true"
 
         if self.forceReset:
             ADDON.setSetting('ForceChannelReset', "False")
@@ -159,7 +140,7 @@ class ChannelList:
         self.maxChannels = 0
         self.enteredChannelCount = 0
 
-        for i in range(self.maxNeededChannels):
+        for i in range(999):
             chtype = 9999
             chsetting1 = ''
             chsetting2 = ''
@@ -345,7 +326,7 @@ class ChannelList:
                 self.channels[channel - 1].addShowPosition(1)
 
         self.channels[channel - 1].name = self.getChannelName(chtype, chsetting1)
-        
+
         if ((createlist or needsreset) and makenewlist) and returnval:
             self.runActions(RULES_ACTION_FINAL_MADE, channel, self.channels[channel - 1])
         else:
@@ -448,7 +429,8 @@ class ChannelList:
         except:
             self.log("Unable to get the playlist name.", xbmc.LOGERROR)
             return ''
-    
+
+
     # Based on a smart playlist, create a normal playlist that can actually be used by us
     def makeChannelList(self, channel, chtype, setting1, setting2, append = False):
         self.log('makeChannelList ' + str(channel))
@@ -468,7 +450,7 @@ class ChannelList:
                 fle = MADE_CHAN_LOC + os.path.split(setting1)[1]
             else:
                 fle = self.makeTypePlaylist(chtype, setting1, setting2)
-                
+
             fle = uni(fle)
 
             if len(fle) == 0:
@@ -493,7 +475,8 @@ class ChannelList:
             if self.getSmartPlaylistType(dom) == 'mixed':
                 fileList = self.buildMixedFileList(dom, channel)
             else:
-                fileList = self.buildFileList(fle, channel, chtype)
+                fileList = self.buildFileList(fle, channel)
+
             try:
                 order = dom.getElementsByTagName('order')
 
@@ -668,7 +651,7 @@ class ChannelList:
 
     def createGenrePlaylist(self, pltype, chtype, genre):
         flename = xbmc.makeLegalFilename(GEN_CHAN_LOC + pltype + '_' + genre + '.xsp')
-        debug('genre flename = ', flename)
+
         try:
             fle = FileAccess.open(flename, "w")
         except:
@@ -683,6 +666,7 @@ class ChannelList:
         self.writeXSPFooter(fle, 0, "random")
         fle.close()
         return flename
+
 
     def createStudioPlaylist(self, studio):
         flename = xbmc.makeLegalFilename(GEN_CHAN_LOC + 'Studio_' + studio + '.xsp')
@@ -715,8 +699,6 @@ class ChannelList:
             self.updateDialog.update(self.updateDialogProgress, ''.join(LANGUAGE(30168)) % (str(self.settingChannel)), LANGUAGE(30172), LANGUAGE(30174))
 
         file_detail = listdir_fullpath(setting1)
-        
-        debug('file_detail = ', file_detail)
 
         for f in file_detail:
             if self.threadPause() == False:
@@ -737,25 +719,11 @@ class ChannelList:
                 afile = os.path.basename(f)
                 afile, ext = os.path.splitext(afile)
                 tmpstr = str(duration) + ','
-                
-                #tmpstr += afile + "//" + "//" + LANGUAGE(30049) + (' "{}"'.format(setting1)) + "\n"
-                Pathlist = setting1.split("\\")
-                ChannelName = Pathlist[-2]
-                tmpstr += afile + "//" + "//" + LANGUAGE(30193) + ChannelName + LANGUAGE(30194) + afile  + ".\n"
-                
+                tmpstr += afile + "//" + "//" + LANGUAGE(30049) + (' "{}"'.format(setting1)) + "\n"
                 tmpstr += setting1 + os.path.basename(f)
                 tmpstr = uni(tmpstr[:2036])
                 fileList.append(tmpstr)
-            else:
-                self.log("Failed to find duration for directory video " + str(f), xbmc.LOGWARNING)
-                if self.DirFailWarning:
-                    if self.DirAlreadyWarned == False:
-                        assetMsg = "Possible Failure Adding Directory Video.  Check log."
-                        xbmc.executebuiltin("Notification(\"PseudoTV BuildFileList\", \"%s\")" % assetMsg)
-                        self.AlreadyWarned = True
-                if self.DirAssignDuration:
-                    self.log("Setting default duration for " + str(f), xbmc.LOGWARNING)
-                    dur = self.DirAssignedDuration
+
         if filecount == 0:
             self.log('Unable to access Videos files in ' + setting1)
 
@@ -1019,27 +987,25 @@ class ChannelList:
         return newlist
 
 
-    def buildFileList(self, dir_name, channel, chtype):
+    def buildFileList(self, dir_name, channel):
         self.log("buildFileList")
         fileList = []
         seasoneplist = []
         filecount = 0
-        
-        #sending the xsp playlist path to jason, which is what generates the file data to be put into the m3u playlists        
-        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","plotoutline","season","episode","year","lastplayed","playcount","resume","artist"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
+        json_query = '{"jsonrpc": "2.0", "method": "Files.GetDirectory", "params": {"directory": "%s", "media": "video", "properties":["duration","runtime","showtitle","plot","plotoutline","season","episode","year","lastplayed","playcount","resume"]}, "id": 1}' % (self.escapeDirJSON(dir_name))
 
         if self.background == False:
             self.updateDialog.update(self.updateDialogProgress, ''.join(LANGUAGE(30168)) % (str(self.settingChannel)), LANGUAGE(30172), LANGUAGE(30179))
 
         json_folder_detail = self.sendJSON(json_query)
         json_folder_detail = json_folder_detail.replace('"id":1,"jsonrpc":"2.0"','')
-        self.log(json_folder_detail)
 
         #next two lines accounting for how JSON returns resume info; stripping it down to just get the position
         json_folder_detail = json_folder_detail.replace('"resume":{', '')
         json_folder_detail = re.sub(r',"total":.+?}', '', json_folder_detail)
 
         file_detail = re.compile("{(.*?)}", re.DOTALL).findall(json_folder_detail)
+
         for f in file_detail:
             if self.threadPause() == False:
                 del fileList[:]
@@ -1073,16 +1039,6 @@ class ChannelList:
                         except:
                             dur = 0
 
-                    if dur == 0:
-                        self.log("Failed to find duration for video " + str(f), xbmc.LOGWARNING)
-                        if self.FailWarning:
-                            if self.AlreadyWarned == False:
-                                assetMsg = "Possible Failure Adding Video.  Check log."
-                                xbmc.executebuiltin("Notification(\"PseudoTV BuildFileList\", \"%s\")" % assetMsg)
-                                self.AlreadyWarned = True
-                        if self.AssignDuration:
-                            self.log("Setting default duration for " + str(f), xbmc.LOGWARNING)
-                            dur = self.AssignedDuration
                     try:
                         if dur > 0:
                             filecount += 1
@@ -1096,11 +1052,9 @@ class ChannelList:
                             tmpstr = str(dur) + ','
                             title = re.search('"label" *: *"(.*?)"', f)
                             showtitle = re.search('"showtitle" *: *"(.*?)"', f)
-                            
                             plot = re.search('"plot" *: *"(.*?)","', f)
                             plotoutline = re.search('"plotoutline" *: *"(.*?)","', f)
-                            artist = re.search('"artist" *: *\[(.*?)\]',f)
-                            
+
                             if len(plotoutline.group(1)) > 0:
                                 theplot = plotoutline.group(1)
                             elif len(plotoutline.group(1)) == 0 and len(plot.group(1)) > 0:
@@ -1120,47 +1074,28 @@ class ChannelList:
                             resumePositionval = resumePosition.group(1)
                             lastplayedval = lastplayed.group(1)
                             idval = id.group(1)
-                            artist = artist.group(1)
-                            artist = artist.strip('"')
-                                                        
+
                             # This is a TV show
                             if showtitle != None and len(showtitle.group(1)) > 0:
-                                #swtitle is *episode* title, not showtitle.
                                 swtitle = title.group(1)
-                                self.log('swtitle = ' + swtitle)
-                                self.log('title.group(0) = ' + title.group(0))
                                 
                                 if "." in swtitle:
                                     param, swtitle = swtitle.split(". ", 1)
                                 
+                                swtitle = ('"{}"'.format(swtitle))
                                 season = re.search('"season" *: *(.*?),', f)
                                 episode = re.search('"episode" *: *(.*?),', f)
                                 seasonval = season.group(1)
                                 epval = episode.group(1).zfill(2)
                                 sxexx = (' ({})'.format(seasonval + 'x' + epval))
 
-                                if chtype == 6 and self.SingleShowTitleIsEp:
-                                    newShowTitle = swtitle
-                                    #if single show, out the episode title in the show title, and then clear it from episode
-                                    if epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'false':
-                                        swtitle = sxexx
-                                    elif epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'true':
-                                        swtitle = ""
-                                    tmpstr += newShowTitle + "//" + swtitle + "//" + theplot
-                                else:    
-                                    swtitle = ('"{}"'.format(swtitle))
-                                    if epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'false':
-                                        swtitle = swtitle + sxexx
-                                    tmpstr += showtitle.group(1) + "//" + swtitle + "//" + theplot
+                                if epval != None and len(episode.group(1)) > 0 and self.YearEpInfo == 'false':
+                                    swtitle = swtitle + sxexx
+                                tmpstr += showtitle.group(1) + "//" + swtitle + "//" + theplot
                             else:
-                                # This is a movie or music video
+                                # This is a movie
                                 if showtitle == None or len(showtitle.group(1)) == 0:
-                                    #This is a music video
-                                    if artist != None and len(artist) > 0:
-                                         tmpstr += artist + " - " + title.group(1)
-                                    else:
-                                        tmpstr += title.group(1)
-                                    
+                                    tmpstr += title.group(1)
                                     years = re.search('"year" *: *([\d.]*\d+)', f)
                                     year = ('({})'.format(years.group(1)))
 
@@ -1176,10 +1111,7 @@ class ChannelList:
                             tmpstr += "//"  + playcountval
                             tmpstr += "//"  + resumePositionval
                             tmpstr += "//"  + lastplayedval
-                            if artist != None and len(artist) > 0:
-                               tmpstr += "//"  + idval + "MTV"
-                            else:
-                                tmpstr += "//"  + idval
+                            tmpstr += "//"  + idval
 
                             tmpstr = tmpstr.replace("\\n", " ").replace("\\r", " ").replace("\\\"", "\"")
                             tmpstr = tmpstr + '\n' + match.group(1).replace("\\\\", "\\")
